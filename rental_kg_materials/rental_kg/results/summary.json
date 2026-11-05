@@ -1,0 +1,49 @@
+{
+  "observed": {
+    "triples": 150,
+    "shacl_conforms": true
+  },
+  "demo": {
+    "triples": 926,
+    "shacl_conforms": true
+  },
+  "classes": 15,
+  "object_properties": 12,
+  "datatype_properties": 23,
+  "reasoning": {
+    "inverse": "PASS",
+    "transitive": "PASS",
+    "subclass": "PASS"
+  },
+  "negative_validation_test": "PASS",
+  "negative_validation_tests": {
+    "negative_rent": "PASS",
+    "amenity_as_building": "PASS",
+    "amenity_as_location": "PASS",
+    "dwelling_as_location": "PASS",
+    "district_as_building": "PASS",
+    "building_as_city": "PASS",
+    "amenity_as_location_subject": "PASS",
+    "city_in_building": "PASS",
+    "district_in_building": "PASS",
+    "building_in_building": "PASS",
+    "coordinates_on_dwelling": "PASS",
+    "coordinates_on_city": "PASS",
+    "latitude_out_of_range": "PASS",
+    "incompatible_amenity_types": "PASS",
+    "incomplete_coordinate_pair": "PASS",
+    "missing_building_height": "PASS"
+  },
+  "semantic_checks": {
+    "class_membership": "PASS",
+    "disjoint_types": "PASS",
+    "coordinate_ownership": "PASS",
+    "materialized_graph_shacl": "PASS",
+    "source_observation_date": "PASS"
+  },
+  "inferred_instances": {
+    "Place": 14,
+    "Dwelling": 12,
+    "Amenity": 6
+  }
+}

@@ -1,0 +1,5 @@
+PREFIX ex: <https://example.org/rental-kg#>
+SELECT ?listing ?rent WHERE {
+ ?listing a ex:ListingSnapshot; ex:term ?term; ex:rentRubMonth ?rent.
+ FILTER(str(?term) = "long_term" && ?rent <= 40000)
+} ORDER BY ?rent

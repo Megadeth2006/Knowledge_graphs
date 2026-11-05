@@ -1,0 +1,177 @@
+@prefix ex: <https://example.org/rental-kg#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:R01 a ex:ListingSnapshot ;
+    ex:commissionRub 22500.0 ;
+    ex:hasSource ex:R01_source ;
+    ex:isSynthetic false ;
+    ex:observedOn "2026-10-22"^^xsd:date ;
+    ex:offers ex:R01_home ;
+    ex:petsAllowed false ;
+    ex:qualityNote "furniture_conflict"^^xsd:string ;
+    ex:rentRubMonth 45000.0 ;
+    ex:term "long_term"^^xsd:string .
+
+ex:R02 a ex:ListingSnapshot ;
+    ex:commissionRub 0.0 ;
+    ex:depositRub 0.0 ;
+    ex:hasSource ex:R02_source ;
+    ex:isSynthetic false ;
+    ex:minMonths 11 ;
+    ex:observedOn "2026-10-22"^^xsd:date ;
+    ex:offers ex:R02_home ;
+    ex:petsAllowed false ;
+    ex:rentRubMonth 33500.0 ;
+    ex:term "long_term"^^xsd:string .
+
+ex:R03 a ex:ListingSnapshot ;
+    ex:commissionRub 12500.0 ;
+    ex:hasSource ex:R03_source ;
+    ex:isSynthetic false ;
+    ex:observedOn "2026-10-22"^^xsd:date ;
+    ex:offers ex:R03_home ;
+    ex:petsAllowed false ;
+    ex:qualityNote "4 months; excluded from long-term selection"^^xsd:string ;
+    ex:rentRubMonth 25000.0 ;
+    ex:term "fixed_short_term"^^xsd:string .
+
+ex:R04 a ex:ListingSnapshot ;
+    ex:commissionRub 35000.0 ;
+    ex:depositRub 70000.0 ;
+    ex:hasSource ex:R04_source ;
+    ex:isSynthetic false ;
+    ex:observedOn "2026-10-22"^^xsd:date ;
+    ex:offers ex:R04_home ;
+    ex:rentRubMonth 70000.0 ;
+    ex:term "long_term"^^xsd:string .
+
+ex:R05 a ex:ListingSnapshot ;
+    ex:commissionRub 25000.0 ;
+    ex:depositRub 45000.0 ;
+    ex:hasSource ex:R05_source ;
+    ex:isSynthetic false ;
+    ex:observedOn "2026-10-22"^^xsd:date ;
+    ex:offers ex:R05_home ;
+    ex:qualityNote "possible_duplicate_R06; elevator_and_window_conflicts"^^xsd:string ;
+    ex:rentRubMonth 50000.0 ;
+    ex:term "long_term"^^xsd:string .
+
+ex:R06 a ex:ListingSnapshot ;
+    ex:commissionRub 22500.0 ;
+    ex:depositRub 45000.0 ;
+    ex:hasSource ex:R06_source ;
+    ex:isSynthetic false ;
+    ex:observedOn "2026-10-22"^^xsd:date ;
+    ex:offers ex:R06_home ;
+    ex:qualityNote "possible_duplicate_R05; elevator_conflict"^^xsd:string ;
+    ex:rentRubMonth 45000.0 ;
+    ex:term "long_term"^^xsd:string .
+
+ex:R01_building a ex:Building ;
+    ex:address "Пулковское шоссе, 42к6"^^xsd:string ;
+    ex:floorsTotal 20 ;
+    ex:hasSource ex:R01_source ;
+    ex:isSynthetic false .
+
+ex:R01_home a ex:Apartment ;
+    ex:areaM2 44.5 ;
+    ex:floor 7 ;
+    ex:hasSource ex:R01_source ;
+    ex:inBuilding ex:R01_building ;
+    ex:isSynthetic false ;
+    ex:rooms 2 .
+
+ex:R02_building a ex:Building ;
+    ex:address "Русановская улица, 20к3"^^xsd:string ;
+    ex:floorsTotal 24 ;
+    ex:hasSource ex:R02_source ;
+    ex:isSynthetic false .
+
+ex:R02_home a ex:Apartment ;
+    ex:areaM2 24.0 ;
+    ex:floor 9 ;
+    ex:hasSource ex:R02_source ;
+    ex:inBuilding ex:R02_building ;
+    ex:isSynthetic false ;
+    ex:rooms 0 .
+
+ex:R03_building a ex:Building ;
+    ex:address "улица Тельмана, 48к4"^^xsd:string ;
+    ex:floorsTotal 10 ;
+    ex:hasSource ex:R03_source ;
+    ex:isSynthetic false .
+
+ex:R03_home a ex:Apartment ;
+    ex:areaM2 40.6 ;
+    ex:floor 8 ;
+    ex:hasSource ex:R03_source ;
+    ex:inBuilding ex:R03_building ;
+    ex:isSynthetic false ;
+    ex:rooms 1 .
+
+ex:R04_building a ex:Building ;
+    ex:address "улица Красного Курсанта, 51"^^xsd:string ;
+    ex:floorsTotal 5 ;
+    ex:hasSource ex:R04_source ;
+    ex:isSynthetic false .
+
+ex:R04_home a ex:Apartment ;
+    ex:areaM2 54.7 ;
+    ex:floor 1 ;
+    ex:hasSource ex:R04_source ;
+    ex:inBuilding ex:R04_building ;
+    ex:isSynthetic false ;
+    ex:rooms 2 .
+
+ex:R05_building a ex:Building ;
+    ex:address "Невский проспект, 88"^^xsd:string ;
+    ex:floorsTotal 5 ;
+    ex:hasSource ex:R05_source ;
+    ex:isSynthetic false .
+
+ex:R05_home a ex:Apartment ;
+    ex:areaM2 40.0 ;
+    ex:floor 2 ;
+    ex:hasSource ex:R05_source ;
+    ex:inBuilding ex:R05_building ;
+    ex:isSynthetic false ;
+    ex:rooms 1 .
+
+ex:R06_building a ex:Building ;
+    ex:address "Невский проспект, 88"^^xsd:string ;
+    ex:floorsTotal 5 ;
+    ex:hasSource ex:R06_source ;
+    ex:isSynthetic false .
+
+ex:R06_home a ex:Apartment ;
+    ex:areaM2 40.0 ;
+    ex:floor 2 ;
+    ex:hasSource ex:R06_source ;
+    ex:inBuilding ex:R06_building ;
+    ex:isSynthetic false ;
+    ex:rooms 1 .
+
+ex:R01_source a ex:SourceRecord ;
+    ex:isSynthetic false ;
+    ex:sourceUrl "https://realty.yandex.ru/offer/5227535735060667195/"^^xsd:anyURI .
+
+ex:R02_source a ex:SourceRecord ;
+    ex:isSynthetic false ;
+    ex:sourceUrl "https://realty.yandex.ru/offer/5467258361881462548/"^^xsd:anyURI .
+
+ex:R03_source a ex:SourceRecord ;
+    ex:isSynthetic false ;
+    ex:sourceUrl "https://realty.yandex.ru/offer/4744575448774797879/"^^xsd:anyURI .
+
+ex:R04_source a ex:SourceRecord ;
+    ex:isSynthetic false ;
+    ex:sourceUrl "https://realty.yandex.ru/offer/1544554545513061376/"^^xsd:anyURI .
+
+ex:R05_source a ex:SourceRecord ;
+    ex:isSynthetic false ;
+    ex:sourceUrl "https://realty.yandex.ru/offer/8162702168070170624/"^^xsd:anyURI .
+
+ex:R06_source a ex:SourceRecord ;
+    ex:isSynthetic false ;
+    ex:sourceUrl "https://realty.yandex.ru/offer/8560687234450187520/"^^xsd:anyURI .
+

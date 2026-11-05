@@ -1,0 +1,5 @@
+PREFIX ex: <https://example.org/rental-kg#>
+SELECT ?listing ?observedOn ?sourceUrl WHERE {
+ ?listing a ex:ListingSnapshot; ex:observedOn ?observedOn; ex:hasSource ?source.
+ ?source ex:sourceUrl ?sourceUrl.
+} ORDER BY ?listing ?sourceUrl

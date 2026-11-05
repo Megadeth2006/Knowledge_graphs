@@ -1,0 +1,269 @@
+@prefix ex: <https://example.org/rental-kg#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://example.org/rental-kg> a owl:Ontology ;
+    owl:versionInfo "1.1.0" .
+
+ex:Apartment a owl:Class ;
+    rdfs:label "Квартира"@ru ;
+    rdfs:comment "Отдельная жилая единица внутри здания, предлагаемая целиком в аренду; характеризуется площадью, числом комнат и этажом. Студия также является квартирой."@ru ;
+    rdfs:subClassOf ex:Dwelling .
+
+ex:MetroStation a owl:Class ;
+    rdfs:label "Станция метро"@ru ;
+    rdfs:comment "Объект транспортного обслуживания, предоставляющий доступ к метрополитену. В текущем наборе представлен одной репрезентативной точкой, а не всеми входами."@ru ;
+    rdfs:subClassOf ex:Amenity ;
+    owl:disjointWith ex:Park,
+        ex:Supermarket .
+
+ex:address a owl:DatatypeProperty ;
+    rdfs:label "адрес"@ru ;
+    rdfs:domain ex:Building ;
+    rdfs:range xsd:string .
+
+ex:areaM2 a owl:DatatypeProperty ;
+    rdfs:label "площадь, м²"@ru ;
+    rdfs:domain ex:Dwelling ;
+    rdfs:range xsd:decimal .
+
+ex:calculatedOn a owl:DatatypeProperty ;
+    rdfs:label "дата вычисления"@ru ;
+    rdfs:domain ex:DistanceMeasurement ;
+    rdfs:range xsd:date .
+
+ex:commissionRub a owl:DatatypeProperty ;
+    rdfs:label "разовая комиссия, руб."@ru ;
+    rdfs:domain ex:ListingSnapshot ;
+    rdfs:range xsd:decimal .
+
+ex:depositRub a owl:DatatypeProperty ;
+    rdfs:label "залог, руб."@ru ;
+    rdfs:domain ex:ListingSnapshot ;
+    rdfs:range xsd:decimal .
+
+ex:distanceM a owl:DatatypeProperty ;
+    rdfs:label "расстояние, м"@ru ;
+    rdfs:domain ex:DistanceMeasurement ;
+    rdfs:range xsd:decimal .
+
+ex:floor a owl:DatatypeProperty ;
+    rdfs:label "этаж"@ru ;
+    rdfs:domain ex:Dwelling ;
+    rdfs:range xsd:integer .
+
+ex:floorsTotal a owl:DatatypeProperty ;
+    rdfs:label "этажей в доме"@ru ;
+    rdfs:domain ex:Building ;
+    rdfs:range xsd:integer .
+
+ex:fromDwelling a owl:ObjectProperty ;
+    rdfs:label "начало измерения"@ru ;
+    rdfs:domain ex:DistanceMeasurement ;
+    rdfs:range ex:Dwelling .
+
+ex:hasSource a owl:ObjectProperty ;
+    rdfs:label "источник записи"@ru ;
+    rdfs:range ex:SourceRecord .
+
+ex:inBuilding a owl:ObjectProperty ;
+    rdfs:label "находится в здании"@ru ;
+    rdfs:domain ex:Dwelling ;
+    rdfs:range ex:Building ;
+    rdfs:subPropertyOf ex:locatedIn .
+
+ex:inCity a owl:ObjectProperty ;
+    rdfs:label "находится в городе"@ru ;
+    rdfs:domain ex:District ;
+    rdfs:range ex:City ;
+    rdfs:subPropertyOf ex:locatedIn .
+
+ex:inDistrict a owl:ObjectProperty ;
+    rdfs:label "находится в районе"@ru ;
+    rdfs:domain ex:Building ;
+    rdfs:range ex:District ;
+    rdfs:subPropertyOf ex:locatedIn .
+
+ex:isSynthetic a owl:DatatypeProperty ;
+    rdfs:label "синтетические данные"@ru ;
+    rdfs:range xsd:boolean .
+
+ex:latitude a owl:DatatypeProperty ;
+    rdfs:label "широта, WGS84"@ru ;
+    rdfs:domain _:N69e9aed2d31b4b8081865dbbf44c9aec ;
+    rdfs:range xsd:decimal .
+
+ex:longitude a owl:DatatypeProperty ;
+    rdfs:label "долгота, WGS84"@ru ;
+    rdfs:domain _:N69e9aed2d31b4b8081865dbbf44c9aec ;
+    rdfs:range xsd:decimal .
+
+ex:maxMetroDistanceM a owl:DatatypeProperty ;
+    rdfs:label "порог расстояния до метро"@ru ;
+    rdfs:domain ex:RenterProfile ;
+    rdfs:range xsd:decimal .
+
+ex:maxRentRubMonth a owl:DatatypeProperty ;
+    rdfs:label "лимит арендной платы"@ru ;
+    rdfs:domain ex:RenterProfile ;
+    rdfs:range xsd:decimal .
+
+ex:minMonths a owl:DatatypeProperty ;
+    rdfs:label "минимальный срок, месяцев"@ru ;
+    rdfs:domain ex:ListingSnapshot ;
+    rdfs:range xsd:integer .
+
+ex:nearAmenity a owl:ObjectProperty ;
+    rdfs:label "не далее 1000 м по прямой"@ru ;
+    rdfs:domain ex:Dwelling ;
+    rdfs:range ex:Amenity .
+
+ex:observedOn a owl:DatatypeProperty ;
+    rdfs:label "дата наблюдения"@ru ;
+    rdfs:domain ex:ListingSnapshot ;
+    rdfs:range xsd:date .
+
+ex:offers a owl:ObjectProperty ;
+    rdfs:label "предлагает жильё"@ru ;
+    rdfs:domain ex:ListingSnapshot ;
+    rdfs:range ex:Dwelling ;
+    owl:inverseOf ex:hasListing .
+
+ex:petsAllowed a owl:DatatypeProperty ;
+    rdfs:label "животные разрешены"@ru ;
+    rdfs:domain ex:ListingSnapshot ;
+    rdfs:range xsd:boolean .
+
+ex:preferredCity a owl:ObjectProperty ;
+    rdfs:label "предпочтительный город"@ru ;
+    rdfs:domain ex:RenterProfile ;
+    rdfs:range ex:City .
+
+ex:qualityNote a owl:DatatypeProperty ;
+    rdfs:label "замечание к качеству"@ru ;
+    rdfs:range xsd:string .
+
+ex:rentRubMonth a owl:DatatypeProperty ;
+    rdfs:label "аренда, руб./месяц"@ru ;
+    rdfs:domain ex:ListingSnapshot ;
+    rdfs:range xsd:decimal .
+
+ex:requiresPets a owl:DatatypeProperty ;
+    rdfs:label "нужно разрешение на животных"@ru ;
+    rdfs:domain ex:RenterProfile ;
+    rdfs:range xsd:boolean .
+
+ex:rooms a owl:DatatypeProperty ;
+    rdfs:label "число комнат, студия = 0"@ru ;
+    rdfs:domain ex:Dwelling ;
+    rdfs:range xsd:integer .
+
+ex:sourceUrl a owl:DatatypeProperty ;
+    rdfs:label "ссылка на источник"@ru ;
+    rdfs:domain ex:SourceRecord ;
+    rdfs:range xsd:anyURI .
+
+ex:term a owl:DatatypeProperty ;
+    rdfs:label "категория срока аренды"@ru ;
+    rdfs:domain ex:ListingSnapshot ;
+    rdfs:range xsd:string .
+
+ex:toAmenity a owl:ObjectProperty ;
+    rdfs:label "цель измерения"@ru ;
+    rdfs:domain ex:DistanceMeasurement ;
+    rdfs:range ex:Amenity .
+
+ex:usesMethod a owl:ObjectProperty ;
+    rdfs:label "метод измерения"@ru ;
+    rdfs:domain ex:DistanceMeasurement ;
+    rdfs:range ex:MeasurementMethod .
+
+ex:utilitiesRubMonth a owl:DatatypeProperty ;
+    rdfs:label "дополнительные КУ, руб./месяц"@ru ;
+    rdfs:domain ex:ListingSnapshot ;
+    rdfs:range xsd:decimal .
+
+ex:MeasurementMethod a owl:Class ;
+    rdfs:label "Метод измерения"@ru ;
+    rdfs:comment "Описание способа получения численного расстояния, на которое ссылается usesMethod. Экземпляр Haversine обозначает расчёт по сферической модели Земли."@ru .
+
+ex:Supermarket a owl:Class ;
+    rdfs:label "Супермаркет"@ru ;
+    rdfs:comment "Объект розничного обслуживания для покупки продуктов и повседневных товаров. Обозначает магазин как объект обслуживания, а не его здание."@ru ;
+    rdfs:subClassOf ex:Amenity ;
+    owl:disjointWith ex:Park .
+
+ex:hasListing a owl:ObjectProperty ;
+    rdfs:label "имеет объявление"@ru ;
+    rdfs:domain ex:Dwelling ;
+    rdfs:range ex:ListingSnapshot .
+
+ex:City a owl:Class ;
+    rdfs:label "Город"@ru ;
+    rdfs:comment "Населённый пункт, содержащий районы и являющийся верхним используемым уровнем адресной иерархии."@ru ;
+    rdfs:subClassOf ex:Place ;
+    owl:disjointWith ex:Building,
+        ex:District .
+
+ex:Park a owl:Class ;
+    rdfs:label "Парк"@ru ;
+    rdfs:comment "Объект инфраструктуры для отдыха на озеленённой территории. В текущей модели расстояние измеряется до репрезентативной точки, а не до входа или границы парка."@ru ;
+    rdfs:subClassOf ex:Amenity .
+
+ex:SourceRecord a owl:Class ;
+    rdfs:label "Запись источника"@ru ;
+    rdfs:comment "Указатель на исходную запись, из которой получены факты: URL реальной карточки либо явно учебный идентификатор источника. Используется как объект hasSource."@ru .
+
+ex:District a owl:Class ;
+    rdfs:label "Район"@ru ;
+    rdfs:comment "Территориальная адресная единица внутри города, в которую входит здание. Членство определяется уровнем адресной иерархии, а не близостью к жилью."@ru ;
+    rdfs:subClassOf ex:Place ;
+    owl:disjointWith ex:Building .
+
+ex:locatedIn a owl:ObjectProperty,
+        owl:TransitiveProperty ;
+    rdfs:label "расположено в"@ru ;
+    rdfs:range ex:Place .
+
+ex:RenterProfile a owl:Class ;
+    rdfs:label "Профиль требований"@ru ;
+    rdfs:comment "Набор явных требований арендатора к поиску: бюджет, город, радиус до метро и необходимость разрешения на животных. Не является человеком или объявлением."@ru .
+
+ex:DistanceMeasurement a owl:Class ;
+    rdfs:label "Измерение расстояния"@ru ;
+    rdfs:comment "Результат измерения между одним жильём и одним объектом инфраструктуры, заданный числом метров, методом и датой расчёта. В текущем наборе используется точка здания жилья."@ru ;
+    owl:disjointWith ex:Place .
+
+ex:Place a owl:Class ;
+    rdfs:label "Место расположения"@ru ;
+    rdfs:comment "Адресный контейнер, в котором размещено жильё прямо или через цепочку locatedIn: здание, район или город. Жильё и объекты инфраструктуры в этот класс не входят."@ru ;
+    owl:disjointWith ex:Amenity,
+        ex:Dwelling .
+
+ex:Building a owl:Class ;
+    rdfs:label "Здание"@ru ;
+    rdfs:comment "Физическая постройка, содержащая жильё, с адресом и этажностью. Её точка WGS84 служит приближённой точкой расположения находящегося в ней жилья."@ru ;
+    rdfs:subClassOf ex:Place .
+
+ex:Amenity a owl:Class ;
+    rdfs:label "Объект инфраструктуры"@ru ;
+    rdfs:comment "Объект обслуживания или отдыха, близость которого важна при подборе жилья. Является целью toAmenity и nearAmenity, а не адресным контейнером жилья. Объект обслуживания и вмещающее его здание моделируются отдельно."@ru .
+
+ex:ListingSnapshot a owl:Class ;
+    rdfs:label "Снимок объявления"@ru ;
+    rdfs:comment "Зафиксированное на дату наблюдения предложение аренды одного жилья с ценой, условиями и ссылкой на запись источника; не является самим жильём."@ru ;
+    owl:disjointWith ex:Dwelling .
+
+ex:Dwelling a owl:Class ;
+    rdfs:label "Жильё"@ru ;
+    rdfs:comment "Жилая единица, предлагаемая в аренду снимком объявления через offers. В текущем проекте представлены целые квартиры; комнаты и отдельные дома могут быть добавлены при расширении модели."@ru ;
+    owl:disjointWith ex:Amenity .
+
+_:N06d9e128484a47d2838402d220b1b538 rdf:first ex:Building ;
+    rdf:rest ( ex:Amenity ) .
+
+_:N69e9aed2d31b4b8081865dbbf44c9aec a owl:Class ;
+    owl:unionOf _:N06d9e128484a47d2838402d220b1b538 .
+

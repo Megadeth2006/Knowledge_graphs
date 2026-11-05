@@ -1,0 +1,1641 @@
+@prefix ex: <https://example.org/rental-kg#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+rdf:HTML a rdfs:Datatype ;
+    owl:sameAs rdf:HTML .
+
+rdf:PlainLiteral a rdfs:Datatype ;
+    owl:sameAs rdf:PlainLiteral .
+
+rdf:XMLLiteral a rdfs:Datatype ;
+    owl:sameAs rdf:XMLLiteral .
+
+rdf:first owl:sameAs rdf:first .
+
+rdf:langString a rdfs:Datatype ;
+    owl:sameAs rdf:langString .
+
+() owl:sameAs () .
+
+rdf:rest owl:sameAs rdf:rest .
+
+rdf:type owl:sameAs rdf:type .
+
+rdfs:Literal a rdfs:Datatype ;
+    owl:sameAs rdfs:Literal .
+
+rdfs:comment a owl:AnnotationProperty ;
+    owl:sameAs rdfs:comment .
+
+rdfs:domain owl:sameAs rdfs:domain .
+
+rdfs:isDefinedBy a owl:AnnotationProperty ;
+    owl:sameAs rdfs:isDefinedBy .
+
+rdfs:label a owl:AnnotationProperty ;
+    owl:sameAs rdfs:label .
+
+rdfs:range owl:sameAs rdfs:range .
+
+rdfs:seeAlso a owl:AnnotationProperty ;
+    owl:sameAs rdfs:seeAlso .
+
+rdfs:subClassOf owl:sameAs rdfs:subClassOf .
+
+rdfs:subPropertyOf owl:sameAs rdfs:subPropertyOf .
+
+xsd:NCName a rdfs:Datatype ;
+    owl:sameAs xsd:NCName .
+
+xsd:NMTOKEN a rdfs:Datatype ;
+    owl:sameAs xsd:NMTOKEN .
+
+xsd:Name a rdfs:Datatype ;
+    owl:sameAs xsd:Name .
+
+xsd:base64Binary a rdfs:Datatype ;
+    owl:sameAs xsd:base64Binary .
+
+xsd:byte a rdfs:Datatype ;
+    owl:sameAs xsd:byte .
+
+xsd:dateTime a rdfs:Datatype ;
+    owl:sameAs xsd:dateTime .
+
+xsd:dateTimeStamp a rdfs:Datatype ;
+    owl:sameAs xsd:dateTimeStamp .
+
+xsd:double a rdfs:Datatype ;
+    owl:sameAs xsd:double .
+
+xsd:float a rdfs:Datatype ;
+    owl:sameAs xsd:float .
+
+xsd:hexBinary a rdfs:Datatype ;
+    owl:sameAs xsd:hexBinary .
+
+xsd:int a rdfs:Datatype ;
+    owl:sameAs xsd:int .
+
+xsd:language a rdfs:Datatype ;
+    owl:sameAs xsd:language .
+
+xsd:long a rdfs:Datatype ;
+    owl:sameAs xsd:long .
+
+xsd:negativeInteger a rdfs:Datatype ;
+    owl:sameAs xsd:negativeInteger .
+
+xsd:nonNegativeInteger a rdfs:Datatype ;
+    owl:sameAs xsd:nonNegativeInteger .
+
+xsd:nonPositiveInteger a rdfs:Datatype ;
+    owl:sameAs xsd:nonPositiveInteger .
+
+xsd:normalizedString a rdfs:Datatype ;
+    owl:sameAs xsd:normalizedString .
+
+xsd:positiveInteger a rdfs:Datatype ;
+    owl:sameAs xsd:positiveInteger .
+
+xsd:short a rdfs:Datatype ;
+    owl:sameAs xsd:short .
+
+xsd:time a rdfs:Datatype ;
+    owl:sameAs xsd:time .
+
+xsd:token a rdfs:Datatype ;
+    owl:sameAs xsd:token .
+
+xsd:unsignedByte a rdfs:Datatype ;
+    owl:sameAs xsd:unsignedByte .
+
+xsd:unsignedInt a rdfs:Datatype ;
+    owl:sameAs xsd:unsignedInt .
+
+xsd:unsignedLong a rdfs:Datatype ;
+    owl:sameAs xsd:unsignedLong .
+
+xsd:unsignedShort a rdfs:Datatype ;
+    owl:sameAs xsd:unsignedShort .
+
+owl:DatatypeProperty owl:sameAs owl:DatatypeProperty .
+
+owl:ObjectProperty owl:sameAs owl:ObjectProperty .
+
+owl:Ontology owl:sameAs owl:Ontology .
+
+owl:TransitiveProperty owl:sameAs owl:TransitiveProperty .
+
+owl:backwardCompatibleWith a owl:AnnotationProperty ;
+    owl:sameAs owl:backwardCompatibleWith .
+
+owl:deprecated a owl:AnnotationProperty ;
+    owl:sameAs owl:deprecated .
+
+owl:disjointWith owl:sameAs owl:disjointWith .
+
+owl:equivalentClass owl:sameAs owl:equivalentClass .
+
+owl:equivalentProperty owl:sameAs owl:equivalentProperty .
+
+owl:incompatibleWith a owl:AnnotationProperty ;
+    owl:sameAs owl:incompatibleWith .
+
+owl:inverseOf owl:sameAs owl:inverseOf .
+
+owl:priorVersion a owl:AnnotationProperty ;
+    owl:sameAs owl:priorVersion .
+
+owl:sameAs owl:sameAs owl:sameAs .
+
+owl:unionOf owl:sameAs owl:unionOf .
+
+owl:versionInfo a owl:AnnotationProperty ;
+    owl:sameAs owl:versionInfo .
+
+<https://example.org/rental-kg> owl:sameAs <https://example.org/rental-kg> .
+
+ex:D01_M1 a owl:Thing ;
+    owl:sameAs ex:D01_M1 .
+
+ex:D01_M2 a owl:Thing ;
+    owl:sameAs ex:D01_M2 .
+
+ex:D01_P1 a owl:Thing ;
+    owl:sameAs ex:D01_P1 .
+
+ex:D01_P2 a owl:Thing ;
+    owl:sameAs ex:D01_P2 .
+
+ex:D01_S1 a owl:Thing ;
+    owl:sameAs ex:D01_S1 .
+
+ex:D01_S2 a owl:Thing ;
+    owl:sameAs ex:D01_S2 .
+
+ex:D01_home a owl:Thing,
+        ex:Dwelling ;
+    owl:sameAs ex:D01_home ;
+    ex:hasListing ex:D01 ;
+    ex:locatedIn ex:D01_building,
+        ex:DemoCity,
+        ex:DemoDistrict .
+
+ex:D01_source a owl:Thing ;
+    owl:sameAs ex:D01_source .
+
+ex:D02_M1 a owl:Thing ;
+    owl:sameAs ex:D02_M1 .
+
+ex:D02_M2 a owl:Thing ;
+    owl:sameAs ex:D02_M2 .
+
+ex:D02_P1 a owl:Thing ;
+    owl:sameAs ex:D02_P1 .
+
+ex:D02_P2 a owl:Thing ;
+    owl:sameAs ex:D02_P2 .
+
+ex:D02_S1 a owl:Thing ;
+    owl:sameAs ex:D02_S1 .
+
+ex:D02_S2 a owl:Thing ;
+    owl:sameAs ex:D02_S2 .
+
+ex:D02_home a owl:Thing,
+        ex:Dwelling ;
+    owl:sameAs ex:D02_home ;
+    ex:hasListing ex:D02 ;
+    ex:locatedIn ex:D02_building,
+        ex:DemoCity,
+        ex:DemoDistrict .
+
+ex:D02_source a owl:Thing ;
+    owl:sameAs ex:D02_source .
+
+ex:D03_M1 a owl:Thing ;
+    owl:sameAs ex:D03_M1 .
+
+ex:D03_M2 a owl:Thing ;
+    owl:sameAs ex:D03_M2 .
+
+ex:D03_P1 a owl:Thing ;
+    owl:sameAs ex:D03_P1 .
+
+ex:D03_P2 a owl:Thing ;
+    owl:sameAs ex:D03_P2 .
+
+ex:D03_S1 a owl:Thing ;
+    owl:sameAs ex:D03_S1 .
+
+ex:D03_S2 a owl:Thing ;
+    owl:sameAs ex:D03_S2 .
+
+ex:D03_home a owl:Thing,
+        ex:Dwelling ;
+    owl:sameAs ex:D03_home ;
+    ex:hasListing ex:D03 ;
+    ex:locatedIn ex:D03_building,
+        ex:DemoCity,
+        ex:DemoDistrict .
+
+ex:D03_source a owl:Thing ;
+    owl:sameAs ex:D03_source .
+
+ex:D04_M1 a owl:Thing ;
+    owl:sameAs ex:D04_M1 .
+
+ex:D04_M2 a owl:Thing ;
+    owl:sameAs ex:D04_M2 .
+
+ex:D04_P1 a owl:Thing ;
+    owl:sameAs ex:D04_P1 .
+
+ex:D04_P2 a owl:Thing ;
+    owl:sameAs ex:D04_P2 .
+
+ex:D04_S1 a owl:Thing ;
+    owl:sameAs ex:D04_S1 .
+
+ex:D04_S2 a owl:Thing ;
+    owl:sameAs ex:D04_S2 .
+
+ex:D04_home a owl:Thing,
+        ex:Dwelling ;
+    owl:sameAs ex:D04_home ;
+    ex:hasListing ex:D04 ;
+    ex:locatedIn ex:D04_building,
+        ex:DemoCity,
+        ex:DemoDistrict .
+
+ex:D04_source a owl:Thing ;
+    owl:sameAs ex:D04_source .
+
+ex:D05_M1 a owl:Thing ;
+    owl:sameAs ex:D05_M1 .
+
+ex:D05_M2 a owl:Thing ;
+    owl:sameAs ex:D05_M2 .
+
+ex:D05_P1 a owl:Thing ;
+    owl:sameAs ex:D05_P1 .
+
+ex:D05_P2 a owl:Thing ;
+    owl:sameAs ex:D05_P2 .
+
+ex:D05_S1 a owl:Thing ;
+    owl:sameAs ex:D05_S1 .
+
+ex:D05_S2 a owl:Thing ;
+    owl:sameAs ex:D05_S2 .
+
+ex:D05_home a owl:Thing,
+        ex:Dwelling ;
+    owl:sameAs ex:D05_home ;
+    ex:hasListing ex:D05 ;
+    ex:locatedIn ex:D05_building,
+        ex:DemoCity,
+        ex:DemoDistrict .
+
+ex:D05_source a owl:Thing ;
+    owl:sameAs ex:D05_source .
+
+ex:D06_M1 a owl:Thing ;
+    owl:sameAs ex:D06_M1 .
+
+ex:D06_M2 a owl:Thing ;
+    owl:sameAs ex:D06_M2 .
+
+ex:D06_P1 a owl:Thing ;
+    owl:sameAs ex:D06_P1 .
+
+ex:D06_P2 a owl:Thing ;
+    owl:sameAs ex:D06_P2 .
+
+ex:D06_S1 a owl:Thing ;
+    owl:sameAs ex:D06_S1 .
+
+ex:D06_S2 a owl:Thing ;
+    owl:sameAs ex:D06_S2 .
+
+ex:D06_home a owl:Thing,
+        ex:Dwelling ;
+    owl:sameAs ex:D06_home ;
+    ex:hasListing ex:D06 ;
+    ex:locatedIn ex:D06_building,
+        ex:DemoCity,
+        ex:DemoDistrict .
+
+ex:D06_source a owl:Thing ;
+    owl:sameAs ex:D06_source .
+
+ex:D07_M1 a owl:Thing ;
+    owl:sameAs ex:D07_M1 .
+
+ex:D07_M2 a owl:Thing ;
+    owl:sameAs ex:D07_M2 .
+
+ex:D07_P1 a owl:Thing ;
+    owl:sameAs ex:D07_P1 .
+
+ex:D07_P2 a owl:Thing ;
+    owl:sameAs ex:D07_P2 .
+
+ex:D07_S1 a owl:Thing ;
+    owl:sameAs ex:D07_S1 .
+
+ex:D07_S2 a owl:Thing ;
+    owl:sameAs ex:D07_S2 .
+
+ex:D07_home a owl:Thing,
+        ex:Dwelling ;
+    owl:sameAs ex:D07_home ;
+    ex:hasListing ex:D07 ;
+    ex:locatedIn ex:D07_building,
+        ex:DemoCity,
+        ex:DemoDistrict .
+
+ex:D07_source a owl:Thing ;
+    owl:sameAs ex:D07_source .
+
+ex:D08_M1 a owl:Thing ;
+    owl:sameAs ex:D08_M1 .
+
+ex:D08_M2 a owl:Thing ;
+    owl:sameAs ex:D08_M2 .
+
+ex:D08_P1 a owl:Thing ;
+    owl:sameAs ex:D08_P1 .
+
+ex:D08_P2 a owl:Thing ;
+    owl:sameAs ex:D08_P2 .
+
+ex:D08_S1 a owl:Thing ;
+    owl:sameAs ex:D08_S1 .
+
+ex:D08_S2 a owl:Thing ;
+    owl:sameAs ex:D08_S2 .
+
+ex:D08_home a owl:Thing,
+        ex:Dwelling ;
+    owl:sameAs ex:D08_home ;
+    ex:hasListing ex:D08 ;
+    ex:locatedIn ex:D08_building,
+        ex:DemoCity,
+        ex:DemoDistrict .
+
+ex:D08_source a owl:Thing ;
+    owl:sameAs ex:D08_source .
+
+ex:D09_M1 a owl:Thing ;
+    owl:sameAs ex:D09_M1 .
+
+ex:D09_M2 a owl:Thing ;
+    owl:sameAs ex:D09_M2 .
+
+ex:D09_P1 a owl:Thing ;
+    owl:sameAs ex:D09_P1 .
+
+ex:D09_P2 a owl:Thing ;
+    owl:sameAs ex:D09_P2 .
+
+ex:D09_S1 a owl:Thing ;
+    owl:sameAs ex:D09_S1 .
+
+ex:D09_S2 a owl:Thing ;
+    owl:sameAs ex:D09_S2 .
+
+ex:D09_home a owl:Thing,
+        ex:Dwelling ;
+    owl:sameAs ex:D09_home ;
+    ex:hasListing ex:D09 ;
+    ex:locatedIn ex:D09_building,
+        ex:DemoCity,
+        ex:DemoDistrict .
+
+ex:D09_source a owl:Thing ;
+    owl:sameAs ex:D09_source .
+
+ex:D10_M1 a owl:Thing ;
+    owl:sameAs ex:D10_M1 .
+
+ex:D10_M2 a owl:Thing ;
+    owl:sameAs ex:D10_M2 .
+
+ex:D10_P1 a owl:Thing ;
+    owl:sameAs ex:D10_P1 .
+
+ex:D10_P2 a owl:Thing ;
+    owl:sameAs ex:D10_P2 .
+
+ex:D10_S1 a owl:Thing ;
+    owl:sameAs ex:D10_S1 .
+
+ex:D10_S2 a owl:Thing ;
+    owl:sameAs ex:D10_S2 .
+
+ex:D10_home a owl:Thing,
+        ex:Dwelling ;
+    owl:sameAs ex:D10_home ;
+    ex:hasListing ex:D10 ;
+    ex:locatedIn ex:D10_building,
+        ex:DemoCity,
+        ex:DemoDistrict .
+
+ex:D10_source a owl:Thing ;
+    owl:sameAs ex:D10_source .
+
+ex:D11_M1 a owl:Thing ;
+    owl:sameAs ex:D11_M1 .
+
+ex:D11_M2 a owl:Thing ;
+    owl:sameAs ex:D11_M2 .
+
+ex:D11_P1 a owl:Thing ;
+    owl:sameAs ex:D11_P1 .
+
+ex:D11_P2 a owl:Thing ;
+    owl:sameAs ex:D11_P2 .
+
+ex:D11_S1 a owl:Thing ;
+    owl:sameAs ex:D11_S1 .
+
+ex:D11_S2 a owl:Thing ;
+    owl:sameAs ex:D11_S2 .
+
+ex:D11_home a owl:Thing,
+        ex:Dwelling ;
+    owl:sameAs ex:D11_home ;
+    ex:hasListing ex:D11 ;
+    ex:locatedIn ex:D11_building,
+        ex:DemoCity,
+        ex:DemoDistrict .
+
+ex:D11_source a owl:Thing ;
+    owl:sameAs ex:D11_source .
+
+ex:D12_M1 a owl:Thing ;
+    owl:sameAs ex:D12_M1 .
+
+ex:D12_M2 a owl:Thing ;
+    owl:sameAs ex:D12_M2 .
+
+ex:D12_P1 a owl:Thing ;
+    owl:sameAs ex:D12_P1 .
+
+ex:D12_P2 a owl:Thing ;
+    owl:sameAs ex:D12_P2 .
+
+ex:D12_S1 a owl:Thing ;
+    owl:sameAs ex:D12_S1 .
+
+ex:D12_S2 a owl:Thing ;
+    owl:sameAs ex:D12_S2 .
+
+ex:D12_home a owl:Thing,
+        ex:Dwelling ;
+    owl:sameAs ex:D12_home ;
+    ex:hasListing ex:D12 ;
+    ex:locatedIn ex:D12_building,
+        ex:DemoCity,
+        ex:DemoDistrict .
+
+ex:D12_source a owl:Thing ;
+    owl:sameAs ex:D12_source .
+
+ex:Haversine a owl:Thing ;
+    owl:sameAs ex:Haversine .
+
+ex:M1 a _:N69e9aed2d31b4b8081865dbbf44c9aec,
+        owl:Thing,
+        ex:Amenity ;
+    owl:sameAs ex:M1 .
+
+ex:M2 a _:N69e9aed2d31b4b8081865dbbf44c9aec,
+        owl:Thing,
+        ex:Amenity ;
+    owl:sameAs ex:M2 .
+
+ex:P1 a _:N69e9aed2d31b4b8081865dbbf44c9aec,
+        owl:Thing,
+        ex:Amenity ;
+    owl:sameAs ex:P1 .
+
+ex:P2 a _:N69e9aed2d31b4b8081865dbbf44c9aec,
+        owl:Thing,
+        ex:Amenity ;
+    owl:sameAs ex:P2 .
+
+ex:S1 a _:N69e9aed2d31b4b8081865dbbf44c9aec,
+        owl:Thing,
+        ex:Amenity ;
+    owl:sameAs ex:S1 .
+
+ex:S2 a _:N69e9aed2d31b4b8081865dbbf44c9aec,
+        owl:Thing,
+        ex:Amenity ;
+    owl:sameAs ex:S2 .
+
+ex:StudentWithPet a owl:Thing ;
+    owl:sameAs ex:StudentWithPet .
+
+"https://example.org/synthetic/D01"^^xsd:anyURI a xsd:anyURI ;
+    owl:sameAs "https://example.org/synthetic/D01"^^xsd:anyURI .
+
+"https://example.org/synthetic/D02"^^xsd:anyURI a xsd:anyURI ;
+    owl:sameAs "https://example.org/synthetic/D02"^^xsd:anyURI .
+
+"https://example.org/synthetic/D03"^^xsd:anyURI a xsd:anyURI ;
+    owl:sameAs "https://example.org/synthetic/D03"^^xsd:anyURI .
+
+"https://example.org/synthetic/D04"^^xsd:anyURI a xsd:anyURI ;
+    owl:sameAs "https://example.org/synthetic/D04"^^xsd:anyURI .
+
+"https://example.org/synthetic/D05"^^xsd:anyURI a xsd:anyURI ;
+    owl:sameAs "https://example.org/synthetic/D05"^^xsd:anyURI .
+
+"https://example.org/synthetic/D06"^^xsd:anyURI a xsd:anyURI ;
+    owl:sameAs "https://example.org/synthetic/D06"^^xsd:anyURI .
+
+"https://example.org/synthetic/D07"^^xsd:anyURI a xsd:anyURI ;
+    owl:sameAs "https://example.org/synthetic/D07"^^xsd:anyURI .
+
+"https://example.org/synthetic/D08"^^xsd:anyURI a xsd:anyURI ;
+    owl:sameAs "https://example.org/synthetic/D08"^^xsd:anyURI .
+
+"https://example.org/synthetic/D09"^^xsd:anyURI a xsd:anyURI ;
+    owl:sameAs "https://example.org/synthetic/D09"^^xsd:anyURI .
+
+"https://example.org/synthetic/D10"^^xsd:anyURI a xsd:anyURI ;
+    owl:sameAs "https://example.org/synthetic/D10"^^xsd:anyURI .
+
+"https://example.org/synthetic/D11"^^xsd:anyURI a xsd:anyURI ;
+    owl:sameAs "https://example.org/synthetic/D11"^^xsd:anyURI .
+
+"https://example.org/synthetic/D12"^^xsd:anyURI a xsd:anyURI ;
+    owl:sameAs "https://example.org/synthetic/D12"^^xsd:anyURI .
+
+false a xsd:boolean ;
+    owl:sameAs false .
+
+true a xsd:boolean ;
+    owl:sameAs true .
+
+"2026-10-22"^^xsd:date a xsd:date ;
+    owl:sameAs "2026-10-22"^^xsd:date .
+
+0.0 a xsd:decimal ;
+    owl:sameAs 0.0 .
+
+0.0 a xsd:decimal ;
+    owl:sameAs 0.0 .
+
+0 a xsd:decimal,
+        xsd:integer ;
+    owl:sameAs 0 .
+
+1 a xsd:decimal,
+        xsd:integer ;
+    owl:sameAs 1 .
+
+2 a xsd:decimal,
+        xsd:integer ;
+    owl:sameAs 2 .
+
+3 a xsd:decimal,
+        xsd:integer ;
+    owl:sameAs 3 .
+
+4 a xsd:decimal,
+        xsd:integer ;
+    owl:sameAs 4 .
+
+5 a xsd:decimal,
+        xsd:integer ;
+    owl:sameAs 5 .
+
+6 a xsd:decimal,
+        xsd:integer ;
+    owl:sameAs 6 .
+
+7 a xsd:decimal,
+        xsd:integer ;
+    owl:sameAs 7 .
+
+8 a xsd:decimal,
+        xsd:integer ;
+    owl:sameAs 8 .
+
+9 a xsd:decimal,
+        xsd:integer ;
+    owl:sameAs 9 .
+
+10 a xsd:decimal,
+        xsd:integer ;
+    owl:sameAs 10 .
+
+11 a xsd:decimal,
+        xsd:integer ;
+    owl:sameAs 11 .
+
+12 a xsd:decimal,
+        xsd:integer ;
+    owl:sameAs 12 .
+
+13 a xsd:decimal,
+        xsd:integer ;
+    owl:sameAs 13 .
+
+16 a xsd:decimal,
+        xsd:integer ;
+    owl:sameAs 16 .
+
+27.0 a xsd:decimal ;
+    owl:sameAs 27.0 .
+
+29.0 a xsd:decimal ;
+    owl:sameAs 29.0 .
+
+30.303 a xsd:decimal ;
+    owl:sameAs 30.303 .
+
+30.306 a xsd:decimal ;
+    owl:sameAs 30.306 .
+
+30.309 a xsd:decimal ;
+    owl:sameAs 30.309 .
+
+30.312 a xsd:decimal ;
+    owl:sameAs 30.312 .
+
+30.315 a xsd:decimal ;
+    owl:sameAs 30.315 .
+
+30.316 a xsd:decimal ;
+    owl:sameAs 30.316 .
+
+30.318 a xsd:decimal ;
+    owl:sameAs 30.318 .
+
+30.321 a xsd:decimal ;
+    owl:sameAs 30.321 .
+
+30.323 a xsd:decimal ;
+    owl:sameAs 30.323 .
+
+30.324 a xsd:decimal ;
+    owl:sameAs 30.324 .
+
+30.327 a xsd:decimal ;
+    owl:sameAs 30.327 .
+
+30.330000000000002 a xsd:decimal ;
+    owl:sameAs 30.330000000000002 .
+
+30.333 a xsd:decimal ;
+    owl:sameAs 30.333 .
+
+30.333000000000002 a xsd:decimal ;
+    owl:sameAs 30.333000000000002 .
+
+30.334 a xsd:decimal ;
+    owl:sameAs 30.334 .
+
+30.336000000000002 a xsd:decimal ;
+    owl:sameAs 30.336000000000002 .
+
+30.34 a xsd:decimal ;
+    owl:sameAs 30.34 .
+
+31.0 a xsd:decimal ;
+    owl:sameAs 31.0 .
+
+33.0 a xsd:decimal ;
+    owl:sameAs 33.0 .
+
+35.0 a xsd:decimal ;
+    owl:sameAs 35.0 .
+
+37.0 a xsd:decimal ;
+    owl:sameAs 37.0 .
+
+39.0 a xsd:decimal ;
+    owl:sameAs 39.0 .
+
+41.0 a xsd:decimal ;
+    owl:sameAs 41.0 .
+
+43.0 a xsd:decimal ;
+    owl:sameAs 43.0 .
+
+45.0 a xsd:decimal ;
+    owl:sameAs 45.0 .
+
+47.0 a xsd:decimal ;
+    owl:sameAs 47.0 .
+
+49.0 a xsd:decimal ;
+    owl:sameAs 49.0 .
+
+55.7 a xsd:decimal ;
+    owl:sameAs 55.7 .
+
+59.922000000000004 a xsd:decimal ;
+    owl:sameAs 59.922000000000004 .
+
+59.924 a xsd:decimal ;
+    owl:sameAs 59.924 .
+
+59.926 a xsd:decimal ;
+    owl:sameAs 59.926 .
+
+59.928 a xsd:decimal ;
+    owl:sameAs 59.928 .
+
+59.928000000000004 a xsd:decimal ;
+    owl:sameAs 59.928000000000004 .
+
+59.93 a xsd:decimal ;
+    owl:sameAs 59.93 .
+
+59.932 a xsd:decimal ;
+    owl:sameAs 59.932 .
+
+59.934000000000005 a xsd:decimal ;
+    owl:sameAs 59.934000000000005 .
+
+59.935 a xsd:decimal ;
+    owl:sameAs 59.935 .
+
+59.936 a xsd:decimal ;
+    owl:sameAs 59.936 .
+
+59.938 a xsd:decimal ;
+    owl:sameAs 59.938 .
+
+59.940000000000005 a xsd:decimal ;
+    owl:sameAs 59.940000000000005 .
+
+59.942 a xsd:decimal ;
+    owl:sameAs 59.942 .
+
+59.943 a xsd:decimal ;
+    owl:sameAs 59.943 .
+
+59.944 a xsd:decimal ;
+    owl:sameAs 59.944 .
+
+59.946 a xsd:decimal ;
+    owl:sameAs 59.946 .
+
+124.4 a xsd:decimal ;
+    owl:sameAs 124.4 .
+
+157.4 a xsd:decimal ;
+    owl:sameAs 157.4 .
+
+248.7 a xsd:decimal ;
+    owl:sameAs 248.7 .
+
+278.2 a xsd:decimal ;
+    owl:sameAs 278.2 .
+
+314.8 a xsd:decimal ;
+    owl:sameAs 314.8 .
+
+401.1 a xsd:decimal ;
+    owl:sameAs 401.1 .
+
+401.2 a xsd:decimal ;
+    owl:sameAs 401.2 .
+
+434.6 a xsd:decimal ;
+    owl:sameAs 434.6 .
+
+524.8 a xsd:decimal ;
+    owl:sameAs 524.8 .
+
+556.3 a xsd:decimal ;
+    owl:sameAs 556.3 .
+
+556.4 a xsd:decimal ;
+    owl:sameAs 556.4 .
+
+591.4 a xsd:decimal ;
+    owl:sameAs 591.4 .
+
+591.6 a xsd:decimal ;
+    owl:sameAs 591.6 .
+
+679.1 a xsd:decimal ;
+    owl:sameAs 679.1 .
+
+712.6 a xsd:decimal ;
+    owl:sameAs 712.6 .
+
+802.3 a xsd:decimal ;
+    owl:sameAs 802.3 .
+
+834.5 a xsd:decimal ;
+    owl:sameAs 834.5 .
+
+834.6 a xsd:decimal ;
+    owl:sameAs 834.6 .
+
+869.1 a xsd:decimal ;
+    owl:sameAs 869.1 .
+
+869.2 a xsd:decimal ;
+    owl:sameAs 869.2 .
+
+957.1 a xsd:decimal ;
+    owl:sameAs 957.1 .
+
+990.7 a xsd:decimal ;
+    owl:sameAs 990.7 .
+
+1000.0 a xsd:decimal ;
+    owl:sameAs 1000.0 .
+
+1080.2 a xsd:decimal ;
+    owl:sameAs 1080.2 .
+
+1112.7 a xsd:decimal ;
+    owl:sameAs 1112.7 .
+
+1112.8 a xsd:decimal ;
+    owl:sameAs 1112.8 .
+
+1147.0 a xsd:decimal ;
+    owl:sameAs 1147.0 .
+
+1147.2 a xsd:decimal ;
+    owl:sameAs 1147.2 .
+
+1235.2 a xsd:decimal ;
+    owl:sameAs 1235.2 .
+
+1235.3 a xsd:decimal ;
+    owl:sameAs 1235.3 .
+
+1268.8 a xsd:decimal ;
+    owl:sameAs 1268.8 .
+
+1358.2 a xsd:decimal ;
+    owl:sameAs 1358.2 .
+
+1390.9 a xsd:decimal ;
+    owl:sameAs 1390.9 .
+
+1391.0 a xsd:decimal ;
+    owl:sameAs 1391.0 .
+
+1425.0 a xsd:decimal ;
+    owl:sameAs 1425.0 .
+
+1513.4 a xsd:decimal ;
+    owl:sameAs 1513.4 .
+
+1547.0 a xsd:decimal ;
+    owl:sameAs 1547.0 .
+
+1636.2 a xsd:decimal ;
+    owl:sameAs 1636.2 .
+
+1669.1 a xsd:decimal ;
+    owl:sameAs 1669.1 .
+
+1703.1 a xsd:decimal ;
+    owl:sameAs 1703.1 .
+
+1791.6 a xsd:decimal ;
+    owl:sameAs 1791.6 .
+
+1825.2 a xsd:decimal ;
+    owl:sameAs 1825.2 .
+
+1914.3 a xsd:decimal ;
+    owl:sameAs 1914.3 .
+
+1947.3 a xsd:decimal ;
+    owl:sameAs 1947.3 .
+
+1981.2 a xsd:decimal ;
+    owl:sameAs 1981.2 .
+
+2069.8 a xsd:decimal ;
+    owl:sameAs 2069.8 .
+
+2225.4 a xsd:decimal ;
+    owl:sameAs 2225.4 .
+
+2225.5 a xsd:decimal ;
+    owl:sameAs 2225.5 .
+
+2259.3 a xsd:decimal ;
+    owl:sameAs 2259.3 .
+
+2347.9 a xsd:decimal ;
+    owl:sameAs 2347.9 .
+
+2503.7 a xsd:decimal ;
+    owl:sameAs 2503.7 .
+
+2537.5 a xsd:decimal ;
+    owl:sameAs 2537.5 .
+
+2626.2 a xsd:decimal ;
+    owl:sameAs 2626.2 .
+
+2781.9 a xsd:decimal ;
+    owl:sameAs 2781.9 .
+
+2815.6 a xsd:decimal ;
+    owl:sameAs 2815.6 .
+
+2904.4 a xsd:decimal ;
+    owl:sameAs 2904.4 .
+
+3093.8 a xsd:decimal ;
+    owl:sameAs 3093.8 .
+
+3372.0 a xsd:decimal ;
+    owl:sameAs 3372.0 .
+
+4000.0 a xsd:decimal ;
+    owl:sameAs 4000.0 .
+
+30000.0 a xsd:decimal ;
+    owl:sameAs 30000.0 .
+
+34000.0 a xsd:decimal ;
+    owl:sameAs 34000.0 .
+
+38000.0 a xsd:decimal ;
+    owl:sameAs 38000.0 .
+
+40000.0 a xsd:decimal ;
+    owl:sameAs 40000.0 .
+
+42000.0 a xsd:decimal ;
+    owl:sameAs 42000.0 .
+
+"1.1.0" owl:sameAs "1.1.0" .
+
+"long_term"^^xsd:string a xsd:string ;
+    owl:sameAs "long_term"^^xsd:string .
+
+"Учебный адрес D01"^^xsd:string a xsd:string ;
+    owl:sameAs "Учебный адрес D01"^^xsd:string .
+
+"Учебный адрес D02"^^xsd:string a xsd:string ;
+    owl:sameAs "Учебный адрес D02"^^xsd:string .
+
+"Учебный адрес D03"^^xsd:string a xsd:string ;
+    owl:sameAs "Учебный адрес D03"^^xsd:string .
+
+"Учебный адрес D04"^^xsd:string a xsd:string ;
+    owl:sameAs "Учебный адрес D04"^^xsd:string .
+
+"Учебный адрес D05"^^xsd:string a xsd:string ;
+    owl:sameAs "Учебный адрес D05"^^xsd:string .
+
+"Учебный адрес D06"^^xsd:string a xsd:string ;
+    owl:sameAs "Учебный адрес D06"^^xsd:string .
+
+"Учебный адрес D07"^^xsd:string a xsd:string ;
+    owl:sameAs "Учебный адрес D07"^^xsd:string .
+
+"Учебный адрес D08"^^xsd:string a xsd:string ;
+    owl:sameAs "Учебный адрес D08"^^xsd:string .
+
+"Учебный адрес D09"^^xsd:string a xsd:string ;
+    owl:sameAs "Учебный адрес D09"^^xsd:string .
+
+"Учебный адрес D10"^^xsd:string a xsd:string ;
+    owl:sameAs "Учебный адрес D10"^^xsd:string .
+
+"Учебный адрес D11"^^xsd:string a xsd:string ;
+    owl:sameAs "Учебный адрес D11"^^xsd:string .
+
+"Учебный адрес D12"^^xsd:string a xsd:string ;
+    owl:sameAs "Учебный адрес D12"^^xsd:string .
+
+"Адресный контейнер, в котором размещено жильё прямо или через цепочку locatedIn: здание, район или город. Жильё и объекты инфраструктуры в этот класс не входят."@ru owl:sameAs "Адресный контейнер, в котором размещено жильё прямо или через цепочку locatedIn: здание, район или город. Жильё и объекты инфраструктуры в этот класс не входят."@ru .
+
+"Город"@ru owl:sameAs "Город"@ru .
+
+"Жилая единица, предлагаемая в аренду снимком объявления через offers. В текущем проекте представлены целые квартиры; комнаты и отдельные дома могут быть добавлены при расширении модели."@ru owl:sameAs "Жилая единица, предлагаемая в аренду снимком объявления через offers. В текущем проекте представлены целые квартиры; комнаты и отдельные дома могут быть добавлены при расширении модели."@ru .
+
+"Жильё"@ru owl:sameAs "Жильё"@ru .
+
+"Запись источника"@ru owl:sameAs "Запись источника"@ru .
+
+"Зафиксированное на дату наблюдения предложение аренды одного жилья с ценой, условиями и ссылкой на запись источника; не является самим жильём."@ru owl:sameAs "Зафиксированное на дату наблюдения предложение аренды одного жилья с ценой, условиями и ссылкой на запись источника; не является самим жильём."@ru .
+
+"Здание"@ru owl:sameAs "Здание"@ru .
+
+"Измерение расстояния"@ru owl:sameAs "Измерение расстояния"@ru .
+
+"Квартира"@ru owl:sameAs "Квартира"@ru .
+
+"Место расположения"@ru owl:sameAs "Место расположения"@ru .
+
+"Метод измерения"@ru owl:sameAs "Метод измерения"@ru .
+
+"Набор явных требований арендатора к поиску: бюджет, город, радиус до метро и необходимость разрешения на животных. Не является человеком или объявлением."@ru owl:sameAs "Набор явных требований арендатора к поиску: бюджет, город, радиус до метро и необходимость разрешения на животных. Не является человеком или объявлением."@ru .
+
+"Населённый пункт, содержащий районы и являющийся верхним используемым уровнем адресной иерархии."@ru owl:sameAs "Населённый пункт, содержащий районы и являющийся верхним используемым уровнем адресной иерархии."@ru .
+
+"Объект инфраструктуры"@ru owl:sameAs "Объект инфраструктуры"@ru .
+
+"Объект инфраструктуры для отдыха на озеленённой территории. В текущей модели расстояние измеряется до репрезентативной точки, а не до входа или границы парка."@ru owl:sameAs "Объект инфраструктуры для отдыха на озеленённой территории. В текущей модели расстояние измеряется до репрезентативной точки, а не до входа или границы парка."@ru .
+
+"Объект обслуживания или отдыха, близость которого важна при подборе жилья. Является целью toAmenity и nearAmenity, а не адресным контейнером жилья. Объект обслуживания и вмещающее его здание моделируются отдельно."@ru owl:sameAs "Объект обслуживания или отдыха, близость которого важна при подборе жилья. Является целью toAmenity и nearAmenity, а не адресным контейнером жилья. Объект обслуживания и вмещающее его здание моделируются отдельно."@ru .
+
+"Объект розничного обслуживания для покупки продуктов и повседневных товаров. Обозначает магазин как объект обслуживания, а не его здание."@ru owl:sameAs "Объект розничного обслуживания для покупки продуктов и повседневных товаров. Обозначает магазин как объект обслуживания, а не его здание."@ru .
+
+"Объект транспортного обслуживания, предоставляющий доступ к метрополитену. В текущем наборе представлен одной репрезентативной точкой, а не всеми входами."@ru owl:sameAs "Объект транспортного обслуживания, предоставляющий доступ к метрополитену. В текущем наборе представлен одной репрезентативной точкой, а не всеми входами."@ru .
+
+"Описание способа получения численного расстояния, на которое ссылается usesMethod. Экземпляр Haversine обозначает расчёт по сферической модели Земли."@ru owl:sameAs "Описание способа получения численного расстояния, на которое ссылается usesMethod. Экземпляр Haversine обозначает расчёт по сферической модели Земли."@ru .
+
+"Отдельная жилая единица внутри здания, предлагаемая целиком в аренду; характеризуется площадью, числом комнат и этажом. Студия также является квартирой."@ru owl:sameAs "Отдельная жилая единица внутри здания, предлагаемая целиком в аренду; характеризуется площадью, числом комнат и этажом. Студия также является квартирой."@ru .
+
+"Парк"@ru owl:sameAs "Парк"@ru .
+
+"Профиль требований"@ru owl:sameAs "Профиль требований"@ru .
+
+"Район"@ru owl:sameAs "Район"@ru .
+
+"Результат измерения между одним жильём и одним объектом инфраструктуры, заданный числом метров, методом и датой расчёта. В текущем наборе используется точка здания жилья."@ru owl:sameAs "Результат измерения между одним жильём и одним объектом инфраструктуры, заданный числом метров, методом и датой расчёта. В текущем наборе используется точка здания жилья."@ru .
+
+"Снимок объявления"@ru owl:sameAs "Снимок объявления"@ru .
+
+"Станция метро"@ru owl:sameAs "Станция метро"@ru .
+
+"Супермаркет"@ru owl:sameAs "Супермаркет"@ru .
+
+"Территориальная адресная единица внутри города, в которую входит здание. Членство определяется уровнем адресной иерархии, а не близостью к жилью."@ru owl:sameAs "Территориальная адресная единица внутри города, в которую входит здание. Членство определяется уровнем адресной иерархии, а не близостью к жилью."@ru .
+
+"Указатель на исходную запись, из которой получены факты: URL реальной карточки либо явно учебный идентификатор источника. Используется как объект hasSource."@ru owl:sameAs "Указатель на исходную запись, из которой получены факты: URL реальной карточки либо явно учебный идентификатор источника. Используется как объект hasSource."@ru .
+
+"Учебная точка парка А"@ru owl:sameAs "Учебная точка парка А"@ru .
+
+"Учебная точка парка Б"@ru owl:sameAs "Учебная точка парка Б"@ru .
+
+"Учебное метро А"@ru owl:sameAs "Учебное метро А"@ru .
+
+"Учебное метро Б"@ru owl:sameAs "Учебное метро Б"@ru .
+
+"Учебный магазин А"@ru owl:sameAs "Учебный магазин А"@ru .
+
+"Учебный магазин Б"@ru owl:sameAs "Учебный магазин Б"@ru .
+
+"Физическая постройка, содержащая жильё, с адресом и этажностью. Её точка WGS84 служит приближённой точкой расположения находящегося в ней жилья."@ru owl:sameAs "Физическая постройка, содержащая жильё, с адресом и этажностью. Её точка WGS84 служит приближённой точкой расположения находящегося в ней жилья."@ru .
+
+"адрес"@ru owl:sameAs "адрес"@ru .
+
+"аренда, руб./месяц"@ru owl:sameAs "аренда, руб./месяц"@ru .
+
+"дата вычисления"@ru owl:sameAs "дата вычисления"@ru .
+
+"дата наблюдения"@ru owl:sameAs "дата наблюдения"@ru .
+
+"долгота, WGS84"@ru owl:sameAs "долгота, WGS84"@ru .
+
+"дополнительные КУ, руб./месяц"@ru owl:sameAs "дополнительные КУ, руб./месяц"@ru .
+
+"животные разрешены"@ru owl:sameAs "животные разрешены"@ru .
+
+"залог, руб."@ru owl:sameAs "залог, руб."@ru .
+
+"замечание к качеству"@ru owl:sameAs "замечание к качеству"@ru .
+
+"имеет объявление"@ru owl:sameAs "имеет объявление"@ru .
+
+"источник записи"@ru owl:sameAs "источник записи"@ru .
+
+"категория срока аренды"@ru owl:sameAs "категория срока аренды"@ru .
+
+"лимит арендной платы"@ru owl:sameAs "лимит арендной платы"@ru .
+
+"метод измерения"@ru owl:sameAs "метод измерения"@ru .
+
+"минимальный срок, месяцев"@ru owl:sameAs "минимальный срок, месяцев"@ru .
+
+"находится в городе"@ru owl:sameAs "находится в городе"@ru .
+
+"находится в здании"@ru owl:sameAs "находится в здании"@ru .
+
+"находится в районе"@ru owl:sameAs "находится в районе"@ru .
+
+"начало измерения"@ru owl:sameAs "начало измерения"@ru .
+
+"не далее 1000 м по прямой"@ru owl:sameAs "не далее 1000 м по прямой"@ru .
+
+"нужно разрешение на животных"@ru owl:sameAs "нужно разрешение на животных"@ru .
+
+"площадь, м²"@ru owl:sameAs "площадь, м²"@ru .
+
+"порог расстояния до метро"@ru owl:sameAs "порог расстояния до метро"@ru .
+
+"предлагает жильё"@ru owl:sameAs "предлагает жильё"@ru .
+
+"предпочтительный город"@ru owl:sameAs "предпочтительный город"@ru .
+
+"разовая комиссия, руб."@ru owl:sameAs "разовая комиссия, руб."@ru .
+
+"расположено в"@ru owl:sameAs "расположено в"@ru .
+
+"расстояние, м"@ru owl:sameAs "расстояние, м"@ru .
+
+"синтетические данные"@ru owl:sameAs "синтетические данные"@ru .
+
+"ссылка на источник"@ru owl:sameAs "ссылка на источник"@ru .
+
+"цель измерения"@ru owl:sameAs "цель измерения"@ru .
+
+"число комнат, студия = 0"@ru owl:sameAs "число комнат, студия = 0"@ru .
+
+"широта, WGS84"@ru owl:sameAs "широта, WGS84"@ru .
+
+"этаж"@ru owl:sameAs "этаж"@ru .
+
+"этажей в доме"@ru owl:sameAs "этажей в доме"@ru .
+
+xsd:date a rdfs:Datatype ;
+    owl:sameAs xsd:date .
+
+ex:D01 a owl:Thing ;
+    owl:sameAs ex:D01 .
+
+ex:D01_building a _:N69e9aed2d31b4b8081865dbbf44c9aec,
+        owl:Thing,
+        ex:Place ;
+    owl:sameAs ex:D01_building ;
+    ex:locatedIn ex:DemoCity,
+        ex:DemoDistrict .
+
+ex:D02 a owl:Thing ;
+    owl:sameAs ex:D02 .
+
+ex:D02_building a _:N69e9aed2d31b4b8081865dbbf44c9aec,
+        owl:Thing,
+        ex:Place ;
+    owl:sameAs ex:D02_building ;
+    ex:locatedIn ex:DemoCity,
+        ex:DemoDistrict .
+
+ex:D03 a owl:Thing ;
+    owl:sameAs ex:D03 .
+
+ex:D03_building a _:N69e9aed2d31b4b8081865dbbf44c9aec,
+        owl:Thing,
+        ex:Place ;
+    owl:sameAs ex:D03_building ;
+    ex:locatedIn ex:DemoCity,
+        ex:DemoDistrict .
+
+ex:D04 a owl:Thing ;
+    owl:sameAs ex:D04 .
+
+ex:D04_building a _:N69e9aed2d31b4b8081865dbbf44c9aec,
+        owl:Thing,
+        ex:Place ;
+    owl:sameAs ex:D04_building ;
+    ex:locatedIn ex:DemoCity,
+        ex:DemoDistrict .
+
+ex:D05 a owl:Thing ;
+    owl:sameAs ex:D05 .
+
+ex:D05_building a _:N69e9aed2d31b4b8081865dbbf44c9aec,
+        owl:Thing,
+        ex:Place ;
+    owl:sameAs ex:D05_building ;
+    ex:locatedIn ex:DemoCity,
+        ex:DemoDistrict .
+
+ex:D06 a owl:Thing ;
+    owl:sameAs ex:D06 .
+
+ex:D06_building a _:N69e9aed2d31b4b8081865dbbf44c9aec,
+        owl:Thing,
+        ex:Place ;
+    owl:sameAs ex:D06_building ;
+    ex:locatedIn ex:DemoCity,
+        ex:DemoDistrict .
+
+ex:D07 a owl:Thing ;
+    owl:sameAs ex:D07 .
+
+ex:D07_building a _:N69e9aed2d31b4b8081865dbbf44c9aec,
+        owl:Thing,
+        ex:Place ;
+    owl:sameAs ex:D07_building ;
+    ex:locatedIn ex:DemoCity,
+        ex:DemoDistrict .
+
+ex:D08 a owl:Thing ;
+    owl:sameAs ex:D08 .
+
+ex:D08_building a _:N69e9aed2d31b4b8081865dbbf44c9aec,
+        owl:Thing,
+        ex:Place ;
+    owl:sameAs ex:D08_building ;
+    ex:locatedIn ex:DemoCity,
+        ex:DemoDistrict .
+
+ex:D09 a owl:Thing ;
+    owl:sameAs ex:D09 .
+
+ex:D09_building a _:N69e9aed2d31b4b8081865dbbf44c9aec,
+        owl:Thing,
+        ex:Place ;
+    owl:sameAs ex:D09_building ;
+    ex:locatedIn ex:DemoCity,
+        ex:DemoDistrict .
+
+ex:D10 a owl:Thing ;
+    owl:sameAs ex:D10 .
+
+ex:D10_building a _:N69e9aed2d31b4b8081865dbbf44c9aec,
+        owl:Thing,
+        ex:Place ;
+    owl:sameAs ex:D10_building ;
+    ex:locatedIn ex:DemoCity,
+        ex:DemoDistrict .
+
+ex:D11 a owl:Thing ;
+    owl:sameAs ex:D11 .
+
+ex:D11_building a _:N69e9aed2d31b4b8081865dbbf44c9aec,
+        owl:Thing,
+        ex:Place ;
+    owl:sameAs ex:D11_building ;
+    ex:locatedIn ex:DemoCity,
+        ex:DemoDistrict .
+
+ex:D12 a owl:Thing ;
+    owl:sameAs ex:D12 .
+
+ex:D12_building a _:N69e9aed2d31b4b8081865dbbf44c9aec,
+        owl:Thing,
+        ex:Place ;
+    owl:sameAs ex:D12_building ;
+    ex:locatedIn ex:DemoCity,
+        ex:DemoDistrict .
+
+owl:Class owl:sameAs owl:Class .
+
+owl:Nothing a owl:Class ;
+    rdfs:subClassOf _:N69e9aed2d31b4b8081865dbbf44c9aec,
+        owl:Nothing,
+        owl:Thing,
+        ex:Amenity,
+        ex:Apartment,
+        ex:Building,
+        ex:City,
+        ex:DistanceMeasurement,
+        ex:District,
+        ex:Dwelling,
+        ex:ListingSnapshot,
+        ex:MeasurementMethod,
+        ex:MetroStation,
+        ex:Park,
+        ex:Place,
+        ex:RenterProfile,
+        ex:SourceRecord,
+        ex:Supermarket ;
+    owl:equivalentClass owl:Nothing ;
+    owl:sameAs owl:Nothing .
+
+ex:address rdfs:domain _:N69e9aed2d31b4b8081865dbbf44c9aec,
+        owl:Thing,
+        ex:Place ;
+    rdfs:subPropertyOf ex:address ;
+    owl:equivalentProperty ex:address ;
+    owl:sameAs ex:address .
+
+ex:areaM2 rdfs:domain owl:Thing ;
+    rdfs:subPropertyOf ex:areaM2 ;
+    owl:equivalentProperty ex:areaM2 ;
+    owl:sameAs ex:areaM2 .
+
+ex:calculatedOn rdfs:domain owl:Thing ;
+    rdfs:subPropertyOf ex:calculatedOn ;
+    owl:equivalentProperty ex:calculatedOn ;
+    owl:sameAs ex:calculatedOn .
+
+ex:commissionRub rdfs:domain owl:Thing ;
+    rdfs:subPropertyOf ex:commissionRub ;
+    owl:equivalentProperty ex:commissionRub ;
+    owl:sameAs ex:commissionRub .
+
+ex:depositRub rdfs:domain owl:Thing ;
+    rdfs:subPropertyOf ex:depositRub ;
+    owl:equivalentProperty ex:depositRub ;
+    owl:sameAs ex:depositRub .
+
+ex:distanceM rdfs:domain owl:Thing ;
+    rdfs:subPropertyOf ex:distanceM ;
+    owl:equivalentProperty ex:distanceM ;
+    owl:sameAs ex:distanceM .
+
+ex:floor rdfs:domain owl:Thing ;
+    rdfs:subPropertyOf ex:floor ;
+    owl:equivalentProperty ex:floor ;
+    owl:sameAs ex:floor .
+
+ex:floorsTotal rdfs:domain _:N69e9aed2d31b4b8081865dbbf44c9aec,
+        owl:Thing,
+        ex:Place ;
+    rdfs:subPropertyOf ex:floorsTotal ;
+    owl:equivalentProperty ex:floorsTotal ;
+    owl:sameAs ex:floorsTotal .
+
+ex:fromDwelling rdfs:domain owl:Thing ;
+    rdfs:range owl:Thing ;
+    rdfs:subPropertyOf ex:fromDwelling ;
+    owl:equivalentProperty ex:fromDwelling ;
+    owl:sameAs ex:fromDwelling .
+
+ex:hasListing rdfs:domain owl:Thing ;
+    rdfs:range owl:Thing ;
+    rdfs:subPropertyOf ex:hasListing ;
+    owl:equivalentProperty ex:hasListing ;
+    owl:sameAs ex:hasListing .
+
+ex:hasSource rdfs:range owl:Thing ;
+    rdfs:subPropertyOf ex:hasSource ;
+    owl:equivalentProperty ex:hasSource ;
+    owl:sameAs ex:hasSource .
+
+ex:inBuilding rdfs:domain owl:Thing ;
+    rdfs:range _:N69e9aed2d31b4b8081865dbbf44c9aec,
+        owl:Thing,
+        ex:Place ;
+    rdfs:subPropertyOf ex:inBuilding ;
+    owl:equivalentProperty ex:inBuilding ;
+    owl:sameAs ex:inBuilding .
+
+ex:inCity rdfs:domain owl:Thing,
+        ex:Place ;
+    rdfs:range owl:Thing,
+        ex:Place ;
+    rdfs:subPropertyOf ex:inCity ;
+    owl:equivalentProperty ex:inCity ;
+    owl:sameAs ex:inCity .
+
+ex:inDistrict rdfs:domain _:N69e9aed2d31b4b8081865dbbf44c9aec,
+        owl:Thing,
+        ex:Place ;
+    rdfs:range owl:Thing,
+        ex:Place ;
+    rdfs:subPropertyOf ex:inDistrict ;
+    owl:equivalentProperty ex:inDistrict ;
+    owl:sameAs ex:inDistrict .
+
+ex:isSynthetic rdfs:subPropertyOf ex:isSynthetic ;
+    owl:equivalentProperty ex:isSynthetic ;
+    owl:sameAs ex:isSynthetic .
+
+ex:latitude rdfs:domain owl:Thing ;
+    rdfs:subPropertyOf ex:latitude ;
+    owl:equivalentProperty ex:latitude ;
+    owl:sameAs ex:latitude .
+
+ex:locatedIn rdfs:range owl:Thing ;
+    rdfs:subPropertyOf ex:locatedIn ;
+    owl:equivalentProperty ex:locatedIn ;
+    owl:sameAs ex:locatedIn .
+
+ex:longitude rdfs:domain owl:Thing ;
+    rdfs:subPropertyOf ex:longitude ;
+    owl:equivalentProperty ex:longitude ;
+    owl:sameAs ex:longitude .
+
+ex:maxMetroDistanceM rdfs:domain owl:Thing ;
+    rdfs:subPropertyOf ex:maxMetroDistanceM ;
+    owl:equivalentProperty ex:maxMetroDistanceM ;
+    owl:sameAs ex:maxMetroDistanceM .
+
+ex:maxRentRubMonth rdfs:domain owl:Thing ;
+    rdfs:subPropertyOf ex:maxRentRubMonth ;
+    owl:equivalentProperty ex:maxRentRubMonth ;
+    owl:sameAs ex:maxRentRubMonth .
+
+ex:minMonths rdfs:domain owl:Thing ;
+    rdfs:subPropertyOf ex:minMonths ;
+    owl:equivalentProperty ex:minMonths ;
+    owl:sameAs ex:minMonths .
+
+ex:nearAmenity rdfs:domain owl:Thing ;
+    rdfs:range _:N69e9aed2d31b4b8081865dbbf44c9aec,
+        owl:Thing ;
+    rdfs:subPropertyOf ex:nearAmenity ;
+    owl:equivalentProperty ex:nearAmenity ;
+    owl:sameAs ex:nearAmenity .
+
+ex:observedOn rdfs:domain owl:Thing ;
+    rdfs:subPropertyOf ex:observedOn ;
+    owl:equivalentProperty ex:observedOn ;
+    owl:sameAs ex:observedOn .
+
+ex:offers rdfs:domain owl:Thing ;
+    rdfs:range owl:Thing ;
+    rdfs:subPropertyOf ex:offers ;
+    owl:equivalentProperty ex:offers ;
+    owl:sameAs ex:offers .
+
+ex:petsAllowed rdfs:domain owl:Thing ;
+    rdfs:subPropertyOf ex:petsAllowed ;
+    owl:equivalentProperty ex:petsAllowed ;
+    owl:sameAs ex:petsAllowed .
+
+ex:preferredCity rdfs:domain owl:Thing ;
+    rdfs:range owl:Thing,
+        ex:Place ;
+    rdfs:subPropertyOf ex:preferredCity ;
+    owl:equivalentProperty ex:preferredCity ;
+    owl:sameAs ex:preferredCity .
+
+ex:qualityNote rdfs:subPropertyOf ex:qualityNote ;
+    owl:equivalentProperty ex:qualityNote ;
+    owl:sameAs ex:qualityNote .
+
+ex:rentRubMonth rdfs:domain owl:Thing ;
+    rdfs:subPropertyOf ex:rentRubMonth ;
+    owl:equivalentProperty ex:rentRubMonth ;
+    owl:sameAs ex:rentRubMonth .
+
+ex:requiresPets rdfs:domain owl:Thing ;
+    rdfs:subPropertyOf ex:requiresPets ;
+    owl:equivalentProperty ex:requiresPets ;
+    owl:sameAs ex:requiresPets .
+
+ex:rooms rdfs:domain owl:Thing ;
+    rdfs:subPropertyOf ex:rooms ;
+    owl:equivalentProperty ex:rooms ;
+    owl:sameAs ex:rooms .
+
+ex:sourceUrl rdfs:domain owl:Thing ;
+    rdfs:subPropertyOf ex:sourceUrl ;
+    owl:equivalentProperty ex:sourceUrl ;
+    owl:sameAs ex:sourceUrl .
+
+ex:term rdfs:domain owl:Thing ;
+    rdfs:subPropertyOf ex:term ;
+    owl:equivalentProperty ex:term ;
+    owl:sameAs ex:term .
+
+ex:toAmenity rdfs:domain owl:Thing ;
+    rdfs:range _:N69e9aed2d31b4b8081865dbbf44c9aec,
+        owl:Thing ;
+    rdfs:subPropertyOf ex:toAmenity ;
+    owl:equivalentProperty ex:toAmenity ;
+    owl:sameAs ex:toAmenity .
+
+ex:usesMethod rdfs:domain owl:Thing ;
+    rdfs:range owl:Thing ;
+    rdfs:subPropertyOf ex:usesMethod ;
+    owl:equivalentProperty ex:usesMethod ;
+    owl:sameAs ex:usesMethod .
+
+ex:utilitiesRubMonth rdfs:domain owl:Thing ;
+    rdfs:subPropertyOf ex:utilitiesRubMonth ;
+    owl:equivalentProperty ex:utilitiesRubMonth ;
+    owl:sameAs ex:utilitiesRubMonth .
+
+xsd:boolean a rdfs:Datatype ;
+    owl:disjointWith xsd:decimal,
+        xsd:string ;
+    owl:sameAs xsd:boolean .
+
+ex:Apartment rdfs:subClassOf owl:Thing,
+        ex:Apartment ;
+    owl:equivalentClass ex:Apartment ;
+    owl:sameAs ex:Apartment .
+
+ex:Building rdfs:subClassOf _:N69e9aed2d31b4b8081865dbbf44c9aec,
+        owl:Thing,
+        ex:Building ;
+    owl:equivalentClass ex:Building ;
+    owl:sameAs ex:Building .
+
+ex:City rdfs:subClassOf owl:Thing,
+        ex:City ;
+    owl:equivalentClass ex:City ;
+    owl:sameAs ex:City .
+
+ex:DistanceMeasurement rdfs:subClassOf owl:Thing,
+        ex:DistanceMeasurement ;
+    owl:equivalentClass ex:DistanceMeasurement ;
+    owl:sameAs ex:DistanceMeasurement .
+
+ex:District rdfs:subClassOf owl:Thing,
+        ex:District ;
+    owl:equivalentClass ex:District ;
+    owl:sameAs ex:District .
+
+ex:ListingSnapshot rdfs:subClassOf owl:Thing,
+        ex:ListingSnapshot ;
+    owl:equivalentClass ex:ListingSnapshot ;
+    owl:sameAs ex:ListingSnapshot .
+
+ex:MeasurementMethod rdfs:subClassOf owl:Thing,
+        ex:MeasurementMethod ;
+    owl:equivalentClass ex:MeasurementMethod ;
+    owl:sameAs ex:MeasurementMethod .
+
+ex:MetroStation rdfs:subClassOf _:N69e9aed2d31b4b8081865dbbf44c9aec,
+        owl:Thing,
+        ex:MetroStation ;
+    owl:equivalentClass ex:MetroStation ;
+    owl:sameAs ex:MetroStation .
+
+ex:Park rdfs:subClassOf _:N69e9aed2d31b4b8081865dbbf44c9aec,
+        owl:Thing,
+        ex:Park ;
+    owl:equivalentClass ex:Park ;
+    owl:sameAs ex:Park .
+
+ex:RenterProfile rdfs:subClassOf owl:Thing,
+        ex:RenterProfile ;
+    owl:equivalentClass ex:RenterProfile ;
+    owl:sameAs ex:RenterProfile .
+
+ex:SourceRecord rdfs:subClassOf owl:Thing,
+        ex:SourceRecord ;
+    owl:equivalentClass ex:SourceRecord ;
+    owl:sameAs ex:SourceRecord .
+
+ex:Supermarket rdfs:subClassOf _:N69e9aed2d31b4b8081865dbbf44c9aec,
+        owl:Thing,
+        ex:Supermarket ;
+    owl:equivalentClass ex:Supermarket ;
+    owl:sameAs ex:Supermarket .
+
+owl:AnnotationProperty owl:sameAs owl:AnnotationProperty .
+
+ex:Amenity rdfs:subClassOf _:N69e9aed2d31b4b8081865dbbf44c9aec,
+        owl:Thing,
+        ex:Amenity ;
+    owl:equivalentClass ex:Amenity ;
+    owl:sameAs ex:Amenity .
+
+xsd:anyURI a rdfs:Datatype ;
+    owl:disjointWith xsd:boolean,
+        xsd:decimal,
+        xsd:string ;
+    owl:sameAs xsd:anyURI .
+
+xsd:integer a rdfs:Datatype ;
+    owl:sameAs xsd:integer .
+
+ex:Dwelling rdfs:subClassOf owl:Thing,
+        ex:Dwelling ;
+    owl:equivalentClass ex:Dwelling ;
+    owl:sameAs ex:Dwelling .
+
+xsd:string a rdfs:Datatype ;
+    owl:sameAs xsd:string .
+
+ex:DemoDistrict a owl:Thing,
+        ex:Place ;
+    owl:sameAs ex:DemoDistrict ;
+    ex:locatedIn ex:DemoCity .
+
+ex:DemoCity a owl:Thing,
+        ex:Place ;
+    owl:sameAs ex:DemoCity .
+
+ex:Place rdfs:subClassOf owl:Thing,
+        ex:Place ;
+    owl:equivalentClass ex:Place ;
+    owl:sameAs ex:Place .
+
+rdfs:Datatype owl:sameAs rdfs:Datatype .
+
+xsd:decimal a rdfs:Datatype ;
+    owl:disjointWith xsd:string ;
+    owl:sameAs xsd:decimal .
+
+owl:Thing a owl:Class ;
+    rdfs:subClassOf owl:Thing ;
+    owl:equivalentClass owl:Thing ;
+    owl:sameAs owl:Thing .
+
+_:N06d9e128484a47d2838402d220b1b538 owl:sameAs _:N06d9e128484a47d2838402d220b1b538 .
+
+_:N8e5841e6c7a8430cbc796b270f7d685b owl:sameAs _:N8e5841e6c7a8430cbc796b270f7d685b .
+
+_:N69e9aed2d31b4b8081865dbbf44c9aec rdfs:subClassOf _:N69e9aed2d31b4b8081865dbbf44c9aec,
+        owl:Thing ;
+    owl:equivalentClass _:N69e9aed2d31b4b8081865dbbf44c9aec ;
+    owl:sameAs _:N69e9aed2d31b4b8081865dbbf44c9aec .
+

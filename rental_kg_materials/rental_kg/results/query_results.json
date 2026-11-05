@@ -1,0 +1,166 @@
+{
+  "demo_inferred_city": [
+    {
+      "home": "https://example.org/rental-kg#D01_home"
+    },
+    {
+      "home": "https://example.org/rental-kg#D02_home"
+    },
+    {
+      "home": "https://example.org/rental-kg#D03_home"
+    },
+    {
+      "home": "https://example.org/rental-kg#D04_home"
+    },
+    {
+      "home": "https://example.org/rental-kg#D05_home"
+    },
+    {
+      "home": "https://example.org/rental-kg#D06_home"
+    },
+    {
+      "home": "https://example.org/rental-kg#D07_home"
+    },
+    {
+      "home": "https://example.org/rental-kg#D08_home"
+    },
+    {
+      "home": "https://example.org/rental-kg#D09_home"
+    },
+    {
+      "home": "https://example.org/rental-kg#D10_home"
+    },
+    {
+      "home": "https://example.org/rental-kg#D11_home"
+    },
+    {
+      "home": "https://example.org/rental-kg#D12_home"
+    }
+  ],
+  "demo_missing_pets": [
+    {
+      "listing": "https://example.org/rental-kg#D02"
+    },
+    {
+      "listing": "https://example.org/rental-kg#D05"
+    },
+    {
+      "listing": "https://example.org/rental-kg#D08"
+    },
+    {
+      "listing": "https://example.org/rental-kg#D11"
+    }
+  ],
+  "demo_pet_budget": [
+    {
+      "listing": "https://example.org/rental-kg#D12",
+      "rent": "30000"
+    },
+    {
+      "listing": "https://example.org/rental-kg#D09",
+      "rent": "34000"
+    },
+    {
+      "listing": "https://example.org/rental-kg#D06",
+      "rent": "38000"
+    }
+  ],
+  "demo_shop_park": [
+    {
+      "listing": "https://example.org/rental-kg#D04"
+    },
+    {
+      "listing": "https://example.org/rental-kg#D05"
+    },
+    {
+      "listing": "https://example.org/rental-kg#D06"
+    },
+    {
+      "listing": "https://example.org/rental-kg#D07"
+    },
+    {
+      "listing": "https://example.org/rental-kg#D09"
+    },
+    {
+      "listing": "https://example.org/rental-kg#D10"
+    },
+    {
+      "listing": "https://example.org/rental-kg#D11"
+    },
+    {
+      "listing": "https://example.org/rental-kg#D12"
+    }
+  ],
+  "real_budget": [
+    {
+      "listing": "https://example.org/rental-kg#R02",
+      "rent": "33500"
+    }
+  ],
+  "real_initial_payment": [
+    {
+      "listing": "https://example.org/rental-kg#R02",
+      "knownInitial": "33500"
+    },
+    {
+      "listing": "https://example.org/rental-kg#R04",
+      "knownInitial": "175000"
+    },
+    {
+      "listing": "https://example.org/rental-kg#R05",
+      "knownInitial": "120000"
+    },
+    {
+      "listing": "https://example.org/rental-kg#R06",
+      "knownInitial": "112500"
+    }
+  ],
+  "real_sources": [
+    {
+      "listing": "https://example.org/rental-kg#R01",
+      "observedOn": "2026-10-22",
+      "sourceUrl": "https://realty.yandex.ru/offer/5227535735060667195/"
+    },
+    {
+      "listing": "https://example.org/rental-kg#R02",
+      "observedOn": "2026-10-22",
+      "sourceUrl": "https://realty.yandex.ru/offer/5467258361881462548/"
+    },
+    {
+      "listing": "https://example.org/rental-kg#R03",
+      "observedOn": "2026-10-22",
+      "sourceUrl": "https://realty.yandex.ru/offer/4744575448774797879/"
+    },
+    {
+      "listing": "https://example.org/rental-kg#R04",
+      "observedOn": "2026-10-22",
+      "sourceUrl": "https://realty.yandex.ru/offer/1544554545513061376/"
+    },
+    {
+      "listing": "https://example.org/rental-kg#R05",
+      "observedOn": "2026-10-22",
+      "sourceUrl": "https://realty.yandex.ru/offer/8162702168070170624/"
+    },
+    {
+      "listing": "https://example.org/rental-kg#R06",
+      "observedOn": "2026-10-22",
+      "sourceUrl": "https://realty.yandex.ru/offer/8560687234450187520/"
+    }
+  ],
+  "real_space_floor": [
+    {
+      "listing": "https://example.org/rental-kg#R01",
+      "area": "44.5",
+      "rooms": "2",
+      "floor": "7",
+      "floorsTotal": "20"
+    },
+    {
+      "listing": "https://example.org/rental-kg#R04",
+      "area": "54.7",
+      "rooms": "2",
+      "floor": "1",
+      "floorsTotal": "5"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+PREFIX ex: <https://example.org/rental-kg#>
+SELECT DISTINCT ?listing WHERE {
+ ?listing a ex:ListingSnapshot; ex:offers ?home.
+ ?shopMeasurement ex:fromDwelling ?home; ex:toAmenity ?shop;
+   ex:usesMethod ex:Haversine; ex:distanceM ?shopDistance.
+ ?shop a ex:Supermarket.
+ ?parkMeasurement ex:fromDwelling ?home; ex:toAmenity ?park;
+   ex:usesMethod ex:Haversine; ex:distanceM ?parkDistance.
+ ?park a ex:Park.
+ FILTER(?shopDistance <= 700 && ?parkDistance <= 1000)
+} ORDER BY ?listing

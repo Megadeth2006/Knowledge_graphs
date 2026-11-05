@@ -1,0 +1,1060 @@
+@prefix ex: <https://example.org/rental-kg#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:D01 a ex:ListingSnapshot ;
+    ex:commissionRub 0.0 ;
+    ex:depositRub 30000.0 ;
+    ex:hasSource ex:D01_source ;
+    ex:isSynthetic true ;
+    ex:observedOn "2026-10-22"^^xsd:date ;
+    ex:offers ex:D01_home ;
+    ex:petsAllowed false ;
+    ex:rentRubMonth 34000.0 ;
+    ex:term "long_term"^^xsd:string ;
+    ex:utilitiesRubMonth 4000.0 .
+
+ex:D01_M1 a ex:DistanceMeasurement ;
+    ex:calculatedOn "2026-10-22"^^xsd:date ;
+    ex:distanceM 834.6 ;
+    ex:fromDwelling ex:D01_home ;
+    ex:isSynthetic true ;
+    ex:toAmenity ex:M1 ;
+    ex:usesMethod ex:Haversine .
+
+ex:D01_M2 a ex:DistanceMeasurement ;
+    ex:calculatedOn "2026-10-22"^^xsd:date ;
+    ex:distanceM 2781.9 ;
+    ex:fromDwelling ex:D01_home ;
+    ex:isSynthetic true ;
+    ex:toAmenity ex:M2 ;
+    ex:usesMethod ex:Haversine .
+
+ex:D01_P1 a ex:DistanceMeasurement ;
+    ex:calculatedOn "2026-10-22"^^xsd:date ;
+    ex:distanceM 1825.2 ;
+    ex:fromDwelling ex:D01_home ;
+    ex:isSynthetic true ;
+    ex:toAmenity ex:P1 ;
+    ex:usesMethod ex:Haversine .
+
+ex:D01_P2 a ex:DistanceMeasurement ;
+    ex:calculatedOn "2026-10-22"^^xsd:date ;
+    ex:distanceM 3372.0 ;
+    ex:fromDwelling ex:D01_home ;
+    ex:isSynthetic true ;
+    ex:toAmenity ex:P2 ;
+    ex:usesMethod ex:Haversine .
+
+ex:D01_S1 a ex:DistanceMeasurement ;
+    ex:calculatedOn "2026-10-22"^^xsd:date ;
+    ex:distanceM 1147.2 ;
+    ex:fromDwelling ex:D01_home ;
+    ex:isSynthetic true ;
+    ex:toAmenity ex:S1 ;
+    ex:usesMethod ex:Haversine .
+
+ex:D01_S2 a ex:DistanceMeasurement ;
+    ex:calculatedOn "2026-10-22"^^xsd:date ;
+    ex:distanceM 2904.4 ;
+    ex:fromDwelling ex:D01_home ;
+    ex:isSynthetic true ;
+    ex:toAmenity ex:S2 ;
+    ex:usesMethod ex:Haversine .
+
+ex:D02 a ex:ListingSnapshot ;
+    ex:commissionRub 0.0 ;
+    ex:depositRub 30000.0 ;
+    ex:hasSource ex:D02_source ;
+    ex:isSynthetic true ;
+    ex:observedOn "2026-10-22"^^xsd:date ;
+    ex:offers ex:D02_home ;
+    ex:rentRubMonth 38000.0 ;
+    ex:term "long_term"^^xsd:string ;
+    ex:utilitiesRubMonth 4000.0 .
+
+ex:D02_M1 a ex:DistanceMeasurement ;
+    ex:calculatedOn "2026-10-22"^^xsd:date ;
+    ex:distanceM 556.4 ;
+    ex:fromDwelling ex:D02_home ;
+    ex:isSynthetic true ;
+    ex:toAmenity ex:M1 ;
+    ex:usesMethod ex:Haversine .
+
+ex:D02_M2 a ex:DistanceMeasurement ;
+    ex:calculatedOn "2026-10-22"^^xsd:date ;
+    ex:distanceM 2503.7 ;
+    ex:fromDwelling ex:D02_home ;
+    ex:isSynthetic true ;
+    ex:toAmenity ex:M2 ;
+    ex:usesMethod ex:Haversine .
+
+ex:D02_P1 a ex:DistanceMeasurement ;
+    ex:calculatedOn "2026-10-22"^^xsd:date ;
+    ex:distanceM 1547.0 ;
+    ex:fromDwelling ex:D02_home ;
+    ex:isSynthetic true ;
+    ex:toAmenity ex:P1 ;
+    ex:usesMethod ex:Haversine .
+
+ex:D02_P2 a ex:DistanceMeasurement ;
+    ex:calculatedOn "2026-10-22"^^xsd:date ;
+    ex:distanceM 3093.8 ;
+    ex:fromDwelling ex:D02_home ;
+    ex:isSynthetic true ;
+    ex:toAmenity ex:P2 ;
+    ex:usesMethod ex:Haversine .
+
+ex:D02_S1 a ex:DistanceMeasurement ;
+    ex:calculatedOn "2026-10-22"^^xsd:date ;
+    ex:distanceM 869.2 ;
+    ex:fromDwelling ex:D02_home ;
+    ex:isSynthetic true ;
+    ex:toAmenity ex:S1 ;
+    ex:usesMethod ex:Haversine .
+
+ex:D02_S2 a ex:DistanceMeasurement ;
+    ex:calculatedOn "2026-10-22"^^xsd:date ;
+    ex:distanceM 2626.2 ;
+    ex:fromDwelling ex:D02_home ;
+    ex:isSynthetic true ;
+    ex:toAmenity ex:S2 ;
+    ex:usesMethod ex:Haversine .
+
+ex:D03 a ex:ListingSnapshot ;
+    ex:commissionRub 0.0 ;
+    ex:depositRub 30000.0 ;
+    ex:hasSource ex:D03_source ;
+    ex:isSynthetic true ;
+    ex:observedOn "2026-10-22"^^xsd:date ;
+    ex:offers ex:D03_home ;
+    ex:petsAllowed true ;
+    ex:rentRubMonth 42000.0 ;
+    ex:term "long_term"^^xsd:string ;
+    ex:utilitiesRubMonth 4000.0 .
+
+ex:D03_M1 a ex:DistanceMeasurement ;
+    ex:calculatedOn "2026-10-22"^^xsd:date ;
+    ex:distanceM 278.2 ;
+    ex:fromDwelling ex:D03_home ;
+    ex:isSynthetic true ;
+    ex:toAmenity ex:M1 ;
+    ex:usesMethod ex:Haversine .
+
+ex:D03_M2 a ex:DistanceMeasurement ;
+    ex:calculatedOn "2026-10-22"^^xsd:date ;
+    ex:distanceM 2225.5 ;
+    ex:fromDwelling ex:D03_home ;
+    ex:isSynthetic true ;
+    ex:toAmenity ex:M2 ;
+    ex:usesMethod ex:Haversine .
+
+ex:D03_P1 a ex:DistanceMeasurement ;
+    ex:calculatedOn "2026-10-22"^^xsd:date ;
+    ex:distanceM 1268.8 ;
+    ex:fromDwelling ex:D03_home ;
+    ex:isSynthetic true ;
+    ex:toAmenity ex:P1 ;
+    ex:usesMethod ex:Haversine .
+
+ex:D03_P2 a ex:DistanceMeasurement ;
+    ex:calculatedOn "2026-10-22"^^xsd:date ;
+    ex:distanceM 2815.6 ;
+    ex:fromDwelling ex:D03_home ;
+    ex:isSynthetic true ;
+    ex:toAmenity ex:P2 ;
+    ex:usesMethod ex:Haversine .
+
+ex:D03_S1 a ex:DistanceMeasurement ;
+    ex:calculatedOn "2026-10-22"^^xsd:date ;
+    ex:distanceM 591.6 ;
+    ex:fromDwelling ex:D03_home ;
+    ex:isSynthetic true ;
+    ex:toAmenity ex:S1 ;
+    ex:usesMethod ex:Haversine .
+
+ex:D03_S2 a ex:DistanceMeasurement ;
+    ex:calculatedOn "2026-10-22"^^xsd:date ;
+    ex:distanceM 2347.9 ;
+    ex:fromDwelling ex:D03_home ;
+    ex:isSynthetic true ;
+    ex:toAmenity ex:S2 ;
+    ex:usesMethod ex:Haversine .
+
+ex:D04 a ex:ListingSnapshot ;
+    ex:commissionRub 0.0 ;
+    ex:depositRub 30000.0 ;
+    ex:hasSource ex:D04_source ;
+    ex:isSynthetic true ;
+    ex:observedOn "2026-10-22"^^xsd:date ;
+    ex:offers ex:D04_home ;
+    ex:petsAllowed false ;
+    ex:rentRubMonth 30000.0 ;
+    ex:term "long_term"^^xsd:string ;
+    ex:utilitiesRubMonth 4000.0 .
+
+ex:D04_M1 a ex:DistanceMeasurement ;
+    ex:calculatedOn "2026-10-22"^^xsd:date ;
+    ex:distanceM 0.0 ;
+    ex:fromDwelling ex:D04_home ;
+    ex:isSynthetic true ;
+    ex:toAmenity ex:M1 ;
+    ex:usesMethod ex:Haversine .
+
+ex:D04_M2 a ex:DistanceMeasurement ;
+    ex:calculatedOn "2026-10-22"^^xsd:date ;
+    ex:distanceM 1947.3 ;
+    ex:fromDwelling ex:D04_home ;
+    ex:isSynthetic true ;
+    ex:toAmenity ex:M2 ;
+    ex:usesMethod ex:Haversine .
+
+ex:D04_P1 a ex:DistanceMeasurement ;
+    ex:calculatedOn "2026-10-22"^^xsd:date ;
+    ex:distanceM 990.7 ;
+    ex:fromDwelling ex:D04_home ;
+    ex:isSynthetic true ;
+    ex:toAmenity ex:P1 ;
+    ex:usesMethod ex:Haversine .
+
+ex:D04_P2 a ex:DistanceMeasurement ;
+    ex:calculatedOn "2026-10-22"^^xsd:date ;
+    ex:distanceM 2537.5 ;
+    ex:fromDwelling ex:D04_home ;
+    ex:isSynthetic true ;
+    ex:toAmenity ex:P2 ;
+    ex:usesMethod ex:Haversine .
+
+ex:D04_S1 a ex:DistanceMeasurement ;
+    ex:calculatedOn "2026-10-22"^^xsd:date ;
+    ex:distanceM 314.8 ;
+    ex:fromDwelling ex:D04_home ;
+    ex:isSynthetic true ;
+    ex:toAmenity ex:S1 ;
+    ex:usesMethod ex:Haversine .
+
+ex:D04_S2 a ex:DistanceMeasurement ;
+    ex:calculatedOn "2026-10-22"^^xsd:date ;
+    ex:distanceM 2069.8 ;
+    ex:fromDwelling ex:D04_home ;
+    ex:isSynthetic true ;
+    ex:toAmenity ex:S2 ;
+    ex:usesMethod ex:Haversine .
+
+ex:D05 a ex:ListingSnapshot ;
+    ex:commissionRub 0.0 ;
+    ex:depositRub 30000.0 ;
+    ex:hasSource ex:D05_source ;
+    ex:isSynthetic true ;
+    ex:observedOn "2026-10-22"^^xsd:date ;
+    ex:offers ex:D05_home ;
+    ex:rentRubMonth 34000.0 ;
+    ex:term "long_term"^^xsd:string ;
+    ex:utilitiesRubMonth 4000.0 .
+
+ex:D05_M1 a ex:DistanceMeasurement ;
+    ex:calculatedOn "2026-10-22"^^xsd:date ;
+    ex:distanceM 278.2 ;
+    ex:fromDwelling ex:D05_home ;
+    ex:isSynthetic true ;
+    ex:toAmenity ex:M1 ;
+    ex:usesMethod ex:Haversine .
+
+ex:D05_M2 a ex:DistanceMeasurement ;
+    ex:calculatedOn "2026-10-22"^^xsd:date ;
+    ex:distanceM 1669.1 ;
+    ex:fromDwelling ex:D05_home ;
+    ex:isSynthetic true ;
+    ex:toAmenity ex:M2 ;
+    ex:usesMethod ex:Haversine .
+
+ex:D05_P1 a ex:DistanceMeasurement ;
+    ex:calculatedOn "2026-10-22"^^xsd:date ;
+    ex:distanceM 712.6 ;
+    ex:fromDwelling ex:D05_home ;
+    ex:isSynthetic true ;
+    ex:toAmenity ex:P1 ;
+    ex:usesMethod ex:Haversine .
+
+ex:D05_P2 a ex:DistanceMeasurement ;
+    ex:calculatedOn "2026-10-22"^^xsd:date ;
+    ex:distanceM 2259.3 ;
+    ex:fromDwelling ex:D05_home ;
+    ex:isSynthetic true ;
+    ex:toAmenity ex:P2 ;
+    ex:usesMethod ex:Haversine .
+
+ex:D05_S1 a ex:DistanceMeasurement ;
+    ex:calculatedOn "2026-10-22"^^xsd:date ;
+    ex:distanceM 55.7 ;
+    ex:fromDwelling ex:D05_home ;
+    ex:isSynthetic true ;
+    ex:toAmenity ex:S1 ;
+    ex:usesMethod ex:Haversine .
+
+ex:D05_S2 a ex:DistanceMeasurement ;
+    ex:calculatedOn "2026-10-22"^^xsd:date ;
+    ex:distanceM 1791.6 ;
+    ex:fromDwelling ex:D05_home ;
+    ex:isSynthetic true ;
+    ex:toAmenity ex:S2 ;
+    ex:usesMethod ex:Haversine .
+
+ex:D06 a ex:ListingSnapshot ;
+    ex:commissionRub 0.0 ;
+    ex:depositRub 30000.0 ;
+    ex:hasSource ex:D06_source ;
+    ex:isSynthetic true ;
+    ex:observedOn "2026-10-22"^^xsd:date ;
+    ex:offers ex:D06_home ;
+    ex:petsAllowed true ;
+    ex:rentRubMonth 38000.0 ;
+    ex:term "long_term"^^xsd:string ;
+    ex:utilitiesRubMonth 4000.0 .
+
+ex:D06_M1 a ex:DistanceMeasurement ;
+    ex:calculatedOn "2026-10-22"^^xsd:date ;
+    ex:distanceM 556.4 ;
+    ex:fromDwelling ex:D06_home ;
+    ex:isSynthetic true ;
+    ex:toAmenity ex:M1 ;
+    ex:usesMethod ex:Haversine .
+
+ex:D06_M2 a ex:DistanceMeasurement ;
+    ex:calculatedOn "2026-10-22"^^xsd:date ;
+    ex:distanceM 1390.9 ;
+    ex:fromDwelling ex:D06_home ;
+    ex:isSynthetic true ;
+    ex:toAmenity ex:M2 ;
+    ex:usesMethod ex:Haversine .
+
+ex:D06_P1 a ex:DistanceMeasurement ;
+    ex:calculatedOn "2026-10-22"^^xsd:date ;
+    ex:distanceM 434.6 ;
+    ex:fromDwelling ex:D06_home ;
+    ex:isSynthetic true ;
+    ex:toAmenity ex:P1 ;
+    ex:usesMethod ex:Haversine .
+
+ex:D06_P2 a ex:DistanceMeasurement ;
+    ex:calculatedOn "2026-10-22"^^xsd:date ;
+    ex:distanceM 1981.2 ;
+    ex:fromDwelling ex:D06_home ;
+    ex:isSynthetic true ;
+    ex:toAmenity ex:P2 ;
+    ex:usesMethod ex:Haversine .
+
+ex:D06_S1 a ex:DistanceMeasurement ;
+    ex:calculatedOn "2026-10-22"^^xsd:date ;
+    ex:distanceM 248.7 ;
+    ex:fromDwelling ex:D06_home ;
+    ex:isSynthetic true ;
+    ex:toAmenity ex:S1 ;
+    ex:usesMethod ex:Haversine .
+
+ex:D06_S2 a ex:DistanceMeasurement ;
+    ex:calculatedOn "2026-10-22"^^xsd:date ;
+    ex:distanceM 1513.4 ;
+    ex:fromDwelling ex:D06_home ;
+    ex:isSynthetic true ;
+    ex:toAmenity ex:S2 ;
+    ex:usesMethod ex:Haversine .
+
+ex:D07 a ex:ListingSnapshot ;
+    ex:commissionRub 0.0 ;
+    ex:depositRub 30000.0 ;
+    ex:hasSource ex:D07_source ;
+    ex:isSynthetic true ;
+    ex:observedOn "2026-10-22"^^xsd:date ;
+    ex:offers ex:D07_home ;
+    ex:petsAllowed false ;
+    ex:rentRubMonth 42000.0 ;
+    ex:term "long_term"^^xsd:string ;
+    ex:utilitiesRubMonth 4000.0 .
+
+ex:D07_M1 a ex:DistanceMeasurement ;
+    ex:calculatedOn "2026-10-22"^^xsd:date ;
+    ex:distanceM 834.6 ;
+    ex:fromDwelling ex:D07_home ;
+    ex:isSynthetic true ;
+    ex:toAmenity ex:M1 ;
+    ex:usesMethod ex:Haversine .
+
+ex:D07_M2 a ex:DistanceMeasurement ;
+    ex:calculatedOn "2026-10-22"^^xsd:date ;
+    ex:distanceM 1112.7 ;
+    ex:fromDwelling ex:D07_home ;
+    ex:isSynthetic true ;
+    ex:toAmenity ex:M2 ;
+    ex:usesMethod ex:Haversine .
+
+ex:D07_P1 a ex:DistanceMeasurement ;
+    ex:calculatedOn "2026-10-22"^^xsd:date ;
+    ex:distanceM 157.4 ;
+    ex:fromDwelling ex:D07_home ;
+    ex:isSynthetic true ;
+    ex:toAmenity ex:P1 ;
+    ex:usesMethod ex:Haversine .
+
+ex:D07_P2 a ex:DistanceMeasurement ;
+    ex:calculatedOn "2026-10-22"^^xsd:date ;
+    ex:distanceM 1703.1 ;
+    ex:fromDwelling ex:D07_home ;
+    ex:isSynthetic true ;
+    ex:toAmenity ex:P2 ;
+    ex:usesMethod ex:Haversine .
+
+ex:D07_S1 a ex:DistanceMeasurement ;
+    ex:calculatedOn "2026-10-22"^^xsd:date ;
+    ex:distanceM 524.8 ;
+    ex:fromDwelling ex:D07_home ;
+    ex:isSynthetic true ;
+    ex:toAmenity ex:S1 ;
+    ex:usesMethod ex:Haversine .
+
+ex:D07_S2 a ex:DistanceMeasurement ;
+    ex:calculatedOn "2026-10-22"^^xsd:date ;
+    ex:distanceM 1235.3 ;
+    ex:fromDwelling ex:D07_home ;
+    ex:isSynthetic true ;
+    ex:toAmenity ex:S2 ;
+    ex:usesMethod ex:Haversine .
+
+ex:D08 a ex:ListingSnapshot ;
+    ex:commissionRub 0.0 ;
+    ex:depositRub 30000.0 ;
+    ex:hasSource ex:D08_source ;
+    ex:isSynthetic true ;
+    ex:observedOn "2026-10-22"^^xsd:date ;
+    ex:offers ex:D08_home ;
+    ex:rentRubMonth 30000.0 ;
+    ex:term "long_term"^^xsd:string ;
+    ex:utilitiesRubMonth 4000.0 .
+
+ex:D08_M1 a ex:DistanceMeasurement ;
+    ex:calculatedOn "2026-10-22"^^xsd:date ;
+    ex:distanceM 1112.8 ;
+    ex:fromDwelling ex:D08_home ;
+    ex:isSynthetic true ;
+    ex:toAmenity ex:M1 ;
+    ex:usesMethod ex:Haversine .
+
+ex:D08_M2 a ex:DistanceMeasurement ;
+    ex:calculatedOn "2026-10-22"^^xsd:date ;
+    ex:distanceM 834.5 ;
+    ex:fromDwelling ex:D08_home ;
+    ex:isSynthetic true ;
+    ex:toAmenity ex:M2 ;
+    ex:usesMethod ex:Haversine .
+
+ex:D08_P1 a ex:DistanceMeasurement ;
+    ex:calculatedOn "2026-10-22"^^xsd:date ;
+    ex:distanceM 124.4 ;
+    ex:fromDwelling ex:D08_home ;
+    ex:isSynthetic true ;
+    ex:toAmenity ex:P1 ;
+    ex:usesMethod ex:Haversine .
+
+ex:D08_P2 a ex:DistanceMeasurement ;
+    ex:calculatedOn "2026-10-22"^^xsd:date ;
+    ex:distanceM 1425.0 ;
+    ex:fromDwelling ex:D08_home ;
+    ex:isSynthetic true ;
+    ex:toAmenity ex:P2 ;
+    ex:usesMethod ex:Haversine .
+
+ex:D08_S1 a ex:DistanceMeasurement ;
+    ex:calculatedOn "2026-10-22"^^xsd:date ;
+    ex:distanceM 802.3 ;
+    ex:fromDwelling ex:D08_home ;
+    ex:isSynthetic true ;
+    ex:toAmenity ex:S1 ;
+    ex:usesMethod ex:Haversine .
+
+ex:D08_S2 a ex:DistanceMeasurement ;
+    ex:calculatedOn "2026-10-22"^^xsd:date ;
+    ex:distanceM 957.1 ;
+    ex:fromDwelling ex:D08_home ;
+    ex:isSynthetic true ;
+    ex:toAmenity ex:S2 ;
+    ex:usesMethod ex:Haversine .
+
+ex:D09 a ex:ListingSnapshot ;
+    ex:commissionRub 0.0 ;
+    ex:depositRub 30000.0 ;
+    ex:hasSource ex:D09_source ;
+    ex:isSynthetic true ;
+    ex:observedOn "2026-10-22"^^xsd:date ;
+    ex:offers ex:D09_home ;
+    ex:petsAllowed true ;
+    ex:rentRubMonth 34000.0 ;
+    ex:term "long_term"^^xsd:string ;
+    ex:utilitiesRubMonth 4000.0 .
+
+ex:D09_M1 a ex:DistanceMeasurement ;
+    ex:calculatedOn "2026-10-22"^^xsd:date ;
+    ex:distanceM 1391.0 ;
+    ex:fromDwelling ex:D09_home ;
+    ex:isSynthetic true ;
+    ex:toAmenity ex:M1 ;
+    ex:usesMethod ex:Haversine .
+
+ex:D09_M2 a ex:DistanceMeasurement ;
+    ex:calculatedOn "2026-10-22"^^xsd:date ;
+    ex:distanceM 556.3 ;
+    ex:fromDwelling ex:D09_home ;
+    ex:isSynthetic true ;
+    ex:toAmenity ex:M2 ;
+    ex:usesMethod ex:Haversine .
+
+ex:D09_P1 a ex:DistanceMeasurement ;
+    ex:calculatedOn "2026-10-22"^^xsd:date ;
+    ex:distanceM 401.2 ;
+    ex:fromDwelling ex:D09_home ;
+    ex:isSynthetic true ;
+    ex:toAmenity ex:P1 ;
+    ex:usesMethod ex:Haversine .
+
+ex:D09_P2 a ex:DistanceMeasurement ;
+    ex:calculatedOn "2026-10-22"^^xsd:date ;
+    ex:distanceM 1147.0 ;
+    ex:fromDwelling ex:D09_home ;
+    ex:isSynthetic true ;
+    ex:toAmenity ex:P2 ;
+    ex:usesMethod ex:Haversine .
+
+ex:D09_S1 a ex:DistanceMeasurement ;
+    ex:calculatedOn "2026-10-22"^^xsd:date ;
+    ex:distanceM 1080.2 ;
+    ex:fromDwelling ex:D09_home ;
+    ex:isSynthetic true ;
+    ex:toAmenity ex:S1 ;
+    ex:usesMethod ex:Haversine .
+
+ex:D09_S2 a ex:DistanceMeasurement ;
+    ex:calculatedOn "2026-10-22"^^xsd:date ;
+    ex:distanceM 679.1 ;
+    ex:fromDwelling ex:D09_home ;
+    ex:isSynthetic true ;
+    ex:toAmenity ex:S2 ;
+    ex:usesMethod ex:Haversine .
+
+ex:D10 a ex:ListingSnapshot ;
+    ex:commissionRub 0.0 ;
+    ex:depositRub 30000.0 ;
+    ex:hasSource ex:D10_source ;
+    ex:isSynthetic true ;
+    ex:observedOn "2026-10-22"^^xsd:date ;
+    ex:offers ex:D10_home ;
+    ex:petsAllowed false ;
+    ex:rentRubMonth 38000.0 ;
+    ex:term "long_term"^^xsd:string ;
+    ex:utilitiesRubMonth 4000.0 .
+
+ex:D10_M1 a ex:DistanceMeasurement ;
+    ex:calculatedOn "2026-10-22"^^xsd:date ;
+    ex:distanceM 1669.1 ;
+    ex:fromDwelling ex:D10_home ;
+    ex:isSynthetic true ;
+    ex:toAmenity ex:M1 ;
+    ex:usesMethod ex:Haversine .
+
+ex:D10_M2 a ex:DistanceMeasurement ;
+    ex:calculatedOn "2026-10-22"^^xsd:date ;
+    ex:distanceM 278.2 ;
+    ex:fromDwelling ex:D10_home ;
+    ex:isSynthetic true ;
+    ex:toAmenity ex:M2 ;
+    ex:usesMethod ex:Haversine .
+
+ex:D10_P1 a ex:DistanceMeasurement ;
+    ex:calculatedOn "2026-10-22"^^xsd:date ;
+    ex:distanceM 679.1 ;
+    ex:fromDwelling ex:D10_home ;
+    ex:isSynthetic true ;
+    ex:toAmenity ex:P1 ;
+    ex:usesMethod ex:Haversine .
+
+ex:D10_P2 a ex:DistanceMeasurement ;
+    ex:calculatedOn "2026-10-22"^^xsd:date ;
+    ex:distanceM 869.1 ;
+    ex:fromDwelling ex:D10_home ;
+    ex:isSynthetic true ;
+    ex:toAmenity ex:P2 ;
+    ex:usesMethod ex:Haversine .
+
+ex:D10_S1 a ex:DistanceMeasurement ;
+    ex:calculatedOn "2026-10-22"^^xsd:date ;
+    ex:distanceM 1358.2 ;
+    ex:fromDwelling ex:D10_home ;
+    ex:isSynthetic true ;
+    ex:toAmenity ex:S1 ;
+    ex:usesMethod ex:Haversine .
+
+ex:D10_S2 a ex:DistanceMeasurement ;
+    ex:calculatedOn "2026-10-22"^^xsd:date ;
+    ex:distanceM 401.1 ;
+    ex:fromDwelling ex:D10_home ;
+    ex:isSynthetic true ;
+    ex:toAmenity ex:S2 ;
+    ex:usesMethod ex:Haversine .
+
+ex:D11 a ex:ListingSnapshot ;
+    ex:commissionRub 0.0 ;
+    ex:depositRub 30000.0 ;
+    ex:hasSource ex:D11_source ;
+    ex:isSynthetic true ;
+    ex:observedOn "2026-10-22"^^xsd:date ;
+    ex:offers ex:D11_home ;
+    ex:rentRubMonth 42000.0 ;
+    ex:term "long_term"^^xsd:string ;
+    ex:utilitiesRubMonth 4000.0 .
+
+ex:D11_M1 a ex:DistanceMeasurement ;
+    ex:calculatedOn "2026-10-22"^^xsd:date ;
+    ex:distanceM 1947.3 ;
+    ex:fromDwelling ex:D11_home ;
+    ex:isSynthetic true ;
+    ex:toAmenity ex:M1 ;
+    ex:usesMethod ex:Haversine .
+
+ex:D11_M2 a ex:DistanceMeasurement ;
+    ex:calculatedOn "2026-10-22"^^xsd:date ;
+    ex:distanceM 0.0 ;
+    ex:fromDwelling ex:D11_home ;
+    ex:isSynthetic true ;
+    ex:toAmenity ex:M2 ;
+    ex:usesMethod ex:Haversine .
+
+ex:D11_P1 a ex:DistanceMeasurement ;
+    ex:calculatedOn "2026-10-22"^^xsd:date ;
+    ex:distanceM 957.1 ;
+    ex:fromDwelling ex:D11_home ;
+    ex:isSynthetic true ;
+    ex:toAmenity ex:P1 ;
+    ex:usesMethod ex:Haversine .
+
+ex:D11_P2 a ex:DistanceMeasurement ;
+    ex:calculatedOn "2026-10-22"^^xsd:date ;
+    ex:distanceM 591.4 ;
+    ex:fromDwelling ex:D11_home ;
+    ex:isSynthetic true ;
+    ex:toAmenity ex:P2 ;
+    ex:usesMethod ex:Haversine .
+
+ex:D11_S1 a ex:DistanceMeasurement ;
+    ex:calculatedOn "2026-10-22"^^xsd:date ;
+    ex:distanceM 1636.2 ;
+    ex:fromDwelling ex:D11_home ;
+    ex:isSynthetic true ;
+    ex:toAmenity ex:S1 ;
+    ex:usesMethod ex:Haversine .
+
+ex:D11_S2 a ex:DistanceMeasurement ;
+    ex:calculatedOn "2026-10-22"^^xsd:date ;
+    ex:distanceM 124.4 ;
+    ex:fromDwelling ex:D11_home ;
+    ex:isSynthetic true ;
+    ex:toAmenity ex:S2 ;
+    ex:usesMethod ex:Haversine .
+
+ex:D12 a ex:ListingSnapshot ;
+    ex:commissionRub 0.0 ;
+    ex:depositRub 30000.0 ;
+    ex:hasSource ex:D12_source ;
+    ex:isSynthetic true ;
+    ex:observedOn "2026-10-22"^^xsd:date ;
+    ex:offers ex:D12_home ;
+    ex:petsAllowed true ;
+    ex:rentRubMonth 30000.0 ;
+    ex:term "long_term"^^xsd:string ;
+    ex:utilitiesRubMonth 4000.0 .
+
+ex:D12_M1 a ex:DistanceMeasurement ;
+    ex:calculatedOn "2026-10-22"^^xsd:date ;
+    ex:distanceM 2225.4 ;
+    ex:fromDwelling ex:D12_home ;
+    ex:isSynthetic true ;
+    ex:toAmenity ex:M1 ;
+    ex:usesMethod ex:Haversine .
+
+ex:D12_M2 a ex:DistanceMeasurement ;
+    ex:calculatedOn "2026-10-22"^^xsd:date ;
+    ex:distanceM 278.2 ;
+    ex:fromDwelling ex:D12_home ;
+    ex:isSynthetic true ;
+    ex:toAmenity ex:M2 ;
+    ex:usesMethod ex:Haversine .
+
+ex:D12_P1 a ex:DistanceMeasurement ;
+    ex:calculatedOn "2026-10-22"^^xsd:date ;
+    ex:distanceM 1235.2 ;
+    ex:fromDwelling ex:D12_home ;
+    ex:isSynthetic true ;
+    ex:toAmenity ex:P1 ;
+    ex:usesMethod ex:Haversine .
+
+ex:D12_P2 a ex:DistanceMeasurement ;
+    ex:calculatedOn "2026-10-22"^^xsd:date ;
+    ex:distanceM 314.8 ;
+    ex:fromDwelling ex:D12_home ;
+    ex:isSynthetic true ;
+    ex:toAmenity ex:P2 ;
+    ex:usesMethod ex:Haversine .
+
+ex:D12_S1 a ex:DistanceMeasurement ;
+    ex:calculatedOn "2026-10-22"^^xsd:date ;
+    ex:distanceM 1914.3 ;
+    ex:fromDwelling ex:D12_home ;
+    ex:isSynthetic true ;
+    ex:toAmenity ex:S1 ;
+    ex:usesMethod ex:Haversine .
+
+ex:D12_S2 a ex:DistanceMeasurement ;
+    ex:calculatedOn "2026-10-22"^^xsd:date ;
+    ex:distanceM 157.4 ;
+    ex:fromDwelling ex:D12_home ;
+    ex:isSynthetic true ;
+    ex:toAmenity ex:S2 ;
+    ex:usesMethod ex:Haversine .
+
+ex:StudentWithPet a ex:RenterProfile ;
+    ex:isSynthetic true ;
+    ex:maxMetroDistanceM 1000.0 ;
+    ex:maxRentRubMonth 40000.0 ;
+    ex:preferredCity ex:DemoCity ;
+    ex:requiresPets true .
+
+ex:D01_building a ex:Building ;
+    ex:address "Учебный адрес D01"^^xsd:string ;
+    ex:floorsTotal 16 ;
+    ex:hasSource ex:D01_source ;
+    ex:inDistrict ex:DemoDistrict ;
+    ex:isSynthetic true ;
+    ex:latitude 59.922000000000004 ;
+    ex:longitude 30.303 .
+
+ex:D02_building a ex:Building ;
+    ex:address "Учебный адрес D02"^^xsd:string ;
+    ex:floorsTotal 16 ;
+    ex:hasSource ex:D02_source ;
+    ex:inDistrict ex:DemoDistrict ;
+    ex:isSynthetic true ;
+    ex:latitude 59.924 ;
+    ex:longitude 30.306 .
+
+ex:D03_building a ex:Building ;
+    ex:address "Учебный адрес D03"^^xsd:string ;
+    ex:floorsTotal 16 ;
+    ex:hasSource ex:D03_source ;
+    ex:inDistrict ex:DemoDistrict ;
+    ex:isSynthetic true ;
+    ex:latitude 59.926 ;
+    ex:longitude 30.309 .
+
+ex:D04_building a ex:Building ;
+    ex:address "Учебный адрес D04"^^xsd:string ;
+    ex:floorsTotal 16 ;
+    ex:hasSource ex:D04_source ;
+    ex:inDistrict ex:DemoDistrict ;
+    ex:isSynthetic true ;
+    ex:latitude 59.928000000000004 ;
+    ex:longitude 30.312 .
+
+ex:D05_building a ex:Building ;
+    ex:address "Учебный адрес D05"^^xsd:string ;
+    ex:floorsTotal 16 ;
+    ex:hasSource ex:D05_source ;
+    ex:inDistrict ex:DemoDistrict ;
+    ex:isSynthetic true ;
+    ex:latitude 59.93 ;
+    ex:longitude 30.315 .
+
+ex:D06_building a ex:Building ;
+    ex:address "Учебный адрес D06"^^xsd:string ;
+    ex:floorsTotal 16 ;
+    ex:hasSource ex:D06_source ;
+    ex:inDistrict ex:DemoDistrict ;
+    ex:isSynthetic true ;
+    ex:latitude 59.932 ;
+    ex:longitude 30.318 .
+
+ex:D07_building a ex:Building ;
+    ex:address "Учебный адрес D07"^^xsd:string ;
+    ex:floorsTotal 16 ;
+    ex:hasSource ex:D07_source ;
+    ex:inDistrict ex:DemoDistrict ;
+    ex:isSynthetic true ;
+    ex:latitude 59.934000000000005 ;
+    ex:longitude 30.321 .
+
+ex:D08_building a ex:Building ;
+    ex:address "Учебный адрес D08"^^xsd:string ;
+    ex:floorsTotal 16 ;
+    ex:hasSource ex:D08_source ;
+    ex:inDistrict ex:DemoDistrict ;
+    ex:isSynthetic true ;
+    ex:latitude 59.936 ;
+    ex:longitude 30.324 .
+
+ex:D09_building a ex:Building ;
+    ex:address "Учебный адрес D09"^^xsd:string ;
+    ex:floorsTotal 16 ;
+    ex:hasSource ex:D09_source ;
+    ex:inDistrict ex:DemoDistrict ;
+    ex:isSynthetic true ;
+    ex:latitude 59.938 ;
+    ex:longitude 30.327 .
+
+ex:D10_building a ex:Building ;
+    ex:address "Учебный адрес D10"^^xsd:string ;
+    ex:floorsTotal 16 ;
+    ex:hasSource ex:D10_source ;
+    ex:inDistrict ex:DemoDistrict ;
+    ex:isSynthetic true ;
+    ex:latitude 59.940000000000005 ;
+    ex:longitude 30.330000000000002 .
+
+ex:D11_building a ex:Building ;
+    ex:address "Учебный адрес D11"^^xsd:string ;
+    ex:floorsTotal 16 ;
+    ex:hasSource ex:D11_source ;
+    ex:inDistrict ex:DemoDistrict ;
+    ex:isSynthetic true ;
+    ex:latitude 59.942 ;
+    ex:longitude 30.333000000000002 .
+
+ex:D12_building a ex:Building ;
+    ex:address "Учебный адрес D12"^^xsd:string ;
+    ex:floorsTotal 16 ;
+    ex:hasSource ex:D12_source ;
+    ex:inDistrict ex:DemoDistrict ;
+    ex:isSynthetic true ;
+    ex:latitude 59.944 ;
+    ex:longitude 30.336000000000002 .
+
+ex:DemoCity a ex:City ;
+    ex:isSynthetic true .
+
+ex:D01_source a ex:SourceRecord ;
+    ex:isSynthetic true ;
+    ex:sourceUrl "https://example.org/synthetic/D01"^^xsd:anyURI .
+
+ex:D02_source a ex:SourceRecord ;
+    ex:isSynthetic true ;
+    ex:sourceUrl "https://example.org/synthetic/D02"^^xsd:anyURI .
+
+ex:D03_source a ex:SourceRecord ;
+    ex:isSynthetic true ;
+    ex:sourceUrl "https://example.org/synthetic/D03"^^xsd:anyURI .
+
+ex:D04_source a ex:SourceRecord ;
+    ex:isSynthetic true ;
+    ex:sourceUrl "https://example.org/synthetic/D04"^^xsd:anyURI .
+
+ex:D05_source a ex:SourceRecord ;
+    ex:isSynthetic true ;
+    ex:sourceUrl "https://example.org/synthetic/D05"^^xsd:anyURI .
+
+ex:D06_source a ex:SourceRecord ;
+    ex:isSynthetic true ;
+    ex:sourceUrl "https://example.org/synthetic/D06"^^xsd:anyURI .
+
+ex:D07_source a ex:SourceRecord ;
+    ex:isSynthetic true ;
+    ex:sourceUrl "https://example.org/synthetic/D07"^^xsd:anyURI .
+
+ex:D08_source a ex:SourceRecord ;
+    ex:isSynthetic true ;
+    ex:sourceUrl "https://example.org/synthetic/D08"^^xsd:anyURI .
+
+ex:D09_source a ex:SourceRecord ;
+    ex:isSynthetic true ;
+    ex:sourceUrl "https://example.org/synthetic/D09"^^xsd:anyURI .
+
+ex:D10_source a ex:SourceRecord ;
+    ex:isSynthetic true ;
+    ex:sourceUrl "https://example.org/synthetic/D10"^^xsd:anyURI .
+
+ex:D11_source a ex:SourceRecord ;
+    ex:isSynthetic true ;
+    ex:sourceUrl "https://example.org/synthetic/D11"^^xsd:anyURI .
+
+ex:D12_source a ex:SourceRecord ;
+    ex:isSynthetic true ;
+    ex:sourceUrl "https://example.org/synthetic/D12"^^xsd:anyURI .
+
+ex:D01_home a ex:Apartment ;
+    ex:areaM2 27.0 ;
+    ex:floor 2 ;
+    ex:hasSource ex:D01_source ;
+    ex:inBuilding ex:D01_building ;
+    ex:isSynthetic true ;
+    ex:nearAmenity ex:M1 ;
+    ex:rooms 1 .
+
+ex:D02_home a ex:Apartment ;
+    ex:areaM2 29.0 ;
+    ex:floor 3 ;
+    ex:hasSource ex:D02_source ;
+    ex:inBuilding ex:D02_building ;
+    ex:isSynthetic true ;
+    ex:nearAmenity ex:M1,
+        ex:S1 ;
+    ex:rooms 2 .
+
+ex:D03_home a ex:Apartment ;
+    ex:areaM2 31.0 ;
+    ex:floor 4 ;
+    ex:hasSource ex:D03_source ;
+    ex:inBuilding ex:D03_building ;
+    ex:isSynthetic true ;
+    ex:nearAmenity ex:M1,
+        ex:S1 ;
+    ex:rooms 0 .
+
+ex:D04_home a ex:Apartment ;
+    ex:areaM2 33.0 ;
+    ex:floor 5 ;
+    ex:hasSource ex:D04_source ;
+    ex:inBuilding ex:D04_building ;
+    ex:isSynthetic true ;
+    ex:nearAmenity ex:M1,
+        ex:P1,
+        ex:S1 ;
+    ex:rooms 1 .
+
+ex:D05_home a ex:Apartment ;
+    ex:areaM2 35.0 ;
+    ex:floor 6 ;
+    ex:hasSource ex:D05_source ;
+    ex:inBuilding ex:D05_building ;
+    ex:isSynthetic true ;
+    ex:nearAmenity ex:M1,
+        ex:P1,
+        ex:S1 ;
+    ex:rooms 2 .
+
+ex:D06_home a ex:Apartment ;
+    ex:areaM2 37.0 ;
+    ex:floor 7 ;
+    ex:hasSource ex:D06_source ;
+    ex:inBuilding ex:D06_building ;
+    ex:isSynthetic true ;
+    ex:nearAmenity ex:M1,
+        ex:P1,
+        ex:S1 ;
+    ex:rooms 0 .
+
+ex:D07_home a ex:Apartment ;
+    ex:areaM2 39.0 ;
+    ex:floor 8 ;
+    ex:hasSource ex:D07_source ;
+    ex:inBuilding ex:D07_building ;
+    ex:isSynthetic true ;
+    ex:nearAmenity ex:M1,
+        ex:P1,
+        ex:S1 ;
+    ex:rooms 1 .
+
+ex:D08_home a ex:Apartment ;
+    ex:areaM2 41.0 ;
+    ex:floor 9 ;
+    ex:hasSource ex:D08_source ;
+    ex:inBuilding ex:D08_building ;
+    ex:isSynthetic true ;
+    ex:nearAmenity ex:M2,
+        ex:P1,
+        ex:S1,
+        ex:S2 ;
+    ex:rooms 2 .
+
+ex:D09_home a ex:Apartment ;
+    ex:areaM2 43.0 ;
+    ex:floor 10 ;
+    ex:hasSource ex:D09_source ;
+    ex:inBuilding ex:D09_building ;
+    ex:isSynthetic true ;
+    ex:nearAmenity ex:M2,
+        ex:P1,
+        ex:S2 ;
+    ex:rooms 0 .
+
+ex:D10_home a ex:Apartment ;
+    ex:areaM2 45.0 ;
+    ex:floor 11 ;
+    ex:hasSource ex:D10_source ;
+    ex:inBuilding ex:D10_building ;
+    ex:isSynthetic true ;
+    ex:nearAmenity ex:M2,
+        ex:P1,
+        ex:P2,
+        ex:S2 ;
+    ex:rooms 1 .
+
+ex:D11_home a ex:Apartment ;
+    ex:areaM2 47.0 ;
+    ex:floor 12 ;
+    ex:hasSource ex:D11_source ;
+    ex:inBuilding ex:D11_building ;
+    ex:isSynthetic true ;
+    ex:nearAmenity ex:M2,
+        ex:P1,
+        ex:P2,
+        ex:S2 ;
+    ex:rooms 2 .
+
+ex:D12_home a ex:Apartment ;
+    ex:areaM2 49.0 ;
+    ex:floor 13 ;
+    ex:hasSource ex:D12_source ;
+    ex:inBuilding ex:D12_building ;
+    ex:isSynthetic true ;
+    ex:nearAmenity ex:M2,
+        ex:P2,
+        ex:S2 ;
+    ex:rooms 0 .
+
+ex:DemoDistrict a ex:District ;
+    ex:inCity ex:DemoCity ;
+    ex:isSynthetic true .
+
+ex:P2 a ex:Park ;
+    rdfs:label "Учебная точка парка Б"@ru ;
+    ex:isSynthetic true ;
+    ex:latitude 59.946 ;
+    ex:longitude 30.34 .
+
+ex:M2 a ex:MetroStation ;
+    rdfs:label "Учебное метро Б"@ru ;
+    ex:isSynthetic true ;
+    ex:latitude 59.942 ;
+    ex:longitude 30.333 .
+
+ex:S2 a ex:Supermarket ;
+    rdfs:label "Учебный магазин Б"@ru ;
+    ex:isSynthetic true ;
+    ex:latitude 59.943 ;
+    ex:longitude 30.334 .
+
+ex:M1 a ex:MetroStation ;
+    rdfs:label "Учебное метро А"@ru ;
+    ex:isSynthetic true ;
+    ex:latitude 59.928 ;
+    ex:longitude 30.312 .
+
+ex:S1 a ex:Supermarket ;
+    rdfs:label "Учебный магазин А"@ru ;
+    ex:isSynthetic true ;
+    ex:latitude 59.93 ;
+    ex:longitude 30.316 .
+
+ex:P1 a ex:Park ;
+    rdfs:label "Учебная точка парка А"@ru ;
+    ex:isSynthetic true ;
+    ex:latitude 59.935 ;
+    ex:longitude 30.323 .
+
+ex:Haversine a ex:MeasurementMethod ;
+    ex:isSynthetic true .
+
