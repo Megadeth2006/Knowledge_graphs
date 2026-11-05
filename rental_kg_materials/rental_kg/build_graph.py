@@ -93,9 +93,20 @@ def lit(g,s,p,v):
     else:val=str(v)
     g.add((s,EX[p],Literal(val,datatype=XSD[typ])))
 def read(name):return list(csv.DictReader((P/'data'/name).open(encoding='utf-8')))
+def label(g,node,text):
+    g.add((node,RDFS.label,Literal(text,lang='ru')))
+def require_labels(g):
+    instance_classes={EX[name] for name in classes}
+    nodes={s for s,_,cls in g.triples((None,RDF.type,None)) if cls in instance_classes}
+    assert all(any(v.language=='ru' and str(v).strip() for v in g.objects(s,RDFS.label)) for s in nodes),'Missing Russian instance label'
 def listing(g,r,synthetic):
     key=r['id']; l=EX[key];d=EX[key+'_home'];b=EX[key+'_building'];s=EX[key+'_source']
     for node,cls in [(l,'ListingSnapshot'),(d,'Apartment'),(b,'Building'),(s,'SourceRecord')]:g.add((node,RDF.type,EX[cls]));lit(g,node,'isSynthetic',synthetic)
+    prefix='Учебное ' if synthetic else ''
+    label(g,l,prefix+'объявление '+key)
+    label(g,d,('Учебная квартира ' if synthetic else 'Квартира ')+key)
+    label(g,b,('Учебное здание '+key) if synthetic else 'Здание '+key+' — '+r['address'])
+    label(g,s,('Учебный источник ' if synthetic else 'Источник объявления ')+key)
     for a,p,o in [(l,'offers',d),(d,'inBuilding',b),(l,'hasSource',s),(d,'hasSource',s),(b,'hasSource',s)]:g.add((a,EX[p],o))
     for field,p in [('rent_rub_month','rentRubMonth'),('utilities_rub_month','utilitiesRubMonth'),('deposit_rub','depositRub'),('commission_rub','commissionRub'),('pets_allowed','petsAllowed'),('term','term'),('min_months','minMonths'),('quality_note','qualityNote')]:lit(g,l,p,r.get(field,''))
     lit(g,l,'observedOn','2026-10-22' if synthetic else r['observed_on'])
@@ -106,9 +117,11 @@ def listing(g,r,synthetic):
     return l,d,b
 real=graph()
 for r in read('observed_listings.csv'):listing(real,r,False)
+require_labels(real)
 real.serialize(P/'observed.ttl',format='turtle')
 demo=graph();rows=read('demo_listings.csv');pois=read('demo_poi.csv')
 for n,c in [('DemoCity','City'),('DemoDistrict','District'),('Haversine','MeasurementMethod'),('StudentWithPet','RenterProfile')]:demo.add((EX[n],RDF.type,EX[c]));lit(demo,EX[n],'isSynthetic',True)
+for n,text in {'DemoCity':'Учебный город','DemoDistrict':'Учебный район','Haversine':'Метод гаверсинуса','StudentWithPet':'Студент с питомцем'}.items():label(demo,EX[n],text)
 demo.add((EX.DemoDistrict,EX.inCity,EX.DemoCity));demo.add((EX.StudentWithPet,EX.preferredCity,EX.DemoCity))
 for p,v in [('maxRentRubMonth',40000),('maxMetroDistanceM',1000),('requiresPets',True)]:lit(demo,EX.StudentWithPet,p,v)
 for r in pois:
@@ -121,9 +134,11 @@ for r in rows:
     r['term']='long_term';l,d,b=listing(demo,r,True);demo.add((b,EX.inDistrict,EX.DemoDistrict))
     for po in pois:
         m=EX[r['id']+'_'+po['id']];dist=hav(r['lat'],r['lon'],po['lat'],po['lon']);demo.add((m,RDF.type,EX.DistanceMeasurement))
+        label(demo,m,'Учебное расстояние '+r['id']+' — '+po['id'])
         for p,v in [('fromDwelling',d),('toAmenity',EX[po['id']]),('usesMethod',EX.Haversine)]:demo.add((m,EX[p],v))
         for p,v in [('distanceM',dist),('calculatedOn','2026-10-22'),('isSynthetic',True)]:lit(demo,m,p,v)
         if dist<=1000:demo.add((d,EX.nearAmenity,EX[po['id']]))
+require_labels(demo)
 demo.serialize(P/'demo.ttl',format='turtle')
 # OWL RL materialization: inference is separate from metric computations.
 full=ont+demo;before=set(full);DeductiveClosure(OWLRL_Semantics).expand(full)
@@ -198,8 +213,8 @@ assert {r['listing']: (r['observedOn'],r['sourceUrl']) for r in answers['real_so
     str(EX[r['id']]): (r['observed_on'],r['source_url']) for r in read('observed_listings.csv')}
 assert len(answers)==8
 report.update(classes=len(classes),object_properties=len(objects),datatype_properties=len(attrs),reasoning={k:'PASS' for k in checks},negative_validation_test='PASS',negative_validation_tests=negative_results,
-    semantic_checks={'class_membership':'PASS','disjoint_types':'PASS','coordinate_ownership':'PASS','materialized_graph_shacl':'PASS','source_observation_date':'PASS'},
+    semantic_checks={'class_membership':'PASS','disjoint_types':'PASS','coordinate_ownership':'PASS','materialized_graph_shacl':'PASS','source_observation_date':'PASS','russian_instance_labels':'PASS'},
     inferred_instances={c:len(set(full.subjects(RDF.type,EX[c]))) for c in ['Place','Dwelling','Amenity']})
-(P/'results/summary.json').write_text(json.dumps(report,ensure_ascii=False,indent=2))
+(P/'results/summary.json').write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf-8',newline='\n')
 (P/'results/query_results.json').write_text(json.dumps(answers,ensure_ascii=False,indent=2))
 print(json.dumps(report,ensure_ascii=False,indent=2))

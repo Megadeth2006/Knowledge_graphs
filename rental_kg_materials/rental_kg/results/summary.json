@@ -1,10 +1,10 @@
 {
   "observed": {
-    "triples": 150,
+    "triples": 174,
     "shacl_conforms": true
   },
   "demo": {
-    "triples": 926,
+    "triples": 1050,
     "shacl_conforms": true
   },
   "classes": 15,
@@ -39,7 +39,8 @@
     "disjoint_types": "PASS",
     "coordinate_ownership": "PASS",
     "materialized_graph_shacl": "PASS",
-    "source_observation_date": "PASS"
+    "source_observation_date": "PASS",
+    "russian_instance_labels": "PASS"
   },
   "inferred_instances": {
     "Place": 14,

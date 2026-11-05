@@ -510,32 +510,32 @@ ex:D12_source a owl:Thing ;
 ex:Haversine a owl:Thing ;
     owl:sameAs ex:Haversine .
 
-ex:M1 a _:N69e9aed2d31b4b8081865dbbf44c9aec,
+ex:M1 a _:Nc368dd51f82647c982dbd8b170964fc2,
         owl:Thing,
         ex:Amenity ;
     owl:sameAs ex:M1 .
 
-ex:M2 a _:N69e9aed2d31b4b8081865dbbf44c9aec,
+ex:M2 a _:Nc368dd51f82647c982dbd8b170964fc2,
         owl:Thing,
         ex:Amenity ;
     owl:sameAs ex:M2 .
 
-ex:P1 a _:N69e9aed2d31b4b8081865dbbf44c9aec,
+ex:P1 a _:Nc368dd51f82647c982dbd8b170964fc2,
         owl:Thing,
         ex:Amenity ;
     owl:sameAs ex:P1 .
 
-ex:P2 a _:N69e9aed2d31b4b8081865dbbf44c9aec,
+ex:P2 a _:Nc368dd51f82647c982dbd8b170964fc2,
         owl:Thing,
         ex:Amenity ;
     owl:sameAs ex:P2 .
 
-ex:S1 a _:N69e9aed2d31b4b8081865dbbf44c9aec,
+ex:S1 a _:Nc368dd51f82647c982dbd8b170964fc2,
         owl:Thing,
         ex:Amenity ;
     owl:sameAs ex:S1 .
 
-ex:S2 a _:N69e9aed2d31b4b8081865dbbf44c9aec,
+ex:S2 a _:Nc368dd51f82647c982dbd8b170964fc2,
         owl:Thing,
         ex:Amenity ;
     owl:sameAs ex:S2 .
@@ -591,12 +591,12 @@ true a xsd:boolean ;
 0.0 a xsd:decimal ;
     owl:sameAs 0.0 .
 
-0.0 a xsd:decimal ;
-    owl:sameAs 0.0 .
-
 0 a xsd:decimal,
         xsd:integer ;
     owl:sameAs 0 .
+
+0.0 a xsd:decimal ;
+    owl:sameAs 0.0 .
 
 1 a xsd:decimal,
         xsd:integer ;
@@ -1045,6 +1045,8 @@ true a xsd:boolean ;
 
 "Место расположения"@ru owl:sameAs "Место расположения"@ru .
 
+"Метод гаверсинуса"@ru owl:sameAs "Метод гаверсинуса"@ru .
+
 "Метод измерения"@ru owl:sameAs "Метод измерения"@ru .
 
 "Набор явных требований арендатора к поиску: бюджет, город, радиус до метро и необходимость разрешения на животных. Не является человеком или объявлением."@ru owl:sameAs "Набор явных требований арендатора к поиску: бюджет, город, радиус до метро и необходимость разрешения на животных. Не является человеком или объявлением."@ru .
@@ -1077,23 +1079,269 @@ true a xsd:boolean ;
 
 "Станция метро"@ru owl:sameAs "Станция метро"@ru .
 
+"Студент с питомцем"@ru owl:sameAs "Студент с питомцем"@ru .
+
 "Супермаркет"@ru owl:sameAs "Супермаркет"@ru .
 
 "Территориальная адресная единица внутри города, в которую входит здание. Членство определяется уровнем адресной иерархии, а не близостью к жилью."@ru owl:sameAs "Территориальная адресная единица внутри города, в которую входит здание. Членство определяется уровнем адресной иерархии, а не близостью к жилью."@ru .
 
 "Указатель на исходную запись, из которой получены факты: URL реальной карточки либо явно учебный идентификатор источника. Используется как объект hasSource."@ru owl:sameAs "Указатель на исходную запись, из которой получены факты: URL реальной карточки либо явно учебный идентификатор источника. Используется как объект hasSource."@ru .
 
+"Учебная квартира D01"@ru owl:sameAs "Учебная квартира D01"@ru .
+
+"Учебная квартира D02"@ru owl:sameAs "Учебная квартира D02"@ru .
+
+"Учебная квартира D03"@ru owl:sameAs "Учебная квартира D03"@ru .
+
+"Учебная квартира D04"@ru owl:sameAs "Учебная квартира D04"@ru .
+
+"Учебная квартира D05"@ru owl:sameAs "Учебная квартира D05"@ru .
+
+"Учебная квартира D06"@ru owl:sameAs "Учебная квартира D06"@ru .
+
+"Учебная квартира D07"@ru owl:sameAs "Учебная квартира D07"@ru .
+
+"Учебная квартира D08"@ru owl:sameAs "Учебная квартира D08"@ru .
+
+"Учебная квартира D09"@ru owl:sameAs "Учебная квартира D09"@ru .
+
+"Учебная квартира D10"@ru owl:sameAs "Учебная квартира D10"@ru .
+
+"Учебная квартира D11"@ru owl:sameAs "Учебная квартира D11"@ru .
+
+"Учебная квартира D12"@ru owl:sameAs "Учебная квартира D12"@ru .
+
 "Учебная точка парка А"@ru owl:sameAs "Учебная точка парка А"@ru .
 
 "Учебная точка парка Б"@ru owl:sameAs "Учебная точка парка Б"@ru .
+
+"Учебное здание D01"@ru owl:sameAs "Учебное здание D01"@ru .
+
+"Учебное здание D02"@ru owl:sameAs "Учебное здание D02"@ru .
+
+"Учебное здание D03"@ru owl:sameAs "Учебное здание D03"@ru .
+
+"Учебное здание D04"@ru owl:sameAs "Учебное здание D04"@ru .
+
+"Учебное здание D05"@ru owl:sameAs "Учебное здание D05"@ru .
+
+"Учебное здание D06"@ru owl:sameAs "Учебное здание D06"@ru .
+
+"Учебное здание D07"@ru owl:sameAs "Учебное здание D07"@ru .
+
+"Учебное здание D08"@ru owl:sameAs "Учебное здание D08"@ru .
+
+"Учебное здание D09"@ru owl:sameAs "Учебное здание D09"@ru .
+
+"Учебное здание D10"@ru owl:sameAs "Учебное здание D10"@ru .
+
+"Учебное здание D11"@ru owl:sameAs "Учебное здание D11"@ru .
+
+"Учебное здание D12"@ru owl:sameAs "Учебное здание D12"@ru .
 
 "Учебное метро А"@ru owl:sameAs "Учебное метро А"@ru .
 
 "Учебное метро Б"@ru owl:sameAs "Учебное метро Б"@ru .
 
+"Учебное объявление D01"@ru owl:sameAs "Учебное объявление D01"@ru .
+
+"Учебное объявление D02"@ru owl:sameAs "Учебное объявление D02"@ru .
+
+"Учебное объявление D03"@ru owl:sameAs "Учебное объявление D03"@ru .
+
+"Учебное объявление D04"@ru owl:sameAs "Учебное объявление D04"@ru .
+
+"Учебное объявление D05"@ru owl:sameAs "Учебное объявление D05"@ru .
+
+"Учебное объявление D06"@ru owl:sameAs "Учебное объявление D06"@ru .
+
+"Учебное объявление D07"@ru owl:sameAs "Учебное объявление D07"@ru .
+
+"Учебное объявление D08"@ru owl:sameAs "Учебное объявление D08"@ru .
+
+"Учебное объявление D09"@ru owl:sameAs "Учебное объявление D09"@ru .
+
+"Учебное объявление D10"@ru owl:sameAs "Учебное объявление D10"@ru .
+
+"Учебное объявление D11"@ru owl:sameAs "Учебное объявление D11"@ru .
+
+"Учебное объявление D12"@ru owl:sameAs "Учебное объявление D12"@ru .
+
+"Учебное расстояние D01 — M1"@ru owl:sameAs "Учебное расстояние D01 — M1"@ru .
+
+"Учебное расстояние D01 — M2"@ru owl:sameAs "Учебное расстояние D01 — M2"@ru .
+
+"Учебное расстояние D01 — P1"@ru owl:sameAs "Учебное расстояние D01 — P1"@ru .
+
+"Учебное расстояние D01 — P2"@ru owl:sameAs "Учебное расстояние D01 — P2"@ru .
+
+"Учебное расстояние D01 — S1"@ru owl:sameAs "Учебное расстояние D01 — S1"@ru .
+
+"Учебное расстояние D01 — S2"@ru owl:sameAs "Учебное расстояние D01 — S2"@ru .
+
+"Учебное расстояние D02 — M1"@ru owl:sameAs "Учебное расстояние D02 — M1"@ru .
+
+"Учебное расстояние D02 — M2"@ru owl:sameAs "Учебное расстояние D02 — M2"@ru .
+
+"Учебное расстояние D02 — P1"@ru owl:sameAs "Учебное расстояние D02 — P1"@ru .
+
+"Учебное расстояние D02 — P2"@ru owl:sameAs "Учебное расстояние D02 — P2"@ru .
+
+"Учебное расстояние D02 — S1"@ru owl:sameAs "Учебное расстояние D02 — S1"@ru .
+
+"Учебное расстояние D02 — S2"@ru owl:sameAs "Учебное расстояние D02 — S2"@ru .
+
+"Учебное расстояние D03 — M1"@ru owl:sameAs "Учебное расстояние D03 — M1"@ru .
+
+"Учебное расстояние D03 — M2"@ru owl:sameAs "Учебное расстояние D03 — M2"@ru .
+
+"Учебное расстояние D03 — P1"@ru owl:sameAs "Учебное расстояние D03 — P1"@ru .
+
+"Учебное расстояние D03 — P2"@ru owl:sameAs "Учебное расстояние D03 — P2"@ru .
+
+"Учебное расстояние D03 — S1"@ru owl:sameAs "Учебное расстояние D03 — S1"@ru .
+
+"Учебное расстояние D03 — S2"@ru owl:sameAs "Учебное расстояние D03 — S2"@ru .
+
+"Учебное расстояние D04 — M1"@ru owl:sameAs "Учебное расстояние D04 — M1"@ru .
+
+"Учебное расстояние D04 — M2"@ru owl:sameAs "Учебное расстояние D04 — M2"@ru .
+
+"Учебное расстояние D04 — P1"@ru owl:sameAs "Учебное расстояние D04 — P1"@ru .
+
+"Учебное расстояние D04 — P2"@ru owl:sameAs "Учебное расстояние D04 — P2"@ru .
+
+"Учебное расстояние D04 — S1"@ru owl:sameAs "Учебное расстояние D04 — S1"@ru .
+
+"Учебное расстояние D04 — S2"@ru owl:sameAs "Учебное расстояние D04 — S2"@ru .
+
+"Учебное расстояние D05 — M1"@ru owl:sameAs "Учебное расстояние D05 — M1"@ru .
+
+"Учебное расстояние D05 — M2"@ru owl:sameAs "Учебное расстояние D05 — M2"@ru .
+
+"Учебное расстояние D05 — P1"@ru owl:sameAs "Учебное расстояние D05 — P1"@ru .
+
+"Учебное расстояние D05 — P2"@ru owl:sameAs "Учебное расстояние D05 — P2"@ru .
+
+"Учебное расстояние D05 — S1"@ru owl:sameAs "Учебное расстояние D05 — S1"@ru .
+
+"Учебное расстояние D05 — S2"@ru owl:sameAs "Учебное расстояние D05 — S2"@ru .
+
+"Учебное расстояние D06 — M1"@ru owl:sameAs "Учебное расстояние D06 — M1"@ru .
+
+"Учебное расстояние D06 — M2"@ru owl:sameAs "Учебное расстояние D06 — M2"@ru .
+
+"Учебное расстояние D06 — P1"@ru owl:sameAs "Учебное расстояние D06 — P1"@ru .
+
+"Учебное расстояние D06 — P2"@ru owl:sameAs "Учебное расстояние D06 — P2"@ru .
+
+"Учебное расстояние D06 — S1"@ru owl:sameAs "Учебное расстояние D06 — S1"@ru .
+
+"Учебное расстояние D06 — S2"@ru owl:sameAs "Учебное расстояние D06 — S2"@ru .
+
+"Учебное расстояние D07 — M1"@ru owl:sameAs "Учебное расстояние D07 — M1"@ru .
+
+"Учебное расстояние D07 — M2"@ru owl:sameAs "Учебное расстояние D07 — M2"@ru .
+
+"Учебное расстояние D07 — P1"@ru owl:sameAs "Учебное расстояние D07 — P1"@ru .
+
+"Учебное расстояние D07 — P2"@ru owl:sameAs "Учебное расстояние D07 — P2"@ru .
+
+"Учебное расстояние D07 — S1"@ru owl:sameAs "Учебное расстояние D07 — S1"@ru .
+
+"Учебное расстояние D07 — S2"@ru owl:sameAs "Учебное расстояние D07 — S2"@ru .
+
+"Учебное расстояние D08 — M1"@ru owl:sameAs "Учебное расстояние D08 — M1"@ru .
+
+"Учебное расстояние D08 — M2"@ru owl:sameAs "Учебное расстояние D08 — M2"@ru .
+
+"Учебное расстояние D08 — P1"@ru owl:sameAs "Учебное расстояние D08 — P1"@ru .
+
+"Учебное расстояние D08 — P2"@ru owl:sameAs "Учебное расстояние D08 — P2"@ru .
+
+"Учебное расстояние D08 — S1"@ru owl:sameAs "Учебное расстояние D08 — S1"@ru .
+
+"Учебное расстояние D08 — S2"@ru owl:sameAs "Учебное расстояние D08 — S2"@ru .
+
+"Учебное расстояние D09 — M1"@ru owl:sameAs "Учебное расстояние D09 — M1"@ru .
+
+"Учебное расстояние D09 — M2"@ru owl:sameAs "Учебное расстояние D09 — M2"@ru .
+
+"Учебное расстояние D09 — P1"@ru owl:sameAs "Учебное расстояние D09 — P1"@ru .
+
+"Учебное расстояние D09 — P2"@ru owl:sameAs "Учебное расстояние D09 — P2"@ru .
+
+"Учебное расстояние D09 — S1"@ru owl:sameAs "Учебное расстояние D09 — S1"@ru .
+
+"Учебное расстояние D09 — S2"@ru owl:sameAs "Учебное расстояние D09 — S2"@ru .
+
+"Учебное расстояние D10 — M1"@ru owl:sameAs "Учебное расстояние D10 — M1"@ru .
+
+"Учебное расстояние D10 — M2"@ru owl:sameAs "Учебное расстояние D10 — M2"@ru .
+
+"Учебное расстояние D10 — P1"@ru owl:sameAs "Учебное расстояние D10 — P1"@ru .
+
+"Учебное расстояние D10 — P2"@ru owl:sameAs "Учебное расстояние D10 — P2"@ru .
+
+"Учебное расстояние D10 — S1"@ru owl:sameAs "Учебное расстояние D10 — S1"@ru .
+
+"Учебное расстояние D10 — S2"@ru owl:sameAs "Учебное расстояние D10 — S2"@ru .
+
+"Учебное расстояние D11 — M1"@ru owl:sameAs "Учебное расстояние D11 — M1"@ru .
+
+"Учебное расстояние D11 — M2"@ru owl:sameAs "Учебное расстояние D11 — M2"@ru .
+
+"Учебное расстояние D11 — P1"@ru owl:sameAs "Учебное расстояние D11 — P1"@ru .
+
+"Учебное расстояние D11 — P2"@ru owl:sameAs "Учебное расстояние D11 — P2"@ru .
+
+"Учебное расстояние D11 — S1"@ru owl:sameAs "Учебное расстояние D11 — S1"@ru .
+
+"Учебное расстояние D11 — S2"@ru owl:sameAs "Учебное расстояние D11 — S2"@ru .
+
+"Учебное расстояние D12 — M1"@ru owl:sameAs "Учебное расстояние D12 — M1"@ru .
+
+"Учебное расстояние D12 — M2"@ru owl:sameAs "Учебное расстояние D12 — M2"@ru .
+
+"Учебное расстояние D12 — P1"@ru owl:sameAs "Учебное расстояние D12 — P1"@ru .
+
+"Учебное расстояние D12 — P2"@ru owl:sameAs "Учебное расстояние D12 — P2"@ru .
+
+"Учебное расстояние D12 — S1"@ru owl:sameAs "Учебное расстояние D12 — S1"@ru .
+
+"Учебное расстояние D12 — S2"@ru owl:sameAs "Учебное расстояние D12 — S2"@ru .
+
+"Учебный город"@ru owl:sameAs "Учебный город"@ru .
+
+"Учебный источник D01"@ru owl:sameAs "Учебный источник D01"@ru .
+
+"Учебный источник D02"@ru owl:sameAs "Учебный источник D02"@ru .
+
+"Учебный источник D03"@ru owl:sameAs "Учебный источник D03"@ru .
+
+"Учебный источник D04"@ru owl:sameAs "Учебный источник D04"@ru .
+
+"Учебный источник D05"@ru owl:sameAs "Учебный источник D05"@ru .
+
+"Учебный источник D06"@ru owl:sameAs "Учебный источник D06"@ru .
+
+"Учебный источник D07"@ru owl:sameAs "Учебный источник D07"@ru .
+
+"Учебный источник D08"@ru owl:sameAs "Учебный источник D08"@ru .
+
+"Учебный источник D09"@ru owl:sameAs "Учебный источник D09"@ru .
+
+"Учебный источник D10"@ru owl:sameAs "Учебный источник D10"@ru .
+
+"Учебный источник D11"@ru owl:sameAs "Учебный источник D11"@ru .
+
+"Учебный источник D12"@ru owl:sameAs "Учебный источник D12"@ru .
+
 "Учебный магазин А"@ru owl:sameAs "Учебный магазин А"@ru .
 
 "Учебный магазин Б"@ru owl:sameAs "Учебный магазин Б"@ru .
+
+"Учебный район"@ru owl:sameAs "Учебный район"@ru .
 
 "Физическая постройка, содержащая жильё, с адресом и этажностью. Её точка WGS84 служит приближённой точкой расположения находящегося в ней жилья."@ru owl:sameAs "Физическая постройка, содержащая жильё, с адресом и этажностью. Её точка WGS84 служит приближённой точкой расположения находящегося в ней жилья."@ru .
 
@@ -1173,7 +1421,7 @@ xsd:date a rdfs:Datatype ;
 ex:D01 a owl:Thing ;
     owl:sameAs ex:D01 .
 
-ex:D01_building a _:N69e9aed2d31b4b8081865dbbf44c9aec,
+ex:D01_building a _:Nc368dd51f82647c982dbd8b170964fc2,
         owl:Thing,
         ex:Place ;
     owl:sameAs ex:D01_building ;
@@ -1183,7 +1431,7 @@ ex:D01_building a _:N69e9aed2d31b4b8081865dbbf44c9aec,
 ex:D02 a owl:Thing ;
     owl:sameAs ex:D02 .
 
-ex:D02_building a _:N69e9aed2d31b4b8081865dbbf44c9aec,
+ex:D02_building a _:Nc368dd51f82647c982dbd8b170964fc2,
         owl:Thing,
         ex:Place ;
     owl:sameAs ex:D02_building ;
@@ -1193,7 +1441,7 @@ ex:D02_building a _:N69e9aed2d31b4b8081865dbbf44c9aec,
 ex:D03 a owl:Thing ;
     owl:sameAs ex:D03 .
 
-ex:D03_building a _:N69e9aed2d31b4b8081865dbbf44c9aec,
+ex:D03_building a _:Nc368dd51f82647c982dbd8b170964fc2,
         owl:Thing,
         ex:Place ;
     owl:sameAs ex:D03_building ;
@@ -1203,7 +1451,7 @@ ex:D03_building a _:N69e9aed2d31b4b8081865dbbf44c9aec,
 ex:D04 a owl:Thing ;
     owl:sameAs ex:D04 .
 
-ex:D04_building a _:N69e9aed2d31b4b8081865dbbf44c9aec,
+ex:D04_building a _:Nc368dd51f82647c982dbd8b170964fc2,
         owl:Thing,
         ex:Place ;
     owl:sameAs ex:D04_building ;
@@ -1213,7 +1461,7 @@ ex:D04_building a _:N69e9aed2d31b4b8081865dbbf44c9aec,
 ex:D05 a owl:Thing ;
     owl:sameAs ex:D05 .
 
-ex:D05_building a _:N69e9aed2d31b4b8081865dbbf44c9aec,
+ex:D05_building a _:Nc368dd51f82647c982dbd8b170964fc2,
         owl:Thing,
         ex:Place ;
     owl:sameAs ex:D05_building ;
@@ -1223,7 +1471,7 @@ ex:D05_building a _:N69e9aed2d31b4b8081865dbbf44c9aec,
 ex:D06 a owl:Thing ;
     owl:sameAs ex:D06 .
 
-ex:D06_building a _:N69e9aed2d31b4b8081865dbbf44c9aec,
+ex:D06_building a _:Nc368dd51f82647c982dbd8b170964fc2,
         owl:Thing,
         ex:Place ;
     owl:sameAs ex:D06_building ;
@@ -1233,7 +1481,7 @@ ex:D06_building a _:N69e9aed2d31b4b8081865dbbf44c9aec,
 ex:D07 a owl:Thing ;
     owl:sameAs ex:D07 .
 
-ex:D07_building a _:N69e9aed2d31b4b8081865dbbf44c9aec,
+ex:D07_building a _:Nc368dd51f82647c982dbd8b170964fc2,
         owl:Thing,
         ex:Place ;
     owl:sameAs ex:D07_building ;
@@ -1243,7 +1491,7 @@ ex:D07_building a _:N69e9aed2d31b4b8081865dbbf44c9aec,
 ex:D08 a owl:Thing ;
     owl:sameAs ex:D08 .
 
-ex:D08_building a _:N69e9aed2d31b4b8081865dbbf44c9aec,
+ex:D08_building a _:Nc368dd51f82647c982dbd8b170964fc2,
         owl:Thing,
         ex:Place ;
     owl:sameAs ex:D08_building ;
@@ -1253,7 +1501,7 @@ ex:D08_building a _:N69e9aed2d31b4b8081865dbbf44c9aec,
 ex:D09 a owl:Thing ;
     owl:sameAs ex:D09 .
 
-ex:D09_building a _:N69e9aed2d31b4b8081865dbbf44c9aec,
+ex:D09_building a _:Nc368dd51f82647c982dbd8b170964fc2,
         owl:Thing,
         ex:Place ;
     owl:sameAs ex:D09_building ;
@@ -1263,7 +1511,7 @@ ex:D09_building a _:N69e9aed2d31b4b8081865dbbf44c9aec,
 ex:D10 a owl:Thing ;
     owl:sameAs ex:D10 .
 
-ex:D10_building a _:N69e9aed2d31b4b8081865dbbf44c9aec,
+ex:D10_building a _:Nc368dd51f82647c982dbd8b170964fc2,
         owl:Thing,
         ex:Place ;
     owl:sameAs ex:D10_building ;
@@ -1273,7 +1521,7 @@ ex:D10_building a _:N69e9aed2d31b4b8081865dbbf44c9aec,
 ex:D11 a owl:Thing ;
     owl:sameAs ex:D11 .
 
-ex:D11_building a _:N69e9aed2d31b4b8081865dbbf44c9aec,
+ex:D11_building a _:Nc368dd51f82647c982dbd8b170964fc2,
         owl:Thing,
         ex:Place ;
     owl:sameAs ex:D11_building ;
@@ -1283,7 +1531,7 @@ ex:D11_building a _:N69e9aed2d31b4b8081865dbbf44c9aec,
 ex:D12 a owl:Thing ;
     owl:sameAs ex:D12 .
 
-ex:D12_building a _:N69e9aed2d31b4b8081865dbbf44c9aec,
+ex:D12_building a _:Nc368dd51f82647c982dbd8b170964fc2,
         owl:Thing,
         ex:Place ;
     owl:sameAs ex:D12_building ;
@@ -1293,7 +1541,7 @@ ex:D12_building a _:N69e9aed2d31b4b8081865dbbf44c9aec,
 owl:Class owl:sameAs owl:Class .
 
 owl:Nothing a owl:Class ;
-    rdfs:subClassOf _:N69e9aed2d31b4b8081865dbbf44c9aec,
+    rdfs:subClassOf _:Nc368dd51f82647c982dbd8b170964fc2,
         owl:Nothing,
         owl:Thing,
         ex:Amenity,
@@ -1314,7 +1562,7 @@ owl:Nothing a owl:Class ;
     owl:equivalentClass owl:Nothing ;
     owl:sameAs owl:Nothing .
 
-ex:address rdfs:domain _:N69e9aed2d31b4b8081865dbbf44c9aec,
+ex:address rdfs:domain _:Nc368dd51f82647c982dbd8b170964fc2,
         owl:Thing,
         ex:Place ;
     rdfs:subPropertyOf ex:address ;
@@ -1351,7 +1599,7 @@ ex:floor rdfs:domain owl:Thing ;
     owl:equivalentProperty ex:floor ;
     owl:sameAs ex:floor .
 
-ex:floorsTotal rdfs:domain _:N69e9aed2d31b4b8081865dbbf44c9aec,
+ex:floorsTotal rdfs:domain _:Nc368dd51f82647c982dbd8b170964fc2,
         owl:Thing,
         ex:Place ;
     rdfs:subPropertyOf ex:floorsTotal ;
@@ -1376,7 +1624,7 @@ ex:hasSource rdfs:range owl:Thing ;
     owl:sameAs ex:hasSource .
 
 ex:inBuilding rdfs:domain owl:Thing ;
-    rdfs:range _:N69e9aed2d31b4b8081865dbbf44c9aec,
+    rdfs:range _:Nc368dd51f82647c982dbd8b170964fc2,
         owl:Thing,
         ex:Place ;
     rdfs:subPropertyOf ex:inBuilding ;
@@ -1391,7 +1639,7 @@ ex:inCity rdfs:domain owl:Thing,
     owl:equivalentProperty ex:inCity ;
     owl:sameAs ex:inCity .
 
-ex:inDistrict rdfs:domain _:N69e9aed2d31b4b8081865dbbf44c9aec,
+ex:inDistrict rdfs:domain _:Nc368dd51f82647c982dbd8b170964fc2,
         owl:Thing,
         ex:Place ;
     rdfs:range owl:Thing,
@@ -1435,7 +1683,7 @@ ex:minMonths rdfs:domain owl:Thing ;
     owl:sameAs ex:minMonths .
 
 ex:nearAmenity rdfs:domain owl:Thing ;
-    rdfs:range _:N69e9aed2d31b4b8081865dbbf44c9aec,
+    rdfs:range _:Nc368dd51f82647c982dbd8b170964fc2,
         owl:Thing ;
     rdfs:subPropertyOf ex:nearAmenity ;
     owl:equivalentProperty ex:nearAmenity ;
@@ -1494,7 +1742,7 @@ ex:term rdfs:domain owl:Thing ;
     owl:sameAs ex:term .
 
 ex:toAmenity rdfs:domain owl:Thing ;
-    rdfs:range _:N69e9aed2d31b4b8081865dbbf44c9aec,
+    rdfs:range _:Nc368dd51f82647c982dbd8b170964fc2,
         owl:Thing ;
     rdfs:subPropertyOf ex:toAmenity ;
     owl:equivalentProperty ex:toAmenity ;
@@ -1521,7 +1769,7 @@ ex:Apartment rdfs:subClassOf owl:Thing,
     owl:equivalentClass ex:Apartment ;
     owl:sameAs ex:Apartment .
 
-ex:Building rdfs:subClassOf _:N69e9aed2d31b4b8081865dbbf44c9aec,
+ex:Building rdfs:subClassOf _:Nc368dd51f82647c982dbd8b170964fc2,
         owl:Thing,
         ex:Building ;
     owl:equivalentClass ex:Building ;
@@ -1552,13 +1800,13 @@ ex:MeasurementMethod rdfs:subClassOf owl:Thing,
     owl:equivalentClass ex:MeasurementMethod ;
     owl:sameAs ex:MeasurementMethod .
 
-ex:MetroStation rdfs:subClassOf _:N69e9aed2d31b4b8081865dbbf44c9aec,
+ex:MetroStation rdfs:subClassOf _:Nc368dd51f82647c982dbd8b170964fc2,
         owl:Thing,
         ex:MetroStation ;
     owl:equivalentClass ex:MetroStation ;
     owl:sameAs ex:MetroStation .
 
-ex:Park rdfs:subClassOf _:N69e9aed2d31b4b8081865dbbf44c9aec,
+ex:Park rdfs:subClassOf _:Nc368dd51f82647c982dbd8b170964fc2,
         owl:Thing,
         ex:Park ;
     owl:equivalentClass ex:Park ;
@@ -1574,7 +1822,7 @@ ex:SourceRecord rdfs:subClassOf owl:Thing,
     owl:equivalentClass ex:SourceRecord ;
     owl:sameAs ex:SourceRecord .
 
-ex:Supermarket rdfs:subClassOf _:N69e9aed2d31b4b8081865dbbf44c9aec,
+ex:Supermarket rdfs:subClassOf _:Nc368dd51f82647c982dbd8b170964fc2,
         owl:Thing,
         ex:Supermarket ;
     owl:equivalentClass ex:Supermarket ;
@@ -1582,7 +1830,7 @@ ex:Supermarket rdfs:subClassOf _:N69e9aed2d31b4b8081865dbbf44c9aec,
 
 owl:AnnotationProperty owl:sameAs owl:AnnotationProperty .
 
-ex:Amenity rdfs:subClassOf _:N69e9aed2d31b4b8081865dbbf44c9aec,
+ex:Amenity rdfs:subClassOf _:Nc368dd51f82647c982dbd8b170964fc2,
         owl:Thing,
         ex:Amenity ;
     owl:equivalentClass ex:Amenity ;
@@ -1630,12 +1878,12 @@ owl:Thing a owl:Class ;
     owl:equivalentClass owl:Thing ;
     owl:sameAs owl:Thing .
 
-_:N06d9e128484a47d2838402d220b1b538 owl:sameAs _:N06d9e128484a47d2838402d220b1b538 .
+_:N868f6cdc9b7d471e98e08c501197c567 owl:sameAs _:N868f6cdc9b7d471e98e08c501197c567 .
 
-_:N8e5841e6c7a8430cbc796b270f7d685b owl:sameAs _:N8e5841e6c7a8430cbc796b270f7d685b .
+_:Nc5ac38acfc054c5e8fb53f2f70658574 owl:sameAs _:Nc5ac38acfc054c5e8fb53f2f70658574 .
 
-_:N69e9aed2d31b4b8081865dbbf44c9aec rdfs:subClassOf _:N69e9aed2d31b4b8081865dbbf44c9aec,
+_:Nc368dd51f82647c982dbd8b170964fc2 rdfs:subClassOf _:Nc368dd51f82647c982dbd8b170964fc2,
         owl:Thing ;
-    owl:equivalentClass _:N69e9aed2d31b4b8081865dbbf44c9aec ;
-    owl:sameAs _:N69e9aed2d31b4b8081865dbbf44c9aec .
+    owl:equivalentClass _:Nc368dd51f82647c982dbd8b170964fc2 ;
+    owl:sameAs _:Nc368dd51f82647c982dbd8b170964fc2 .
 

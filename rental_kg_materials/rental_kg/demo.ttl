@@ -3,6 +3,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 ex:D01 a ex:ListingSnapshot ;
+    rdfs:label "Учебное объявление D01"@ru ;
     ex:commissionRub 0.0 ;
     ex:depositRub 30000.0 ;
     ex:hasSource ex:D01_source ;
@@ -15,6 +16,7 @@ ex:D01 a ex:ListingSnapshot ;
     ex:utilitiesRubMonth 4000.0 .
 
 ex:D01_M1 a ex:DistanceMeasurement ;
+    rdfs:label "Учебное расстояние D01 — M1"@ru ;
     ex:calculatedOn "2026-10-22"^^xsd:date ;
     ex:distanceM 834.6 ;
     ex:fromDwelling ex:D01_home ;
@@ -23,6 +25,7 @@ ex:D01_M1 a ex:DistanceMeasurement ;
     ex:usesMethod ex:Haversine .
 
 ex:D01_M2 a ex:DistanceMeasurement ;
+    rdfs:label "Учебное расстояние D01 — M2"@ru ;
     ex:calculatedOn "2026-10-22"^^xsd:date ;
     ex:distanceM 2781.9 ;
     ex:fromDwelling ex:D01_home ;
@@ -31,6 +34,7 @@ ex:D01_M2 a ex:DistanceMeasurement ;
     ex:usesMethod ex:Haversine .
 
 ex:D01_P1 a ex:DistanceMeasurement ;
+    rdfs:label "Учебное расстояние D01 — P1"@ru ;
     ex:calculatedOn "2026-10-22"^^xsd:date ;
     ex:distanceM 1825.2 ;
     ex:fromDwelling ex:D01_home ;
@@ -39,6 +43,7 @@ ex:D01_P1 a ex:DistanceMeasurement ;
     ex:usesMethod ex:Haversine .
 
 ex:D01_P2 a ex:DistanceMeasurement ;
+    rdfs:label "Учебное расстояние D01 — P2"@ru ;
     ex:calculatedOn "2026-10-22"^^xsd:date ;
     ex:distanceM 3372.0 ;
     ex:fromDwelling ex:D01_home ;
@@ -47,6 +52,7 @@ ex:D01_P2 a ex:DistanceMeasurement ;
     ex:usesMethod ex:Haversine .
 
 ex:D01_S1 a ex:DistanceMeasurement ;
+    rdfs:label "Учебное расстояние D01 — S1"@ru ;
     ex:calculatedOn "2026-10-22"^^xsd:date ;
     ex:distanceM 1147.2 ;
     ex:fromDwelling ex:D01_home ;
@@ -55,6 +61,7 @@ ex:D01_S1 a ex:DistanceMeasurement ;
     ex:usesMethod ex:Haversine .
 
 ex:D01_S2 a ex:DistanceMeasurement ;
+    rdfs:label "Учебное расстояние D01 — S2"@ru ;
     ex:calculatedOn "2026-10-22"^^xsd:date ;
     ex:distanceM 2904.4 ;
     ex:fromDwelling ex:D01_home ;
@@ -63,6 +70,7 @@ ex:D01_S2 a ex:DistanceMeasurement ;
     ex:usesMethod ex:Haversine .
 
 ex:D02 a ex:ListingSnapshot ;
+    rdfs:label "Учебное объявление D02"@ru ;
     ex:commissionRub 0.0 ;
     ex:depositRub 30000.0 ;
     ex:hasSource ex:D02_source ;
@@ -74,6 +82,7 @@ ex:D02 a ex:ListingSnapshot ;
     ex:utilitiesRubMonth 4000.0 .
 
 ex:D02_M1 a ex:DistanceMeasurement ;
+    rdfs:label "Учебное расстояние D02 — M1"@ru ;
     ex:calculatedOn "2026-10-22"^^xsd:date ;
     ex:distanceM 556.4 ;
     ex:fromDwelling ex:D02_home ;
@@ -82,6 +91,7 @@ ex:D02_M1 a ex:DistanceMeasurement ;
     ex:usesMethod ex:Haversine .
 
 ex:D02_M2 a ex:DistanceMeasurement ;
+    rdfs:label "Учебное расстояние D02 — M2"@ru ;
     ex:calculatedOn "2026-10-22"^^xsd:date ;
     ex:distanceM 2503.7 ;
     ex:fromDwelling ex:D02_home ;
@@ -90,6 +100,7 @@ ex:D02_M2 a ex:DistanceMeasurement ;
     ex:usesMethod ex:Haversine .
 
 ex:D02_P1 a ex:DistanceMeasurement ;
+    rdfs:label "Учебное расстояние D02 — P1"@ru ;
     ex:calculatedOn "2026-10-22"^^xsd:date ;
     ex:distanceM 1547.0 ;
     ex:fromDwelling ex:D02_home ;
@@ -98,6 +109,7 @@ ex:D02_P1 a ex:DistanceMeasurement ;
     ex:usesMethod ex:Haversine .
 
 ex:D02_P2 a ex:DistanceMeasurement ;
+    rdfs:label "Учебное расстояние D02 — P2"@ru ;
     ex:calculatedOn "2026-10-22"^^xsd:date ;
     ex:distanceM 3093.8 ;
     ex:fromDwelling ex:D02_home ;
@@ -106,6 +118,7 @@ ex:D02_P2 a ex:DistanceMeasurement ;
     ex:usesMethod ex:Haversine .
 
 ex:D02_S1 a ex:DistanceMeasurement ;
+    rdfs:label "Учебное расстояние D02 — S1"@ru ;
     ex:calculatedOn "2026-10-22"^^xsd:date ;
     ex:distanceM 869.2 ;
     ex:fromDwelling ex:D02_home ;
@@ -114,6 +127,7 @@ ex:D02_S1 a ex:DistanceMeasurement ;
     ex:usesMethod ex:Haversine .
 
 ex:D02_S2 a ex:DistanceMeasurement ;
+    rdfs:label "Учебное расстояние D02 — S2"@ru ;
     ex:calculatedOn "2026-10-22"^^xsd:date ;
     ex:distanceM 2626.2 ;
     ex:fromDwelling ex:D02_home ;
@@ -122,6 +136,7 @@ ex:D02_S2 a ex:DistanceMeasurement ;
     ex:usesMethod ex:Haversine .
 
 ex:D03 a ex:ListingSnapshot ;
+    rdfs:label "Учебное объявление D03"@ru ;
     ex:commissionRub 0.0 ;
     ex:depositRub 30000.0 ;
     ex:hasSource ex:D03_source ;
@@ -134,6 +149,7 @@ ex:D03 a ex:ListingSnapshot ;
     ex:utilitiesRubMonth 4000.0 .
 
 ex:D03_M1 a ex:DistanceMeasurement ;
+    rdfs:label "Учебное расстояние D03 — M1"@ru ;
     ex:calculatedOn "2026-10-22"^^xsd:date ;
     ex:distanceM 278.2 ;
     ex:fromDwelling ex:D03_home ;
@@ -142,6 +158,7 @@ ex:D03_M1 a ex:DistanceMeasurement ;
     ex:usesMethod ex:Haversine .
 
 ex:D03_M2 a ex:DistanceMeasurement ;
+    rdfs:label "Учебное расстояние D03 — M2"@ru ;
     ex:calculatedOn "2026-10-22"^^xsd:date ;
     ex:distanceM 2225.5 ;
     ex:fromDwelling ex:D03_home ;
@@ -150,6 +167,7 @@ ex:D03_M2 a ex:DistanceMeasurement ;
     ex:usesMethod ex:Haversine .
 
 ex:D03_P1 a ex:DistanceMeasurement ;
+    rdfs:label "Учебное расстояние D03 — P1"@ru ;
     ex:calculatedOn "2026-10-22"^^xsd:date ;
     ex:distanceM 1268.8 ;
     ex:fromDwelling ex:D03_home ;
@@ -158,6 +176,7 @@ ex:D03_P1 a ex:DistanceMeasurement ;
     ex:usesMethod ex:Haversine .
 
 ex:D03_P2 a ex:DistanceMeasurement ;
+    rdfs:label "Учебное расстояние D03 — P2"@ru ;
     ex:calculatedOn "2026-10-22"^^xsd:date ;
     ex:distanceM 2815.6 ;
     ex:fromDwelling ex:D03_home ;
@@ -166,6 +185,7 @@ ex:D03_P2 a ex:DistanceMeasurement ;
     ex:usesMethod ex:Haversine .
 
 ex:D03_S1 a ex:DistanceMeasurement ;
+    rdfs:label "Учебное расстояние D03 — S1"@ru ;
     ex:calculatedOn "2026-10-22"^^xsd:date ;
     ex:distanceM 591.6 ;
     ex:fromDwelling ex:D03_home ;
@@ -174,6 +194,7 @@ ex:D03_S1 a ex:DistanceMeasurement ;
     ex:usesMethod ex:Haversine .
 
 ex:D03_S2 a ex:DistanceMeasurement ;
+    rdfs:label "Учебное расстояние D03 — S2"@ru ;
     ex:calculatedOn "2026-10-22"^^xsd:date ;
     ex:distanceM 2347.9 ;
     ex:fromDwelling ex:D03_home ;
@@ -182,6 +203,7 @@ ex:D03_S2 a ex:DistanceMeasurement ;
     ex:usesMethod ex:Haversine .
 
 ex:D04 a ex:ListingSnapshot ;
+    rdfs:label "Учебное объявление D04"@ru ;
     ex:commissionRub 0.0 ;
     ex:depositRub 30000.0 ;
     ex:hasSource ex:D04_source ;
@@ -194,6 +216,7 @@ ex:D04 a ex:ListingSnapshot ;
     ex:utilitiesRubMonth 4000.0 .
 
 ex:D04_M1 a ex:DistanceMeasurement ;
+    rdfs:label "Учебное расстояние D04 — M1"@ru ;
     ex:calculatedOn "2026-10-22"^^xsd:date ;
     ex:distanceM 0.0 ;
     ex:fromDwelling ex:D04_home ;
@@ -202,6 +225,7 @@ ex:D04_M1 a ex:DistanceMeasurement ;
     ex:usesMethod ex:Haversine .
 
 ex:D04_M2 a ex:DistanceMeasurement ;
+    rdfs:label "Учебное расстояние D04 — M2"@ru ;
     ex:calculatedOn "2026-10-22"^^xsd:date ;
     ex:distanceM 1947.3 ;
     ex:fromDwelling ex:D04_home ;
@@ -210,6 +234,7 @@ ex:D04_M2 a ex:DistanceMeasurement ;
     ex:usesMethod ex:Haversine .
 
 ex:D04_P1 a ex:DistanceMeasurement ;
+    rdfs:label "Учебное расстояние D04 — P1"@ru ;
     ex:calculatedOn "2026-10-22"^^xsd:date ;
     ex:distanceM 990.7 ;
     ex:fromDwelling ex:D04_home ;
@@ -218,6 +243,7 @@ ex:D04_P1 a ex:DistanceMeasurement ;
     ex:usesMethod ex:Haversine .
 
 ex:D04_P2 a ex:DistanceMeasurement ;
+    rdfs:label "Учебное расстояние D04 — P2"@ru ;
     ex:calculatedOn "2026-10-22"^^xsd:date ;
     ex:distanceM 2537.5 ;
     ex:fromDwelling ex:D04_home ;
@@ -226,6 +252,7 @@ ex:D04_P2 a ex:DistanceMeasurement ;
     ex:usesMethod ex:Haversine .
 
 ex:D04_S1 a ex:DistanceMeasurement ;
+    rdfs:label "Учебное расстояние D04 — S1"@ru ;
     ex:calculatedOn "2026-10-22"^^xsd:date ;
     ex:distanceM 314.8 ;
     ex:fromDwelling ex:D04_home ;
@@ -234,6 +261,7 @@ ex:D04_S1 a ex:DistanceMeasurement ;
     ex:usesMethod ex:Haversine .
 
 ex:D04_S2 a ex:DistanceMeasurement ;
+    rdfs:label "Учебное расстояние D04 — S2"@ru ;
     ex:calculatedOn "2026-10-22"^^xsd:date ;
     ex:distanceM 2069.8 ;
     ex:fromDwelling ex:D04_home ;
@@ -242,6 +270,7 @@ ex:D04_S2 a ex:DistanceMeasurement ;
     ex:usesMethod ex:Haversine .
 
 ex:D05 a ex:ListingSnapshot ;
+    rdfs:label "Учебное объявление D05"@ru ;
     ex:commissionRub 0.0 ;
     ex:depositRub 30000.0 ;
     ex:hasSource ex:D05_source ;
@@ -253,6 +282,7 @@ ex:D05 a ex:ListingSnapshot ;
     ex:utilitiesRubMonth 4000.0 .
 
 ex:D05_M1 a ex:DistanceMeasurement ;
+    rdfs:label "Учебное расстояние D05 — M1"@ru ;
     ex:calculatedOn "2026-10-22"^^xsd:date ;
     ex:distanceM 278.2 ;
     ex:fromDwelling ex:D05_home ;
@@ -261,6 +291,7 @@ ex:D05_M1 a ex:DistanceMeasurement ;
     ex:usesMethod ex:Haversine .
 
 ex:D05_M2 a ex:DistanceMeasurement ;
+    rdfs:label "Учебное расстояние D05 — M2"@ru ;
     ex:calculatedOn "2026-10-22"^^xsd:date ;
     ex:distanceM 1669.1 ;
     ex:fromDwelling ex:D05_home ;
@@ -269,6 +300,7 @@ ex:D05_M2 a ex:DistanceMeasurement ;
     ex:usesMethod ex:Haversine .
 
 ex:D05_P1 a ex:DistanceMeasurement ;
+    rdfs:label "Учебное расстояние D05 — P1"@ru ;
     ex:calculatedOn "2026-10-22"^^xsd:date ;
     ex:distanceM 712.6 ;
     ex:fromDwelling ex:D05_home ;
@@ -277,6 +309,7 @@ ex:D05_P1 a ex:DistanceMeasurement ;
     ex:usesMethod ex:Haversine .
 
 ex:D05_P2 a ex:DistanceMeasurement ;
+    rdfs:label "Учебное расстояние D05 — P2"@ru ;
     ex:calculatedOn "2026-10-22"^^xsd:date ;
     ex:distanceM 2259.3 ;
     ex:fromDwelling ex:D05_home ;
@@ -285,6 +318,7 @@ ex:D05_P2 a ex:DistanceMeasurement ;
     ex:usesMethod ex:Haversine .
 
 ex:D05_S1 a ex:DistanceMeasurement ;
+    rdfs:label "Учебное расстояние D05 — S1"@ru ;
     ex:calculatedOn "2026-10-22"^^xsd:date ;
     ex:distanceM 55.7 ;
     ex:fromDwelling ex:D05_home ;
@@ -293,6 +327,7 @@ ex:D05_S1 a ex:DistanceMeasurement ;
     ex:usesMethod ex:Haversine .
 
 ex:D05_S2 a ex:DistanceMeasurement ;
+    rdfs:label "Учебное расстояние D05 — S2"@ru ;
     ex:calculatedOn "2026-10-22"^^xsd:date ;
     ex:distanceM 1791.6 ;
     ex:fromDwelling ex:D05_home ;
@@ -301,6 +336,7 @@ ex:D05_S2 a ex:DistanceMeasurement ;
     ex:usesMethod ex:Haversine .
 
 ex:D06 a ex:ListingSnapshot ;
+    rdfs:label "Учебное объявление D06"@ru ;
     ex:commissionRub 0.0 ;
     ex:depositRub 30000.0 ;
     ex:hasSource ex:D06_source ;
@@ -313,6 +349,7 @@ ex:D06 a ex:ListingSnapshot ;
     ex:utilitiesRubMonth 4000.0 .
 
 ex:D06_M1 a ex:DistanceMeasurement ;
+    rdfs:label "Учебное расстояние D06 — M1"@ru ;
     ex:calculatedOn "2026-10-22"^^xsd:date ;
     ex:distanceM 556.4 ;
     ex:fromDwelling ex:D06_home ;
@@ -321,6 +358,7 @@ ex:D06_M1 a ex:DistanceMeasurement ;
     ex:usesMethod ex:Haversine .
 
 ex:D06_M2 a ex:DistanceMeasurement ;
+    rdfs:label "Учебное расстояние D06 — M2"@ru ;
     ex:calculatedOn "2026-10-22"^^xsd:date ;
     ex:distanceM 1390.9 ;
     ex:fromDwelling ex:D06_home ;
@@ -329,6 +367,7 @@ ex:D06_M2 a ex:DistanceMeasurement ;
     ex:usesMethod ex:Haversine .
 
 ex:D06_P1 a ex:DistanceMeasurement ;
+    rdfs:label "Учебное расстояние D06 — P1"@ru ;
     ex:calculatedOn "2026-10-22"^^xsd:date ;
     ex:distanceM 434.6 ;
     ex:fromDwelling ex:D06_home ;
@@ -337,6 +376,7 @@ ex:D06_P1 a ex:DistanceMeasurement ;
     ex:usesMethod ex:Haversine .
 
 ex:D06_P2 a ex:DistanceMeasurement ;
+    rdfs:label "Учебное расстояние D06 — P2"@ru ;
     ex:calculatedOn "2026-10-22"^^xsd:date ;
     ex:distanceM 1981.2 ;
     ex:fromDwelling ex:D06_home ;
@@ -345,6 +385,7 @@ ex:D06_P2 a ex:DistanceMeasurement ;
     ex:usesMethod ex:Haversine .
 
 ex:D06_S1 a ex:DistanceMeasurement ;
+    rdfs:label "Учебное расстояние D06 — S1"@ru ;
     ex:calculatedOn "2026-10-22"^^xsd:date ;
     ex:distanceM 248.7 ;
     ex:fromDwelling ex:D06_home ;
@@ -353,6 +394,7 @@ ex:D06_S1 a ex:DistanceMeasurement ;
     ex:usesMethod ex:Haversine .
 
 ex:D06_S2 a ex:DistanceMeasurement ;
+    rdfs:label "Учебное расстояние D06 — S2"@ru ;
     ex:calculatedOn "2026-10-22"^^xsd:date ;
     ex:distanceM 1513.4 ;
     ex:fromDwelling ex:D06_home ;
@@ -361,6 +403,7 @@ ex:D06_S2 a ex:DistanceMeasurement ;
     ex:usesMethod ex:Haversine .
 
 ex:D07 a ex:ListingSnapshot ;
+    rdfs:label "Учебное объявление D07"@ru ;
     ex:commissionRub 0.0 ;
     ex:depositRub 30000.0 ;
     ex:hasSource ex:D07_source ;
@@ -373,6 +416,7 @@ ex:D07 a ex:ListingSnapshot ;
     ex:utilitiesRubMonth 4000.0 .
 
 ex:D07_M1 a ex:DistanceMeasurement ;
+    rdfs:label "Учебное расстояние D07 — M1"@ru ;
     ex:calculatedOn "2026-10-22"^^xsd:date ;
     ex:distanceM 834.6 ;
     ex:fromDwelling ex:D07_home ;
@@ -381,6 +425,7 @@ ex:D07_M1 a ex:DistanceMeasurement ;
     ex:usesMethod ex:Haversine .
 
 ex:D07_M2 a ex:DistanceMeasurement ;
+    rdfs:label "Учебное расстояние D07 — M2"@ru ;
     ex:calculatedOn "2026-10-22"^^xsd:date ;
     ex:distanceM 1112.7 ;
     ex:fromDwelling ex:D07_home ;
@@ -389,6 +434,7 @@ ex:D07_M2 a ex:DistanceMeasurement ;
     ex:usesMethod ex:Haversine .
 
 ex:D07_P1 a ex:DistanceMeasurement ;
+    rdfs:label "Учебное расстояние D07 — P1"@ru ;
     ex:calculatedOn "2026-10-22"^^xsd:date ;
     ex:distanceM 157.4 ;
     ex:fromDwelling ex:D07_home ;
@@ -397,6 +443,7 @@ ex:D07_P1 a ex:DistanceMeasurement ;
     ex:usesMethod ex:Haversine .
 
 ex:D07_P2 a ex:DistanceMeasurement ;
+    rdfs:label "Учебное расстояние D07 — P2"@ru ;
     ex:calculatedOn "2026-10-22"^^xsd:date ;
     ex:distanceM 1703.1 ;
     ex:fromDwelling ex:D07_home ;
@@ -405,6 +452,7 @@ ex:D07_P2 a ex:DistanceMeasurement ;
     ex:usesMethod ex:Haversine .
 
 ex:D07_S1 a ex:DistanceMeasurement ;
+    rdfs:label "Учебное расстояние D07 — S1"@ru ;
     ex:calculatedOn "2026-10-22"^^xsd:date ;
     ex:distanceM 524.8 ;
     ex:fromDwelling ex:D07_home ;
@@ -413,6 +461,7 @@ ex:D07_S1 a ex:DistanceMeasurement ;
     ex:usesMethod ex:Haversine .
 
 ex:D07_S2 a ex:DistanceMeasurement ;
+    rdfs:label "Учебное расстояние D07 — S2"@ru ;
     ex:calculatedOn "2026-10-22"^^xsd:date ;
     ex:distanceM 1235.3 ;
     ex:fromDwelling ex:D07_home ;
@@ -421,6 +470,7 @@ ex:D07_S2 a ex:DistanceMeasurement ;
     ex:usesMethod ex:Haversine .
 
 ex:D08 a ex:ListingSnapshot ;
+    rdfs:label "Учебное объявление D08"@ru ;
     ex:commissionRub 0.0 ;
     ex:depositRub 30000.0 ;
     ex:hasSource ex:D08_source ;
@@ -432,6 +482,7 @@ ex:D08 a ex:ListingSnapshot ;
     ex:utilitiesRubMonth 4000.0 .
 
 ex:D08_M1 a ex:DistanceMeasurement ;
+    rdfs:label "Учебное расстояние D08 — M1"@ru ;
     ex:calculatedOn "2026-10-22"^^xsd:date ;
     ex:distanceM 1112.8 ;
     ex:fromDwelling ex:D08_home ;
@@ -440,6 +491,7 @@ ex:D08_M1 a ex:DistanceMeasurement ;
     ex:usesMethod ex:Haversine .
 
 ex:D08_M2 a ex:DistanceMeasurement ;
+    rdfs:label "Учебное расстояние D08 — M2"@ru ;
     ex:calculatedOn "2026-10-22"^^xsd:date ;
     ex:distanceM 834.5 ;
     ex:fromDwelling ex:D08_home ;
@@ -448,6 +500,7 @@ ex:D08_M2 a ex:DistanceMeasurement ;
     ex:usesMethod ex:Haversine .
 
 ex:D08_P1 a ex:DistanceMeasurement ;
+    rdfs:label "Учебное расстояние D08 — P1"@ru ;
     ex:calculatedOn "2026-10-22"^^xsd:date ;
     ex:distanceM 124.4 ;
     ex:fromDwelling ex:D08_home ;
@@ -456,6 +509,7 @@ ex:D08_P1 a ex:DistanceMeasurement ;
     ex:usesMethod ex:Haversine .
 
 ex:D08_P2 a ex:DistanceMeasurement ;
+    rdfs:label "Учебное расстояние D08 — P2"@ru ;
     ex:calculatedOn "2026-10-22"^^xsd:date ;
     ex:distanceM 1425.0 ;
     ex:fromDwelling ex:D08_home ;
@@ -464,6 +518,7 @@ ex:D08_P2 a ex:DistanceMeasurement ;
     ex:usesMethod ex:Haversine .
 
 ex:D08_S1 a ex:DistanceMeasurement ;
+    rdfs:label "Учебное расстояние D08 — S1"@ru ;
     ex:calculatedOn "2026-10-22"^^xsd:date ;
     ex:distanceM 802.3 ;
     ex:fromDwelling ex:D08_home ;
@@ -472,6 +527,7 @@ ex:D08_S1 a ex:DistanceMeasurement ;
     ex:usesMethod ex:Haversine .
 
 ex:D08_S2 a ex:DistanceMeasurement ;
+    rdfs:label "Учебное расстояние D08 — S2"@ru ;
     ex:calculatedOn "2026-10-22"^^xsd:date ;
     ex:distanceM 957.1 ;
     ex:fromDwelling ex:D08_home ;
@@ -480,6 +536,7 @@ ex:D08_S2 a ex:DistanceMeasurement ;
     ex:usesMethod ex:Haversine .
 
 ex:D09 a ex:ListingSnapshot ;
+    rdfs:label "Учебное объявление D09"@ru ;
     ex:commissionRub 0.0 ;
     ex:depositRub 30000.0 ;
     ex:hasSource ex:D09_source ;
@@ -492,6 +549,7 @@ ex:D09 a ex:ListingSnapshot ;
     ex:utilitiesRubMonth 4000.0 .
 
 ex:D09_M1 a ex:DistanceMeasurement ;
+    rdfs:label "Учебное расстояние D09 — M1"@ru ;
     ex:calculatedOn "2026-10-22"^^xsd:date ;
     ex:distanceM 1391.0 ;
     ex:fromDwelling ex:D09_home ;
@@ -500,6 +558,7 @@ ex:D09_M1 a ex:DistanceMeasurement ;
     ex:usesMethod ex:Haversine .
 
 ex:D09_M2 a ex:DistanceMeasurement ;
+    rdfs:label "Учебное расстояние D09 — M2"@ru ;
     ex:calculatedOn "2026-10-22"^^xsd:date ;
     ex:distanceM 556.3 ;
     ex:fromDwelling ex:D09_home ;
@@ -508,6 +567,7 @@ ex:D09_M2 a ex:DistanceMeasurement ;
     ex:usesMethod ex:Haversine .
 
 ex:D09_P1 a ex:DistanceMeasurement ;
+    rdfs:label "Учебное расстояние D09 — P1"@ru ;
     ex:calculatedOn "2026-10-22"^^xsd:date ;
     ex:distanceM 401.2 ;
     ex:fromDwelling ex:D09_home ;
@@ -516,6 +576,7 @@ ex:D09_P1 a ex:DistanceMeasurement ;
     ex:usesMethod ex:Haversine .
 
 ex:D09_P2 a ex:DistanceMeasurement ;
+    rdfs:label "Учебное расстояние D09 — P2"@ru ;
     ex:calculatedOn "2026-10-22"^^xsd:date ;
     ex:distanceM 1147.0 ;
     ex:fromDwelling ex:D09_home ;
@@ -524,6 +585,7 @@ ex:D09_P2 a ex:DistanceMeasurement ;
     ex:usesMethod ex:Haversine .
 
 ex:D09_S1 a ex:DistanceMeasurement ;
+    rdfs:label "Учебное расстояние D09 — S1"@ru ;
     ex:calculatedOn "2026-10-22"^^xsd:date ;
     ex:distanceM 1080.2 ;
     ex:fromDwelling ex:D09_home ;
@@ -532,6 +594,7 @@ ex:D09_S1 a ex:DistanceMeasurement ;
     ex:usesMethod ex:Haversine .
 
 ex:D09_S2 a ex:DistanceMeasurement ;
+    rdfs:label "Учебное расстояние D09 — S2"@ru ;
     ex:calculatedOn "2026-10-22"^^xsd:date ;
     ex:distanceM 679.1 ;
     ex:fromDwelling ex:D09_home ;
@@ -540,6 +603,7 @@ ex:D09_S2 a ex:DistanceMeasurement ;
     ex:usesMethod ex:Haversine .
 
 ex:D10 a ex:ListingSnapshot ;
+    rdfs:label "Учебное объявление D10"@ru ;
     ex:commissionRub 0.0 ;
     ex:depositRub 30000.0 ;
     ex:hasSource ex:D10_source ;
@@ -552,6 +616,7 @@ ex:D10 a ex:ListingSnapshot ;
     ex:utilitiesRubMonth 4000.0 .
 
 ex:D10_M1 a ex:DistanceMeasurement ;
+    rdfs:label "Учебное расстояние D10 — M1"@ru ;
     ex:calculatedOn "2026-10-22"^^xsd:date ;
     ex:distanceM 1669.1 ;
     ex:fromDwelling ex:D10_home ;
@@ -560,6 +625,7 @@ ex:D10_M1 a ex:DistanceMeasurement ;
     ex:usesMethod ex:Haversine .
 
 ex:D10_M2 a ex:DistanceMeasurement ;
+    rdfs:label "Учебное расстояние D10 — M2"@ru ;
     ex:calculatedOn "2026-10-22"^^xsd:date ;
     ex:distanceM 278.2 ;
     ex:fromDwelling ex:D10_home ;
@@ -568,6 +634,7 @@ ex:D10_M2 a ex:DistanceMeasurement ;
     ex:usesMethod ex:Haversine .
 
 ex:D10_P1 a ex:DistanceMeasurement ;
+    rdfs:label "Учебное расстояние D10 — P1"@ru ;
     ex:calculatedOn "2026-10-22"^^xsd:date ;
     ex:distanceM 679.1 ;
     ex:fromDwelling ex:D10_home ;
@@ -576,6 +643,7 @@ ex:D10_P1 a ex:DistanceMeasurement ;
     ex:usesMethod ex:Haversine .
 
 ex:D10_P2 a ex:DistanceMeasurement ;
+    rdfs:label "Учебное расстояние D10 — P2"@ru ;
     ex:calculatedOn "2026-10-22"^^xsd:date ;
     ex:distanceM 869.1 ;
     ex:fromDwelling ex:D10_home ;
@@ -584,6 +652,7 @@ ex:D10_P2 a ex:DistanceMeasurement ;
     ex:usesMethod ex:Haversine .
 
 ex:D10_S1 a ex:DistanceMeasurement ;
+    rdfs:label "Учебное расстояние D10 — S1"@ru ;
     ex:calculatedOn "2026-10-22"^^xsd:date ;
     ex:distanceM 1358.2 ;
     ex:fromDwelling ex:D10_home ;
@@ -592,6 +661,7 @@ ex:D10_S1 a ex:DistanceMeasurement ;
     ex:usesMethod ex:Haversine .
 
 ex:D10_S2 a ex:DistanceMeasurement ;
+    rdfs:label "Учебное расстояние D10 — S2"@ru ;
     ex:calculatedOn "2026-10-22"^^xsd:date ;
     ex:distanceM 401.1 ;
     ex:fromDwelling ex:D10_home ;
@@ -600,6 +670,7 @@ ex:D10_S2 a ex:DistanceMeasurement ;
     ex:usesMethod ex:Haversine .
 
 ex:D11 a ex:ListingSnapshot ;
+    rdfs:label "Учебное объявление D11"@ru ;
     ex:commissionRub 0.0 ;
     ex:depositRub 30000.0 ;
     ex:hasSource ex:D11_source ;
@@ -611,6 +682,7 @@ ex:D11 a ex:ListingSnapshot ;
     ex:utilitiesRubMonth 4000.0 .
 
 ex:D11_M1 a ex:DistanceMeasurement ;
+    rdfs:label "Учебное расстояние D11 — M1"@ru ;
     ex:calculatedOn "2026-10-22"^^xsd:date ;
     ex:distanceM 1947.3 ;
     ex:fromDwelling ex:D11_home ;
@@ -619,6 +691,7 @@ ex:D11_M1 a ex:DistanceMeasurement ;
     ex:usesMethod ex:Haversine .
 
 ex:D11_M2 a ex:DistanceMeasurement ;
+    rdfs:label "Учебное расстояние D11 — M2"@ru ;
     ex:calculatedOn "2026-10-22"^^xsd:date ;
     ex:distanceM 0.0 ;
     ex:fromDwelling ex:D11_home ;
@@ -627,6 +700,7 @@ ex:D11_M2 a ex:DistanceMeasurement ;
     ex:usesMethod ex:Haversine .
 
 ex:D11_P1 a ex:DistanceMeasurement ;
+    rdfs:label "Учебное расстояние D11 — P1"@ru ;
     ex:calculatedOn "2026-10-22"^^xsd:date ;
     ex:distanceM 957.1 ;
     ex:fromDwelling ex:D11_home ;
@@ -635,6 +709,7 @@ ex:D11_P1 a ex:DistanceMeasurement ;
     ex:usesMethod ex:Haversine .
 
 ex:D11_P2 a ex:DistanceMeasurement ;
+    rdfs:label "Учебное расстояние D11 — P2"@ru ;
     ex:calculatedOn "2026-10-22"^^xsd:date ;
     ex:distanceM 591.4 ;
     ex:fromDwelling ex:D11_home ;
@@ -643,6 +718,7 @@ ex:D11_P2 a ex:DistanceMeasurement ;
     ex:usesMethod ex:Haversine .
 
 ex:D11_S1 a ex:DistanceMeasurement ;
+    rdfs:label "Учебное расстояние D11 — S1"@ru ;
     ex:calculatedOn "2026-10-22"^^xsd:date ;
     ex:distanceM 1636.2 ;
     ex:fromDwelling ex:D11_home ;
@@ -651,6 +727,7 @@ ex:D11_S1 a ex:DistanceMeasurement ;
     ex:usesMethod ex:Haversine .
 
 ex:D11_S2 a ex:DistanceMeasurement ;
+    rdfs:label "Учебное расстояние D11 — S2"@ru ;
     ex:calculatedOn "2026-10-22"^^xsd:date ;
     ex:distanceM 124.4 ;
     ex:fromDwelling ex:D11_home ;
@@ -659,6 +736,7 @@ ex:D11_S2 a ex:DistanceMeasurement ;
     ex:usesMethod ex:Haversine .
 
 ex:D12 a ex:ListingSnapshot ;
+    rdfs:label "Учебное объявление D12"@ru ;
     ex:commissionRub 0.0 ;
     ex:depositRub 30000.0 ;
     ex:hasSource ex:D12_source ;
@@ -671,6 +749,7 @@ ex:D12 a ex:ListingSnapshot ;
     ex:utilitiesRubMonth 4000.0 .
 
 ex:D12_M1 a ex:DistanceMeasurement ;
+    rdfs:label "Учебное расстояние D12 — M1"@ru ;
     ex:calculatedOn "2026-10-22"^^xsd:date ;
     ex:distanceM 2225.4 ;
     ex:fromDwelling ex:D12_home ;
@@ -679,6 +758,7 @@ ex:D12_M1 a ex:DistanceMeasurement ;
     ex:usesMethod ex:Haversine .
 
 ex:D12_M2 a ex:DistanceMeasurement ;
+    rdfs:label "Учебное расстояние D12 — M2"@ru ;
     ex:calculatedOn "2026-10-22"^^xsd:date ;
     ex:distanceM 278.2 ;
     ex:fromDwelling ex:D12_home ;
@@ -687,6 +767,7 @@ ex:D12_M2 a ex:DistanceMeasurement ;
     ex:usesMethod ex:Haversine .
 
 ex:D12_P1 a ex:DistanceMeasurement ;
+    rdfs:label "Учебное расстояние D12 — P1"@ru ;
     ex:calculatedOn "2026-10-22"^^xsd:date ;
     ex:distanceM 1235.2 ;
     ex:fromDwelling ex:D12_home ;
@@ -695,6 +776,7 @@ ex:D12_P1 a ex:DistanceMeasurement ;
     ex:usesMethod ex:Haversine .
 
 ex:D12_P2 a ex:DistanceMeasurement ;
+    rdfs:label "Учебное расстояние D12 — P2"@ru ;
     ex:calculatedOn "2026-10-22"^^xsd:date ;
     ex:distanceM 314.8 ;
     ex:fromDwelling ex:D12_home ;
@@ -703,6 +785,7 @@ ex:D12_P2 a ex:DistanceMeasurement ;
     ex:usesMethod ex:Haversine .
 
 ex:D12_S1 a ex:DistanceMeasurement ;
+    rdfs:label "Учебное расстояние D12 — S1"@ru ;
     ex:calculatedOn "2026-10-22"^^xsd:date ;
     ex:distanceM 1914.3 ;
     ex:fromDwelling ex:D12_home ;
@@ -711,6 +794,7 @@ ex:D12_S1 a ex:DistanceMeasurement ;
     ex:usesMethod ex:Haversine .
 
 ex:D12_S2 a ex:DistanceMeasurement ;
+    rdfs:label "Учебное расстояние D12 — S2"@ru ;
     ex:calculatedOn "2026-10-22"^^xsd:date ;
     ex:distanceM 157.4 ;
     ex:fromDwelling ex:D12_home ;
@@ -719,6 +803,7 @@ ex:D12_S2 a ex:DistanceMeasurement ;
     ex:usesMethod ex:Haversine .
 
 ex:StudentWithPet a ex:RenterProfile ;
+    rdfs:label "Студент с питомцем"@ru ;
     ex:isSynthetic true ;
     ex:maxMetroDistanceM 1000.0 ;
     ex:maxRentRubMonth 40000.0 ;
@@ -726,6 +811,7 @@ ex:StudentWithPet a ex:RenterProfile ;
     ex:requiresPets true .
 
 ex:D01_building a ex:Building ;
+    rdfs:label "Учебное здание D01"@ru ;
     ex:address "Учебный адрес D01"^^xsd:string ;
     ex:floorsTotal 16 ;
     ex:hasSource ex:D01_source ;
@@ -735,6 +821,7 @@ ex:D01_building a ex:Building ;
     ex:longitude 30.303 .
 
 ex:D02_building a ex:Building ;
+    rdfs:label "Учебное здание D02"@ru ;
     ex:address "Учебный адрес D02"^^xsd:string ;
     ex:floorsTotal 16 ;
     ex:hasSource ex:D02_source ;
@@ -744,6 +831,7 @@ ex:D02_building a ex:Building ;
     ex:longitude 30.306 .
 
 ex:D03_building a ex:Building ;
+    rdfs:label "Учебное здание D03"@ru ;
     ex:address "Учебный адрес D03"^^xsd:string ;
     ex:floorsTotal 16 ;
     ex:hasSource ex:D03_source ;
@@ -753,6 +841,7 @@ ex:D03_building a ex:Building ;
     ex:longitude 30.309 .
 
 ex:D04_building a ex:Building ;
+    rdfs:label "Учебное здание D04"@ru ;
     ex:address "Учебный адрес D04"^^xsd:string ;
     ex:floorsTotal 16 ;
     ex:hasSource ex:D04_source ;
@@ -762,6 +851,7 @@ ex:D04_building a ex:Building ;
     ex:longitude 30.312 .
 
 ex:D05_building a ex:Building ;
+    rdfs:label "Учебное здание D05"@ru ;
     ex:address "Учебный адрес D05"^^xsd:string ;
     ex:floorsTotal 16 ;
     ex:hasSource ex:D05_source ;
@@ -771,6 +861,7 @@ ex:D05_building a ex:Building ;
     ex:longitude 30.315 .
 
 ex:D06_building a ex:Building ;
+    rdfs:label "Учебное здание D06"@ru ;
     ex:address "Учебный адрес D06"^^xsd:string ;
     ex:floorsTotal 16 ;
     ex:hasSource ex:D06_source ;
@@ -780,6 +871,7 @@ ex:D06_building a ex:Building ;
     ex:longitude 30.318 .
 
 ex:D07_building a ex:Building ;
+    rdfs:label "Учебное здание D07"@ru ;
     ex:address "Учебный адрес D07"^^xsd:string ;
     ex:floorsTotal 16 ;
     ex:hasSource ex:D07_source ;
@@ -789,6 +881,7 @@ ex:D07_building a ex:Building ;
     ex:longitude 30.321 .
 
 ex:D08_building a ex:Building ;
+    rdfs:label "Учебное здание D08"@ru ;
     ex:address "Учебный адрес D08"^^xsd:string ;
     ex:floorsTotal 16 ;
     ex:hasSource ex:D08_source ;
@@ -798,6 +891,7 @@ ex:D08_building a ex:Building ;
     ex:longitude 30.324 .
 
 ex:D09_building a ex:Building ;
+    rdfs:label "Учебное здание D09"@ru ;
     ex:address "Учебный адрес D09"^^xsd:string ;
     ex:floorsTotal 16 ;
     ex:hasSource ex:D09_source ;
@@ -807,6 +901,7 @@ ex:D09_building a ex:Building ;
     ex:longitude 30.327 .
 
 ex:D10_building a ex:Building ;
+    rdfs:label "Учебное здание D10"@ru ;
     ex:address "Учебный адрес D10"^^xsd:string ;
     ex:floorsTotal 16 ;
     ex:hasSource ex:D10_source ;
@@ -816,6 +911,7 @@ ex:D10_building a ex:Building ;
     ex:longitude 30.330000000000002 .
 
 ex:D11_building a ex:Building ;
+    rdfs:label "Учебное здание D11"@ru ;
     ex:address "Учебный адрес D11"^^xsd:string ;
     ex:floorsTotal 16 ;
     ex:hasSource ex:D11_source ;
@@ -825,6 +921,7 @@ ex:D11_building a ex:Building ;
     ex:longitude 30.333000000000002 .
 
 ex:D12_building a ex:Building ;
+    rdfs:label "Учебное здание D12"@ru ;
     ex:address "Учебный адрес D12"^^xsd:string ;
     ex:floorsTotal 16 ;
     ex:hasSource ex:D12_source ;
@@ -834,57 +931,71 @@ ex:D12_building a ex:Building ;
     ex:longitude 30.336000000000002 .
 
 ex:DemoCity a ex:City ;
+    rdfs:label "Учебный город"@ru ;
     ex:isSynthetic true .
 
 ex:D01_source a ex:SourceRecord ;
+    rdfs:label "Учебный источник D01"@ru ;
     ex:isSynthetic true ;
     ex:sourceUrl "https://example.org/synthetic/D01"^^xsd:anyURI .
 
 ex:D02_source a ex:SourceRecord ;
+    rdfs:label "Учебный источник D02"@ru ;
     ex:isSynthetic true ;
     ex:sourceUrl "https://example.org/synthetic/D02"^^xsd:anyURI .
 
 ex:D03_source a ex:SourceRecord ;
+    rdfs:label "Учебный источник D03"@ru ;
     ex:isSynthetic true ;
     ex:sourceUrl "https://example.org/synthetic/D03"^^xsd:anyURI .
 
 ex:D04_source a ex:SourceRecord ;
+    rdfs:label "Учебный источник D04"@ru ;
     ex:isSynthetic true ;
     ex:sourceUrl "https://example.org/synthetic/D04"^^xsd:anyURI .
 
 ex:D05_source a ex:SourceRecord ;
+    rdfs:label "Учебный источник D05"@ru ;
     ex:isSynthetic true ;
     ex:sourceUrl "https://example.org/synthetic/D05"^^xsd:anyURI .
 
 ex:D06_source a ex:SourceRecord ;
+    rdfs:label "Учебный источник D06"@ru ;
     ex:isSynthetic true ;
     ex:sourceUrl "https://example.org/synthetic/D06"^^xsd:anyURI .
 
 ex:D07_source a ex:SourceRecord ;
+    rdfs:label "Учебный источник D07"@ru ;
     ex:isSynthetic true ;
     ex:sourceUrl "https://example.org/synthetic/D07"^^xsd:anyURI .
 
 ex:D08_source a ex:SourceRecord ;
+    rdfs:label "Учебный источник D08"@ru ;
     ex:isSynthetic true ;
     ex:sourceUrl "https://example.org/synthetic/D08"^^xsd:anyURI .
 
 ex:D09_source a ex:SourceRecord ;
+    rdfs:label "Учебный источник D09"@ru ;
     ex:isSynthetic true ;
     ex:sourceUrl "https://example.org/synthetic/D09"^^xsd:anyURI .
 
 ex:D10_source a ex:SourceRecord ;
+    rdfs:label "Учебный источник D10"@ru ;
     ex:isSynthetic true ;
     ex:sourceUrl "https://example.org/synthetic/D10"^^xsd:anyURI .
 
 ex:D11_source a ex:SourceRecord ;
+    rdfs:label "Учебный источник D11"@ru ;
     ex:isSynthetic true ;
     ex:sourceUrl "https://example.org/synthetic/D11"^^xsd:anyURI .
 
 ex:D12_source a ex:SourceRecord ;
+    rdfs:label "Учебный источник D12"@ru ;
     ex:isSynthetic true ;
     ex:sourceUrl "https://example.org/synthetic/D12"^^xsd:anyURI .
 
 ex:D01_home a ex:Apartment ;
+    rdfs:label "Учебная квартира D01"@ru ;
     ex:areaM2 27.0 ;
     ex:floor 2 ;
     ex:hasSource ex:D01_source ;
@@ -894,6 +1005,7 @@ ex:D01_home a ex:Apartment ;
     ex:rooms 1 .
 
 ex:D02_home a ex:Apartment ;
+    rdfs:label "Учебная квартира D02"@ru ;
     ex:areaM2 29.0 ;
     ex:floor 3 ;
     ex:hasSource ex:D02_source ;
@@ -904,6 +1016,7 @@ ex:D02_home a ex:Apartment ;
     ex:rooms 2 .
 
 ex:D03_home a ex:Apartment ;
+    rdfs:label "Учебная квартира D03"@ru ;
     ex:areaM2 31.0 ;
     ex:floor 4 ;
     ex:hasSource ex:D03_source ;
@@ -914,6 +1027,7 @@ ex:D03_home a ex:Apartment ;
     ex:rooms 0 .
 
 ex:D04_home a ex:Apartment ;
+    rdfs:label "Учебная квартира D04"@ru ;
     ex:areaM2 33.0 ;
     ex:floor 5 ;
     ex:hasSource ex:D04_source ;
@@ -925,6 +1039,7 @@ ex:D04_home a ex:Apartment ;
     ex:rooms 1 .
 
 ex:D05_home a ex:Apartment ;
+    rdfs:label "Учебная квартира D05"@ru ;
     ex:areaM2 35.0 ;
     ex:floor 6 ;
     ex:hasSource ex:D05_source ;
@@ -936,6 +1051,7 @@ ex:D05_home a ex:Apartment ;
     ex:rooms 2 .
 
 ex:D06_home a ex:Apartment ;
+    rdfs:label "Учебная квартира D06"@ru ;
     ex:areaM2 37.0 ;
     ex:floor 7 ;
     ex:hasSource ex:D06_source ;
@@ -947,6 +1063,7 @@ ex:D06_home a ex:Apartment ;
     ex:rooms 0 .
 
 ex:D07_home a ex:Apartment ;
+    rdfs:label "Учебная квартира D07"@ru ;
     ex:areaM2 39.0 ;
     ex:floor 8 ;
     ex:hasSource ex:D07_source ;
@@ -958,6 +1075,7 @@ ex:D07_home a ex:Apartment ;
     ex:rooms 1 .
 
 ex:D08_home a ex:Apartment ;
+    rdfs:label "Учебная квартира D08"@ru ;
     ex:areaM2 41.0 ;
     ex:floor 9 ;
     ex:hasSource ex:D08_source ;
@@ -970,6 +1088,7 @@ ex:D08_home a ex:Apartment ;
     ex:rooms 2 .
 
 ex:D09_home a ex:Apartment ;
+    rdfs:label "Учебная квартира D09"@ru ;
     ex:areaM2 43.0 ;
     ex:floor 10 ;
     ex:hasSource ex:D09_source ;
@@ -981,6 +1100,7 @@ ex:D09_home a ex:Apartment ;
     ex:rooms 0 .
 
 ex:D10_home a ex:Apartment ;
+    rdfs:label "Учебная квартира D10"@ru ;
     ex:areaM2 45.0 ;
     ex:floor 11 ;
     ex:hasSource ex:D10_source ;
@@ -993,6 +1113,7 @@ ex:D10_home a ex:Apartment ;
     ex:rooms 1 .
 
 ex:D11_home a ex:Apartment ;
+    rdfs:label "Учебная квартира D11"@ru ;
     ex:areaM2 47.0 ;
     ex:floor 12 ;
     ex:hasSource ex:D11_source ;
@@ -1005,6 +1126,7 @@ ex:D11_home a ex:Apartment ;
     ex:rooms 2 .
 
 ex:D12_home a ex:Apartment ;
+    rdfs:label "Учебная квартира D12"@ru ;
     ex:areaM2 49.0 ;
     ex:floor 13 ;
     ex:hasSource ex:D12_source ;
@@ -1016,6 +1138,7 @@ ex:D12_home a ex:Apartment ;
     ex:rooms 0 .
 
 ex:DemoDistrict a ex:District ;
+    rdfs:label "Учебный район"@ru ;
     ex:inCity ex:DemoCity ;
     ex:isSynthetic true .
 
@@ -1056,5 +1179,6 @@ ex:P1 a ex:Park ;
     ex:longitude 30.323 .
 
 ex:Haversine a ex:MeasurementMethod ;
+    rdfs:label "Метод гаверсинуса"@ru ;
     ex:isSynthetic true .
 

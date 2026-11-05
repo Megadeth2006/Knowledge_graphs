@@ -92,12 +92,12 @@ ex:isSynthetic a owl:DatatypeProperty ;
 
 ex:latitude a owl:DatatypeProperty ;
     rdfs:label "широта, WGS84"@ru ;
-    rdfs:domain _:N69e9aed2d31b4b8081865dbbf44c9aec ;
+    rdfs:domain _:Nc368dd51f82647c982dbd8b170964fc2 ;
     rdfs:range xsd:decimal .
 
 ex:longitude a owl:DatatypeProperty ;
     rdfs:label "долгота, WGS84"@ru ;
-    rdfs:domain _:N69e9aed2d31b4b8081865dbbf44c9aec ;
+    rdfs:domain _:Nc368dd51f82647c982dbd8b170964fc2 ;
     rdfs:range xsd:decimal .
 
 ex:maxMetroDistanceM a owl:DatatypeProperty ;
@@ -261,9 +261,9 @@ ex:Dwelling a owl:Class ;
     rdfs:comment "Жилая единица, предлагаемая в аренду снимком объявления через offers. В текущем проекте представлены целые квартиры; комнаты и отдельные дома могут быть добавлены при расширении модели."@ru ;
     owl:disjointWith ex:Amenity .
 
-_:N06d9e128484a47d2838402d220b1b538 rdf:first ex:Building ;
+_:N868f6cdc9b7d471e98e08c501197c567 rdf:first ex:Building ;
     rdf:rest ( ex:Amenity ) .
 
-_:N69e9aed2d31b4b8081865dbbf44c9aec a owl:Class ;
-    owl:unionOf _:N06d9e128484a47d2838402d220b1b538 .
+_:Nc368dd51f82647c982dbd8b170964fc2 a owl:Class ;
+    owl:unionOf _:N868f6cdc9b7d471e98e08c501197c567 .
 
