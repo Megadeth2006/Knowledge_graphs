@@ -1,2 +1,0 @@
-PREFIX ex: <https://example.org/rental-kg#>
-SELECT ?home WHERE { ?home a ex:Dwelling; ex:locatedIn ex:DemoCity. } ORDER BY ?home

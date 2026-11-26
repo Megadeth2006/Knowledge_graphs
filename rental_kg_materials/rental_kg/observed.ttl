@@ -1,9 +1,16 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix ex: <https://example.org/rental-kg#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+ex:IslandSample dcterms:hasPart ex:E128027065,
+        ex:E129891108,
+        ex:E132735378,
+        ex:E146482554,
+        ex:E64293061 .
+
 ex:R01 a ex:ListingSnapshot ;
-    rdfs:label "объявление R01"@ru ;
+    rdfs:label "Объявление R01"@ru ;
     ex:commissionRub 22500.0 ;
     ex:hasSource ex:R01_source ;
     ex:isSynthetic false ;
@@ -15,7 +22,7 @@ ex:R01 a ex:ListingSnapshot ;
     ex:term "long_term"^^xsd:string .
 
 ex:R02 a ex:ListingSnapshot ;
-    rdfs:label "объявление R02"@ru ;
+    rdfs:label "Объявление R02"@ru ;
     ex:commissionRub 0.0 ;
     ex:depositRub 0.0 ;
     ex:hasSource ex:R02_source ;
@@ -28,7 +35,7 @@ ex:R02 a ex:ListingSnapshot ;
     ex:term "long_term"^^xsd:string .
 
 ex:R03 a ex:ListingSnapshot ;
-    rdfs:label "объявление R03"@ru ;
+    rdfs:label "Объявление R03"@ru ;
     ex:commissionRub 12500.0 ;
     ex:hasSource ex:R03_source ;
     ex:isSynthetic false ;
@@ -40,7 +47,7 @@ ex:R03 a ex:ListingSnapshot ;
     ex:term "fixed_short_term"^^xsd:string .
 
 ex:R04 a ex:ListingSnapshot ;
-    rdfs:label "объявление R04"@ru ;
+    rdfs:label "Объявление R04"@ru ;
     ex:commissionRub 35000.0 ;
     ex:depositRub 70000.0 ;
     ex:hasSource ex:R04_source ;
@@ -51,7 +58,7 @@ ex:R04 a ex:ListingSnapshot ;
     ex:term "long_term"^^xsd:string .
 
 ex:R05 a ex:ListingSnapshot ;
-    rdfs:label "объявление R05"@ru ;
+    rdfs:label "Объявление R05"@ru ;
     ex:commissionRub 25000.0 ;
     ex:depositRub 45000.0 ;
     ex:hasSource ex:R05_source ;
@@ -63,7 +70,7 @@ ex:R05 a ex:ListingSnapshot ;
     ex:term "long_term"^^xsd:string .
 
 ex:R06 a ex:ListingSnapshot ;
-    rdfs:label "объявление R06"@ru ;
+    rdfs:label "Объявление R06"@ru ;
     ex:commissionRub 22500.0 ;
     ex:depositRub 45000.0 ;
     ex:hasSource ex:R06_source ;
@@ -74,129 +81,299 @@ ex:R06 a ex:ListingSnapshot ;
     ex:rentRubMonth 45000.0 ;
     ex:term "long_term"^^xsd:string .
 
-ex:R01_building a ex:Building ;
-    rdfs:label "Здание R01 — Пулковское шоссе, 42к6"@ru ;
+ex:Building_010f87aa72a5e05423cc a ex:Building ;
+    rdfs:label "Здание — улица Красного Курсанта, 51"@ru ;
+    ex:address "улица Красного Курсанта, 51"^^xsd:string ;
+    ex:floorsTotal 5 ;
+    ex:hasSource ex:R04_source ;
+    ex:isSynthetic false ;
+    ex:locatedIn ex:SaintPetersburg .
+
+ex:Building_5b243800fa1f2040b58a a ex:Building ;
+    rdfs:label "Здание — Малая Посадская ул., 17"@ru ;
+    ex:address "Малая Посадская ул., 17"^^xsd:string ;
+    ex:floorsTotal 4 ;
+    ex:hasSource ex:E146482554_source ;
+    ex:isSynthetic false ;
+    ex:locatedIn ex:SaintPetersburg .
+
+ex:Building_6bb1245b10beb129e554 a ex:Building ;
+    rdfs:label "Здание — Мичуринская ул., 6, литера Б"@ru ;
+    ex:address "Мичуринская ул., 6, литера Б"^^xsd:string ;
+    ex:floorsTotal 9 ;
+    ex:hasSource ex:E128027065_source ;
+    ex:isSynthetic false ;
+    ex:locatedIn ex:SaintPetersburg .
+
+ex:Building_840bb8348cc61ea77886 a ex:Building ;
+    rdfs:label "Здание — Русановская улица, 20к3"@ru ;
+    ex:address "Русановская улица, 20к3"^^xsd:string ;
+    ex:floorsTotal 24 ;
+    ex:hasSource ex:R02_source ;
+    ex:isSynthetic false ;
+    ex:locatedIn ex:SaintPetersburg .
+
+ex:Building_9c65a12b320ad8bd0634 a ex:Building ;
+    rdfs:label "Здание — Ропшинская ул., 4"@ru ;
+    ex:address "Ропшинская ул., 4"^^xsd:string ;
+    ex:floorsTotal 5 ;
+    ex:hasSource ex:E129891108_source ;
+    ex:isSynthetic false ;
+    ex:locatedIn ex:SaintPetersburg .
+
+ex:Building_b786b1771fd30e1843d3 a ex:Building ;
+    rdfs:label "Здание — Большая Посадская ул., 12"@ru ;
+    ex:address "Большая Посадская ул., 12"^^xsd:string ;
+    ex:floorsTotal 8 ;
+    ex:hasSource ex:E64293061_source ;
+    ex:isSynthetic false ;
+    ex:locatedIn ex:SaintPetersburg .
+
+ex:Building_c1598bd9705984973384 a ex:Building ;
+    rdfs:label "Здание — Подковырова ул., 11-13"@ru ;
+    ex:address "Подковырова ул., 11-13"^^xsd:string ;
+    ex:floorsTotal 3 ;
+    ex:hasSource ex:E132735378_source ;
+    ex:isSynthetic false ;
+    ex:locatedIn ex:SaintPetersburg .
+
+ex:Building_d695f36d03ac8920498a a ex:Building ;
+    rdfs:label "Здание — Пулковское шоссе, 42к6"@ru ;
     ex:address "Пулковское шоссе, 42к6"^^xsd:string ;
     ex:floorsTotal 20 ;
     ex:hasSource ex:R01_source ;
-    ex:isSynthetic false .
+    ex:isSynthetic false ;
+    ex:locatedIn ex:SaintPetersburg .
+
+ex:Building_e905e70eb1351f26e857 a ex:Building ;
+    rdfs:label "Здание — улица Тельмана, 48к4"@ru ;
+    ex:address "улица Тельмана, 48к4"^^xsd:string ;
+    ex:floorsTotal 10 ;
+    ex:hasSource ex:R03_source ;
+    ex:isSynthetic false ;
+    ex:locatedIn ex:SaintPetersburg .
+
+ex:E128027065 a ex:ListingSnapshot ;
+    rdfs:label "Объявление E128027065"@ru ;
+    ex:hasSource ex:E128027065_source ;
+    ex:isSynthetic false ;
+    ex:observedOn "2026-11-26"^^xsd:date ;
+    ex:offers ex:E128027065_home ;
+    ex:rentRubMonth 350000.0 ;
+    ex:term "long_term"^^xsd:string .
+
+ex:E128027065_home a ex:Apartment ;
+    rdfs:label "Квартира E128027065"@ru ;
+    ex:areaM2 229.00 ;
+    ex:floor 8 ;
+    ex:hasSource ex:E128027065_source ;
+    ex:inBuilding ex:Building_6bb1245b10beb129e554 ;
+    ex:isSynthetic false ;
+    ex:rooms 5 .
+
+ex:E129891108 a ex:ListingSnapshot ;
+    rdfs:label "Объявление E129891108"@ru ;
+    ex:hasSource ex:E129891108_source ;
+    ex:isSynthetic false ;
+    ex:observedOn "2026-11-26"^^xsd:date ;
+    ex:offers ex:E129891108_home ;
+    ex:petsAllowed false ;
+    ex:rentRubMonth 59000.0 ;
+    ex:term "long_term"^^xsd:string .
+
+ex:E129891108_home a ex:Apartment ;
+    rdfs:label "Квартира E129891108"@ru ;
+    ex:areaM2 49.30 ;
+    ex:floor 1 ;
+    ex:hasSource ex:E129891108_source ;
+    ex:inBuilding ex:Building_9c65a12b320ad8bd0634 ;
+    ex:isSynthetic false ;
+    ex:rooms 2 .
+
+ex:E132735378 a ex:ListingSnapshot ;
+    rdfs:label "Объявление E132735378"@ru ;
+    ex:hasSource ex:E132735378_source ;
+    ex:isSynthetic false ;
+    ex:observedOn "2026-11-26"^^xsd:date ;
+    ex:offers ex:E132735378_home ;
+    ex:rentRubMonth 200000.0 ;
+    ex:term "long_term"^^xsd:string .
+
+ex:E132735378_home a ex:Apartment ;
+    rdfs:label "Квартира E132735378"@ru ;
+    ex:areaM2 99.60 ;
+    ex:floor 2 ;
+    ex:hasSource ex:E132735378_source ;
+    ex:inBuilding ex:Building_c1598bd9705984973384 ;
+    ex:isSynthetic false ;
+    ex:rooms 3 .
+
+ex:E146482554 a ex:ListingSnapshot ;
+    rdfs:label "Объявление E146482554"@ru ;
+    ex:hasSource ex:E146482554_source ;
+    ex:isSynthetic false ;
+    ex:observedOn "2026-11-26"^^xsd:date ;
+    ex:offers ex:E146482554_home ;
+    ex:rentRubMonth 220000.0 ;
+    ex:term "long_term"^^xsd:string .
+
+ex:E146482554_home a ex:Apartment ;
+    rdfs:label "Квартира E146482554"@ru ;
+    ex:areaM2 114.00 ;
+    ex:floor 2 ;
+    ex:hasSource ex:E146482554_source ;
+    ex:inBuilding ex:Building_5b243800fa1f2040b58a ;
+    ex:isSynthetic false ;
+    ex:rooms 3 .
+
+ex:E64293061 a ex:ListingSnapshot ;
+    rdfs:label "Объявление E64293061"@ru ;
+    ex:hasSource ex:E64293061_source ;
+    ex:isSynthetic false ;
+    ex:observedOn "2026-11-26"^^xsd:date ;
+    ex:offers ex:E64293061_home ;
+    ex:rentRubMonth 70000.0 ;
+    ex:term "long_term"^^xsd:string .
+
+ex:E64293061_home a ex:Apartment ;
+    rdfs:label "Квартира E64293061"@ru ;
+    ex:areaM2 42.00 ;
+    ex:floor 5 ;
+    ex:hasSource ex:E64293061_source ;
+    ex:inBuilding ex:Building_b786b1771fd30e1843d3 ;
+    ex:isSynthetic false ;
+    ex:rooms 1 .
 
 ex:R01_home a ex:Apartment ;
     rdfs:label "Квартира R01"@ru ;
     ex:areaM2 44.5 ;
     ex:floor 7 ;
     ex:hasSource ex:R01_source ;
-    ex:inBuilding ex:R01_building ;
+    ex:inBuilding ex:Building_d695f36d03ac8920498a ;
     ex:isSynthetic false ;
     ex:rooms 2 .
-
-ex:R02_building a ex:Building ;
-    rdfs:label "Здание R02 — Русановская улица, 20к3"@ru ;
-    ex:address "Русановская улица, 20к3"^^xsd:string ;
-    ex:floorsTotal 24 ;
-    ex:hasSource ex:R02_source ;
-    ex:isSynthetic false .
 
 ex:R02_home a ex:Apartment ;
     rdfs:label "Квартира R02"@ru ;
     ex:areaM2 24.0 ;
     ex:floor 9 ;
     ex:hasSource ex:R02_source ;
-    ex:inBuilding ex:R02_building ;
+    ex:inBuilding ex:Building_840bb8348cc61ea77886 ;
     ex:isSynthetic false ;
     ex:rooms 0 .
-
-ex:R03_building a ex:Building ;
-    rdfs:label "Здание R03 — улица Тельмана, 48к4"@ru ;
-    ex:address "улица Тельмана, 48к4"^^xsd:string ;
-    ex:floorsTotal 10 ;
-    ex:hasSource ex:R03_source ;
-    ex:isSynthetic false .
 
 ex:R03_home a ex:Apartment ;
     rdfs:label "Квартира R03"@ru ;
     ex:areaM2 40.6 ;
     ex:floor 8 ;
     ex:hasSource ex:R03_source ;
-    ex:inBuilding ex:R03_building ;
+    ex:inBuilding ex:Building_e905e70eb1351f26e857 ;
     ex:isSynthetic false ;
     ex:rooms 1 .
-
-ex:R04_building a ex:Building ;
-    rdfs:label "Здание R04 — улица Красного Курсанта, 51"@ru ;
-    ex:address "улица Красного Курсанта, 51"^^xsd:string ;
-    ex:floorsTotal 5 ;
-    ex:hasSource ex:R04_source ;
-    ex:isSynthetic false .
 
 ex:R04_home a ex:Apartment ;
     rdfs:label "Квартира R04"@ru ;
     ex:areaM2 54.7 ;
     ex:floor 1 ;
     ex:hasSource ex:R04_source ;
-    ex:inBuilding ex:R04_building ;
+    ex:inBuilding ex:Building_010f87aa72a5e05423cc ;
     ex:isSynthetic false ;
     ex:rooms 2 .
-
-ex:R05_building a ex:Building ;
-    rdfs:label "Здание R05 — Невский проспект, 88"@ru ;
-    ex:address "Невский проспект, 88"^^xsd:string ;
-    ex:floorsTotal 5 ;
-    ex:hasSource ex:R05_source ;
-    ex:isSynthetic false .
 
 ex:R05_home a ex:Apartment ;
     rdfs:label "Квартира R05"@ru ;
     ex:areaM2 40.0 ;
     ex:floor 2 ;
     ex:hasSource ex:R05_source ;
-    ex:inBuilding ex:R05_building ;
+    ex:inBuilding ex:Building_da300e339750311514ec ;
     ex:isSynthetic false ;
     ex:rooms 1 .
-
-ex:R06_building a ex:Building ;
-    rdfs:label "Здание R06 — Невский проспект, 88"@ru ;
-    ex:address "Невский проспект, 88"^^xsd:string ;
-    ex:floorsTotal 5 ;
-    ex:hasSource ex:R06_source ;
-    ex:isSynthetic false .
 
 ex:R06_home a ex:Apartment ;
     rdfs:label "Квартира R06"@ru ;
     ex:areaM2 40.0 ;
     ex:floor 2 ;
     ex:hasSource ex:R06_source ;
-    ex:inBuilding ex:R06_building ;
+    ex:inBuilding ex:Building_da300e339750311514ec ;
     ex:isSynthetic false ;
     ex:rooms 1 .
 
+ex:Building_da300e339750311514ec a ex:Building ;
+    rdfs:label "Здание — Невский проспект, 88"@ru ;
+    ex:address "Невский проспект, 88"^^xsd:string ;
+    ex:floorsTotal 5 ;
+    ex:hasSource ex:R05_source,
+        ex:R06_source ;
+    ex:isSynthetic false ;
+    ex:locatedIn ex:SaintPetersburg .
+
+ex:E128027065_source a ex:SourceRecord ;
+    rdfs:label "Источник объявления E128027065"@ru ;
+    dcterms:identifier "128027065" ;
+    ex:isSynthetic false ;
+    ex:sourceUrl "https://ecoton.spb.ru/detal-object.html?itemid=128027065"^^xsd:anyURI .
+
+ex:E129891108_source a ex:SourceRecord ;
+    rdfs:label "Источник объявления E129891108"@ru ;
+    dcterms:identifier "129891108" ;
+    ex:isSynthetic false ;
+    ex:sourceUrl "https://ecoton.spb.ru/detal-object.html?itemid=129891108"^^xsd:anyURI .
+
+ex:E132735378_source a ex:SourceRecord ;
+    rdfs:label "Источник объявления E132735378"@ru ;
+    dcterms:identifier "132735378" ;
+    ex:isSynthetic false ;
+    ex:sourceUrl "https://ecoton.spb.ru/detal-object.html?itemid=132735378"^^xsd:anyURI .
+
+ex:E146482554_source a ex:SourceRecord ;
+    rdfs:label "Источник объявления E146482554"@ru ;
+    dcterms:identifier "146482554" ;
+    ex:isSynthetic false ;
+    ex:sourceUrl "https://ecoton.spb.ru/detal-object.html?itemid=146482554"^^xsd:anyURI .
+
+ex:E64293061_source a ex:SourceRecord ;
+    rdfs:label "Источник объявления E64293061"@ru ;
+    dcterms:identifier "64293061" ;
+    ex:isSynthetic false ;
+    ex:sourceUrl "https://ecoton.spb.ru/detal-object.html?itemid=64293061"^^xsd:anyURI .
+
 ex:R01_source a ex:SourceRecord ;
     rdfs:label "Источник объявления R01"@ru ;
+    dcterms:identifier "5227535735060667195" ;
     ex:isSynthetic false ;
     ex:sourceUrl "https://realty.yandex.ru/offer/5227535735060667195/"^^xsd:anyURI .
 
 ex:R02_source a ex:SourceRecord ;
     rdfs:label "Источник объявления R02"@ru ;
+    dcterms:identifier "5467258361881462548" ;
     ex:isSynthetic false ;
     ex:sourceUrl "https://realty.yandex.ru/offer/5467258361881462548/"^^xsd:anyURI .
 
 ex:R03_source a ex:SourceRecord ;
     rdfs:label "Источник объявления R03"@ru ;
+    dcterms:identifier "4744575448774797879" ;
     ex:isSynthetic false ;
     ex:sourceUrl "https://realty.yandex.ru/offer/4744575448774797879/"^^xsd:anyURI .
 
 ex:R04_source a ex:SourceRecord ;
     rdfs:label "Источник объявления R04"@ru ;
+    dcterms:identifier "1544554545513061376" ;
     ex:isSynthetic false ;
     ex:sourceUrl "https://realty.yandex.ru/offer/1544554545513061376/"^^xsd:anyURI .
 
 ex:R05_source a ex:SourceRecord ;
     rdfs:label "Источник объявления R05"@ru ;
+    dcterms:identifier "8162702168070170624" ;
     ex:isSynthetic false ;
     ex:sourceUrl "https://realty.yandex.ru/offer/8162702168070170624/"^^xsd:anyURI .
 
 ex:R06_source a ex:SourceRecord ;
     rdfs:label "Источник объявления R06"@ru ;
+    dcterms:identifier "8560687234450187520" ;
     ex:isSynthetic false ;
     ex:sourceUrl "https://realty.yandex.ru/offer/8560687234450187520/"^^xsd:anyURI .
+
+ex:SaintPetersburg a ex:City ;
+    rdfs:label "Санкт-Петербург"@ru ;
+    ex:isSynthetic false .
 

@@ -1,6 +1,6 @@
 PREFIX ex: <https://example.org/rental-kg#>
 SELECT ?listing ?area ?rooms ?floor ?floorsTotal WHERE {
- ?listing a ex:ListingSnapshot; ex:term ?term; ex:offers ?home.
+ ?listing a ex:ListingSnapshot; ex:isSynthetic false; ex:term ?term; ex:offers ?home.
  ?home ex:areaM2 ?area; ex:rooms ?rooms; ex:floor ?floor; ex:inBuilding ?building.
  ?building ex:floorsTotal ?floorsTotal.
  FILTER(str(?term) = "long_term" && ?area >= 40 && ?rooms >= 2 && ?floor < ?floorsTotal)

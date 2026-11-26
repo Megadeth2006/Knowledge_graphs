@@ -1,5 +1,5 @@
 PREFIX ex: <https://example.org/rental-kg#>
 SELECT ?listing WHERE {
- ?listing a ex:ListingSnapshot.
+ ?listing a ex:ListingSnapshot; ex:isSynthetic true.
  FILTER NOT EXISTS { ?listing ex:petsAllowed ?v }
 } ORDER BY ?listing

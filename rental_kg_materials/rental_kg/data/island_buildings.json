@@ -1,0 +1,26 @@
+[
+  {
+    "address": "Ропшинская ул., 4",
+    "matched_address": "Ропшинская улица, 4",
+    "osm_url": "https://www.openstreetmap.org/way/37437371",
+    "version": "11",
+    "lon": 30.29711909,
+    "lat": 59.95766898
+  },
+  {
+    "address": "Подковырова ул., 11-13",
+    "matched_address": "улица Подковырова, 11-13",
+    "osm_url": "https://www.openstreetmap.org/way/59526597",
+    "version": "5",
+    "lon": 30.30521313,
+    "lat": 59.96347234
+  },
+  {
+    "address": "Малая Посадская ул., 17",
+    "matched_address": "Малая Посадская улица, 17",
+    "osm_url": "https://www.openstreetmap.org/way/51133597",
+    "version": "7",
+    "lon": 30.329065,
+    "lat": 59.95783686
+  }
+]

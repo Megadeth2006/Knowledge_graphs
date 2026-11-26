@@ -1,8 +1,17 @@
 PREFIX ex: <https://example.org/rental-kg#>
-SELECT DISTINCT ?listing ?rent WHERE {
- ex:StudentWithPet ex:maxRentRubMonth ?budget; ex:maxMetroDistanceM ?maxDistance; ex:requiresPets true.
- ?listing a ex:ListingSnapshot; ex:offers ?home; ex:rentRubMonth ?rent; ex:petsAllowed true.
- ?m ex:fromDwelling ?home; ex:toAmenity ?metro; ex:distanceM ?distance; ex:usesMethod ex:Haversine.
- ?metro a ex:MetroStation.
- FILTER(?rent <= ?budget && ?distance <= ?maxDistance)
-} ORDER BY ?rent ?listing
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
+PREFIX uom: <http://www.opengis.net/def/uom/OGC/1.0/>
+SELECT ?listing ?rent (MIN(?distance) AS ?metroDistanceM) WHERE {
+    ex:StudentWithPet ex:maxRentRubMonth ?budget ;
+        ex:maxMetroDistanceM ?limit ; ex:requiresPets true .
+    ?listing a ex:ListingSnapshot ; ex:isSynthetic true ; ex:term ?term ;
+        ex:offers ?home ; ex:rentRubMonth ?rent ; ex:petsAllowed true .
+    ?home ex:inBuilding/geo:hasGeometry/geo:asWKT ?buildingWkt .
+    ?metro a ex:MetroStation ; ex:isSynthetic true ;
+        geo:hasGeometry/geo:asWKT ?metroWkt .
+    BIND(geof:distance(?buildingWkt, ?metroWkt, uom:metre) AS ?distance)
+    FILTER(STR(?term) = "long_term" && ?rent <= ?budget && ?distance <= ?limit)
+}
+GROUP BY ?listing ?rent
+ORDER BY ?rent ?listing

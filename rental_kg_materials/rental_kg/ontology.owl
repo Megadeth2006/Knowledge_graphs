@@ -4,11 +4,26 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 >
-  <rdf:Description rdf:about="https://example.org/rental-kg#depositRub">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-    <rdfs:label xml:lang="ru">залог, руб.</rdfs:label>
-    <rdfs:domain rdf:resource="https://example.org/rental-kg#ListingSnapshot"/>
+  <rdf:Description rdf:about="https://example.org/rental-kg#Place">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="ru">Место расположения</rdfs:label>
+    <rdfs:comment xml:lang="ru">Адресный контейнер, в котором размещено жильё прямо или через цепочку locatedIn: здание, район или город. Жильё и объекты инфраструктуры в этот класс не входят.</rdfs:comment>
+    <owl:disjointWith rdf:resource="https://example.org/rental-kg#Dwelling"/>
+    <owl:disjointWith rdf:resource="https://example.org/rental-kg#Amenity"/>
+    <owl:disjointWith rdf:resource="https://example.org/rental-kg#ListingSnapshot"/>
+    <owl:disjointWith rdf:resource="https://example.org/rental-kg#SourceRecord"/>
+    <owl:disjointWith rdf:resource="https://example.org/rental-kg#RenterProfile"/>
+    <owl:disjointWith rdf:resource="https://example.org/rental-kg#MetroEntrance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#Dwelling">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="ru">Жильё</rdfs:label>
+    <rdfs:comment xml:lang="ru">Жилая единица, предлагаемая в аренду снимком объявления через offers. В текущем проекте представлены целые квартиры; комнаты и отдельные дома могут быть добавлены при расширении модели.</rdfs:comment>
+    <owl:disjointWith rdf:resource="https://example.org/rental-kg#Amenity"/>
+    <owl:disjointWith rdf:resource="https://example.org/rental-kg#ListingSnapshot"/>
+    <owl:disjointWith rdf:resource="https://example.org/rental-kg#SourceRecord"/>
+    <owl:disjointWith rdf:resource="https://example.org/rental-kg#RenterProfile"/>
+    <owl:disjointWith rdf:resource="https://example.org/rental-kg#MetroEntrance"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://example.org/rental-kg#locatedIn">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
@@ -16,24 +31,10 @@
     <rdfs:range rdf:resource="https://example.org/rental-kg#Place"/>
     <rdfs:label xml:lang="ru">расположено в</rdfs:label>
   </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#MetroStation">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label xml:lang="ru">Станция метро</rdfs:label>
-    <rdfs:comment xml:lang="ru">Объект транспортного обслуживания, предоставляющий доступ к метрополитену. В текущем наборе представлен одной репрезентативной точкой, а не всеми входами.</rdfs:comment>
-    <rdfs:subClassOf rdf:resource="https://example.org/rental-kg#Amenity"/>
-    <owl:disjointWith rdf:resource="https://example.org/rental-kg#Supermarket"/>
-    <owl:disjointWith rdf:resource="https://example.org/rental-kg#Park"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#MeasurementMethod">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label xml:lang="ru">Метод измерения</rdfs:label>
-    <rdfs:comment xml:lang="ru">Описание способа получения численного расстояния, на которое ссылается usesMethod. Экземпляр Haversine обозначает расчёт по сферической модели Земли.</rdfs:comment>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#address">
+  <rdf:Description rdf:about="https://example.org/rental-kg#geometryKind">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <rdfs:label xml:lang="ru">адрес</rdfs:label>
-    <rdfs:domain rdf:resource="https://example.org/rental-kg#Building"/>
+    <rdfs:label xml:lang="ru">способ получения опорной точки</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="https://example.org/rental-kg#commissionRub">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
@@ -41,46 +42,108 @@
     <rdfs:label xml:lang="ru">разовая комиссия, руб.</rdfs:label>
     <rdfs:domain rdf:resource="https://example.org/rental-kg#ListingSnapshot"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#toAmenity">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:range rdf:resource="https://example.org/rental-kg#Amenity"/>
-    <rdfs:label xml:lang="ru">цель измерения</rdfs:label>
-    <rdfs:domain rdf:resource="https://example.org/rental-kg#DistanceMeasurement"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#maxMetroDistanceM">
+  <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#asWKT">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-    <rdfs:label xml:lang="ru">порог расстояния до метро</rdfs:label>
-    <rdfs:domain rdf:resource="https://example.org/rental-kg#RenterProfile"/>
+    <rdfs:domain rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+    <rdfs:range rdf:resource="http://www.opengis.net/ont/geosparql#wktLiteral"/>
+    <rdfs:label xml:lang="ru">геометрия в WKT</rdfs:label>
   </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#floor">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-    <rdfs:label xml:lang="ru">этаж</rdfs:label>
-    <rdfs:domain rdf:resource="https://example.org/rental-kg#Dwelling"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#Building">
+  <rdf:Description rdf:about="https://example.org/rental-kg#Amenity">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label xml:lang="ru">Здание</rdfs:label>
-    <rdfs:comment xml:lang="ru">Физическая постройка, содержащая жильё, с адресом и этажностью. Её точка WGS84 служит приближённой точкой расположения находящегося в ней жилья.</rdfs:comment>
-    <rdfs:subClassOf rdf:resource="https://example.org/rental-kg#Place"/>
+    <rdfs:label xml:lang="ru">Объект инфраструктуры</rdfs:label>
+    <rdfs:comment xml:lang="ru">Объект обслуживания или отдыха, близость которого важна при подборе жилья.</rdfs:comment>
+    <owl:disjointWith rdf:resource="https://example.org/rental-kg#ListingSnapshot"/>
+    <owl:disjointWith rdf:resource="https://example.org/rental-kg#SourceRecord"/>
+    <owl:disjointWith rdf:resource="https://example.org/rental-kg#RenterProfile"/>
+    <owl:disjointWith rdf:resource="https://example.org/rental-kg#MetroEntrance"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#requiresPets">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-    <rdfs:label xml:lang="ru">нужно разрешение на животных</rdfs:label>
-    <rdfs:domain rdf:resource="https://example.org/rental-kg#RenterProfile"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#qualityNote">
+  <rdf:Description rdf:about="https://example.org/rental-kg#term">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <rdfs:label xml:lang="ru">замечание к качеству</rdfs:label>
+    <rdfs:label xml:lang="ru">категория срока аренды</rdfs:label>
+    <rdfs:domain rdf:resource="https://example.org/rental-kg#ListingSnapshot"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#DistanceMeasurement">
+  <rdf:Description rdf:about="https://example.org/rental-kg#SourceRecord">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label xml:lang="ru">Измерение расстояния</rdfs:label>
-    <rdfs:comment xml:lang="ru">Результат измерения между одним жильём и одним объектом инфраструктуры, заданный числом метров, методом и датой расчёта. В текущем наборе используется точка здания жилья.</rdfs:comment>
-    <owl:disjointWith rdf:resource="https://example.org/rental-kg#Place"/>
+    <rdfs:label xml:lang="ru">Запись источника</rdfs:label>
+    <rdfs:comment xml:lang="ru">Указатель на исходную запись, из которой получены факты: URL реальной карточки либо явно учебный идентификатор источника. Используется как объект hasSource.</rdfs:comment>
+    <owl:disjointWith rdf:resource="https://example.org/rental-kg#RenterProfile"/>
+    <owl:disjointWith rdf:resource="https://example.org/rental-kg#MetroEntrance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#inCity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:range rdf:resource="https://example.org/rental-kg#City"/>
+    <rdfs:label xml:lang="ru">находится в городе</rdfs:label>
+    <rdfs:domain rdf:resource="https://example.org/rental-kg#District"/>
+    <rdfs:subPropertyOf rdf:resource="https://example.org/rental-kg#locatedIn"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#Apartment">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="ru">Квартира</rdfs:label>
+    <rdfs:comment xml:lang="ru">Отдельная жилая единица внутри здания, предлагаемая целиком в аренду; характеризуется площадью, числом комнат и этажом. Студия также является квартирой.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://example.org/rental-kg#Dwelling"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#RenterProfile">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="ru">Профиль требований</rdfs:label>
+    <rdfs:comment xml:lang="ru">Явные требования поиска: бюджет, город, условия аренды и пороги доступности.</rdfs:comment>
+    <owl:disjointWith rdf:resource="https://example.org/rental-kg#MetroEntrance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#offers">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:range rdf:resource="https://example.org/rental-kg#Dwelling"/>
+    <rdfs:label xml:lang="ru">предлагает жильё</rdfs:label>
+    <rdfs:domain rdf:resource="https://example.org/rental-kg#ListingSnapshot"/>
+    <owl:inverseOf rdf:resource="https://example.org/rental-kg#hasListing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#Supermarket">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="ru">Супермаркет</rdfs:label>
+    <rdfs:comment xml:lang="ru">Объект розничного обслуживания для покупки продуктов и повседневных товаров. Обозначает магазин как объект обслуживания, а не его здание.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://example.org/rental-kg#Amenity"/>
+    <owl:disjointWith rdf:resource="https://example.org/rental-kg#Park"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#entranceOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:range rdf:resource="https://example.org/rental-kg#MetroStation"/>
+    <rdfs:label xml:lang="ru">вход станции</rdfs:label>
+    <rdfs:domain rdf:resource="https://example.org/rental-kg#MetroEntrance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#sourceUrl">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    <rdfs:label xml:lang="ru">ссылка на источник</rdfs:label>
+    <rdfs:domain rdf:resource="https://example.org/rental-kg#SourceRecord"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#preferredCity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:range rdf:resource="https://example.org/rental-kg#City"/>
+    <rdfs:label xml:lang="ru">предпочтительный город</rdfs:label>
+    <rdfs:domain rdf:resource="https://example.org/rental-kg#RenterProfile"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#inDistrict">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:range rdf:resource="https://example.org/rental-kg#District"/>
+    <rdfs:label xml:lang="ru">находится в районе</rdfs:label>
+    <rdfs:domain rdf:resource="https://example.org/rental-kg#Building"/>
+    <rdfs:subPropertyOf rdf:resource="https://example.org/rental-kg#locatedIn"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#isSynthetic">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:label xml:lang="ru">синтетические данные</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#maxRentRubMonth">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label xml:lang="ru">лимит арендной платы</rdfs:label>
+    <rdfs:domain rdf:resource="https://example.org/rental-kg#RenterProfile"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#floorsTotal">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:label xml:lang="ru">этажей в доме</rdfs:label>
+    <rdfs:domain rdf:resource="https://example.org/rental-kg#Building"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://example.org/rental-kg#City">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
@@ -90,215 +153,17 @@
     <owl:disjointWith rdf:resource="https://example.org/rental-kg#District"/>
     <owl:disjointWith rdf:resource="https://example.org/rental-kg#Building"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#Place">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label xml:lang="ru">Место расположения</rdfs:label>
-    <rdfs:comment xml:lang="ru">Адресный контейнер, в котором размещено жильё прямо или через цепочку locatedIn: здание, район или город. Жильё и объекты инфраструктуры в этот класс не входят.</rdfs:comment>
-    <owl:disjointWith rdf:resource="https://example.org/rental-kg#Dwelling"/>
-    <owl:disjointWith rdf:resource="https://example.org/rental-kg#Amenity"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#inBuilding">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:range rdf:resource="https://example.org/rental-kg#Building"/>
-    <rdfs:label xml:lang="ru">находится в здании</rdfs:label>
-    <rdfs:domain rdf:resource="https://example.org/rental-kg#Dwelling"/>
-    <rdfs:subPropertyOf rdf:resource="https://example.org/rental-kg#locatedIn"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#term">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <rdfs:label xml:lang="ru">категория срока аренды</rdfs:label>
-    <rdfs:domain rdf:resource="https://example.org/rental-kg#ListingSnapshot"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#floorsTotal">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-    <rdfs:label xml:lang="ru">этажей в доме</rdfs:label>
-    <rdfs:domain rdf:resource="https://example.org/rental-kg#Building"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#minMonths">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-    <rdfs:label xml:lang="ru">минимальный срок, месяцев</rdfs:label>
-    <rdfs:domain rdf:resource="https://example.org/rental-kg#ListingSnapshot"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#distanceM">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-    <rdfs:label xml:lang="ru">расстояние, м</rdfs:label>
-    <rdfs:domain rdf:resource="https://example.org/rental-kg#DistanceMeasurement"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N868f6cdc9b7d471e98e08c501197c567">
-    <rdf:first rdf:resource="https://example.org/rental-kg#Building"/>
-    <rdf:rest rdf:nodeID="Nc5ac38acfc054c5e8fb53f2f70658574"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#sourceUrl">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
-    <rdfs:label xml:lang="ru">ссылка на источник</rdfs:label>
-    <rdfs:domain rdf:resource="https://example.org/rental-kg#SourceRecord"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#inCity">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:range rdf:resource="https://example.org/rental-kg#City"/>
-    <rdfs:label xml:lang="ru">находится в городе</rdfs:label>
-    <rdfs:domain rdf:resource="https://example.org/rental-kg#District"/>
-    <rdfs:subPropertyOf rdf:resource="https://example.org/rental-kg#locatedIn"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#preferredCity">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:range rdf:resource="https://example.org/rental-kg#City"/>
-    <rdfs:label xml:lang="ru">предпочтительный город</rdfs:label>
-    <rdfs:domain rdf:resource="https://example.org/rental-kg#RenterProfile"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#areaM2">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-    <rdfs:label xml:lang="ru">площадь, м²</rdfs:label>
-    <rdfs:domain rdf:resource="https://example.org/rental-kg#Dwelling"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#Dwelling">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label xml:lang="ru">Жильё</rdfs:label>
-    <rdfs:comment xml:lang="ru">Жилая единица, предлагаемая в аренду снимком объявления через offers. В текущем проекте представлены целые квартиры; комнаты и отдельные дома могут быть добавлены при расширении модели.</rdfs:comment>
-    <owl:disjointWith rdf:resource="https://example.org/rental-kg#Amenity"/>
-  </rdf:Description>
   <rdf:Description rdf:about="https://example.org/rental-kg#Park">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:label xml:lang="ru">Парк</rdfs:label>
-    <rdfs:comment xml:lang="ru">Объект инфраструктуры для отдыха на озеленённой территории. В текущей модели расстояние измеряется до репрезентативной точки, а не до входа или границы парка.</rdfs:comment>
+    <rdfs:comment xml:lang="ru">Озеленённая территория для отдыха. В пилоте представлена опорной точкой.</rdfs:comment>
     <rdfs:subClassOf rdf:resource="https://example.org/rental-kg#Amenity"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nc368dd51f82647c982dbd8b170964fc2">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:unionOf rdf:nodeID="N868f6cdc9b7d471e98e08c501197c567"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#latitude">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-    <rdfs:label xml:lang="ru">широта, WGS84</rdfs:label>
-    <rdfs:domain rdf:nodeID="Nc368dd51f82647c982dbd8b170964fc2"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#maxRentRubMonth">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-    <rdfs:label xml:lang="ru">лимит арендной платы</rdfs:label>
-    <rdfs:domain rdf:resource="https://example.org/rental-kg#RenterProfile"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#Supermarket">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label xml:lang="ru">Супермаркет</rdfs:label>
-    <rdfs:comment xml:lang="ru">Объект розничного обслуживания для покупки продуктов и повседневных товаров. Обозначает магазин как объект обслуживания, а не его здание.</rdfs:comment>
-    <rdfs:subClassOf rdf:resource="https://example.org/rental-kg#Amenity"/>
-    <owl:disjointWith rdf:resource="https://example.org/rental-kg#Park"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#Amenity">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label xml:lang="ru">Объект инфраструктуры</rdfs:label>
-    <rdfs:comment xml:lang="ru">Объект обслуживания или отдыха, близость которого важна при подборе жилья. Является целью toAmenity и nearAmenity, а не адресным контейнером жилья. Объект обслуживания и вмещающее его здание моделируются отдельно.</rdfs:comment>
   </rdf:Description>
   <rdf:Description rdf:about="https://example.org/rental-kg#petsAllowed">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
     <rdfs:label xml:lang="ru">животные разрешены</rdfs:label>
     <rdfs:domain rdf:resource="https://example.org/rental-kg#ListingSnapshot"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#calculatedOn">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
-    <rdfs:label xml:lang="ru">дата вычисления</rdfs:label>
-    <rdfs:domain rdf:resource="https://example.org/rental-kg#DistanceMeasurement"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#offers">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:range rdf:resource="https://example.org/rental-kg#Dwelling"/>
-    <rdfs:label xml:lang="ru">предлагает жильё</rdfs:label>
-    <rdfs:domain rdf:resource="https://example.org/rental-kg#ListingSnapshot"/>
-    <owl:inverseOf rdf:resource="https://example.org/rental-kg#hasListing"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nc5ac38acfc054c5e8fb53f2f70658574">
-    <rdf:first rdf:resource="https://example.org/rental-kg#Amenity"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#rooms">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-    <rdfs:label xml:lang="ru">число комнат, студия = 0</rdfs:label>
-    <rdfs:domain rdf:resource="https://example.org/rental-kg#Dwelling"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#inDistrict">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:range rdf:resource="https://example.org/rental-kg#District"/>
-    <rdfs:label xml:lang="ru">находится в районе</rdfs:label>
-    <rdfs:domain rdf:resource="https://example.org/rental-kg#Building"/>
-    <rdfs:subPropertyOf rdf:resource="https://example.org/rental-kg#locatedIn"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#observedOn">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
-    <rdfs:label xml:lang="ru">дата наблюдения</rdfs:label>
-    <rdfs:domain rdf:resource="https://example.org/rental-kg#ListingSnapshot"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#rentRubMonth">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-    <rdfs:label xml:lang="ru">аренда, руб./месяц</rdfs:label>
-    <rdfs:domain rdf:resource="https://example.org/rental-kg#ListingSnapshot"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#isSynthetic">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-    <rdfs:label xml:lang="ru">синтетические данные</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#ListingSnapshot">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label xml:lang="ru">Снимок объявления</rdfs:label>
-    <rdfs:comment xml:lang="ru">Зафиксированное на дату наблюдения предложение аренды одного жилья с ценой, условиями и ссылкой на запись источника; не является самим жильём.</rdfs:comment>
-    <owl:disjointWith rdf:resource="https://example.org/rental-kg#Dwelling"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#fromDwelling">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:range rdf:resource="https://example.org/rental-kg#Dwelling"/>
-    <rdfs:label xml:lang="ru">начало измерения</rdfs:label>
-    <rdfs:domain rdf:resource="https://example.org/rental-kg#DistanceMeasurement"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#utilitiesRubMonth">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-    <rdfs:label xml:lang="ru">дополнительные КУ, руб./месяц</rdfs:label>
-    <rdfs:domain rdf:resource="https://example.org/rental-kg#ListingSnapshot"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#usesMethod">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:range rdf:resource="https://example.org/rental-kg#MeasurementMethod"/>
-    <rdfs:label xml:lang="ru">метод измерения</rdfs:label>
-    <rdfs:domain rdf:resource="https://example.org/rental-kg#DistanceMeasurement"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
-    <owl:versionInfo>1.1.0</owl:versionInfo>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#hasListing">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:range rdf:resource="https://example.org/rental-kg#ListingSnapshot"/>
-    <rdfs:label xml:lang="ru">имеет объявление</rdfs:label>
-    <rdfs:domain rdf:resource="https://example.org/rental-kg#Dwelling"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#RenterProfile">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label xml:lang="ru">Профиль требований</rdfs:label>
-    <rdfs:comment xml:lang="ru">Набор явных требований арендатора к поиску: бюджет, город, радиус до метро и необходимость разрешения на животных. Не является человеком или объявлением.</rdfs:comment>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#longitude">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-    <rdfs:label xml:lang="ru">долгота, WGS84</rdfs:label>
-    <rdfs:domain rdf:nodeID="Nc368dd51f82647c982dbd8b170964fc2"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#SourceRecord">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label xml:lang="ru">Запись источника</rdfs:label>
-    <rdfs:comment xml:lang="ru">Указатель на исходную запись, из которой получены факты: URL реальной карточки либо явно учебный идентификатор источника. Используется как объект hasSource.</rdfs:comment>
   </rdf:Description>
   <rdf:Description rdf:about="https://example.org/rental-kg#District">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
@@ -307,21 +172,148 @@
     <rdfs:subClassOf rdf:resource="https://example.org/rental-kg#Place"/>
     <owl:disjointWith rdf:resource="https://example.org/rental-kg#Building"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#nearAmenity">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:range rdf:resource="https://example.org/rental-kg#Amenity"/>
-    <rdfs:label xml:lang="ru">не далее 1000 м по прямой</rdfs:label>
+  <rdf:Description rdf:about="https://example.org/rental-kg#rentRubMonth">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label xml:lang="ru">аренда, руб./месяц</rdfs:label>
+    <rdfs:domain rdf:resource="https://example.org/rental-kg#ListingSnapshot"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#minMonths">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:label xml:lang="ru">минимальный срок, месяцев</rdfs:label>
+    <rdfs:domain rdf:resource="https://example.org/rental-kg#ListingSnapshot"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#maxMetroDistanceM">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label xml:lang="ru">порог до метро по прямой, м</rdfs:label>
+    <rdfs:domain rdf:resource="https://example.org/rental-kg#RenterProfile"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#MetroEntrance">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="ru">Вход метро</rdfs:label>
+    <rdfs:comment xml:lang="ru">Отдельный вход или выход станции. Пешеходный маршрут строится до доступного входа.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#MetroStation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="ru">Станция метро</rdfs:label>
+    <rdfs:comment xml:lang="ru">Объект транспортного обслуживания, предоставляющий доступ к метрополитену. В текущем наборе представлен одной репрезентативной точкой, а не всеми входами.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://example.org/rental-kg#Amenity"/>
+    <owl:disjointWith rdf:resource="https://example.org/rental-kg#Supermarket"/>
+    <owl:disjointWith rdf:resource="https://example.org/rental-kg#Park"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#usableEntrance">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:label xml:lang="ru">доступен для входа в пилоте</rdfs:label>
+    <rdfs:domain rdf:resource="https://example.org/rental-kg#MetroEntrance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#ListingSnapshot">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="ru">Снимок объявления</rdfs:label>
+    <rdfs:comment xml:lang="ru">Зафиксированное на дату наблюдения предложение аренды одного жилья с ценой, условиями и ссылкой на запись источника; не является самим жильём.</rdfs:comment>
+    <owl:disjointWith rdf:resource="https://example.org/rental-kg#SourceRecord"/>
+    <owl:disjointWith rdf:resource="https://example.org/rental-kg#RenterProfile"/>
+    <owl:disjointWith rdf:resource="https://example.org/rental-kg#MetroEntrance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#areaM2">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label xml:lang="ru">площадь, м²</rdfs:label>
     <rdfs:domain rdf:resource="https://example.org/rental-kg#Dwelling"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#maxMetroWalkSeconds">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:label xml:lang="ru">порог пешком до метро, с</rdfs:label>
+    <rdfs:domain rdf:resource="https://example.org/rental-kg#RenterProfile"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://example.org/rental-kg#hasSource">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:range rdf:resource="https://example.org/rental-kg#SourceRecord"/>
     <rdfs:label xml:lang="ru">источник записи</rdfs:label>
   </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#Apartment">
+  <rdf:Description rdf:about="https://example.org/rental-kg#utilitiesRubMonth">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label xml:lang="ru">дополнительные КУ, руб./месяц</rdfs:label>
+    <rdfs:domain rdf:resource="https://example.org/rental-kg#ListingSnapshot"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#depositRub">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label xml:lang="ru">залог, руб.</rdfs:label>
+    <rdfs:domain rdf:resource="https://example.org/rental-kg#ListingSnapshot"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#Building">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label xml:lang="ru">Квартира</rdfs:label>
-    <rdfs:comment xml:lang="ru">Отдельная жилая единица внутри здания, предлагаемая целиком в аренду; характеризуется площадью, числом комнат и этажом. Студия также является квартирой.</rdfs:comment>
-    <rdfs:subClassOf rdf:resource="https://example.org/rental-kg#Dwelling"/>
+    <rdfs:label xml:lang="ru">Здание</rdfs:label>
+    <rdfs:comment xml:lang="ru">Физическая постройка, содержащая жильё, с адресом и этажностью. Её точка WGS84 служит приближённой точкой расположения находящегося в ней жилья.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://example.org/rental-kg#Place"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#observedOn">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdfs:label xml:lang="ru">дата наблюдения</rdfs:label>
+    <rdfs:domain rdf:resource="https://example.org/rental-kg#ListingSnapshot"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#inBuilding">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:range rdf:resource="https://example.org/rental-kg#Building"/>
+    <rdfs:label xml:lang="ru">находится в здании</rdfs:label>
+    <rdfs:domain rdf:resource="https://example.org/rental-kg#Dwelling"/>
+    <rdfs:subPropertyOf rdf:resource="https://example.org/rental-kg#locatedIn"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#requiresPets">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:label xml:lang="ru">нужно разрешение на животных</rdfs:label>
+    <rdfs:domain rdf:resource="https://example.org/rental-kg#RenterProfile"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#hasGeometry">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:range rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+    <rdfs:label xml:lang="ru">имеет геометрию</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <owl:versionInfo>2.0.0</owl:versionInfo>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#hasListing">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:range rdf:resource="https://example.org/rental-kg#ListingSnapshot"/>
+    <rdfs:label xml:lang="ru">имеет объявление</rdfs:label>
+    <rdfs:domain rdf:resource="https://example.org/rental-kg#Dwelling"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#wktLiteral">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#floor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:label xml:lang="ru">этаж</rdfs:label>
+    <rdfs:domain rdf:resource="https://example.org/rental-kg#Dwelling"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#address">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="ru">адрес</rdfs:label>
+    <rdfs:domain rdf:resource="https://example.org/rental-kg#Building"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#qualityNote">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="ru">замечание к качеству</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#rooms">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:label xml:lang="ru">число комнат, студия = 0</rdfs:label>
+    <rdfs:domain rdf:resource="https://example.org/rental-kg#Dwelling"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#Geometry">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="ru">Геометрия</rdfs:label>
   </rdf:Description>
 </rdf:RDF>

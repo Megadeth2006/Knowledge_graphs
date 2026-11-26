@@ -1,0 +1,6 @@
+id,source_id,address,rent_rub_month,area_m2,rooms,floor,floors_total,pets_allowed,term,source_url,observed_on,is_synthetic,pin_lon,pin_lat
+E128027065,128027065,"Мичуринская ул., 6, литера Б",350000,229.00,5,8,9,,long_term,https://ecoton.spb.ru/detal-object.html?itemid=128027065,2026-11-26,false,30.329307,59.954669
+E129891108,129891108,"Ропшинская ул., 4",59000,49.30,2,1,5,false,long_term,https://ecoton.spb.ru/detal-object.html?itemid=129891108,2026-11-26,false,30.297102,59.957719
+E132735378,132735378,"Подковырова ул., 11-13",200000,99.60,3,2,3,,long_term,https://ecoton.spb.ru/detal-object.html?itemid=132735378,2026-11-26,false,30.305052,59.963467
+E146482554,146482554,"Малая Посадская ул., 17",220000,114.00,3,2,4,,long_term,https://ecoton.spb.ru/detal-object.html?itemid=146482554,2026-11-26,false,30.329064,59.957868
+E64293061,64293061,"Большая Посадская ул., 12",70000,42.00,1,5,8,,long_term,https://ecoton.spb.ru/detal-object.html?itemid=64293061,2026-11-26,false,30.325049,59.959201

@@ -1,0 +1,13 @@
+PREFIX ex: <https://example.org/rental-kg#>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
+PREFIX uom: <http://www.opengis.net/def/uom/OGC/1.0/>
+SELECT ?address (MIN(?metres) AS ?nearestShopMetres) WHERE {
+    ex:IslandSample dct:hasPart ?listing .
+    ?listing ex:offers/ex:inBuilding ?building .
+    ?building ex:address ?address ; geo:hasGeometry/geo:asWKT ?origin .
+    ?shop a ex:Supermarket ; ex:isSynthetic false ; geo:hasGeometry/geo:asWKT ?target .
+    BIND(geof:distance(?origin, ?target, uom:metre) AS ?metres)
+}
+GROUP BY ?address ORDER BY ?nearestShopMetres

@@ -1,23 +1,25 @@
 @prefix ex: <https://example.org/rental-kg#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+geo:asWKT a owl:DatatypeProperty ;
+    rdfs:label "геометрия в WKT"@ru ;
+    rdfs:domain geo:Geometry ;
+    rdfs:range geo:wktLiteral .
+
+geo:hasGeometry a owl:ObjectProperty ;
+    rdfs:label "имеет геометрию"@ru ;
+    rdfs:range geo:Geometry .
+
 <https://example.org/rental-kg> a owl:Ontology ;
-    owl:versionInfo "1.1.0" .
+    owl:versionInfo "2.0.0" .
 
 ex:Apartment a owl:Class ;
     rdfs:label "Квартира"@ru ;
     rdfs:comment "Отдельная жилая единица внутри здания, предлагаемая целиком в аренду; характеризуется площадью, числом комнат и этажом. Студия также является квартирой."@ru ;
     rdfs:subClassOf ex:Dwelling .
-
-ex:MetroStation a owl:Class ;
-    rdfs:label "Станция метро"@ru ;
-    rdfs:comment "Объект транспортного обслуживания, предоставляющий доступ к метрополитену. В текущем наборе представлен одной репрезентативной точкой, а не всеми входами."@ru ;
-    rdfs:subClassOf ex:Amenity ;
-    owl:disjointWith ex:Park,
-        ex:Supermarket .
 
 ex:address a owl:DatatypeProperty ;
     rdfs:label "адрес"@ru ;
@@ -29,11 +31,6 @@ ex:areaM2 a owl:DatatypeProperty ;
     rdfs:domain ex:Dwelling ;
     rdfs:range xsd:decimal .
 
-ex:calculatedOn a owl:DatatypeProperty ;
-    rdfs:label "дата вычисления"@ru ;
-    rdfs:domain ex:DistanceMeasurement ;
-    rdfs:range xsd:date .
-
 ex:commissionRub a owl:DatatypeProperty ;
     rdfs:label "разовая комиссия, руб."@ru ;
     rdfs:domain ex:ListingSnapshot ;
@@ -44,10 +41,10 @@ ex:depositRub a owl:DatatypeProperty ;
     rdfs:domain ex:ListingSnapshot ;
     rdfs:range xsd:decimal .
 
-ex:distanceM a owl:DatatypeProperty ;
-    rdfs:label "расстояние, м"@ru ;
-    rdfs:domain ex:DistanceMeasurement ;
-    rdfs:range xsd:decimal .
+ex:entranceOf a owl:ObjectProperty ;
+    rdfs:label "вход станции"@ru ;
+    rdfs:domain ex:MetroEntrance ;
+    rdfs:range ex:MetroStation .
 
 ex:floor a owl:DatatypeProperty ;
     rdfs:label "этаж"@ru ;
@@ -59,10 +56,9 @@ ex:floorsTotal a owl:DatatypeProperty ;
     rdfs:domain ex:Building ;
     rdfs:range xsd:integer .
 
-ex:fromDwelling a owl:ObjectProperty ;
-    rdfs:label "начало измерения"@ru ;
-    rdfs:domain ex:DistanceMeasurement ;
-    rdfs:range ex:Dwelling .
+ex:geometryKind a owl:DatatypeProperty ;
+    rdfs:label "способ получения опорной точки"@ru ;
+    rdfs:range xsd:string .
 
 ex:hasSource a owl:ObjectProperty ;
     rdfs:label "источник записи"@ru ;
@@ -90,20 +86,15 @@ ex:isSynthetic a owl:DatatypeProperty ;
     rdfs:label "синтетические данные"@ru ;
     rdfs:range xsd:boolean .
 
-ex:latitude a owl:DatatypeProperty ;
-    rdfs:label "широта, WGS84"@ru ;
-    rdfs:domain _:Nc368dd51f82647c982dbd8b170964fc2 ;
-    rdfs:range xsd:decimal .
-
-ex:longitude a owl:DatatypeProperty ;
-    rdfs:label "долгота, WGS84"@ru ;
-    rdfs:domain _:Nc368dd51f82647c982dbd8b170964fc2 ;
-    rdfs:range xsd:decimal .
-
 ex:maxMetroDistanceM a owl:DatatypeProperty ;
-    rdfs:label "порог расстояния до метро"@ru ;
+    rdfs:label "порог до метро по прямой, м"@ru ;
     rdfs:domain ex:RenterProfile ;
     rdfs:range xsd:decimal .
+
+ex:maxMetroWalkSeconds a owl:DatatypeProperty ;
+    rdfs:label "порог пешком до метро, с"@ru ;
+    rdfs:domain ex:RenterProfile ;
+    rdfs:range xsd:integer .
 
 ex:maxRentRubMonth a owl:DatatypeProperty ;
     rdfs:label "лимит арендной платы"@ru ;
@@ -114,11 +105,6 @@ ex:minMonths a owl:DatatypeProperty ;
     rdfs:label "минимальный срок, месяцев"@ru ;
     rdfs:domain ex:ListingSnapshot ;
     rdfs:range xsd:integer .
-
-ex:nearAmenity a owl:ObjectProperty ;
-    rdfs:label "не далее 1000 м по прямой"@ru ;
-    rdfs:domain ex:Dwelling ;
-    rdfs:range ex:Amenity .
 
 ex:observedOn a owl:DatatypeProperty ;
     rdfs:label "дата наблюдения"@ru ;
@@ -170,24 +156,24 @@ ex:term a owl:DatatypeProperty ;
     rdfs:domain ex:ListingSnapshot ;
     rdfs:range xsd:string .
 
-ex:toAmenity a owl:ObjectProperty ;
-    rdfs:label "цель измерения"@ru ;
-    rdfs:domain ex:DistanceMeasurement ;
-    rdfs:range ex:Amenity .
-
-ex:usesMethod a owl:ObjectProperty ;
-    rdfs:label "метод измерения"@ru ;
-    rdfs:domain ex:DistanceMeasurement ;
-    rdfs:range ex:MeasurementMethod .
+ex:usableEntrance a owl:DatatypeProperty ;
+    rdfs:label "доступен для входа в пилоте"@ru ;
+    rdfs:domain ex:MetroEntrance ;
+    rdfs:range xsd:boolean .
 
 ex:utilitiesRubMonth a owl:DatatypeProperty ;
     rdfs:label "дополнительные КУ, руб./месяц"@ru ;
     rdfs:domain ex:ListingSnapshot ;
     rdfs:range xsd:decimal .
 
-ex:MeasurementMethod a owl:Class ;
-    rdfs:label "Метод измерения"@ru ;
-    rdfs:comment "Описание способа получения численного расстояния, на которое ссылается usesMethod. Экземпляр Haversine обозначает расчёт по сферической модели Земли."@ru .
+geo:wktLiteral a rdfs:Datatype .
+
+ex:MetroStation a owl:Class ;
+    rdfs:label "Станция метро"@ru ;
+    rdfs:comment "Объект транспортного обслуживания, предоставляющий доступ к метрополитену. В текущем наборе представлен одной репрезентативной точкой, а не всеми входами."@ru ;
+    rdfs:subClassOf ex:Amenity ;
+    owl:disjointWith ex:Park,
+        ex:Supermarket .
 
 ex:Supermarket a owl:Class ;
     rdfs:label "Супермаркет"@ru ;
@@ -200,6 +186,9 @@ ex:hasListing a owl:ObjectProperty ;
     rdfs:domain ex:Dwelling ;
     rdfs:range ex:ListingSnapshot .
 
+geo:Geometry a owl:Class ;
+    rdfs:label "Геометрия"@ru .
+
 ex:City a owl:Class ;
     rdfs:label "Город"@ru ;
     rdfs:comment "Населённый пункт, содержащий районы и являющийся верхним используемым уровнем адресной иерархии."@ru ;
@@ -209,12 +198,8 @@ ex:City a owl:Class ;
 
 ex:Park a owl:Class ;
     rdfs:label "Парк"@ru ;
-    rdfs:comment "Объект инфраструктуры для отдыха на озеленённой территории. В текущей модели расстояние измеряется до репрезентативной точки, а не до входа или границы парка."@ru ;
+    rdfs:comment "Озеленённая территория для отдыха. В пилоте представлена опорной точкой."@ru ;
     rdfs:subClassOf ex:Amenity .
-
-ex:SourceRecord a owl:Class ;
-    rdfs:label "Запись источника"@ru ;
-    rdfs:comment "Указатель на исходную запись, из которой получены факты: URL реальной карточки либо явно учебный идентификатор источника. Используется как объект hasSource."@ru .
 
 ex:District a owl:Class ;
     rdfs:label "Район"@ru ;
@@ -227,43 +212,57 @@ ex:locatedIn a owl:ObjectProperty,
     rdfs:label "расположено в"@ru ;
     rdfs:range ex:Place .
 
-ex:RenterProfile a owl:Class ;
-    rdfs:label "Профиль требований"@ru ;
-    rdfs:comment "Набор явных требований арендатора к поиску: бюджет, город, радиус до метро и необходимость разрешения на животных. Не является человеком или объявлением."@ru .
-
-ex:DistanceMeasurement a owl:Class ;
-    rdfs:label "Измерение расстояния"@ru ;
-    rdfs:comment "Результат измерения между одним жильём и одним объектом инфраструктуры, заданный числом метров, методом и датой расчёта. В текущем наборе используется точка здания жилья."@ru ;
-    owl:disjointWith ex:Place .
-
 ex:Place a owl:Class ;
     rdfs:label "Место расположения"@ru ;
     rdfs:comment "Адресный контейнер, в котором размещено жильё прямо или через цепочку locatedIn: здание, район или город. Жильё и объекты инфраструктуры в этот класс не входят."@ru ;
     owl:disjointWith ex:Amenity,
-        ex:Dwelling .
+        ex:Dwelling,
+        ex:ListingSnapshot,
+        ex:MetroEntrance,
+        ex:RenterProfile,
+        ex:SourceRecord .
+
+ex:Amenity a owl:Class ;
+    rdfs:label "Объект инфраструктуры"@ru ;
+    rdfs:comment "Объект обслуживания или отдыха, близость которого важна при подборе жилья."@ru ;
+    owl:disjointWith ex:ListingSnapshot,
+        ex:MetroEntrance,
+        ex:RenterProfile,
+        ex:SourceRecord .
 
 ex:Building a owl:Class ;
     rdfs:label "Здание"@ru ;
     rdfs:comment "Физическая постройка, содержащая жильё, с адресом и этажностью. Её точка WGS84 служит приближённой точкой расположения находящегося в ней жилья."@ru ;
     rdfs:subClassOf ex:Place .
 
-ex:Amenity a owl:Class ;
-    rdfs:label "Объект инфраструктуры"@ru ;
-    rdfs:comment "Объект обслуживания или отдыха, близость которого важна при подборе жилья. Является целью toAmenity и nearAmenity, а не адресным контейнером жилья. Объект обслуживания и вмещающее его здание моделируются отдельно."@ru .
-
-ex:ListingSnapshot a owl:Class ;
-    rdfs:label "Снимок объявления"@ru ;
-    rdfs:comment "Зафиксированное на дату наблюдения предложение аренды одного жилья с ценой, условиями и ссылкой на запись источника; не является самим жильём."@ru ;
-    owl:disjointWith ex:Dwelling .
+ex:SourceRecord a owl:Class ;
+    rdfs:label "Запись источника"@ru ;
+    rdfs:comment "Указатель на исходную запись, из которой получены факты: URL реальной карточки либо явно учебный идентификатор источника. Используется как объект hasSource."@ru ;
+    owl:disjointWith ex:MetroEntrance,
+        ex:RenterProfile .
 
 ex:Dwelling a owl:Class ;
     rdfs:label "Жильё"@ru ;
     rdfs:comment "Жилая единица, предлагаемая в аренду снимком объявления через offers. В текущем проекте представлены целые квартиры; комнаты и отдельные дома могут быть добавлены при расширении модели."@ru ;
-    owl:disjointWith ex:Amenity .
+    owl:disjointWith ex:Amenity,
+        ex:ListingSnapshot,
+        ex:MetroEntrance,
+        ex:RenterProfile,
+        ex:SourceRecord .
 
-_:N868f6cdc9b7d471e98e08c501197c567 rdf:first ex:Building ;
-    rdf:rest ( ex:Amenity ) .
+ex:MetroEntrance a owl:Class ;
+    rdfs:label "Вход метро"@ru ;
+    rdfs:comment "Отдельный вход или выход станции. Пешеходный маршрут строится до доступного входа."@ru .
 
-_:Nc368dd51f82647c982dbd8b170964fc2 a owl:Class ;
-    owl:unionOf _:N868f6cdc9b7d471e98e08c501197c567 .
+ex:RenterProfile a owl:Class ;
+    rdfs:label "Профиль требований"@ru ;
+    rdfs:comment "Явные требования поиска: бюджет, город, условия аренды и пороги доступности."@ru ;
+    owl:disjointWith ex:MetroEntrance .
+
+ex:ListingSnapshot a owl:Class ;
+    rdfs:label "Снимок объявления"@ru ;
+    rdfs:comment "Зафиксированное на дату наблюдения предложение аренды одного жилья с ценой, условиями и ссылкой на запись источника; не является самим жильём."@ru ;
+    owl:disjointWith ex:MetroEntrance,
+        ex:RenterProfile,
+        ex:SourceRecord .
 

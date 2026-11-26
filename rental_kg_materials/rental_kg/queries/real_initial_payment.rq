@@ -1,4 +1,4 @@
 PREFIX ex: <https://example.org/rental-kg#>
 SELECT ?listing (?rent + ?deposit + ?commission AS ?knownInitial) WHERE {
- ?listing ex:rentRubMonth ?rent; ex:depositRub ?deposit; ex:commissionRub ?commission.
+ ?listing a ex:ListingSnapshot; ex:isSynthetic false; ex:rentRubMonth ?rent; ex:depositRub ?deposit; ex:commissionRub ?commission.
 } ORDER BY ?listing

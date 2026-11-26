@@ -1,682 +1,354 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rdf:RDF
    xmlns:ex="https://example.org/rental-kg#"
+   xmlns:geo="http://www.opengis.net/ont/geosparql#"
    xmlns:owl="http://www.w3.org/2002/07/owl#"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 >
-  <rdf:Description rdf:about="https://example.org/rental-kg#D10_S1">
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:calculatedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:calculatedOn>
-    <rdf:type rdf:resource="https://example.org/rental-kg#DistanceMeasurement"/>
-    <ex:usesMethod rdf:resource="https://example.org/rental-kg#Haversine"/>
-    <ex:distanceM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1358.2</ex:distanceM>
-    <ex:fromDwelling rdf:resource="https://example.org/rental-kg#D10_home"/>
-    <rdfs:label xml:lang="ru">Учебное расстояние D10 — S1</rdfs:label>
-    <ex:toAmenity rdf:resource="https://example.org/rental-kg#S1"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D12_S1">
-    <ex:usesMethod rdf:resource="https://example.org/rental-kg#Haversine"/>
-    <ex:fromDwelling rdf:resource="https://example.org/rental-kg#D12_home"/>
-    <rdfs:label xml:lang="ru">Учебное расстояние D12 — S1</rdfs:label>
-    <rdf:type rdf:resource="https://example.org/rental-kg#DistanceMeasurement"/>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:distanceM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1914.3</ex:distanceM>
-    <ex:calculatedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:calculatedOn>
-    <ex:toAmenity rdf:resource="https://example.org/rental-kg#S1"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D09_S1">
-    <rdf:type rdf:resource="https://example.org/rental-kg#DistanceMeasurement"/>
-    <ex:fromDwelling rdf:resource="https://example.org/rental-kg#D09_home"/>
-    <ex:usesMethod rdf:resource="https://example.org/rental-kg#Haversine"/>
-    <ex:toAmenity rdf:resource="https://example.org/rental-kg#S1"/>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <rdfs:label xml:lang="ru">Учебное расстояние D09 — S1</rdfs:label>
-    <ex:distanceM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1080.2</ex:distanceM>
-    <ex:calculatedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:calculatedOn>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#maxMetroDistanceM">
-    <rdfs:domain rdf:resource="https://example.org/rental-kg#RenterProfile"/>
-    <rdfs:label xml:lang="ru">порог расстояния до метро</rdfs:label>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D08_M2">
-    <ex:fromDwelling rdf:resource="https://example.org/rental-kg#D08_home"/>
-    <ex:distanceM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">834.5</ex:distanceM>
-    <rdfs:label xml:lang="ru">Учебное расстояние D08 — M2</rdfs:label>
-    <rdf:type rdf:resource="https://example.org/rental-kg#DistanceMeasurement"/>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:toAmenity rdf:resource="https://example.org/rental-kg#M2"/>
-    <ex:calculatedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:calculatedOn>
-    <ex:usesMethod rdf:resource="https://example.org/rental-kg#Haversine"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D11_P1">
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:calculatedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:calculatedOn>
-    <ex:distanceM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">957.1</ex:distanceM>
-    <rdfs:label xml:lang="ru">Учебное расстояние D11 — P1</rdfs:label>
-    <ex:toAmenity rdf:resource="https://example.org/rental-kg#P1"/>
-    <ex:usesMethod rdf:resource="https://example.org/rental-kg#Haversine"/>
-    <ex:fromDwelling rdf:resource="https://example.org/rental-kg#D11_home"/>
-    <rdf:type rdf:resource="https://example.org/rental-kg#DistanceMeasurement"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D03_building">
-    <ex:longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30.309</ex:longitude>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:hasSource rdf:resource="https://example.org/rental-kg#D03_source"/>
-    <rdfs:label xml:lang="ru">Учебное здание D03</rdfs:label>
-    <ex:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Учебный адрес D03</ex:address>
-    <ex:latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">59.926</ex:latitude>
-    <ex:floorsTotal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</ex:floorsTotal>
-    <rdf:type rdf:resource="https://example.org/rental-kg#Building"/>
+  <rdf:Description rdf:about="https://example.org/rental-kg#D08_building">
+    <rdfs:label xml:lang="ru">Учебное здание D08</rdfs:label>
+    <geo:hasGeometry rdf:resource="https://example.org/rental-kg#D08_building_point"/>
     <ex:inDistrict rdf:resource="https://example.org/rental-kg#DemoDistrict"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D06_S1">
-    <ex:usesMethod rdf:resource="https://example.org/rental-kg#Haversine"/>
-    <rdfs:label xml:lang="ru">Учебное расстояние D06 — S1</rdfs:label>
-    <ex:distanceM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">248.7</ex:distanceM>
+    <rdf:type rdf:resource="https://example.org/rental-kg#Building"/>
+    <ex:hasSource rdf:resource="https://example.org/rental-kg#D08_source"/>
     <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:toAmenity rdf:resource="https://example.org/rental-kg#S1"/>
-    <ex:fromDwelling rdf:resource="https://example.org/rental-kg#D06_home"/>
-    <ex:calculatedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:calculatedOn>
-    <rdf:type rdf:resource="https://example.org/rental-kg#DistanceMeasurement"/>
+    <ex:floorsTotal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</ex:floorsTotal>
+    <ex:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Учебный адрес D08</ex:address>
   </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D12_P2">
-    <ex:distanceM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">314.8</ex:distanceM>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:usesMethod rdf:resource="https://example.org/rental-kg#Haversine"/>
-    <ex:toAmenity rdf:resource="https://example.org/rental-kg#P2"/>
-    <ex:calculatedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:calculatedOn>
-    <ex:fromDwelling rdf:resource="https://example.org/rental-kg#D12_home"/>
-    <rdf:type rdf:resource="https://example.org/rental-kg#DistanceMeasurement"/>
-    <rdfs:label xml:lang="ru">Учебное расстояние D12 — P2</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D10_M2">
-    <ex:fromDwelling rdf:resource="https://example.org/rental-kg#D10_home"/>
-    <ex:distanceM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">278.2</ex:distanceM>
-    <rdfs:label xml:lang="ru">Учебное расстояние D10 — M2</rdfs:label>
-    <ex:usesMethod rdf:resource="https://example.org/rental-kg#Haversine"/>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:toAmenity rdf:resource="https://example.org/rental-kg#M2"/>
-    <ex:calculatedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:calculatedOn>
-    <rdf:type rdf:resource="https://example.org/rental-kg#DistanceMeasurement"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D02_P2">
-    <ex:distanceM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3093.8</ex:distanceM>
-    <ex:toAmenity rdf:resource="https://example.org/rental-kg#P2"/>
-    <ex:fromDwelling rdf:resource="https://example.org/rental-kg#D02_home"/>
-    <ex:calculatedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:calculatedOn>
-    <ex:usesMethod rdf:resource="https://example.org/rental-kg#Haversine"/>
-    <rdf:type rdf:resource="https://example.org/rental-kg#DistanceMeasurement"/>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <rdfs:label xml:lang="ru">Учебное расстояние D02 — P2</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D07_M1">
-    <rdf:type rdf:resource="https://example.org/rental-kg#DistanceMeasurement"/>
-    <rdfs:label xml:lang="ru">Учебное расстояние D07 — M1</rdfs:label>
-    <ex:toAmenity rdf:resource="https://example.org/rental-kg#M1"/>
-    <ex:fromDwelling rdf:resource="https://example.org/rental-kg#D07_home"/>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:distanceM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">834.6</ex:distanceM>
-    <ex:calculatedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:calculatedOn>
-    <ex:usesMethod rdf:resource="https://example.org/rental-kg#Haversine"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D11_home">
-    <ex:rooms rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</ex:rooms>
-    <ex:nearAmenity rdf:resource="https://example.org/rental-kg#S2"/>
-    <ex:nearAmenity rdf:resource="https://example.org/rental-kg#P2"/>
-    <ex:nearAmenity rdf:resource="https://example.org/rental-kg#P1"/>
-    <ex:nearAmenity rdf:resource="https://example.org/rental-kg#M2"/>
-    <ex:inBuilding rdf:resource="https://example.org/rental-kg#D11_building"/>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <rdfs:label xml:lang="ru">Учебная квартира D11</rdfs:label>
-    <ex:hasSource rdf:resource="https://example.org/rental-kg#D11_source"/>
-    <rdf:type rdf:resource="https://example.org/rental-kg#Apartment"/>
-    <ex:areaM2 rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">47</ex:areaM2>
-    <ex:floor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</ex:floor>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D01_home">
-    <rdfs:label xml:lang="ru">Учебная квартира D01</rdfs:label>
-    <ex:nearAmenity rdf:resource="https://example.org/rental-kg#M1"/>
-    <ex:inBuilding rdf:resource="https://example.org/rental-kg#D01_building"/>
-    <ex:areaM2 rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">27</ex:areaM2>
-    <ex:rooms rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ex:rooms>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:floor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</ex:floor>
-    <rdf:type rdf:resource="https://example.org/rental-kg#Apartment"/>
-    <ex:hasSource rdf:resource="https://example.org/rental-kg#D01_source"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#inBuilding">
-    <rdfs:subPropertyOf rdf:resource="https://example.org/rental-kg#locatedIn"/>
-    <rdfs:domain rdf:resource="https://example.org/rental-kg#Dwelling"/>
-    <rdfs:range rdf:resource="https://example.org/rental-kg#Building"/>
+  <rdf:Description rdf:about="https://example.org/rental-kg#locatedIn">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label xml:lang="ru">находится в здании</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    <rdfs:range rdf:resource="https://example.org/rental-kg#Place"/>
+    <rdfs:label xml:lang="ru">расположено в</rdfs:label>
   </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#distanceM">
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-    <rdfs:label xml:lang="ru">расстояние, м</rdfs:label>
-    <rdfs:domain rdf:resource="https://example.org/rental-kg#DistanceMeasurement"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  <rdf:Description rdf:about="https://example.org/rental-kg#D09_building_point">
+    <ex:geometryKind rdf:datatype="http://www.w3.org/2001/XMLSchema#string">synthetic</ex:geometryKind>
+    <geo:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POINT (30.32700000 59.93800000)</geo:asWKT>
+    <rdfs:label xml:lang="ru">Опорная точка</rdfs:label>
+    <rdf:type rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D02_M2">
-    <ex:usesMethod rdf:resource="https://example.org/rental-kg#Haversine"/>
-    <ex:fromDwelling rdf:resource="https://example.org/rental-kg#D02_home"/>
-    <ex:distanceM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2503.7</ex:distanceM>
-    <rdfs:label xml:lang="ru">Учебное расстояние D02 — M2</rdfs:label>
-    <rdf:type rdf:resource="https://example.org/rental-kg#DistanceMeasurement"/>
+  <rdf:Description rdf:about="https://example.org/rental-kg#D04">
+    <rdfs:label xml:lang="ru">Учебное объявление D04</rdfs:label>
+    <ex:petsAllowed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ex:petsAllowed>
+    <ex:depositRub rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30000</ex:depositRub>
+    <ex:commissionRub rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</ex:commissionRub>
+    <ex:offers rdf:resource="https://example.org/rental-kg#D04_home"/>
     <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:toAmenity rdf:resource="https://example.org/rental-kg#M2"/>
-    <ex:calculatedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:calculatedOn>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#inCity">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:subPropertyOf rdf:resource="https://example.org/rental-kg#locatedIn"/>
-    <rdfs:range rdf:resource="https://example.org/rental-kg#City"/>
-    <rdfs:label xml:lang="ru">находится в городе</rdfs:label>
-    <rdfs:domain rdf:resource="https://example.org/rental-kg#District"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D11_S2">
-    <ex:distanceM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">124.4</ex:distanceM>
-    <ex:calculatedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:calculatedOn>
-    <ex:fromDwelling rdf:resource="https://example.org/rental-kg#D11_home"/>
-    <ex:usesMethod rdf:resource="https://example.org/rental-kg#Haversine"/>
-    <rdf:type rdf:resource="https://example.org/rental-kg#DistanceMeasurement"/>
-    <ex:toAmenity rdf:resource="https://example.org/rental-kg#S2"/>
-    <rdfs:label xml:lang="ru">Учебное расстояние D11 — S2</rdfs:label>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D12_M1">
-    <rdf:type rdf:resource="https://example.org/rental-kg#DistanceMeasurement"/>
-    <ex:toAmenity rdf:resource="https://example.org/rental-kg#M1"/>
-    <rdfs:label xml:lang="ru">Учебное расстояние D12 — M1</rdfs:label>
-    <ex:distanceM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2225.4</ex:distanceM>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:calculatedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:calculatedOn>
-    <ex:fromDwelling rdf:resource="https://example.org/rental-kg#D12_home"/>
-    <ex:usesMethod rdf:resource="https://example.org/rental-kg#Haversine"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D07_S1">
-    <rdfs:label xml:lang="ru">Учебное расстояние D07 — S1</rdfs:label>
-    <ex:distanceM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">524.8</ex:distanceM>
-    <rdf:type rdf:resource="https://example.org/rental-kg#DistanceMeasurement"/>
-    <ex:fromDwelling rdf:resource="https://example.org/rental-kg#D07_home"/>
-    <ex:toAmenity rdf:resource="https://example.org/rental-kg#S1"/>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:usesMethod rdf:resource="https://example.org/rental-kg#Haversine"/>
-    <ex:calculatedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:calculatedOn>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D10_P2">
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:toAmenity rdf:resource="https://example.org/rental-kg#P2"/>
-    <ex:calculatedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:calculatedOn>
-    <ex:usesMethod rdf:resource="https://example.org/rental-kg#Haversine"/>
-    <rdf:type rdf:resource="https://example.org/rental-kg#DistanceMeasurement"/>
-    <ex:distanceM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">869.1</ex:distanceM>
-    <ex:fromDwelling rdf:resource="https://example.org/rental-kg#D10_home"/>
-    <rdfs:label xml:lang="ru">Учебное расстояние D10 — P2</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#MetroStation">
-    <rdfs:label xml:lang="ru">Станция метро</rdfs:label>
-    <rdfs:comment xml:lang="ru">Объект транспортного обслуживания, предоставляющий доступ к метрополитену. В текущем наборе представлен одной репрезентативной точкой, а не всеми входами.</rdfs:comment>
-    <owl:disjointWith rdf:resource="https://example.org/rental-kg#Park"/>
-    <owl:disjointWith rdf:resource="https://example.org/rental-kg#Supermarket"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:resource="https://example.org/rental-kg#Amenity"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nc368dd51f82647c982dbd8b170964fc2">
-    <owl:unionOf rdf:nodeID="N868f6cdc9b7d471e98e08c501197c567"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D09_P1">
-    <rdf:type rdf:resource="https://example.org/rental-kg#DistanceMeasurement"/>
-    <rdfs:label xml:lang="ru">Учебное расстояние D09 — P1</rdfs:label>
-    <ex:fromDwelling rdf:resource="https://example.org/rental-kg#D09_home"/>
-    <ex:usesMethod rdf:resource="https://example.org/rental-kg#Haversine"/>
-    <ex:toAmenity rdf:resource="https://example.org/rental-kg#P1"/>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:distanceM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">401.2</ex:distanceM>
-    <ex:calculatedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:calculatedOn>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D10_home">
-    <ex:inBuilding rdf:resource="https://example.org/rental-kg#D10_building"/>
-    <ex:rooms rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ex:rooms>
-    <rdfs:label xml:lang="ru">Учебная квартира D10</rdfs:label>
-    <ex:floor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</ex:floor>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:nearAmenity rdf:resource="https://example.org/rental-kg#M2"/>
-    <ex:nearAmenity rdf:resource="https://example.org/rental-kg#S2"/>
-    <ex:nearAmenity rdf:resource="https://example.org/rental-kg#P2"/>
-    <ex:nearAmenity rdf:resource="https://example.org/rental-kg#P1"/>
-    <rdf:type rdf:resource="https://example.org/rental-kg#Apartment"/>
-    <ex:areaM2 rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">45</ex:areaM2>
-    <ex:hasSource rdf:resource="https://example.org/rental-kg#D10_source"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D06">
-    <rdfs:label xml:lang="ru">Учебное объявление D06</rdfs:label>
+    <ex:observedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:observedOn>
+    <ex:term rdf:datatype="http://www.w3.org/2001/XMLSchema#string">long_term</ex:term>
     <rdf:type rdf:resource="https://example.org/rental-kg#ListingSnapshot"/>
     <ex:utilitiesRubMonth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4000</ex:utilitiesRubMonth>
-    <ex:term rdf:datatype="http://www.w3.org/2001/XMLSchema#string">long_term</ex:term>
-    <ex:offers rdf:resource="https://example.org/rental-kg#D06_home"/>
-    <ex:rentRubMonth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">38000</ex:rentRubMonth>
-    <ex:commissionRub rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</ex:commissionRub>
-    <ex:observedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:observedOn>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:hasSource rdf:resource="https://example.org/rental-kg#D06_source"/>
-    <ex:petsAllowed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:petsAllowed>
-    <ex:depositRub rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30000</ex:depositRub>
+    <ex:rentRubMonth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30000</ex:rentRubMonth>
+    <ex:hasSource rdf:resource="https://example.org/rental-kg#D04_source"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#petsAllowed">
-    <rdfs:domain rdf:resource="https://example.org/rental-kg#ListingSnapshot"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-    <rdfs:label xml:lang="ru">животные разрешены</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D09_P2">
-    <ex:fromDwelling rdf:resource="https://example.org/rental-kg#D09_home"/>
-    <ex:usesMethod rdf:resource="https://example.org/rental-kg#Haversine"/>
+  <rdf:Description rdf:about="https://example.org/rental-kg#D07_home">
+    <ex:inBuilding rdf:resource="https://example.org/rental-kg#D07_building"/>
+    <ex:floor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</ex:floor>
+    <rdfs:label xml:lang="ru">Учебная квартира D07</rdfs:label>
+    <rdf:type rdf:resource="https://example.org/rental-kg#Apartment"/>
+    <ex:rooms rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ex:rooms>
+    <ex:areaM2 rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">39</ex:areaM2>
     <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:distanceM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1147.0</ex:distanceM>
-    <ex:calculatedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:calculatedOn>
-    <rdf:type rdf:resource="https://example.org/rental-kg#DistanceMeasurement"/>
-    <rdfs:label xml:lang="ru">Учебное расстояние D09 — P2</rdfs:label>
-    <ex:toAmenity rdf:resource="https://example.org/rental-kg#P2"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D10_S2">
-    <rdfs:label xml:lang="ru">Учебное расстояние D10 — S2</rdfs:label>
-    <ex:calculatedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:calculatedOn>
-    <rdf:type rdf:resource="https://example.org/rental-kg#DistanceMeasurement"/>
-    <ex:usesMethod rdf:resource="https://example.org/rental-kg#Haversine"/>
-    <ex:fromDwelling rdf:resource="https://example.org/rental-kg#D10_home"/>
-    <ex:distanceM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">401.1</ex:distanceM>
-    <ex:toAmenity rdf:resource="https://example.org/rental-kg#S2"/>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
+    <ex:hasSource rdf:resource="https://example.org/rental-kg#D07_source"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://example.org/rental-kg#D02_building">
     <rdf:type rdf:resource="https://example.org/rental-kg#Building"/>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">59.924</ex:latitude>
-    <ex:floorsTotal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</ex:floorsTotal>
     <ex:inDistrict rdf:resource="https://example.org/rental-kg#DemoDistrict"/>
-    <ex:hasSource rdf:resource="https://example.org/rental-kg#D02_source"/>
-    <rdfs:label xml:lang="ru">Учебное здание D02</rdfs:label>
+    <ex:floorsTotal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</ex:floorsTotal>
     <ex:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Учебный адрес D02</ex:address>
-    <ex:longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30.306</ex:longitude>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D02">
-    <rdf:type rdf:resource="https://example.org/rental-kg#ListingSnapshot"/>
-    <ex:term rdf:datatype="http://www.w3.org/2001/XMLSchema#string">long_term</ex:term>
     <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:offers rdf:resource="https://example.org/rental-kg#D02_home"/>
-    <ex:commissionRub rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</ex:commissionRub>
+    <rdfs:label xml:lang="ru">Учебное здание D02</rdfs:label>
     <ex:hasSource rdf:resource="https://example.org/rental-kg#D02_source"/>
+    <geo:hasGeometry rdf:resource="https://example.org/rental-kg#D02_building_point"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#D09">
+    <ex:hasSource rdf:resource="https://example.org/rental-kg#D09_source"/>
     <ex:utilitiesRubMonth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4000</ex:utilitiesRubMonth>
-    <ex:rentRubMonth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">38000</ex:rentRubMonth>
-    <ex:observedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:observedOn>
-    <rdfs:label xml:lang="ru">Учебное объявление D02</rdfs:label>
+    <rdfs:label xml:lang="ru">Учебное объявление D09</rdfs:label>
+    <ex:rentRubMonth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">34000</ex:rentRubMonth>
     <ex:depositRub rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30000</ex:depositRub>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#sourceUrl">
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
-    <rdfs:domain rdf:resource="https://example.org/rental-kg#SourceRecord"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:label xml:lang="ru">ссылка на источник</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D04_home">
-    <ex:inBuilding rdf:resource="https://example.org/rental-kg#D04_building"/>
-    <ex:nearAmenity rdf:resource="https://example.org/rental-kg#S1"/>
-    <ex:nearAmenity rdf:resource="https://example.org/rental-kg#M1"/>
-    <ex:nearAmenity rdf:resource="https://example.org/rental-kg#P1"/>
-    <rdf:type rdf:resource="https://example.org/rental-kg#Apartment"/>
-    <ex:hasSource rdf:resource="https://example.org/rental-kg#D04_source"/>
-    <ex:rooms rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ex:rooms>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:areaM2 rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">33</ex:areaM2>
-    <rdfs:label xml:lang="ru">Учебная квартира D04</rdfs:label>
-    <ex:floor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ex:floor>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D09_building">
-    <ex:floorsTotal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</ex:floorsTotal>
-    <ex:inDistrict rdf:resource="https://example.org/rental-kg#DemoDistrict"/>
-    <rdfs:label xml:lang="ru">Учебное здание D09</rdfs:label>
-    <ex:longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30.327</ex:longitude>
-    <ex:hasSource rdf:resource="https://example.org/rental-kg#D09_source"/>
-    <rdf:type rdf:resource="https://example.org/rental-kg#Building"/>
-    <ex:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Учебный адрес D09</ex:address>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">59.938</ex:latitude>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D10_building">
-    <ex:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Учебный адрес D10</ex:address>
-    <ex:hasSource rdf:resource="https://example.org/rental-kg#D10_source"/>
-    <rdfs:label xml:lang="ru">Учебное здание D10</rdfs:label>
-    <ex:longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30.330000000000002</ex:longitude>
-    <ex:inDistrict rdf:resource="https://example.org/rental-kg#DemoDistrict"/>
-    <rdf:type rdf:resource="https://example.org/rental-kg#Building"/>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:floorsTotal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</ex:floorsTotal>
-    <ex:latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">59.940000000000005</ex:latitude>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#floor">
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-    <rdfs:domain rdf:resource="https://example.org/rental-kg#Dwelling"/>
-    <rdfs:label xml:lang="ru">этаж</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D09_home">
-    <rdf:type rdf:resource="https://example.org/rental-kg#Apartment"/>
-    <ex:areaM2 rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">43</ex:areaM2>
-    <ex:inBuilding rdf:resource="https://example.org/rental-kg#D09_building"/>
-    <ex:nearAmenity rdf:resource="https://example.org/rental-kg#M2"/>
-    <ex:nearAmenity rdf:resource="https://example.org/rental-kg#S2"/>
-    <ex:nearAmenity rdf:resource="https://example.org/rental-kg#P1"/>
-    <rdfs:label xml:lang="ru">Учебная квартира D09</rdfs:label>
-    <ex:hasSource rdf:resource="https://example.org/rental-kg#D09_source"/>
-    <ex:floor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</ex:floor>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:rooms rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</ex:rooms>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D03_home">
-    <ex:areaM2 rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">31</ex:areaM2>
-    <ex:nearAmenity rdf:resource="https://example.org/rental-kg#S1"/>
-    <ex:nearAmenity rdf:resource="https://example.org/rental-kg#M1"/>
-    <rdf:type rdf:resource="https://example.org/rental-kg#Apartment"/>
-    <ex:inBuilding rdf:resource="https://example.org/rental-kg#D03_building"/>
-    <rdfs:label xml:lang="ru">Учебная квартира D03</rdfs:label>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:rooms rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</ex:rooms>
-    <ex:hasSource rdf:resource="https://example.org/rental-kg#D03_source"/>
-    <ex:floor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ex:floor>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D07_P2">
-    <ex:usesMethod rdf:resource="https://example.org/rental-kg#Haversine"/>
-    <rdf:type rdf:resource="https://example.org/rental-kg#DistanceMeasurement"/>
-    <rdfs:label xml:lang="ru">Учебное расстояние D07 — P2</rdfs:label>
-    <ex:fromDwelling rdf:resource="https://example.org/rental-kg#D07_home"/>
-    <ex:distanceM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1703.1</ex:distanceM>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:toAmenity rdf:resource="https://example.org/rental-kg#P2"/>
-    <ex:calculatedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:calculatedOn>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#City">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:disjointWith rdf:resource="https://example.org/rental-kg#District"/>
-    <owl:disjointWith rdf:resource="https://example.org/rental-kg#Building"/>
-    <rdfs:comment xml:lang="ru">Населённый пункт, содержащий районы и являющийся верхним используемым уровнем адресной иерархии.</rdfs:comment>
-    <rdfs:subClassOf rdf:resource="https://example.org/rental-kg#Place"/>
-    <rdfs:label xml:lang="ru">Город</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D02_P1">
-    <ex:distanceM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1547.0</ex:distanceM>
-    <ex:usesMethod rdf:resource="https://example.org/rental-kg#Haversine"/>
-    <ex:toAmenity rdf:resource="https://example.org/rental-kg#P1"/>
-    <ex:fromDwelling rdf:resource="https://example.org/rental-kg#D02_home"/>
-    <rdf:type rdf:resource="https://example.org/rental-kg#DistanceMeasurement"/>
-    <rdfs:label xml:lang="ru">Учебное расстояние D02 — P1</rdfs:label>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:calculatedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:calculatedOn>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D05_P1">
-    <ex:calculatedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:calculatedOn>
-    <ex:distanceM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">712.6</ex:distanceM>
-    <ex:fromDwelling rdf:resource="https://example.org/rental-kg#D05_home"/>
-    <rdfs:label xml:lang="ru">Учебное расстояние D05 — P1</rdfs:label>
-    <ex:usesMethod rdf:resource="https://example.org/rental-kg#Haversine"/>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <rdf:type rdf:resource="https://example.org/rental-kg#DistanceMeasurement"/>
-    <ex:toAmenity rdf:resource="https://example.org/rental-kg#P1"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D04_building">
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30.312</ex:longitude>
-    <ex:floorsTotal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</ex:floorsTotal>
-    <ex:latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">59.928000000000004</ex:latitude>
-    <rdfs:label xml:lang="ru">Учебное здание D04</rdfs:label>
-    <ex:hasSource rdf:resource="https://example.org/rental-kg#D04_source"/>
-    <ex:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Учебный адрес D04</ex:address>
-    <ex:inDistrict rdf:resource="https://example.org/rental-kg#DemoDistrict"/>
-    <rdf:type rdf:resource="https://example.org/rental-kg#Building"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D11_M2">
-    <rdfs:label xml:lang="ru">Учебное расстояние D11 — M2</rdfs:label>
-    <ex:distanceM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</ex:distanceM>
-    <ex:fromDwelling rdf:resource="https://example.org/rental-kg#D11_home"/>
-    <ex:toAmenity rdf:resource="https://example.org/rental-kg#M2"/>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <rdf:type rdf:resource="https://example.org/rental-kg#DistanceMeasurement"/>
-    <ex:usesMethod rdf:resource="https://example.org/rental-kg#Haversine"/>
-    <ex:calculatedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:calculatedOn>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D08_S2">
-    <ex:toAmenity rdf:resource="https://example.org/rental-kg#S2"/>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:calculatedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:calculatedOn>
-    <ex:distanceM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">957.1</ex:distanceM>
-    <rdf:type rdf:resource="https://example.org/rental-kg#DistanceMeasurement"/>
-    <ex:usesMethod rdf:resource="https://example.org/rental-kg#Haversine"/>
-    <ex:fromDwelling rdf:resource="https://example.org/rental-kg#D08_home"/>
-    <rdfs:label xml:lang="ru">Учебное расстояние D08 — S2</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#Park">
-    <rdfs:subClassOf rdf:resource="https://example.org/rental-kg#Amenity"/>
-    <rdfs:comment xml:lang="ru">Объект инфраструктуры для отдыха на озеленённой территории. В текущей модели расстояние измеряется до репрезентативной точки, а не до входа или границы парка.</rdfs:comment>
-    <rdfs:label xml:lang="ru">Парк</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D12">
-    <ex:offers rdf:resource="https://example.org/rental-kg#D12_home"/>
-    <ex:hasSource rdf:resource="https://example.org/rental-kg#D12_source"/>
     <ex:commissionRub rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</ex:commissionRub>
-    <ex:observedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:observedOn>
-    <ex:term rdf:datatype="http://www.w3.org/2001/XMLSchema#string">long_term</ex:term>
-    <ex:depositRub rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30000</ex:depositRub>
-    <rdf:type rdf:resource="https://example.org/rental-kg#ListingSnapshot"/>
-    <ex:rentRubMonth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30000</ex:rentRubMonth>
-    <ex:utilitiesRubMonth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4000</ex:utilitiesRubMonth>
     <ex:petsAllowed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:petsAllowed>
     <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <rdfs:label xml:lang="ru">Учебное объявление D12</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D02_source">
-    <rdfs:label xml:lang="ru">Учебный источник D02</rdfs:label>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:sourceUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://example.org/synthetic/D02</ex:sourceUrl>
-    <rdf:type rdf:resource="https://example.org/rental-kg#SourceRecord"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D12_S2">
-    <ex:usesMethod rdf:resource="https://example.org/rental-kg#Haversine"/>
-    <ex:distanceM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">157.4</ex:distanceM>
-    <rdfs:label xml:lang="ru">Учебное расстояние D12 — S2</rdfs:label>
-    <ex:toAmenity rdf:resource="https://example.org/rental-kg#S2"/>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:calculatedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:calculatedOn>
-    <ex:fromDwelling rdf:resource="https://example.org/rental-kg#D12_home"/>
-    <rdf:type rdf:resource="https://example.org/rental-kg#DistanceMeasurement"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D08_building">
-    <rdf:type rdf:resource="https://example.org/rental-kg#Building"/>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30.324</ex:longitude>
-    <ex:hasSource rdf:resource="https://example.org/rental-kg#D08_source"/>
-    <ex:floorsTotal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</ex:floorsTotal>
-    <rdfs:label xml:lang="ru">Учебное здание D08</rdfs:label>
-    <ex:inDistrict rdf:resource="https://example.org/rental-kg#DemoDistrict"/>
-    <ex:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Учебный адрес D08</ex:address>
-    <ex:latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">59.936</ex:latitude>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D02_S1">
-    <rdfs:label xml:lang="ru">Учебное расстояние D02 — S1</rdfs:label>
-    <ex:toAmenity rdf:resource="https://example.org/rental-kg#S1"/>
-    <ex:usesMethod rdf:resource="https://example.org/rental-kg#Haversine"/>
-    <ex:fromDwelling rdf:resource="https://example.org/rental-kg#D02_home"/>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:calculatedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:calculatedOn>
-    <ex:distanceM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">869.2</ex:distanceM>
-    <rdf:type rdf:resource="https://example.org/rental-kg#DistanceMeasurement"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D01">
-    <ex:offers rdf:resource="https://example.org/rental-kg#D01_home"/>
-    <rdf:type rdf:resource="https://example.org/rental-kg#ListingSnapshot"/>
-    <ex:commissionRub rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</ex:commissionRub>
-    <ex:rentRubMonth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">34000</ex:rentRubMonth>
-    <rdfs:label xml:lang="ru">Учебное объявление D01</rdfs:label>
-    <ex:utilitiesRubMonth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4000</ex:utilitiesRubMonth>
-    <ex:depositRub rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30000</ex:depositRub>
-    <ex:hasSource rdf:resource="https://example.org/rental-kg#D01_source"/>
-    <ex:petsAllowed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ex:petsAllowed>
     <ex:observedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:observedOn>
-    <ex:term rdf:datatype="http://www.w3.org/2001/XMLSchema#string">long_term</ex:term>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D06_S2">
-    <ex:distanceM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1513.4</ex:distanceM>
-    <rdf:type rdf:resource="https://example.org/rental-kg#DistanceMeasurement"/>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:toAmenity rdf:resource="https://example.org/rental-kg#S2"/>
-    <ex:fromDwelling rdf:resource="https://example.org/rental-kg#D06_home"/>
-    <rdfs:label xml:lang="ru">Учебное расстояние D06 — S2</rdfs:label>
-    <ex:usesMethod rdf:resource="https://example.org/rental-kg#Haversine"/>
-    <ex:calculatedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:calculatedOn>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D04">
     <rdf:type rdf:resource="https://example.org/rental-kg#ListingSnapshot"/>
-    <ex:rentRubMonth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30000</ex:rentRubMonth>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
     <ex:term rdf:datatype="http://www.w3.org/2001/XMLSchema#string">long_term</ex:term>
-    <ex:utilitiesRubMonth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4000</ex:utilitiesRubMonth>
-    <ex:commissionRub rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</ex:commissionRub>
-    <ex:petsAllowed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ex:petsAllowed>
-    <ex:hasSource rdf:resource="https://example.org/rental-kg#D04_source"/>
-    <ex:observedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:observedOn>
-    <ex:offers rdf:resource="https://example.org/rental-kg#D04_home"/>
-    <ex:depositRub rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30000</ex:depositRub>
-    <rdfs:label xml:lang="ru">Учебное объявление D04</rdfs:label>
+    <ex:offers rdf:resource="https://example.org/rental-kg#D09_home"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D05_S1">
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <rdfs:label xml:lang="ru">Учебное расстояние D05 — S1</rdfs:label>
-    <ex:calculatedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:calculatedOn>
-    <ex:distanceM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">55.7</ex:distanceM>
-    <ex:usesMethod rdf:resource="https://example.org/rental-kg#Haversine"/>
-    <rdf:type rdf:resource="https://example.org/rental-kg#DistanceMeasurement"/>
-    <ex:fromDwelling rdf:resource="https://example.org/rental-kg#D05_home"/>
-    <ex:toAmenity rdf:resource="https://example.org/rental-kg#S1"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D06_P1">
-    <rdf:type rdf:resource="https://example.org/rental-kg#DistanceMeasurement"/>
-    <ex:toAmenity rdf:resource="https://example.org/rental-kg#P1"/>
-    <ex:usesMethod rdf:resource="https://example.org/rental-kg#Haversine"/>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <rdfs:label xml:lang="ru">Учебное расстояние D06 — P1</rdfs:label>
-    <ex:distanceM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">434.6</ex:distanceM>
-    <ex:calculatedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:calculatedOn>
-    <ex:fromDwelling rdf:resource="https://example.org/rental-kg#D06_home"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D04_M2">
-    <rdf:type rdf:resource="https://example.org/rental-kg#DistanceMeasurement"/>
-    <ex:fromDwelling rdf:resource="https://example.org/rental-kg#D04_home"/>
-    <ex:toAmenity rdf:resource="https://example.org/rental-kg#M2"/>
-    <rdfs:label xml:lang="ru">Учебное расстояние D04 — M2</rdfs:label>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:usesMethod rdf:resource="https://example.org/rental-kg#Haversine"/>
-    <ex:calculatedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:calculatedOn>
-    <ex:distanceM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1947.3</ex:distanceM>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D12_source">
-    <rdfs:label xml:lang="ru">Учебный источник D12</rdfs:label>
-    <rdf:type rdf:resource="https://example.org/rental-kg#SourceRecord"/>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:sourceUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://example.org/synthetic/D12</ex:sourceUrl>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D03_S1">
-    <ex:toAmenity rdf:resource="https://example.org/rental-kg#S1"/>
-    <rdf:type rdf:resource="https://example.org/rental-kg#DistanceMeasurement"/>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:calculatedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:calculatedOn>
-    <ex:fromDwelling rdf:resource="https://example.org/rental-kg#D03_home"/>
-    <rdfs:label xml:lang="ru">Учебное расстояние D03 — S1</rdfs:label>
-    <ex:distanceM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">591.6</ex:distanceM>
-    <ex:usesMethod rdf:resource="https://example.org/rental-kg#Haversine"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#S1">
-    <ex:longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30.316</ex:longitude>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <rdf:type rdf:resource="https://example.org/rental-kg#Supermarket"/>
-    <rdfs:label xml:lang="ru">Учебный магазин А</rdfs:label>
-    <ex:latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">59.93</ex:latitude>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D03_S2">
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:calculatedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:calculatedOn>
-    <ex:fromDwelling rdf:resource="https://example.org/rental-kg#D03_home"/>
-    <rdfs:label xml:lang="ru">Учебное расстояние D03 — S2</rdfs:label>
-    <ex:distanceM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2347.9</ex:distanceM>
-    <rdf:type rdf:resource="https://example.org/rental-kg#DistanceMeasurement"/>
-    <ex:usesMethod rdf:resource="https://example.org/rental-kg#Haversine"/>
-    <ex:toAmenity rdf:resource="https://example.org/rental-kg#S2"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D04_P2">
-    <ex:fromDwelling rdf:resource="https://example.org/rental-kg#D04_home"/>
-    <ex:distanceM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2537.5</ex:distanceM>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:calculatedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:calculatedOn>
-    <rdf:type rdf:resource="https://example.org/rental-kg#DistanceMeasurement"/>
-    <ex:toAmenity rdf:resource="https://example.org/rental-kg#P2"/>
-    <ex:usesMethod rdf:resource="https://example.org/rental-kg#Haversine"/>
-    <rdfs:label xml:lang="ru">Учебное расстояние D04 — P2</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D08_P1">
-    <ex:distanceM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">124.4</ex:distanceM>
-    <ex:usesMethod rdf:resource="https://example.org/rental-kg#Haversine"/>
-    <ex:toAmenity rdf:resource="https://example.org/rental-kg#P1"/>
-    <ex:calculatedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:calculatedOn>
-    <ex:fromDwelling rdf:resource="https://example.org/rental-kg#D08_home"/>
-    <rdf:type rdf:resource="https://example.org/rental-kg#DistanceMeasurement"/>
-    <rdfs:label xml:lang="ru">Учебное расстояние D08 — P1</rdfs:label>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#preferredCity">
-    <rdfs:domain rdf:resource="https://example.org/rental-kg#RenterProfile"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:range rdf:resource="https://example.org/rental-kg#City"/>
-    <rdfs:label xml:lang="ru">предпочтительный город</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#address">
-    <rdfs:label xml:lang="ru">адрес</rdfs:label>
-    <rdfs:domain rdf:resource="https://example.org/rental-kg#Building"/>
+  <rdf:Description rdf:about="https://example.org/rental-kg#term">
+    <rdfs:domain rdf:resource="https://example.org/rental-kg#ListingSnapshot"/>
+    <rdfs:label xml:lang="ru">категория срока аренды</rdfs:label>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D11_source">
-    <rdf:type rdf:resource="https://example.org/rental-kg#SourceRecord"/>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:sourceUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://example.org/synthetic/D11</ex:sourceUrl>
-    <rdfs:label xml:lang="ru">Учебный источник D11</rdfs:label>
-  </rdf:Description>
   <rdf:Description rdf:about="https://example.org/rental-kg#D07">
-    <ex:observedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:observedOn>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:rentRubMonth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42000</ex:rentRubMonth>
-    <ex:depositRub rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30000</ex:depositRub>
-    <ex:offers rdf:resource="https://example.org/rental-kg#D07_home"/>
-    <rdfs:label xml:lang="ru">Учебное объявление D07</rdfs:label>
     <ex:commissionRub rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</ex:commissionRub>
+    <rdfs:label xml:lang="ru">Учебное объявление D07</rdfs:label>
+    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
+    <ex:observedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:observedOn>
     <rdf:type rdf:resource="https://example.org/rental-kg#ListingSnapshot"/>
-    <ex:petsAllowed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ex:petsAllowed>
     <ex:term rdf:datatype="http://www.w3.org/2001/XMLSchema#string">long_term</ex:term>
     <ex:utilitiesRubMonth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4000</ex:utilitiesRubMonth>
     <ex:hasSource rdf:resource="https://example.org/rental-kg#D07_source"/>
+    <ex:offers rdf:resource="https://example.org/rental-kg#D07_home"/>
+    <ex:depositRub rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30000</ex:depositRub>
+    <ex:petsAllowed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ex:petsAllowed>
+    <ex:rentRubMonth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42000</ex:rentRubMonth>
   </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D09_S2">
-    <ex:usesMethod rdf:resource="https://example.org/rental-kg#Haversine"/>
-    <rdf:type rdf:resource="https://example.org/rental-kg#DistanceMeasurement"/>
-    <rdfs:label xml:lang="ru">Учебное расстояние D09 — S2</rdfs:label>
-    <ex:toAmenity rdf:resource="https://example.org/rental-kg#S2"/>
+  <rdf:Description rdf:about="https://example.org/rental-kg#SourceRecord">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:disjointWith rdf:resource="https://example.org/rental-kg#MetroEntrance"/>
+    <owl:disjointWith rdf:resource="https://example.org/rental-kg#RenterProfile"/>
+    <rdfs:label xml:lang="ru">Запись источника</rdfs:label>
+    <rdfs:comment xml:lang="ru">Указатель на исходную запись, из которой получены факты: URL реальной карточки либо явно учебный идентификатор источника. Используется как объект hasSource.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#inCity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:range rdf:resource="https://example.org/rental-kg#City"/>
+    <rdfs:domain rdf:resource="https://example.org/rental-kg#District"/>
+    <rdfs:subPropertyOf rdf:resource="https://example.org/rental-kg#locatedIn"/>
+    <rdfs:label xml:lang="ru">находится в городе</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#D01">
+    <ex:observedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:observedOn>
+    <rdfs:label xml:lang="ru">Учебное объявление D01</rdfs:label>
+    <ex:term rdf:datatype="http://www.w3.org/2001/XMLSchema#string">long_term</ex:term>
+    <rdf:type rdf:resource="https://example.org/rental-kg#ListingSnapshot"/>
+    <ex:utilitiesRubMonth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4000</ex:utilitiesRubMonth>
+    <ex:rentRubMonth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">34000</ex:rentRubMonth>
+    <ex:offers rdf:resource="https://example.org/rental-kg#D01_home"/>
+    <ex:depositRub rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30000</ex:depositRub>
+    <ex:hasSource rdf:resource="https://example.org/rental-kg#D01_source"/>
+    <ex:petsAllowed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ex:petsAllowed>
+    <ex:commissionRub rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</ex:commissionRub>
     <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:fromDwelling rdf:resource="https://example.org/rental-kg#D09_home"/>
-    <ex:calculatedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:calculatedOn>
-    <ex:distanceM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">679.1</ex:distanceM>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#RenterProfile">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="ru">Явные требования поиска: бюджет, город, условия аренды и пороги доступности.</rdfs:comment>
+    <rdfs:label xml:lang="ru">Профиль требований</rdfs:label>
+    <owl:disjointWith rdf:resource="https://example.org/rental-kg#MetroEntrance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#Dwelling">
+    <rdfs:comment xml:lang="ru">Жилая единица, предлагаемая в аренду снимком объявления через offers. В текущем проекте представлены целые квартиры; комнаты и отдельные дома могут быть добавлены при расширении модели.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:disjointWith rdf:resource="https://example.org/rental-kg#MetroEntrance"/>
+    <owl:disjointWith rdf:resource="https://example.org/rental-kg#SourceRecord"/>
+    <owl:disjointWith rdf:resource="https://example.org/rental-kg#RenterProfile"/>
+    <owl:disjointWith rdf:resource="https://example.org/rental-kg#ListingSnapshot"/>
+    <owl:disjointWith rdf:resource="https://example.org/rental-kg#Amenity"/>
+    <rdfs:label xml:lang="ru">Жильё</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#D03">
+    <ex:observedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:observedOn>
+    <ex:utilitiesRubMonth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4000</ex:utilitiesRubMonth>
+    <ex:offers rdf:resource="https://example.org/rental-kg#D03_home"/>
+    <ex:term rdf:datatype="http://www.w3.org/2001/XMLSchema#string">long_term</ex:term>
+    <ex:hasSource rdf:resource="https://example.org/rental-kg#D03_source"/>
+    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
+    <rdf:type rdf:resource="https://example.org/rental-kg#ListingSnapshot"/>
+    <ex:rentRubMonth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42000</ex:rentRubMonth>
+    <ex:depositRub rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30000</ex:depositRub>
+    <ex:commissionRub rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</ex:commissionRub>
+    <rdfs:label xml:lang="ru">Учебное объявление D03</rdfs:label>
+    <ex:petsAllowed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:petsAllowed>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#D03_building">
+    <geo:hasGeometry rdf:resource="https://example.org/rental-kg#D03_building_point"/>
+    <rdf:type rdf:resource="https://example.org/rental-kg#Building"/>
+    <rdfs:label xml:lang="ru">Учебное здание D03</rdfs:label>
+    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
+    <ex:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Учебный адрес D03</ex:address>
+    <ex:floorsTotal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</ex:floorsTotal>
+    <ex:hasSource rdf:resource="https://example.org/rental-kg#D03_source"/>
+    <ex:inDistrict rdf:resource="https://example.org/rental-kg#DemoDistrict"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#D06">
+    <ex:term rdf:datatype="http://www.w3.org/2001/XMLSchema#string">long_term</ex:term>
+    <rdf:type rdf:resource="https://example.org/rental-kg#ListingSnapshot"/>
+    <ex:offers rdf:resource="https://example.org/rental-kg#D06_home"/>
+    <ex:hasSource rdf:resource="https://example.org/rental-kg#D06_source"/>
+    <ex:depositRub rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30000</ex:depositRub>
+    <ex:commissionRub rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</ex:commissionRub>
+    <ex:rentRubMonth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">38000</ex:rentRubMonth>
+    <rdfs:label xml:lang="ru">Учебное объявление D06</rdfs:label>
+    <ex:petsAllowed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:petsAllowed>
+    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
+    <ex:observedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:observedOn>
+    <ex:utilitiesRubMonth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4000</ex:utilitiesRubMonth>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#D10_building">
+    <geo:hasGeometry rdf:resource="https://example.org/rental-kg#D10_building_point"/>
+    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
+    <ex:floorsTotal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</ex:floorsTotal>
+    <rdf:type rdf:resource="https://example.org/rental-kg#Building"/>
+    <rdfs:label xml:lang="ru">Учебное здание D10</rdfs:label>
+    <ex:inDistrict rdf:resource="https://example.org/rental-kg#DemoDistrict"/>
+    <ex:hasSource rdf:resource="https://example.org/rental-kg#D10_source"/>
+    <ex:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Учебный адрес D10</ex:address>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#D10_home">
+    <ex:inBuilding rdf:resource="https://example.org/rental-kg#D10_building"/>
+    <ex:hasSource rdf:resource="https://example.org/rental-kg#D10_source"/>
+    <rdf:type rdf:resource="https://example.org/rental-kg#Apartment"/>
+    <ex:floor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</ex:floor>
+    <ex:rooms rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ex:rooms>
+    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
+    <ex:areaM2 rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">45</ex:areaM2>
+    <rdfs:label xml:lang="ru">Учебная квартира D10</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#Supermarket">
+    <owl:disjointWith rdf:resource="https://example.org/rental-kg#Park"/>
+    <rdfs:comment xml:lang="ru">Объект розничного обслуживания для покупки продуктов и повседневных товаров. Обозначает магазин как объект обслуживания, а не его здание.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://example.org/rental-kg#Amenity"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="ru">Супермаркет</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#D08">
+    <ex:commissionRub rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</ex:commissionRub>
+    <ex:rentRubMonth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30000</ex:rentRubMonth>
+    <ex:utilitiesRubMonth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4000</ex:utilitiesRubMonth>
+    <rdfs:label xml:lang="ru">Учебное объявление D08</rdfs:label>
+    <ex:observedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:observedOn>
+    <ex:hasSource rdf:resource="https://example.org/rental-kg#D08_source"/>
+    <ex:offers rdf:resource="https://example.org/rental-kg#D08_home"/>
+    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
+    <rdf:type rdf:resource="https://example.org/rental-kg#ListingSnapshot"/>
+    <ex:depositRub rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30000</ex:depositRub>
+    <ex:term rdf:datatype="http://www.w3.org/2001/XMLSchema#string">long_term</ex:term>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#D11">
+    <ex:commissionRub rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</ex:commissionRub>
+    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
+    <ex:observedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:observedOn>
+    <rdf:type rdf:resource="https://example.org/rental-kg#ListingSnapshot"/>
+    <ex:term rdf:datatype="http://www.w3.org/2001/XMLSchema#string">long_term</ex:term>
+    <ex:hasSource rdf:resource="https://example.org/rental-kg#D11_source"/>
+    <ex:utilitiesRubMonth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4000</ex:utilitiesRubMonth>
+    <ex:offers rdf:resource="https://example.org/rental-kg#D11_home"/>
+    <ex:rentRubMonth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42000</ex:rentRubMonth>
+    <ex:depositRub rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30000</ex:depositRub>
+    <rdfs:label xml:lang="ru">Учебное объявление D11</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#sourceUrl">
+    <rdfs:label xml:lang="ru">ссылка на источник</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    <rdfs:domain rdf:resource="https://example.org/rental-kg#SourceRecord"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#D01_building">
+    <rdf:type rdf:resource="https://example.org/rental-kg#Building"/>
+    <ex:hasSource rdf:resource="https://example.org/rental-kg#D01_source"/>
+    <geo:hasGeometry rdf:resource="https://example.org/rental-kg#D01_building_point"/>
+    <rdfs:label xml:lang="ru">Учебное здание D01</rdfs:label>
+    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
+    <ex:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Учебный адрес D01</ex:address>
+    <ex:floorsTotal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</ex:floorsTotal>
+    <ex:inDistrict rdf:resource="https://example.org/rental-kg#DemoDistrict"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#preferredCity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="ru">предпочтительный город</rdfs:label>
+    <rdfs:range rdf:resource="https://example.org/rental-kg#City"/>
+    <rdfs:domain rdf:resource="https://example.org/rental-kg#RenterProfile"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#inDistrict">
+    <rdfs:label xml:lang="ru">находится в районе</rdfs:label>
+    <rdfs:range rdf:resource="https://example.org/rental-kg#District"/>
+    <rdfs:domain rdf:resource="https://example.org/rental-kg#Building"/>
+    <rdfs:subPropertyOf rdf:resource="https://example.org/rental-kg#locatedIn"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#D03_building_point">
+    <rdf:type rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+    <rdfs:label xml:lang="ru">Опорная точка</rdfs:label>
+    <geo:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POINT (30.30900000 59.92600000)</geo:asWKT>
+    <ex:geometryKind rdf:datatype="http://www.w3.org/2001/XMLSchema#string">synthetic</ex:geometryKind>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#D05_source">
+    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
+    <rdf:type rdf:resource="https://example.org/rental-kg#SourceRecord"/>
+    <ex:sourceUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://example.org/synthetic/D05</ex:sourceUrl>
+    <rdfs:label xml:lang="ru">Учебный источник D05</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#D11_building">
+    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
+    <ex:floorsTotal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</ex:floorsTotal>
+    <ex:hasSource rdf:resource="https://example.org/rental-kg#D11_source"/>
+    <ex:inDistrict rdf:resource="https://example.org/rental-kg#DemoDistrict"/>
+    <rdfs:label xml:lang="ru">Учебное здание D11</rdfs:label>
+    <rdf:type rdf:resource="https://example.org/rental-kg#Building"/>
+    <ex:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Учебный адрес D11</ex:address>
+    <geo:hasGeometry rdf:resource="https://example.org/rental-kg#D11_building_point"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#D12_building">
+    <geo:hasGeometry rdf:resource="https://example.org/rental-kg#D12_building_point"/>
+    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
+    <ex:floorsTotal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</ex:floorsTotal>
+    <ex:inDistrict rdf:resource="https://example.org/rental-kg#DemoDistrict"/>
+    <ex:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Учебный адрес D12</ex:address>
+    <ex:hasSource rdf:resource="https://example.org/rental-kg#D12_source"/>
+    <rdfs:label xml:lang="ru">Учебное здание D12</rdfs:label>
+    <rdf:type rdf:resource="https://example.org/rental-kg#Building"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#rentRubMonth">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="https://example.org/rental-kg#ListingSnapshot"/>
+    <rdfs:label xml:lang="ru">аренда, руб./месяц</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#D11_building_point">
+    <rdfs:label xml:lang="ru">Опорная точка</rdfs:label>
+    <rdf:type rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+    <geo:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POINT (30.33300000 59.94120000)</geo:asWKT>
+    <ex:geometryKind rdf:datatype="http://www.w3.org/2001/XMLSchema#string">synthetic</ex:geometryKind>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#D06_home">
+    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
+    <ex:inBuilding rdf:resource="https://example.org/rental-kg#D06_building"/>
+    <ex:areaM2 rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">37</ex:areaM2>
+    <ex:floor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</ex:floor>
+    <rdfs:label xml:lang="ru">Учебная квартира D06</rdfs:label>
+    <ex:hasSource rdf:resource="https://example.org/rental-kg#D06_source"/>
+    <rdf:type rdf:resource="https://example.org/rental-kg#Apartment"/>
+    <ex:rooms rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</ex:rooms>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#D06_building">
+    <geo:hasGeometry rdf:resource="https://example.org/rental-kg#D06_building_point"/>
+    <ex:floorsTotal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</ex:floorsTotal>
+    <ex:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Учебный адрес D06</ex:address>
+    <ex:inDistrict rdf:resource="https://example.org/rental-kg#DemoDistrict"/>
+    <rdf:type rdf:resource="https://example.org/rental-kg#Building"/>
+    <rdfs:label xml:lang="ru">Учебное здание D06</rdfs:label>
+    <ex:hasSource rdf:resource="https://example.org/rental-kg#D06_source"/>
+    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#MetroEntrance">
+    <rdfs:comment xml:lang="ru">Отдельный вход или выход станции. Пешеходный маршрут строится до доступного входа.</rdfs:comment>
+    <rdfs:label xml:lang="ru">Вход метро</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#D04_building">
+    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
+    <rdfs:label xml:lang="ru">Учебное здание D04</rdfs:label>
+    <rdf:type rdf:resource="https://example.org/rental-kg#Building"/>
+    <ex:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Учебный адрес D04</ex:address>
+    <ex:inDistrict rdf:resource="https://example.org/rental-kg#DemoDistrict"/>
+    <geo:hasGeometry rdf:resource="https://example.org/rental-kg#D04_building_point"/>
+    <ex:floorsTotal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</ex:floorsTotal>
+    <ex:hasSource rdf:resource="https://example.org/rental-kg#D04_source"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#maxMetroWalkSeconds">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="ru">порог пешком до метро, с</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:domain rdf:resource="https://example.org/rental-kg#RenterProfile"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#hasSource">
+    <rdfs:label xml:lang="ru">источник записи</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:range rdf:resource="https://example.org/rental-kg#SourceRecord"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://example.org/rental-kg#Building">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
@@ -684,955 +356,606 @@
     <rdfs:comment xml:lang="ru">Физическая постройка, содержащая жильё, с адресом и этажностью. Её точка WGS84 служит приближённой точкой расположения находящегося в ней жилья.</rdfs:comment>
     <rdfs:label xml:lang="ru">Здание</rdfs:label>
   </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D08">
-    <ex:rentRubMonth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30000</ex:rentRubMonth>
-    <ex:commissionRub rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</ex:commissionRub>
-    <ex:observedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:observedOn>
-    <ex:depositRub rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30000</ex:depositRub>
-    <ex:hasSource rdf:resource="https://example.org/rental-kg#D08_source"/>
-    <rdf:type rdf:resource="https://example.org/rental-kg#ListingSnapshot"/>
-    <ex:utilitiesRubMonth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4000</ex:utilitiesRubMonth>
-    <rdfs:label xml:lang="ru">Учебное объявление D08</rdfs:label>
-    <ex:term rdf:datatype="http://www.w3.org/2001/XMLSchema#string">long_term</ex:term>
+  <rdf:Description rdf:about="https://example.org/rental-kg#D03_home">
+    <ex:hasSource rdf:resource="https://example.org/rental-kg#D03_source"/>
+    <rdf:type rdf:resource="https://example.org/rental-kg#Apartment"/>
+    <ex:rooms rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</ex:rooms>
     <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:offers rdf:resource="https://example.org/rental-kg#D08_home"/>
+    <rdfs:label xml:lang="ru">Учебная квартира D03</rdfs:label>
+    <ex:areaM2 rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">31</ex:areaM2>
+    <ex:inBuilding rdf:resource="https://example.org/rental-kg#D03_building"/>
+    <ex:floor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ex:floor>
   </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D10">
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:rentRubMonth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">38000</ex:rentRubMonth>
-    <ex:hasSource rdf:resource="https://example.org/rental-kg#D10_source"/>
-    <ex:commissionRub rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</ex:commissionRub>
-    <ex:observedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:observedOn>
-    <ex:term rdf:datatype="http://www.w3.org/2001/XMLSchema#string">long_term</ex:term>
-    <ex:depositRub rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30000</ex:depositRub>
-    <ex:offers rdf:resource="https://example.org/rental-kg#D10_home"/>
-    <rdf:type rdf:resource="https://example.org/rental-kg#ListingSnapshot"/>
-    <ex:petsAllowed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ex:petsAllowed>
-    <rdfs:label xml:lang="ru">Учебное объявление D10</rdfs:label>
-    <ex:utilitiesRubMonth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4000</ex:utilitiesRubMonth>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D06_building">
-    <rdfs:label xml:lang="ru">Учебное здание D06</rdfs:label>
-    <ex:floorsTotal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</ex:floorsTotal>
+  <rdf:Description rdf:about="https://example.org/rental-kg#D09_building">
     <ex:inDistrict rdf:resource="https://example.org/rental-kg#DemoDistrict"/>
     <rdf:type rdf:resource="https://example.org/rental-kg#Building"/>
+    <rdfs:label xml:lang="ru">Учебное здание D09</rdfs:label>
     <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30.318</ex:longitude>
-    <ex:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Учебный адрес D06</ex:address>
-    <ex:hasSource rdf:resource="https://example.org/rental-kg#D06_source"/>
-    <ex:latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">59.932</ex:latitude>
+    <ex:floorsTotal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</ex:floorsTotal>
+    <geo:hasGeometry rdf:resource="https://example.org/rental-kg#D09_building_point"/>
+    <ex:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Учебный адрес D09</ex:address>
+    <ex:hasSource rdf:resource="https://example.org/rental-kg#D09_source"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D11_M1">
-    <ex:toAmenity rdf:resource="https://example.org/rental-kg#M1"/>
-    <ex:distanceM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1947.3</ex:distanceM>
-    <ex:usesMethod rdf:resource="https://example.org/rental-kg#Haversine"/>
-    <ex:calculatedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:calculatedOn>
-    <ex:fromDwelling rdf:resource="https://example.org/rental-kg#D11_home"/>
-    <rdf:type rdf:resource="https://example.org/rental-kg#DistanceMeasurement"/>
-    <rdfs:label xml:lang="ru">Учебное расстояние D11 — M1</rdfs:label>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
+  <rdf:Description rdf:about="https://example.org/rental-kg#D06_building_point">
+    <ex:geometryKind rdf:datatype="http://www.w3.org/2001/XMLSchema#string">synthetic</ex:geometryKind>
+    <rdfs:label xml:lang="ru">Опорная точка</rdfs:label>
+    <rdf:type rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+    <geo:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POINT (30.31800000 59.93200000)</geo:asWKT>
   </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D07_M2">
-    <ex:usesMethod rdf:resource="https://example.org/rental-kg#Haversine"/>
-    <ex:calculatedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:calculatedOn>
-    <rdfs:label xml:lang="ru">Учебное расстояние D07 — M2</rdfs:label>
-    <ex:distanceM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1112.7</ex:distanceM>
-    <rdf:type rdf:resource="https://example.org/rental-kg#DistanceMeasurement"/>
-    <ex:toAmenity rdf:resource="https://example.org/rental-kg#M2"/>
-    <ex:fromDwelling rdf:resource="https://example.org/rental-kg#D07_home"/>
+  <rdf:Description rdf:about="https://example.org/rental-kg#D05">
+    <ex:hasSource rdf:resource="https://example.org/rental-kg#D05_source"/>
+    <ex:rentRubMonth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">34000</ex:rentRubMonth>
+    <ex:depositRub rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30000</ex:depositRub>
+    <ex:offers rdf:resource="https://example.org/rental-kg#D05_home"/>
+    <ex:commissionRub rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</ex:commissionRub>
     <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
+    <ex:observedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:observedOn>
+    <rdf:type rdf:resource="https://example.org/rental-kg#ListingSnapshot"/>
+    <ex:term rdf:datatype="http://www.w3.org/2001/XMLSchema#string">long_term</ex:term>
+    <ex:utilitiesRubMonth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4000</ex:utilitiesRubMonth>
+    <rdfs:label xml:lang="ru">Учебное объявление D05</rdfs:label>
   </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D08_home">
-    <ex:nearAmenity rdf:resource="https://example.org/rental-kg#P1"/>
-    <ex:nearAmenity rdf:resource="https://example.org/rental-kg#S1"/>
-    <ex:nearAmenity rdf:resource="https://example.org/rental-kg#S2"/>
-    <ex:nearAmenity rdf:resource="https://example.org/rental-kg#M2"/>
+  <rdf:Description rdf:about="https://example.org/rental-kg#D04_home">
     <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:floor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</ex:floor>
-    <ex:rooms rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</ex:rooms>
-    <ex:areaM2 rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">41</ex:areaM2>
+    <ex:areaM2 rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">33</ex:areaM2>
+    <ex:rooms rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ex:rooms>
+    <rdfs:label xml:lang="ru">Учебная квартира D04</rdfs:label>
+    <ex:floor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ex:floor>
+    <ex:hasSource rdf:resource="https://example.org/rental-kg#D04_source"/>
+    <ex:inBuilding rdf:resource="https://example.org/rental-kg#D04_building"/>
     <rdf:type rdf:resource="https://example.org/rental-kg#Apartment"/>
-    <rdfs:label xml:lang="ru">Учебная квартира D08</rdfs:label>
-    <ex:inBuilding rdf:resource="https://example.org/rental-kg#D08_building"/>
-    <ex:hasSource rdf:resource="https://example.org/rental-kg#D08_source"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D01_S1">
-    <rdf:type rdf:resource="https://example.org/rental-kg#DistanceMeasurement"/>
-    <ex:usesMethod rdf:resource="https://example.org/rental-kg#Haversine"/>
-    <ex:calculatedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:calculatedOn>
-    <rdfs:label xml:lang="ru">Учебное расстояние D01 — S1</rdfs:label>
-    <ex:fromDwelling rdf:resource="https://example.org/rental-kg#D01_home"/>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:distanceM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1147.2</ex:distanceM>
-    <ex:toAmenity rdf:resource="https://example.org/rental-kg#S1"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D06_M2">
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:toAmenity rdf:resource="https://example.org/rental-kg#M2"/>
-    <ex:calculatedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:calculatedOn>
-    <rdf:type rdf:resource="https://example.org/rental-kg#DistanceMeasurement"/>
-    <ex:distanceM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1390.9</ex:distanceM>
-    <rdfs:label xml:lang="ru">Учебное расстояние D06 — M2</rdfs:label>
-    <ex:fromDwelling rdf:resource="https://example.org/rental-kg#D06_home"/>
-    <ex:usesMethod rdf:resource="https://example.org/rental-kg#Haversine"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#MeasurementMethod">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="ru">Описание способа получения численного расстояния, на которое ссылается usesMethod. Экземпляр Haversine обозначает расчёт по сферической модели Земли.</rdfs:comment>
-    <rdfs:label xml:lang="ru">Метод измерения</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#utilitiesRubMonth">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:label xml:lang="ru">дополнительные КУ, руб./месяц</rdfs:label>
-    <rdfs:domain rdf:resource="https://example.org/rental-kg#ListingSnapshot"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D08_S1">
-    <ex:fromDwelling rdf:resource="https://example.org/rental-kg#D08_home"/>
-    <ex:toAmenity rdf:resource="https://example.org/rental-kg#S1"/>
-    <ex:distanceM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">802.3</ex:distanceM>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:calculatedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:calculatedOn>
-    <rdf:type rdf:resource="https://example.org/rental-kg#DistanceMeasurement"/>
-    <rdfs:label xml:lang="ru">Учебное расстояние D08 — S1</rdfs:label>
-    <ex:usesMethod rdf:resource="https://example.org/rental-kg#Haversine"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D01_M1">
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:distanceM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">834.6</ex:distanceM>
-    <ex:toAmenity rdf:resource="https://example.org/rental-kg#M1"/>
-    <ex:calculatedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:calculatedOn>
-    <ex:usesMethod rdf:resource="https://example.org/rental-kg#Haversine"/>
-    <ex:fromDwelling rdf:resource="https://example.org/rental-kg#D01_home"/>
-    <rdfs:label xml:lang="ru">Учебное расстояние D01 — M1</rdfs:label>
-    <rdf:type rdf:resource="https://example.org/rental-kg#DistanceMeasurement"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D04_source">
-    <ex:sourceUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://example.org/synthetic/D04</ex:sourceUrl>
-    <rdf:type rdf:resource="https://example.org/rental-kg#SourceRecord"/>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <rdfs:label xml:lang="ru">Учебный источник D04</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D01_source">
-    <rdf:type rdf:resource="https://example.org/rental-kg#SourceRecord"/>
-    <rdfs:label xml:lang="ru">Учебный источник D01</rdfs:label>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:sourceUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://example.org/synthetic/D01</ex:sourceUrl>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D09_source">
-    <ex:sourceUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://example.org/synthetic/D09</ex:sourceUrl>
-    <rdf:type rdf:resource="https://example.org/rental-kg#SourceRecord"/>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <rdfs:label xml:lang="ru">Учебный источник D09</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D10_M1">
-    <ex:toAmenity rdf:resource="https://example.org/rental-kg#M1"/>
-    <ex:usesMethod rdf:resource="https://example.org/rental-kg#Haversine"/>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:fromDwelling rdf:resource="https://example.org/rental-kg#D10_home"/>
-    <ex:calculatedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:calculatedOn>
-    <ex:distanceM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1669.1</ex:distanceM>
-    <rdfs:label xml:lang="ru">Учебное расстояние D10 — M1</rdfs:label>
-    <rdf:type rdf:resource="https://example.org/rental-kg#DistanceMeasurement"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#floorsTotal">
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-    <rdfs:domain rdf:resource="https://example.org/rental-kg#Building"/>
-    <rdfs:label xml:lang="ru">этажей в доме</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#term">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:domain rdf:resource="https://example.org/rental-kg#ListingSnapshot"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <rdfs:label xml:lang="ru">категория срока аренды</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D07_S2">
-    <ex:fromDwelling rdf:resource="https://example.org/rental-kg#D07_home"/>
-    <ex:toAmenity rdf:resource="https://example.org/rental-kg#S2"/>
-    <ex:distanceM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1235.3</ex:distanceM>
-    <ex:usesMethod rdf:resource="https://example.org/rental-kg#Haversine"/>
-    <ex:calculatedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:calculatedOn>
-    <rdf:type rdf:resource="https://example.org/rental-kg#DistanceMeasurement"/>
-    <rdfs:label xml:lang="ru">Учебное расстояние D07 — S2</rdfs:label>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D11_S1">
-    <ex:calculatedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:calculatedOn>
-    <rdfs:label xml:lang="ru">Учебное расстояние D11 — S1</rdfs:label>
-    <rdf:type rdf:resource="https://example.org/rental-kg#DistanceMeasurement"/>
-    <ex:fromDwelling rdf:resource="https://example.org/rental-kg#D11_home"/>
-    <ex:usesMethod rdf:resource="https://example.org/rental-kg#Haversine"/>
-    <ex:distanceM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1636.2</ex:distanceM>
-    <ex:toAmenity rdf:resource="https://example.org/rental-kg#S1"/>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
+  <rdf:Description rdf:about="https://example.org/rental-kg#M2_point">
+    <rdfs:label xml:lang="ru">Опорная точка</rdfs:label>
+    <ex:geometryKind rdf:datatype="http://www.w3.org/2001/XMLSchema#string">synthetic</ex:geometryKind>
+    <rdf:type rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+    <geo:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POINT (30.33300000 59.94200000)</geo:asWKT>
   </rdf:Description>
   <rdf:Description rdf:about="https://example.org/rental-kg#D07_source">
     <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:sourceUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://example.org/synthetic/D07</ex:sourceUrl>
+    <rdf:type rdf:resource="https://example.org/rental-kg#SourceRecord"/>
     <rdfs:label xml:lang="ru">Учебный источник D07</rdfs:label>
+    <ex:sourceUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://example.org/synthetic/D07</ex:sourceUrl>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#inBuilding">
+    <rdfs:subPropertyOf rdf:resource="https://example.org/rental-kg#locatedIn"/>
+    <rdfs:domain rdf:resource="https://example.org/rental-kg#Dwelling"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:range rdf:resource="https://example.org/rental-kg#Building"/>
+    <rdfs:label xml:lang="ru">находится в здании</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#D10_source">
+    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
+    <rdf:type rdf:resource="https://example.org/rental-kg#SourceRecord"/>
+    <rdfs:label xml:lang="ru">Учебный источник D10</rdfs:label>
+    <ex:sourceUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://example.org/synthetic/D10</ex:sourceUrl>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#P1_point">
+    <ex:geometryKind rdf:datatype="http://www.w3.org/2001/XMLSchema#string">synthetic</ex:geometryKind>
+    <geo:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POINT (30.32300000 59.93500000)</geo:asWKT>
+    <rdfs:label xml:lang="ru">Опорная точка</rdfs:label>
+    <rdf:type rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#D09_source">
+    <rdfs:label xml:lang="ru">Учебный источник D09</rdfs:label>
+    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
+    <ex:sourceUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://example.org/synthetic/D09</ex:sourceUrl>
     <rdf:type rdf:resource="https://example.org/rental-kg#SourceRecord"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#inDistrict">
-    <rdfs:label xml:lang="ru">находится в районе</rdfs:label>
-    <rdfs:range rdf:resource="https://example.org/rental-kg#District"/>
-    <rdfs:subPropertyOf rdf:resource="https://example.org/rental-kg#locatedIn"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:domain rdf:resource="https://example.org/rental-kg#Building"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D03">
-    <ex:hasSource rdf:resource="https://example.org/rental-kg#D03_source"/>
-    <ex:depositRub rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30000</ex:depositRub>
-    <rdfs:label xml:lang="ru">Учебное объявление D03</rdfs:label>
-    <ex:observedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:observedOn>
-    <ex:rentRubMonth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42000</ex:rentRubMonth>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:offers rdf:resource="https://example.org/rental-kg#D03_home"/>
-    <ex:petsAllowed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:petsAllowed>
-    <rdf:type rdf:resource="https://example.org/rental-kg#ListingSnapshot"/>
-    <ex:commissionRub rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</ex:commissionRub>
-    <ex:term rdf:datatype="http://www.w3.org/2001/XMLSchema#string">long_term</ex:term>
-    <ex:utilitiesRubMonth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4000</ex:utilitiesRubMonth>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D06_home">
+  <rdf:Description rdf:about="https://example.org/rental-kg#D09_home">
+    <ex:areaM2 rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">43</ex:areaM2>
+    <ex:hasSource rdf:resource="https://example.org/rental-kg#D09_source"/>
     <ex:rooms rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</ex:rooms>
-    <ex:areaM2 rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">37</ex:areaM2>
-    <ex:floor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</ex:floor>
-    <ex:nearAmenity rdf:resource="https://example.org/rental-kg#S1"/>
-    <ex:nearAmenity rdf:resource="https://example.org/rental-kg#M1"/>
-    <ex:nearAmenity rdf:resource="https://example.org/rental-kg#P1"/>
+    <rdfs:label xml:lang="ru">Учебная квартира D09</rdfs:label>
     <rdf:type rdf:resource="https://example.org/rental-kg#Apartment"/>
-    <ex:inBuilding rdf:resource="https://example.org/rental-kg#D06_building"/>
-    <rdfs:label xml:lang="ru">Учебная квартира D06</rdfs:label>
+    <ex:floor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</ex:floor>
+    <ex:inBuilding rdf:resource="https://example.org/rental-kg#D09_building"/>
     <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:hasSource rdf:resource="https://example.org/rental-kg#D06_source"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D12_M2">
-    <rdfs:label xml:lang="ru">Учебное расстояние D12 — M2</rdfs:label>
-    <rdf:type rdf:resource="https://example.org/rental-kg#DistanceMeasurement"/>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:toAmenity rdf:resource="https://example.org/rental-kg#M2"/>
-    <ex:calculatedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:calculatedOn>
-    <ex:fromDwelling rdf:resource="https://example.org/rental-kg#D12_home"/>
-    <ex:distanceM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">278.2</ex:distanceM>
-    <ex:usesMethod rdf:resource="https://example.org/rental-kg#Haversine"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D02_S2">
-    <ex:usesMethod rdf:resource="https://example.org/rental-kg#Haversine"/>
-    <ex:fromDwelling rdf:resource="https://example.org/rental-kg#D02_home"/>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:calculatedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:calculatedOn>
-    <ex:toAmenity rdf:resource="https://example.org/rental-kg#S2"/>
-    <rdfs:label xml:lang="ru">Учебное расстояние D02 — S2</rdfs:label>
-    <rdf:type rdf:resource="https://example.org/rental-kg#DistanceMeasurement"/>
-    <ex:distanceM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2626.2</ex:distanceM>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D11_P2">
-    <ex:calculatedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:calculatedOn>
-    <ex:fromDwelling rdf:resource="https://example.org/rental-kg#D11_home"/>
-    <rdf:type rdf:resource="https://example.org/rental-kg#DistanceMeasurement"/>
-    <ex:distanceM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">591.4</ex:distanceM>
-    <ex:toAmenity rdf:resource="https://example.org/rental-kg#P2"/>
-    <ex:usesMethod rdf:resource="https://example.org/rental-kg#Haversine"/>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <rdfs:label xml:lang="ru">Учебное расстояние D11 — P2</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#M2">
-    <ex:longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30.333</ex:longitude>
-    <rdfs:label xml:lang="ru">Учебное метро Б</rdfs:label>
-    <ex:latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">59.942</ex:latitude>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <rdf:type rdf:resource="https://example.org/rental-kg#MetroStation"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D12_building">
-    <ex:hasSource rdf:resource="https://example.org/rental-kg#D12_source"/>
-    <ex:latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">59.944</ex:latitude>
-    <ex:floorsTotal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</ex:floorsTotal>
-    <rdfs:label xml:lang="ru">Учебное здание D12</rdfs:label>
-    <rdf:type rdf:resource="https://example.org/rental-kg#Building"/>
-    <ex:inDistrict rdf:resource="https://example.org/rental-kg#DemoDistrict"/>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30.336000000000002</ex:longitude>
-    <ex:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Учебный адрес D12</ex:address>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#RenterProfile">
-    <rdfs:comment xml:lang="ru">Набор явных требований арендатора к поиску: бюджет, город, радиус до метро и необходимость разрешения на животных. Не является человеком или объявлением.</rdfs:comment>
-    <rdfs:label xml:lang="ru">Профиль требований</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#fromDwelling">
-    <rdfs:range rdf:resource="https://example.org/rental-kg#Dwelling"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:domain rdf:resource="https://example.org/rental-kg#DistanceMeasurement"/>
-    <rdfs:label xml:lang="ru">начало измерения</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D12_P1">
-    <ex:usesMethod rdf:resource="https://example.org/rental-kg#Haversine"/>
-    <ex:toAmenity rdf:resource="https://example.org/rental-kg#P1"/>
-    <ex:fromDwelling rdf:resource="https://example.org/rental-kg#D12_home"/>
-    <ex:distanceM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1235.2</ex:distanceM>
-    <ex:calculatedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:calculatedOn>
-    <rdf:type rdf:resource="https://example.org/rental-kg#DistanceMeasurement"/>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <rdfs:label xml:lang="ru">Учебное расстояние D12 — P1</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#latitude">
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-    <rdfs:label xml:lang="ru">широта, WGS84</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:domain rdf:nodeID="Nc368dd51f82647c982dbd8b170964fc2"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://example.org/rental-kg#D05_building">
-    <ex:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Учебный адрес D05</ex:address>
-    <rdfs:label xml:lang="ru">Учебное здание D05</rdfs:label>
-    <ex:longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30.315</ex:longitude>
-    <ex:latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">59.93</ex:latitude>
     <ex:floorsTotal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</ex:floorsTotal>
-    <rdf:type rdf:resource="https://example.org/rental-kg#Building"/>
+    <rdfs:label xml:lang="ru">Учебное здание D05</rdfs:label>
+    <geo:hasGeometry rdf:resource="https://example.org/rental-kg#D05_building_point"/>
+    <ex:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Учебный адрес D05</ex:address>
     <ex:inDistrict rdf:resource="https://example.org/rental-kg#DemoDistrict"/>
     <ex:hasSource rdf:resource="https://example.org/rental-kg#D05_source"/>
+    <rdf:type rdf:resource="https://example.org/rental-kg#Building"/>
     <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
   </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D04_S1">
-    <ex:toAmenity rdf:resource="https://example.org/rental-kg#S1"/>
+  <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#hasGeometry">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="ru">имеет геометрию</rdfs:label>
+    <rdfs:range rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#D02">
+    <ex:offers rdf:resource="https://example.org/rental-kg#D02_home"/>
+    <ex:depositRub rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30000</ex:depositRub>
+    <ex:commissionRub rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</ex:commissionRub>
     <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:calculatedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:calculatedOn>
-    <ex:usesMethod rdf:resource="https://example.org/rental-kg#Haversine"/>
-    <rdf:type rdf:resource="https://example.org/rental-kg#DistanceMeasurement"/>
-    <ex:fromDwelling rdf:resource="https://example.org/rental-kg#D04_home"/>
-    <ex:distanceM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">314.8</ex:distanceM>
-    <rdfs:label xml:lang="ru">Учебное расстояние D04 — S1</rdfs:label>
+    <ex:hasSource rdf:resource="https://example.org/rental-kg#D02_source"/>
+    <ex:rentRubMonth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">38000</ex:rentRubMonth>
+    <ex:utilitiesRubMonth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4000</ex:utilitiesRubMonth>
+    <ex:observedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:observedOn>
+    <rdf:type rdf:resource="https://example.org/rental-kg#ListingSnapshot"/>
+    <rdfs:label xml:lang="ru">Учебное объявление D02</rdfs:label>
+    <ex:term rdf:datatype="http://www.w3.org/2001/XMLSchema#string">long_term</ex:term>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#D12_home">
+    <ex:floor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</ex:floor>
+    <ex:inBuilding rdf:resource="https://example.org/rental-kg#D12_building"/>
+    <ex:rooms rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</ex:rooms>
+    <rdf:type rdf:resource="https://example.org/rental-kg#Apartment"/>
+    <rdfs:label xml:lang="ru">Учебная квартира D12</rdfs:label>
+    <ex:areaM2 rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">49</ex:areaM2>
+    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
+    <ex:hasSource rdf:resource="https://example.org/rental-kg#D12_source"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#StudentWithPet">
+    <ex:maxMetroDistanceM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">500</ex:maxMetroDistanceM>
+    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
+    <rdf:type rdf:resource="https://example.org/rental-kg#RenterProfile"/>
+    <rdfs:label xml:lang="ru">Студент с питомцем</rdfs:label>
+    <ex:preferredCity rdf:resource="https://example.org/rental-kg#DemoCity"/>
+    <ex:requiresPets rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:requiresPets>
+    <ex:maxRentRubMonth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40000</ex:maxRentRubMonth>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#offers">
+    <owl:inverseOf rdf:resource="https://example.org/rental-kg#hasListing"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="https://example.org/rental-kg#ListingSnapshot"/>
+    <rdfs:label xml:lang="ru">предлагает жильё</rdfs:label>
+    <rdfs:range rdf:resource="https://example.org/rental-kg#Dwelling"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg">
+    <owl:versionInfo>2.0.0</owl:versionInfo>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#petsAllowed">
+    <rdfs:label xml:lang="ru">животные разрешены</rdfs:label>
+    <rdfs:domain rdf:resource="https://example.org/rental-kg#ListingSnapshot"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#hasListing">
+    <rdfs:range rdf:resource="https://example.org/rental-kg#ListingSnapshot"/>
+    <rdfs:label xml:lang="ru">имеет объявление</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="https://example.org/rental-kg#Dwelling"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#D01_home">
+    <ex:rooms rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ex:rooms>
+    <ex:floor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</ex:floor>
+    <rdf:type rdf:resource="https://example.org/rental-kg#Apartment"/>
+    <ex:hasSource rdf:resource="https://example.org/rental-kg#D01_source"/>
+    <rdfs:label xml:lang="ru">Учебная квартира D01</rdfs:label>
+    <ex:areaM2 rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">27</ex:areaM2>
+    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
+    <ex:inBuilding rdf:resource="https://example.org/rental-kg#D01_building"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#areaM2">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="https://example.org/rental-kg#Dwelling"/>
+    <rdfs:label xml:lang="ru">площадь, м²</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#requiresPets">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:label xml:lang="ru">нужно разрешение на животных</rdfs:label>
+    <rdfs:domain rdf:resource="https://example.org/rental-kg#RenterProfile"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#D10">
+    <ex:hasSource rdf:resource="https://example.org/rental-kg#D10_source"/>
+    <ex:petsAllowed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ex:petsAllowed>
+    <ex:depositRub rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30000</ex:depositRub>
+    <ex:commissionRub rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</ex:commissionRub>
+    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
+    <rdf:type rdf:resource="https://example.org/rental-kg#ListingSnapshot"/>
+    <rdfs:label xml:lang="ru">Учебное объявление D10</rdfs:label>
+    <ex:offers rdf:resource="https://example.org/rental-kg#D10_home"/>
+    <ex:observedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:observedOn>
+    <ex:term rdf:datatype="http://www.w3.org/2001/XMLSchema#string">long_term</ex:term>
+    <ex:rentRubMonth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">38000</ex:rentRubMonth>
+    <ex:utilitiesRubMonth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4000</ex:utilitiesRubMonth>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#D05_home">
+    <rdfs:label xml:lang="ru">Учебная квартира D05</rdfs:label>
+    <ex:hasSource rdf:resource="https://example.org/rental-kg#D05_source"/>
+    <ex:areaM2 rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">35</ex:areaM2>
+    <ex:inBuilding rdf:resource="https://example.org/rental-kg#D05_building"/>
+    <rdf:type rdf:resource="https://example.org/rental-kg#Apartment"/>
+    <ex:floor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</ex:floor>
+    <ex:rooms rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</ex:rooms>
+    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#M1_point">
+    <rdfs:label xml:lang="ru">Опорная точка</rdfs:label>
+    <rdf:type rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+    <geo:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POINT (30.31200000 59.92800000)</geo:asWKT>
+    <ex:geometryKind rdf:datatype="http://www.w3.org/2001/XMLSchema#string">synthetic</ex:geometryKind>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#D06_source">
+    <rdfs:label xml:lang="ru">Учебный источник D06</rdfs:label>
+    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
+    <rdf:type rdf:resource="https://example.org/rental-kg#SourceRecord"/>
+    <ex:sourceUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://example.org/synthetic/D06</ex:sourceUrl>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#S2_point">
+    <rdfs:label xml:lang="ru">Опорная точка</rdfs:label>
+    <rdf:type rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+    <geo:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POINT (30.33400000 59.94300000)</geo:asWKT>
+    <ex:geometryKind rdf:datatype="http://www.w3.org/2001/XMLSchema#string">synthetic</ex:geometryKind>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#D11_source">
+    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
+    <rdf:type rdf:resource="https://example.org/rental-kg#SourceRecord"/>
+    <rdfs:label xml:lang="ru">Учебный источник D11</rdfs:label>
+    <ex:sourceUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://example.org/synthetic/D11</ex:sourceUrl>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#P2_point">
+    <rdf:type rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+    <ex:geometryKind rdf:datatype="http://www.w3.org/2001/XMLSchema#string">synthetic</ex:geometryKind>
+    <geo:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POINT (30.34000000 59.94600000)</geo:asWKT>
+    <rdfs:label xml:lang="ru">Опорная точка</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#D02_home">
+    <rdf:type rdf:resource="https://example.org/rental-kg#Apartment"/>
+    <ex:areaM2 rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">29</ex:areaM2>
+    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
+    <ex:inBuilding rdf:resource="https://example.org/rental-kg#D02_building"/>
+    <rdfs:label xml:lang="ru">Учебная квартира D02</rdfs:label>
+    <ex:hasSource rdf:resource="https://example.org/rental-kg#D02_source"/>
+    <ex:rooms rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</ex:rooms>
+    <ex:floor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</ex:floor>
   </rdf:Description>
   <rdf:Description rdf:about="https://example.org/rental-kg#Place">
     <rdfs:label xml:lang="ru">Место расположения</rdfs:label>
-    <owl:disjointWith rdf:resource="https://example.org/rental-kg#Dwelling"/>
+    <owl:disjointWith rdf:resource="https://example.org/rental-kg#SourceRecord"/>
+    <owl:disjointWith rdf:resource="https://example.org/rental-kg#RenterProfile"/>
+    <owl:disjointWith rdf:resource="https://example.org/rental-kg#ListingSnapshot"/>
     <owl:disjointWith rdf:resource="https://example.org/rental-kg#Amenity"/>
-    <rdfs:comment xml:lang="ru">Адресный контейнер, в котором размещено жильё прямо или через цепочку locatedIn: здание, район или город. Жильё и объекты инфраструктуры в этот класс не входят.</rdfs:comment>
+    <owl:disjointWith rdf:resource="https://example.org/rental-kg#Dwelling"/>
+    <owl:disjointWith rdf:resource="https://example.org/rental-kg#MetroEntrance"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="ru">Адресный контейнер, в котором размещено жильё прямо или через цепочку locatedIn: здание, район или город. Жильё и объекты инфраструктуры в этот класс не входят.</rdfs:comment>
   </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D11_building">
-    <ex:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Учебный адрес D11</ex:address>
-    <ex:floorsTotal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</ex:floorsTotal>
-    <ex:latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">59.942</ex:latitude>
+  <rdf:Description rdf:about="https://example.org/rental-kg#S1_point">
+    <rdfs:label xml:lang="ru">Опорная точка</rdfs:label>
+    <ex:geometryKind rdf:datatype="http://www.w3.org/2001/XMLSchema#string">synthetic</ex:geometryKind>
+    <geo:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POINT (30.31600000 59.93000000)</geo:asWKT>
+    <rdf:type rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#D08_home">
+    <ex:floor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</ex:floor>
+    <ex:rooms rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</ex:rooms>
+    <ex:inBuilding rdf:resource="https://example.org/rental-kg#D08_building"/>
+    <ex:areaM2 rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">41</ex:areaM2>
+    <rdf:type rdf:resource="https://example.org/rental-kg#Apartment"/>
+    <rdfs:label xml:lang="ru">Учебная квартира D08</rdfs:label>
+    <ex:hasSource rdf:resource="https://example.org/rental-kg#D08_source"/>
     <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#rooms">
+    <rdfs:label xml:lang="ru">число комнат, студия = 0</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:domain rdf:resource="https://example.org/rental-kg#Dwelling"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#ListingSnapshot">
+    <rdfs:comment xml:lang="ru">Зафиксированное на дату наблюдения предложение аренды одного жилья с ценой, условиями и ссылкой на запись источника; не является самим жильём.</rdfs:comment>
+    <owl:disjointWith rdf:resource="https://example.org/rental-kg#MetroEntrance"/>
+    <owl:disjointWith rdf:resource="https://example.org/rental-kg#RenterProfile"/>
+    <owl:disjointWith rdf:resource="https://example.org/rental-kg#SourceRecord"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="ru">Снимок объявления</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#D05_building_point">
+    <geo:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POINT (30.31500000 59.93000000)</geo:asWKT>
+    <ex:geometryKind rdf:datatype="http://www.w3.org/2001/XMLSchema#string">synthetic</ex:geometryKind>
+    <rdf:type rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+    <rdfs:label xml:lang="ru">Опорная точка</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#D02_source">
+    <ex:sourceUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://example.org/synthetic/D02</ex:sourceUrl>
+    <rdfs:label xml:lang="ru">Учебный источник D02</rdfs:label>
+    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
+    <rdf:type rdf:resource="https://example.org/rental-kg#SourceRecord"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#D11_home">
+    <ex:areaM2 rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">47</ex:areaM2>
+    <ex:floor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</ex:floor>
+    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
+    <ex:rooms rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</ex:rooms>
+    <rdfs:label xml:lang="ru">Учебная квартира D11</rdfs:label>
+    <rdf:type rdf:resource="https://example.org/rental-kg#Apartment"/>
     <ex:hasSource rdf:resource="https://example.org/rental-kg#D11_source"/>
-    <ex:longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30.333000000000002</ex:longitude>
+    <ex:inBuilding rdf:resource="https://example.org/rental-kg#D11_building"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#D12">
+    <ex:hasSource rdf:resource="https://example.org/rental-kg#D12_source"/>
+    <ex:utilitiesRubMonth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4000</ex:utilitiesRubMonth>
+    <rdfs:label xml:lang="ru">Учебное объявление D12</rdfs:label>
+    <ex:depositRub rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30000</ex:depositRub>
+    <ex:commissionRub rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</ex:commissionRub>
+    <ex:petsAllowed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:petsAllowed>
+    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
+    <ex:observedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:observedOn>
+    <rdf:type rdf:resource="https://example.org/rental-kg#ListingSnapshot"/>
+    <ex:term rdf:datatype="http://www.w3.org/2001/XMLSchema#string">long_term</ex:term>
+    <ex:offers rdf:resource="https://example.org/rental-kg#D12_home"/>
+    <ex:rentRubMonth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30000</ex:rentRubMonth>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#DemoCity">
+    <rdf:type rdf:resource="https://example.org/rental-kg#City"/>
+    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
+    <rdfs:label xml:lang="ru">Учебный город</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#Park">
+    <rdfs:comment xml:lang="ru">Озеленённая территория для отдыха. В пилоте представлена опорной точкой.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="ru">Парк</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://example.org/rental-kg#Amenity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#D12_building_point">
+    <rdfs:label xml:lang="ru">Опорная точка</rdfs:label>
+    <rdf:type rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+    <geo:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POINT (30.33600000 59.94400000)</geo:asWKT>
+    <ex:geometryKind rdf:datatype="http://www.w3.org/2001/XMLSchema#string">synthetic</ex:geometryKind>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#minMonths">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:label xml:lang="ru">минимальный срок, месяцев</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="https://example.org/rental-kg#ListingSnapshot"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#M2">
+    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
+    <rdfs:label xml:lang="ru">Учебное метро Б</rdfs:label>
+    <rdf:type rdf:resource="https://example.org/rental-kg#MetroStation"/>
+    <geo:hasGeometry rdf:resource="https://example.org/rental-kg#M2_point"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#isSynthetic">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:label xml:lang="ru">синтетические данные</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#utilitiesRubMonth">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label xml:lang="ru">дополнительные КУ, руб./месяц</rdfs:label>
+    <rdfs:domain rdf:resource="https://example.org/rental-kg#ListingSnapshot"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#floor">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="ru">этаж</rdfs:label>
+    <rdfs:domain rdf:resource="https://example.org/rental-kg#Dwelling"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#D02_building_point">
+    <rdfs:label xml:lang="ru">Опорная точка</rdfs:label>
+    <geo:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POINT (30.30600000 59.92400000)</geo:asWKT>
+    <rdf:type rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+    <ex:geometryKind rdf:datatype="http://www.w3.org/2001/XMLSchema#string">synthetic</ex:geometryKind>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#D07_building">
+    <ex:hasSource rdf:resource="https://example.org/rental-kg#D07_source"/>
     <ex:inDistrict rdf:resource="https://example.org/rental-kg#DemoDistrict"/>
     <rdf:type rdf:resource="https://example.org/rental-kg#Building"/>
-    <rdfs:label xml:lang="ru">Учебное здание D11</rdfs:label>
+    <ex:floorsTotal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</ex:floorsTotal>
+    <ex:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Учебный адрес D07</ex:address>
+    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
+    <geo:hasGeometry rdf:resource="https://example.org/rental-kg#D07_building_point"/>
+    <rdfs:label xml:lang="ru">Учебное здание D07</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#M1">
+    <geo:hasGeometry rdf:resource="https://example.org/rental-kg#M1_point"/>
+    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
+    <rdf:type rdf:resource="https://example.org/rental-kg#MetroStation"/>
+    <rdfs:label xml:lang="ru">Учебное метро А</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#S2">
+    <rdf:type rdf:resource="https://example.org/rental-kg#Supermarket"/>
+    <geo:hasGeometry rdf:resource="https://example.org/rental-kg#S2_point"/>
+    <rdfs:label xml:lang="ru">Учебный магазин Б</rdfs:label>
+    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#maxRentRubMonth">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:domain rdf:resource="https://example.org/rental-kg#RenterProfile"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="ru">лимит арендной платы</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#Geometry">
+    <rdfs:label xml:lang="ru">Геометрия</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#observedOn">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdfs:domain rdf:resource="https://example.org/rental-kg#ListingSnapshot"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="ru">дата наблюдения</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#D08_source">
+    <rdfs:label xml:lang="ru">Учебный источник D08</rdfs:label>
+    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
+    <rdf:type rdf:resource="https://example.org/rental-kg#SourceRecord"/>
+    <ex:sourceUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://example.org/synthetic/D08</ex:sourceUrl>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#City">
+    <rdfs:comment xml:lang="ru">Населённый пункт, содержащий районы и являющийся верхним используемым уровнем адресной иерархии.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="https://example.org/rental-kg#Place"/>
+    <owl:disjointWith rdf:resource="https://example.org/rental-kg#District"/>
+    <owl:disjointWith rdf:resource="https://example.org/rental-kg#Building"/>
+    <rdfs:label xml:lang="ru">Город</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#MetroStation">
+    <owl:disjointWith rdf:resource="https://example.org/rental-kg#Park"/>
+    <owl:disjointWith rdf:resource="https://example.org/rental-kg#Supermarket"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="https://example.org/rental-kg#Amenity"/>
+    <rdfs:comment xml:lang="ru">Объект транспортного обслуживания, предоставляющий доступ к метрополитену. В текущем наборе представлен одной репрезентативной точкой, а не всеми входами.</rdfs:comment>
+    <rdfs:label xml:lang="ru">Станция метро</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#D10_building_point">
+    <geo:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POINT (30.33000000 59.94000000)</geo:asWKT>
+    <ex:geometryKind rdf:datatype="http://www.w3.org/2001/XMLSchema#string">synthetic</ex:geometryKind>
+    <rdfs:label xml:lang="ru">Опорная точка</rdfs:label>
+    <rdf:type rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#commissionRub">
+    <rdfs:label xml:lang="ru">разовая комиссия, руб.</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:domain rdf:resource="https://example.org/rental-kg#ListingSnapshot"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#P1">
+    <rdf:type rdf:resource="https://example.org/rental-kg#Park"/>
+    <rdfs:label xml:lang="ru">Учебная точка парка А</rdfs:label>
+    <geo:hasGeometry rdf:resource="https://example.org/rental-kg#P1_point"/>
+    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#D03_source">
+    <rdfs:label xml:lang="ru">Учебный источник D03</rdfs:label>
+    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
+    <rdf:type rdf:resource="https://example.org/rental-kg#SourceRecord"/>
+    <ex:sourceUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://example.org/synthetic/D03</ex:sourceUrl>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#floorsTotal">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="ru">этажей в доме</rdfs:label>
+    <rdfs:domain rdf:resource="https://example.org/rental-kg#Building"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://example.org/rental-kg#District">
     <rdfs:comment xml:lang="ru">Территориальная адресная единица внутри города, в которую входит здание. Членство определяется уровнем адресной иерархии, а не близостью к жилью.</rdfs:comment>
     <owl:disjointWith rdf:resource="https://example.org/rental-kg#Building"/>
     <rdfs:label xml:lang="ru">Район</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:subClassOf rdf:resource="https://example.org/rental-kg#Place"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D02_M1">
-    <ex:calculatedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:calculatedOn>
-    <ex:fromDwelling rdf:resource="https://example.org/rental-kg#D02_home"/>
-    <rdfs:label xml:lang="ru">Учебное расстояние D02 — M1</rdfs:label>
-    <ex:distanceM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">556.4</ex:distanceM>
-    <rdf:type rdf:resource="https://example.org/rental-kg#DistanceMeasurement"/>
-    <ex:usesMethod rdf:resource="https://example.org/rental-kg#Haversine"/>
-    <ex:toAmenity rdf:resource="https://example.org/rental-kg#M1"/>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
+  <rdf:Description rdf:about="https://example.org/rental-kg#D04_building_point">
+    <ex:geometryKind rdf:datatype="http://www.w3.org/2001/XMLSchema#string">synthetic</ex:geometryKind>
+    <rdfs:label xml:lang="ru">Опорная точка</rdfs:label>
+    <geo:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POINT (30.31200000 59.92880000)</geo:asWKT>
+    <rdf:type rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D12_home">
-    <ex:floor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</ex:floor>
-    <rdf:type rdf:resource="https://example.org/rental-kg#Apartment"/>
-    <ex:nearAmenity rdf:resource="https://example.org/rental-kg#M2"/>
-    <ex:nearAmenity rdf:resource="https://example.org/rental-kg#S2"/>
-    <ex:nearAmenity rdf:resource="https://example.org/rental-kg#P2"/>
-    <ex:inBuilding rdf:resource="https://example.org/rental-kg#D12_building"/>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:areaM2 rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">49</ex:areaM2>
-    <ex:rooms rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</ex:rooms>
-    <rdfs:label xml:lang="ru">Учебная квартира D12</rdfs:label>
-    <ex:hasSource rdf:resource="https://example.org/rental-kg#D12_source"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D08_M1">
-    <ex:usesMethod rdf:resource="https://example.org/rental-kg#Haversine"/>
-    <rdf:type rdf:resource="https://example.org/rental-kg#DistanceMeasurement"/>
-    <ex:toAmenity rdf:resource="https://example.org/rental-kg#M1"/>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:distanceM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1112.8</ex:distanceM>
-    <ex:calculatedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:calculatedOn>
-    <rdfs:label xml:lang="ru">Учебное расстояние D08 — M1</rdfs:label>
-    <ex:fromDwelling rdf:resource="https://example.org/rental-kg#D08_home"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D05">
-    <ex:term rdf:datatype="http://www.w3.org/2001/XMLSchema#string">long_term</ex:term>
-    <rdfs:label xml:lang="ru">Учебное объявление D05</rdfs:label>
-    <ex:rentRubMonth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">34000</ex:rentRubMonth>
-    <ex:utilitiesRubMonth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4000</ex:utilitiesRubMonth>
-    <ex:hasSource rdf:resource="https://example.org/rental-kg#D05_source"/>
-    <ex:observedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:observedOn>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:depositRub rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30000</ex:depositRub>
-    <ex:commissionRub rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</ex:commissionRub>
-    <rdf:type rdf:resource="https://example.org/rental-kg#ListingSnapshot"/>
-    <ex:offers rdf:resource="https://example.org/rental-kg#D05_home"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D10_P1">
-    <ex:calculatedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:calculatedOn>
-    <ex:distanceM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">679.1</ex:distanceM>
-    <ex:usesMethod rdf:resource="https://example.org/rental-kg#Haversine"/>
-    <ex:toAmenity rdf:resource="https://example.org/rental-kg#P1"/>
-    <rdfs:label xml:lang="ru">Учебное расстояние D10 — P1</rdfs:label>
-    <ex:fromDwelling rdf:resource="https://example.org/rental-kg#D10_home"/>
-    <rdf:type rdf:resource="https://example.org/rental-kg#DistanceMeasurement"/>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#usesMethod">
-    <rdfs:range rdf:resource="https://example.org/rental-kg#MeasurementMethod"/>
-    <rdfs:domain rdf:resource="https://example.org/rental-kg#DistanceMeasurement"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label xml:lang="ru">метод измерения</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#Dwelling">
-    <rdfs:comment xml:lang="ru">Жилая единица, предлагаемая в аренду снимком объявления через offers. В текущем проекте представлены целые квартиры; комнаты и отдельные дома могут быть добавлены при расширении модели.</rdfs:comment>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label xml:lang="ru">Жильё</rdfs:label>
-    <owl:disjointWith rdf:resource="https://example.org/rental-kg#Amenity"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D06_M1">
-    <ex:usesMethod rdf:resource="https://example.org/rental-kg#Haversine"/>
-    <rdf:type rdf:resource="https://example.org/rental-kg#DistanceMeasurement"/>
-    <ex:distanceM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">556.4</ex:distanceM>
-    <ex:calculatedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:calculatedOn>
-    <rdfs:label xml:lang="ru">Учебное расстояние D06 — M1</rdfs:label>
-    <ex:toAmenity rdf:resource="https://example.org/rental-kg#M1"/>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:fromDwelling rdf:resource="https://example.org/rental-kg#D06_home"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D11">
-    <ex:hasSource rdf:resource="https://example.org/rental-kg#D11_source"/>
-    <rdfs:label xml:lang="ru">Учебное объявление D11</rdfs:label>
-    <ex:offers rdf:resource="https://example.org/rental-kg#D11_home"/>
-    <ex:commissionRub rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</ex:commissionRub>
-    <ex:observedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:observedOn>
-    <ex:rentRubMonth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42000</ex:rentRubMonth>
-    <ex:depositRub rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30000</ex:depositRub>
-    <rdf:type rdf:resource="https://example.org/rental-kg#ListingSnapshot"/>
-    <ex:utilitiesRubMonth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4000</ex:utilitiesRubMonth>
-    <ex:term rdf:datatype="http://www.w3.org/2001/XMLSchema#string">long_term</ex:term>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D03_M2">
-    <rdf:type rdf:resource="https://example.org/rental-kg#DistanceMeasurement"/>
-    <rdfs:label xml:lang="ru">Учебное расстояние D03 — M2</rdfs:label>
-    <ex:distanceM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2225.5</ex:distanceM>
-    <ex:fromDwelling rdf:resource="https://example.org/rental-kg#D03_home"/>
-    <ex:usesMethod rdf:resource="https://example.org/rental-kg#Haversine"/>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:toAmenity rdf:resource="https://example.org/rental-kg#M2"/>
-    <ex:calculatedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:calculatedOn>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D04_P1">
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:toAmenity rdf:resource="https://example.org/rental-kg#P1"/>
-    <ex:distanceM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">990.7</ex:distanceM>
-    <ex:calculatedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:calculatedOn>
-    <ex:usesMethod rdf:resource="https://example.org/rental-kg#Haversine"/>
-    <rdfs:label xml:lang="ru">Учебное расстояние D04 — P1</rdfs:label>
-    <rdf:type rdf:resource="https://example.org/rental-kg#DistanceMeasurement"/>
-    <ex:fromDwelling rdf:resource="https://example.org/rental-kg#D04_home"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#DistanceMeasurement">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:disjointWith rdf:resource="https://example.org/rental-kg#Place"/>
-    <rdfs:label xml:lang="ru">Измерение расстояния</rdfs:label>
-    <rdfs:comment xml:lang="ru">Результат измерения между одним жильём и одним объектом инфраструктуры, заданный числом метров, методом и датой расчёта. В текущем наборе используется точка здания жилья.</rdfs:comment>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D04_M1">
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:toAmenity rdf:resource="https://example.org/rental-kg#M1"/>
-    <ex:calculatedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:calculatedOn>
-    <ex:usesMethod rdf:resource="https://example.org/rental-kg#Haversine"/>
-    <rdf:type rdf:resource="https://example.org/rental-kg#DistanceMeasurement"/>
-    <rdfs:label xml:lang="ru">Учебное расстояние D04 — M1</rdfs:label>
-    <ex:fromDwelling rdf:resource="https://example.org/rental-kg#D04_home"/>
-    <ex:distanceM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</ex:distanceM>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D06_P2">
-    <rdf:type rdf:resource="https://example.org/rental-kg#DistanceMeasurement"/>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <rdfs:label xml:lang="ru">Учебное расстояние D06 — P2</rdfs:label>
-    <ex:calculatedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:calculatedOn>
-    <ex:fromDwelling rdf:resource="https://example.org/rental-kg#D06_home"/>
-    <ex:toAmenity rdf:resource="https://example.org/rental-kg#P2"/>
-    <ex:usesMethod rdf:resource="https://example.org/rental-kg#Haversine"/>
-    <ex:distanceM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1981.2</ex:distanceM>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D07_home">
-    <ex:nearAmenity rdf:resource="https://example.org/rental-kg#P1"/>
-    <ex:nearAmenity rdf:resource="https://example.org/rental-kg#M1"/>
-    <ex:nearAmenity rdf:resource="https://example.org/rental-kg#S1"/>
-    <rdfs:label xml:lang="ru">Учебная квартира D07</rdfs:label>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:hasSource rdf:resource="https://example.org/rental-kg#D07_source"/>
-    <ex:areaM2 rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">39</ex:areaM2>
-    <ex:floor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</ex:floor>
-    <rdf:type rdf:resource="https://example.org/rental-kg#Apartment"/>
-    <ex:inBuilding rdf:resource="https://example.org/rental-kg#D07_building"/>
-    <ex:rooms rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ex:rooms>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D09_M1">
-    <ex:fromDwelling rdf:resource="https://example.org/rental-kg#D09_home"/>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:toAmenity rdf:resource="https://example.org/rental-kg#M1"/>
-    <ex:calculatedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:calculatedOn>
-    <rdfs:label xml:lang="ru">Учебное расстояние D09 — M1</rdfs:label>
-    <ex:distanceM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1391.0</ex:distanceM>
-    <rdf:type rdf:resource="https://example.org/rental-kg#DistanceMeasurement"/>
-    <ex:usesMethod rdf:resource="https://example.org/rental-kg#Haversine"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#S2">
-    <rdf:type rdf:resource="https://example.org/rental-kg#Supermarket"/>
-    <rdfs:label xml:lang="ru">Учебный магазин Б</rdfs:label>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">59.943</ex:latitude>
-    <ex:longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30.334</ex:longitude>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D08_P2">
-    <rdf:type rdf:resource="https://example.org/rental-kg#DistanceMeasurement"/>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:usesMethod rdf:resource="https://example.org/rental-kg#Haversine"/>
-    <ex:toAmenity rdf:resource="https://example.org/rental-kg#P2"/>
-    <ex:calculatedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:calculatedOn>
-    <ex:fromDwelling rdf:resource="https://example.org/rental-kg#D08_home"/>
-    <ex:distanceM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1425.0</ex:distanceM>
-    <rdfs:label xml:lang="ru">Учебное расстояние D08 — P2</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D01_building">
-    <ex:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Учебный адрес D01</ex:address>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:floorsTotal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</ex:floorsTotal>
-    <rdf:type rdf:resource="https://example.org/rental-kg#Building"/>
-    <rdfs:label xml:lang="ru">Учебное здание D01</rdfs:label>
-    <ex:hasSource rdf:resource="https://example.org/rental-kg#D01_source"/>
-    <ex:latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">59.922000000000004</ex:latitude>
-    <ex:inDistrict rdf:resource="https://example.org/rental-kg#DemoDistrict"/>
-    <ex:longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30.303</ex:longitude>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D05_home">
-    <ex:floor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</ex:floor>
-    <ex:nearAmenity rdf:resource="https://example.org/rental-kg#M1"/>
-    <ex:nearAmenity rdf:resource="https://example.org/rental-kg#S1"/>
-    <ex:nearAmenity rdf:resource="https://example.org/rental-kg#P1"/>
-    <ex:rooms rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</ex:rooms>
-    <ex:inBuilding rdf:resource="https://example.org/rental-kg#D05_building"/>
-    <ex:hasSource rdf:resource="https://example.org/rental-kg#D05_source"/>
-    <rdfs:label xml:lang="ru">Учебная квартира D05</rdfs:label>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <rdf:type rdf:resource="https://example.org/rental-kg#Apartment"/>
-    <ex:areaM2 rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">35</ex:areaM2>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D05_M2">
-    <ex:calculatedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:calculatedOn>
-    <rdfs:label xml:lang="ru">Учебное расстояние D05 — M2</rdfs:label>
-    <ex:usesMethod rdf:resource="https://example.org/rental-kg#Haversine"/>
-    <rdf:type rdf:resource="https://example.org/rental-kg#DistanceMeasurement"/>
-    <ex:toAmenity rdf:resource="https://example.org/rental-kg#M2"/>
-    <ex:distanceM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1669.1</ex:distanceM>
-    <ex:fromDwelling rdf:resource="https://example.org/rental-kg#D05_home"/>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#maxRentRubMonth">
-    <rdfs:label xml:lang="ru">лимит арендной платы</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:domain rdf:resource="https://example.org/rental-kg#RenterProfile"/>
+  <rdf:Description rdf:about="https://example.org/rental-kg#maxMetroDistanceM">
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D01_M2">
-    <ex:distanceM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2781.9</ex:distanceM>
-    <rdf:type rdf:resource="https://example.org/rental-kg#DistanceMeasurement"/>
-    <ex:usesMethod rdf:resource="https://example.org/rental-kg#Haversine"/>
-    <rdfs:label xml:lang="ru">Учебное расстояние D01 — M2</rdfs:label>
-    <ex:fromDwelling rdf:resource="https://example.org/rental-kg#D01_home"/>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:toAmenity rdf:resource="https://example.org/rental-kg#M2"/>
-    <ex:calculatedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:calculatedOn>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#Supermarket">
-    <owl:disjointWith rdf:resource="https://example.org/rental-kg#Park"/>
-    <rdfs:comment xml:lang="ru">Объект розничного обслуживания для покупки продуктов и повседневных товаров. Обозначает магазин как объект обслуживания, а не его здание.</rdfs:comment>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:resource="https://example.org/rental-kg#Amenity"/>
-    <rdfs:label xml:lang="ru">Супермаркет</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#P2">
-    <rdfs:label xml:lang="ru">Учебная точка парка Б</rdfs:label>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30.34</ex:longitude>
-    <ex:latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">59.946</ex:latitude>
-    <rdf:type rdf:resource="https://example.org/rental-kg#Park"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D03_M1">
-    <rdf:type rdf:resource="https://example.org/rental-kg#DistanceMeasurement"/>
-    <ex:usesMethod rdf:resource="https://example.org/rental-kg#Haversine"/>
-    <ex:fromDwelling rdf:resource="https://example.org/rental-kg#D03_home"/>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:distanceM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">278.2</ex:distanceM>
-    <rdfs:label xml:lang="ru">Учебное расстояние D03 — M1</rdfs:label>
-    <ex:toAmenity rdf:resource="https://example.org/rental-kg#M1"/>
-    <ex:calculatedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:calculatedOn>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D06_source">
-    <rdfs:label xml:lang="ru">Учебный источник D06</rdfs:label>
-    <rdf:type rdf:resource="https://example.org/rental-kg#SourceRecord"/>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:sourceUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://example.org/synthetic/D06</ex:sourceUrl>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D07_building">
-    <ex:longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30.321</ex:longitude>
-    <ex:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Учебный адрес D07</ex:address>
-    <rdfs:label xml:lang="ru">Учебное здание D07</rdfs:label>
-    <ex:inDistrict rdf:resource="https://example.org/rental-kg#DemoDistrict"/>
-    <rdf:type rdf:resource="https://example.org/rental-kg#Building"/>
-    <ex:latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">59.934000000000005</ex:latitude>
-    <ex:hasSource rdf:resource="https://example.org/rental-kg#D07_source"/>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:floorsTotal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</ex:floorsTotal>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D03_P1">
-    <rdf:type rdf:resource="https://example.org/rental-kg#DistanceMeasurement"/>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:distanceM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1268.8</ex:distanceM>
-    <rdfs:label xml:lang="ru">Учебное расстояние D03 — P1</rdfs:label>
-    <ex:fromDwelling rdf:resource="https://example.org/rental-kg#D03_home"/>
-    <ex:usesMethod rdf:resource="https://example.org/rental-kg#Haversine"/>
-    <ex:toAmenity rdf:resource="https://example.org/rental-kg#P1"/>
-    <ex:calculatedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:calculatedOn>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D09_M2">
-    <ex:calculatedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:calculatedOn>
-    <ex:distanceM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">556.3</ex:distanceM>
-    <rdf:type rdf:resource="https://example.org/rental-kg#DistanceMeasurement"/>
-    <ex:usesMethod rdf:resource="https://example.org/rental-kg#Haversine"/>
-    <rdfs:label xml:lang="ru">Учебное расстояние D09 — M2</rdfs:label>
-    <ex:fromDwelling rdf:resource="https://example.org/rental-kg#D09_home"/>
-    <ex:toAmenity rdf:resource="https://example.org/rental-kg#M2"/>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#ListingSnapshot">
-    <rdfs:label xml:lang="ru">Снимок объявления</rdfs:label>
-    <rdfs:comment xml:lang="ru">Зафиксированное на дату наблюдения предложение аренды одного жилья с ценой, условиями и ссылкой на запись источника; не является самим жильём.</rdfs:comment>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:disjointWith rdf:resource="https://example.org/rental-kg#Dwelling"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D02_home">
-    <ex:floor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</ex:floor>
-    <ex:areaM2 rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">29</ex:areaM2>
-    <ex:inBuilding rdf:resource="https://example.org/rental-kg#D02_building"/>
-    <rdfs:label xml:lang="ru">Учебная квартира D02</rdfs:label>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:hasSource rdf:resource="https://example.org/rental-kg#D02_source"/>
-    <ex:nearAmenity rdf:resource="https://example.org/rental-kg#M1"/>
-    <ex:nearAmenity rdf:resource="https://example.org/rental-kg#S1"/>
-    <ex:rooms rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</ex:rooms>
-    <rdf:type rdf:resource="https://example.org/rental-kg#Apartment"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D05_M1">
-    <rdf:type rdf:resource="https://example.org/rental-kg#DistanceMeasurement"/>
-    <ex:usesMethod rdf:resource="https://example.org/rental-kg#Haversine"/>
-    <rdfs:label xml:lang="ru">Учебное расстояние D05 — M1</rdfs:label>
-    <ex:distanceM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">278.2</ex:distanceM>
-    <ex:toAmenity rdf:resource="https://example.org/rental-kg#M1"/>
-    <ex:fromDwelling rdf:resource="https://example.org/rental-kg#D05_home"/>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:calculatedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:calculatedOn>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D09">
-    <ex:hasSource rdf:resource="https://example.org/rental-kg#D09_source"/>
-    <ex:commissionRub rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0</ex:commissionRub>
-    <rdfs:label xml:lang="ru">Учебное объявление D09</rdfs:label>
-    <ex:rentRubMonth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">34000</ex:rentRubMonth>
-    <ex:observedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:observedOn>
-    <ex:offers rdf:resource="https://example.org/rental-kg#D09_home"/>
-    <ex:depositRub rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30000</ex:depositRub>
-    <rdf:type rdf:resource="https://example.org/rental-kg#ListingSnapshot"/>
-    <ex:term rdf:datatype="http://www.w3.org/2001/XMLSchema#string">long_term</ex:term>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:utilitiesRubMonth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4000</ex:utilitiesRubMonth>
-    <ex:petsAllowed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:petsAllowed>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#DemoDistrict">
-    <ex:inCity rdf:resource="https://example.org/rental-kg#DemoCity"/>
-    <rdf:type rdf:resource="https://example.org/rental-kg#District"/>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <rdfs:label xml:lang="ru">Учебный район</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D04_S2">
-    <ex:distanceM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2069.8</ex:distanceM>
-    <ex:toAmenity rdf:resource="https://example.org/rental-kg#S2"/>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:fromDwelling rdf:resource="https://example.org/rental-kg#D04_home"/>
-    <ex:calculatedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:calculatedOn>
-    <rdf:type rdf:resource="https://example.org/rental-kg#DistanceMeasurement"/>
-    <ex:usesMethod rdf:resource="https://example.org/rental-kg#Haversine"/>
-    <rdfs:label xml:lang="ru">Учебное расстояние D04 — S2</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#StudentWithPet">
-    <ex:requiresPets rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:requiresPets>
-    <ex:maxRentRubMonth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40000</ex:maxRentRubMonth>
-    <rdfs:label xml:lang="ru">Студент с питомцем</rdfs:label>
-    <ex:maxMetroDistanceM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1000</ex:maxMetroDistanceM>
-    <ex:preferredCity rdf:resource="https://example.org/rental-kg#DemoCity"/>
-    <rdf:type rdf:resource="https://example.org/rental-kg#RenterProfile"/>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D01_S2">
-    <ex:toAmenity rdf:resource="https://example.org/rental-kg#S2"/>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:calculatedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:calculatedOn>
-    <ex:distanceM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2904.4</ex:distanceM>
-    <ex:fromDwelling rdf:resource="https://example.org/rental-kg#D01_home"/>
-    <rdf:type rdf:resource="https://example.org/rental-kg#DistanceMeasurement"/>
-    <rdfs:label xml:lang="ru">Учебное расстояние D01 — S2</rdfs:label>
-    <ex:usesMethod rdf:resource="https://example.org/rental-kg#Haversine"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D05_S2">
-    <ex:distanceM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1791.6</ex:distanceM>
-    <ex:fromDwelling rdf:resource="https://example.org/rental-kg#D05_home"/>
-    <rdf:type rdf:resource="https://example.org/rental-kg#DistanceMeasurement"/>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:toAmenity rdf:resource="https://example.org/rental-kg#S2"/>
-    <ex:usesMethod rdf:resource="https://example.org/rental-kg#Haversine"/>
-    <rdfs:label xml:lang="ru">Учебное расстояние D05 — S2</rdfs:label>
-    <ex:calculatedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:calculatedOn>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#isSynthetic">
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-    <rdfs:label xml:lang="ru">синтетические данные</rdfs:label>
+    <rdfs:label xml:lang="ru">порог до метро по прямой, м</rdfs:label>
+    <rdfs:domain rdf:resource="https://example.org/rental-kg#RenterProfile"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#usableEntrance">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="https://example.org/rental-kg#MetroEntrance"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:label xml:lang="ru">доступен для входа в пилоте</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#asWKT">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+    <rdfs:range rdf:resource="http://www.opengis.net/ont/geosparql#wktLiteral"/>
+    <rdfs:label xml:lang="ru">геометрия в WKT</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#D04_source">
+    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
+    <rdf:type rdf:resource="https://example.org/rental-kg#SourceRecord"/>
+    <ex:sourceUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://example.org/synthetic/D04</ex:sourceUrl>
+    <rdfs:label xml:lang="ru">Учебный источник D04</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="https://example.org/rental-kg#depositRub">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
     <rdfs:label xml:lang="ru">залог, руб.</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <rdfs:domain rdf:resource="https://example.org/rental-kg#ListingSnapshot"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://example.org/rental-kg#Apartment">
-    <rdfs:subClassOf rdf:resource="https://example.org/rental-kg#Dwelling"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:label xml:lang="ru">Квартира</rdfs:label>
     <rdfs:comment xml:lang="ru">Отдельная жилая единица внутри здания, предлагаемая целиком в аренду; характеризуется площадью, числом комнат и этажом. Студия также является квартирой.</rdfs:comment>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="https://example.org/rental-kg#Dwelling"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D05_P2">
-    <rdfs:label xml:lang="ru">Учебное расстояние D05 — P2</rdfs:label>
-    <ex:usesMethod rdf:resource="https://example.org/rental-kg#Haversine"/>
-    <ex:toAmenity rdf:resource="https://example.org/rental-kg#P2"/>
-    <ex:distanceM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2259.3</ex:distanceM>
-    <ex:calculatedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:calculatedOn>
-    <ex:fromDwelling rdf:resource="https://example.org/rental-kg#D05_home"/>
-    <rdf:type rdf:resource="https://example.org/rental-kg#DistanceMeasurement"/>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D07_P1">
-    <ex:usesMethod rdf:resource="https://example.org/rental-kg#Haversine"/>
-    <rdf:type rdf:resource="https://example.org/rental-kg#DistanceMeasurement"/>
-    <ex:toAmenity rdf:resource="https://example.org/rental-kg#P1"/>
-    <ex:calculatedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:calculatedOn>
-    <ex:fromDwelling rdf:resource="https://example.org/rental-kg#D07_home"/>
-    <ex:distanceM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">157.4</ex:distanceM>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <rdfs:label xml:lang="ru">Учебное расстояние D07 — P1</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D03_P2">
-    <rdfs:label xml:lang="ru">Учебное расстояние D03 — P2</rdfs:label>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:calculatedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:calculatedOn>
-    <ex:fromDwelling rdf:resource="https://example.org/rental-kg#D03_home"/>
-    <ex:distanceM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2815.6</ex:distanceM>
-    <rdf:type rdf:resource="https://example.org/rental-kg#DistanceMeasurement"/>
-    <ex:usesMethod rdf:resource="https://example.org/rental-kg#Haversine"/>
-    <ex:toAmenity rdf:resource="https://example.org/rental-kg#P2"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#hasListing">
-    <rdfs:range rdf:resource="https://example.org/rental-kg#ListingSnapshot"/>
-    <rdfs:label xml:lang="ru">имеет объявление</rdfs:label>
-    <rdfs:domain rdf:resource="https://example.org/rental-kg#Dwelling"/>
+  <rdf:Description rdf:about="https://example.org/rental-kg#entranceOf">
+    <rdfs:label xml:lang="ru">вход станции</rdfs:label>
+    <rdfs:domain rdf:resource="https://example.org/rental-kg#MetroEntrance"/>
+    <rdfs:range rdf:resource="https://example.org/rental-kg#MetroStation"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#observedOn">
-    <rdfs:domain rdf:resource="https://example.org/rental-kg#ListingSnapshot"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:label xml:lang="ru">дата наблюдения</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#commissionRub">
-    <rdfs:domain rdf:resource="https://example.org/rental-kg#ListingSnapshot"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:label xml:lang="ru">разовая комиссия, руб.</rdfs:label>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D01_P1">
-    <ex:toAmenity rdf:resource="https://example.org/rental-kg#P1"/>
-    <ex:usesMethod rdf:resource="https://example.org/rental-kg#Haversine"/>
-    <ex:fromDwelling rdf:resource="https://example.org/rental-kg#D01_home"/>
-    <rdf:type rdf:resource="https://example.org/rental-kg#DistanceMeasurement"/>
-    <rdfs:label xml:lang="ru">Учебное расстояние D01 — P1</rdfs:label>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:distanceM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1825.2</ex:distanceM>
-    <ex:calculatedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:calculatedOn>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D10_source">
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:sourceUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://example.org/synthetic/D10</ex:sourceUrl>
-    <rdf:type rdf:resource="https://example.org/rental-kg#SourceRecord"/>
-    <rdfs:label xml:lang="ru">Учебный источник D10</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#requiresPets">
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-    <rdfs:label xml:lang="ru">нужно разрешение на животных</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:domain rdf:resource="https://example.org/rental-kg#RenterProfile"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#offers">
-    <rdfs:label xml:lang="ru">предлагает жильё</rdfs:label>
-    <rdfs:range rdf:resource="https://example.org/rental-kg#Dwelling"/>
-    <rdfs:domain rdf:resource="https://example.org/rental-kg#ListingSnapshot"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <owl:inverseOf rdf:resource="https://example.org/rental-kg#hasListing"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#longitude">
-    <rdfs:label xml:lang="ru">долгота, WGS84</rdfs:label>
-    <rdfs:domain rdf:nodeID="Nc368dd51f82647c982dbd8b170964fc2"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D08_source">
+  <rdf:Description rdf:about="https://example.org/rental-kg#D12_source">
     <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
     <rdf:type rdf:resource="https://example.org/rental-kg#SourceRecord"/>
-    <ex:sourceUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://example.org/synthetic/D08</ex:sourceUrl>
-    <rdfs:label xml:lang="ru">Учебный источник D08</rdfs:label>
+    <ex:sourceUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://example.org/synthetic/D12</ex:sourceUrl>
+    <rdfs:label xml:lang="ru">Учебный источник D12</rdfs:label>
   </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D01_P2">
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:calculatedOn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-22</ex:calculatedOn>
-    <ex:fromDwelling rdf:resource="https://example.org/rental-kg#D01_home"/>
-    <rdfs:label xml:lang="ru">Учебное расстояние D01 — P2</rdfs:label>
-    <ex:usesMethod rdf:resource="https://example.org/rental-kg#Haversine"/>
-    <ex:toAmenity rdf:resource="https://example.org/rental-kg#P2"/>
-    <rdf:type rdf:resource="https://example.org/rental-kg#DistanceMeasurement"/>
-    <ex:distanceM rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3372.0</ex:distanceM>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#areaM2">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:label xml:lang="ru">площадь, м²</rdfs:label>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-    <rdfs:domain rdf:resource="https://example.org/rental-kg#Dwelling"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#calculatedOn">
-    <rdfs:domain rdf:resource="https://example.org/rental-kg#DistanceMeasurement"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
-    <rdfs:label xml:lang="ru">дата вычисления</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#nearAmenity">
-    <rdfs:range rdf:resource="https://example.org/rental-kg#Amenity"/>
-    <rdfs:domain rdf:resource="https://example.org/rental-kg#Dwelling"/>
-    <rdfs:label xml:lang="ru">не далее 1000 м по прямой</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#locatedIn">
-    <rdfs:range rdf:resource="https://example.org/rental-kg#Place"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label xml:lang="ru">расположено в</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#qualityNote">
-    <rdfs:label xml:lang="ru">замечание к качеству</rdfs:label>
+  <rdf:Description rdf:about="https://example.org/rental-kg#address">
+    <rdfs:label xml:lang="ru">адрес</rdfs:label>
+    <rdfs:domain rdf:resource="https://example.org/rental-kg#Building"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#M1">
+  <rdf:Description rdf:about="https://example.org/rental-kg#S1">
+    <geo:hasGeometry rdf:resource="https://example.org/rental-kg#S1_point"/>
+    <rdfs:label xml:lang="ru">Учебный магазин А</rdfs:label>
     <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30.312</ex:longitude>
-    <rdfs:label xml:lang="ru">Учебное метро А</rdfs:label>
-    <ex:latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">59.928</ex:latitude>
-    <rdf:type rdf:resource="https://example.org/rental-kg#MetroStation"/>
+    <rdf:type rdf:resource="https://example.org/rental-kg#Supermarket"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#D08_building_point">
+    <ex:geometryKind rdf:datatype="http://www.w3.org/2001/XMLSchema#string">synthetic</ex:geometryKind>
+    <rdfs:label xml:lang="ru">Опорная точка</rdfs:label>
+    <geo:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POINT (30.32400000 59.93600000)</geo:asWKT>
+    <rdf:type rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#D01_source">
+    <ex:sourceUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://example.org/synthetic/D01</ex:sourceUrl>
+    <rdf:type rdf:resource="https://example.org/rental-kg#SourceRecord"/>
+    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
+    <rdfs:label xml:lang="ru">Учебный источник D01</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#qualityNote">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="ru">замечание к качеству</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#D07_building_point">
+    <ex:geometryKind rdf:datatype="http://www.w3.org/2001/XMLSchema#string">synthetic</ex:geometryKind>
+    <rdfs:label xml:lang="ru">Опорная точка</rdfs:label>
+    <geo:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POINT (30.32100000 59.93400000)</geo:asWKT>
+    <rdf:type rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#DemoDistrict">
+    <rdfs:label xml:lang="ru">Учебный район</rdfs:label>
+    <rdf:type rdf:resource="https://example.org/rental-kg#District"/>
+    <ex:inCity rdf:resource="https://example.org/rental-kg#DemoCity"/>
+    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://example.org/rental-kg#D01_building_point">
+    <ex:geometryKind rdf:datatype="http://www.w3.org/2001/XMLSchema#string">synthetic</ex:geometryKind>
+    <rdf:type rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+    <rdfs:label xml:lang="ru">Опорная точка</rdfs:label>
+    <geo:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POINT (30.30300000 59.92200000)</geo:asWKT>
   </rdf:Description>
   <rdf:Description rdf:about="https://example.org/rental-kg#Amenity">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:disjointWith rdf:resource="https://example.org/rental-kg#MetroEntrance"/>
+    <owl:disjointWith rdf:resource="https://example.org/rental-kg#SourceRecord"/>
+    <owl:disjointWith rdf:resource="https://example.org/rental-kg#RenterProfile"/>
+    <owl:disjointWith rdf:resource="https://example.org/rental-kg#ListingSnapshot"/>
+    <rdfs:comment xml:lang="ru">Объект обслуживания или отдыха, близость которого важна при подборе жилья.</rdfs:comment>
     <rdfs:label xml:lang="ru">Объект инфраструктуры</rdfs:label>
-    <rdfs:comment xml:lang="ru">Объект обслуживания или отдыха, близость которого важна при подборе жилья. Является целью toAmenity и nearAmenity, а не адресным контейнером жилья. Объект обслуживания и вмещающее его здание моделируются отдельно.</rdfs:comment>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#SourceRecord">
-    <rdfs:comment xml:lang="ru">Указатель на исходную запись, из которой получены факты: URL реальной карточки либо явно учебный идентификатор источника. Используется как объект hasSource.</rdfs:comment>
-    <rdfs:label xml:lang="ru">Запись источника</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#Haversine">
-    <rdfs:label xml:lang="ru">Метод гаверсинуса</rdfs:label>
-    <rdf:type rdf:resource="https://example.org/rental-kg#MeasurementMethod"/>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#minMonths">
+  <rdf:Description rdf:about="https://example.org/rental-kg#geometryKind">
+    <rdfs:label xml:lang="ru">способ получения опорной точки</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-    <rdfs:domain rdf:resource="https://example.org/rental-kg#ListingSnapshot"/>
-    <rdfs:label xml:lang="ru">минимальный срок, месяцев</rdfs:label>
   </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#P1">
-    <rdfs:label xml:lang="ru">Учебная точка парка А</rdfs:label>
+  <rdf:Description rdf:about="https://example.org/rental-kg#P2">
     <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <ex:longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30.323</ex:longitude>
-    <ex:latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">59.935</ex:latitude>
     <rdf:type rdf:resource="https://example.org/rental-kg#Park"/>
+    <geo:hasGeometry rdf:resource="https://example.org/rental-kg#P2_point"/>
+    <rdfs:label xml:lang="ru">Учебная точка парка Б</rdfs:label>
   </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#toAmenity">
-    <rdfs:range rdf:resource="https://example.org/rental-kg#Amenity"/>
-    <rdfs:label xml:lang="ru">цель измерения</rdfs:label>
-    <rdfs:domain rdf:resource="https://example.org/rental-kg#DistanceMeasurement"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#rentRubMonth">
-    <rdfs:label xml:lang="ru">аренда, руб./месяц</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-    <rdfs:domain rdf:resource="https://example.org/rental-kg#ListingSnapshot"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#rooms">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:domain rdf:resource="https://example.org/rental-kg#Dwelling"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-    <rdfs:label xml:lang="ru">число комнат, студия = 0</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg">
-    <owl:versionInfo>1.1.0</owl:versionInfo>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D03_source">
-    <rdf:type rdf:resource="https://example.org/rental-kg#SourceRecord"/>
-    <ex:sourceUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://example.org/synthetic/D03</ex:sourceUrl>
-    <rdfs:label xml:lang="ru">Учебный источник D03</rdfs:label>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#hasSource">
-    <rdfs:range rdf:resource="https://example.org/rental-kg#SourceRecord"/>
-    <rdfs:label xml:lang="ru">источник записи</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#D05_source">
-    <ex:sourceUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://example.org/synthetic/D05</ex:sourceUrl>
-    <rdfs:label xml:lang="ru">Учебный источник D05</rdfs:label>
-    <rdf:type rdf:resource="https://example.org/rental-kg#SourceRecord"/>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N868f6cdc9b7d471e98e08c501197c567">
-    <rdf:rest rdf:nodeID="Nc5ac38acfc054c5e8fb53f2f70658574"/>
-    <rdf:first rdf:resource="https://example.org/rental-kg#Building"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nc5ac38acfc054c5e8fb53f2f70658574">
-    <rdf:first rdf:resource="https://example.org/rental-kg#Amenity"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://example.org/rental-kg#DemoCity">
-    <rdfs:label xml:lang="ru">Учебный город</rdfs:label>
-    <ex:isSynthetic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ex:isSynthetic>
-    <rdf:type rdf:resource="https://example.org/rental-kg#City"/>
+  <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#wktLiteral">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
   </rdf:Description>
 </rdf:RDF>

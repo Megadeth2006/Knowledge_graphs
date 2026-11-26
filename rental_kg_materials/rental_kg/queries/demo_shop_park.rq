@@ -1,11 +1,19 @@
 PREFIX ex: <https://example.org/rental-kg#>
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
+PREFIX uom: <http://www.opengis.net/def/uom/OGC/1.0/>
 SELECT DISTINCT ?listing WHERE {
- ?listing a ex:ListingSnapshot; ex:offers ?home.
- ?shopMeasurement ex:fromDwelling ?home; ex:toAmenity ?shop;
-   ex:usesMethod ex:Haversine; ex:distanceM ?shopDistance.
- ?shop a ex:Supermarket.
- ?parkMeasurement ex:fromDwelling ?home; ex:toAmenity ?park;
-   ex:usesMethod ex:Haversine; ex:distanceM ?parkDistance.
- ?park a ex:Park.
- FILTER(?shopDistance <= 700 && ?parkDistance <= 1000)
-} ORDER BY ?listing
+    ?listing a ex:ListingSnapshot ; ex:isSynthetic true ; ex:offers ?home .
+    ?home ex:inBuilding/geo:hasGeometry/geo:asWKT ?buildingWkt .
+    FILTER EXISTS {
+        ?shop a ex:Supermarket ; ex:isSynthetic true ;
+            geo:hasGeometry/geo:asWKT ?shopWkt .
+        FILTER(geof:distance(?buildingWkt, ?shopWkt, uom:metre) <= 700)
+    }
+    FILTER EXISTS {
+        ?park a ex:Park ; ex:isSynthetic true ;
+            geo:hasGeometry/geo:asWKT ?parkWkt .
+        FILTER(geof:distance(?buildingWkt, ?parkWkt, uom:metre) <= 1000)
+    }
+}
+ORDER BY ?listing

@@ -1,0 +1,17 @@
+PREFIX ex: <https://example.org/rental-kg#>
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+SELECT ?listing ?station ?seconds (?seconds <= ?limit AS ?withinLimit) WHERE {
+    ex:WalkingProfile ex:maxMetroWalkSeconds ?limit .
+    {
+        SELECT ?listing ?station (MIN(?walk) AS ?seconds) WHERE {
+            ?listing a ex:ListingSnapshot ; ex:isSynthetic false ; ex:offers ?home .
+            ?home ex:inBuilding/geo:hasGeometry/geo:asWKT ?origin .
+            ?entrance a ex:MetroEntrance ; ex:usableEntrance true ;
+                ex:entranceOf ?station ; geo:hasGeometry/geo:asWKT ?destination .
+            BIND(ex:walkSeconds(?origin, ?destination) AS ?walk)
+            FILTER(BOUND(?walk))
+        }
+        GROUP BY ?listing ?station
+    }
+}
+ORDER BY ?listing ?seconds ?station
