@@ -1,0 +1,25 @@
+<p class="lead">
+  Долгосрочная аренда на Петроградском острове. В срезе $total предложений.
+  Время до метро рассчитано до ближайшего доступного входа при скорости 1,4 м/с.
+</p>
+<form method="get">
+  <label>Бюджет, ₽/мес.
+    <input name="budget" type="number" min="0" max="100000000" required value="$budget">
+  </label>
+  <label>Животные
+    <select name="pets">
+      <option value="any">Любые условия</option>
+      <option value="yes" $pets_selected>Нужно разрешение</option>
+    </select>
+  </label>
+  <label>До метро, мин
+    <input name="minutes" type="number" min="0" max="1440" placeholder="Без лимита" value="$minutes">
+  </label>
+  <button>Найти</button>
+</form>
+<h2>Подходят · $match_count</h2>
+<div class="cards">$matches</div>
+<details>
+  <summary>Почему исключены · $excluded_count</summary>
+  <div class="cards rejected">$excluded</div>
+</details>

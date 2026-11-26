@@ -8,6 +8,7 @@ from owlrl import DeductiveClosure, OWLRL_Semantics
 from pyshacl import validate
 from rdflib import Graph
 from rdflib.namespace import OWL, RDF
+from rdflib.query import ResultRow
 
 from graph_checks import check_graphs, check_queries, negative_checks
 from ontology_schema import EX, build_schema, new_graph
@@ -35,14 +36,16 @@ def validate_graph(graph, shapes, schema, inference):
     return description
 
 
-def query_answers(real, demo):
+def query_answers(real: Graph, demo: Graph) -> dict[str, list[dict[str, str]]]:
     answers = {}
     for path in sorted((ROOT / "queries").glob("*.rq")):
         graph = real if path.stem.startswith("real_") else demo
-        answers[path.stem] = [
-            {str(name): str(value) for name, value in row.asdict().items()}
-            for row in graph.query(path.read_text(encoding="utf-8"))
-        ]
+        rows = []
+        for row in graph.query(path.read_text(encoding="utf-8")):
+            if not isinstance(row, ResultRow):
+                raise TypeError(f"Expected SELECT rows from {path.name}")
+            rows.append({name: str(value) for name, value in row.asdict().items()})
+        answers[path.stem] = rows
     return answers
 
 

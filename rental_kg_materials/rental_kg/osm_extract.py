@@ -4,6 +4,7 @@ import argparse
 import gzip
 import json
 from pathlib import Path
+from typing import NotRequired, TypedDict
 from xml.etree import ElementTree
 
 FOOT_HIGHWAYS = {
@@ -26,7 +27,18 @@ ALLOWED = {"yes", "designated", "permissive", "official"}
 PASSABLE_BARRIERS = {"bollard", "cycle_barrier", "entrance", "kerb"}
 
 
-def tags(element):
+class MapFeature(TypedDict):
+    type: str
+    osm_type: str
+    osm_id: str
+    point: list[float]
+    point_kind: str
+    label: str | None
+    usable: NotRequired[bool]
+    station: NotRequired[list[str]]
+
+
+def tags(element: ElementTree.Element) -> dict[str, str]:
     return {tag.attrib["k"]: tag.attrib["v"] for tag in element.findall("tag")}
 
 
@@ -70,14 +82,19 @@ def feature_type(properties):
     return None
 
 
-def read_tiles(paths):
-    elements = {"node": {}, "way": {}}
+def read_tiles(
+    paths: list[Path],
+) -> tuple[dict[str, dict[str, ElementTree.Element]], list[dict[str, str]]]:
+    elements: dict[str, dict[str, ElementTree.Element]] = {"node": {}, "way": {}}
     bounds = []
     for path in paths:
         root = ElementTree.parse(path).getroot()
-        if root.tag != "osm":
+        if root is None or root.tag != "osm":
             raise ValueError(f"Expected an OSM map extract: {path}")
-        bounds.append(root.find("bounds").attrib)
+        tile_bounds = root.find("bounds")
+        if tile_bounds is None:
+            raise ValueError(f"OSM extract is missing bounds: {path}")
+        bounds.append(tile_bounds.attrib)
         for kind, by_id in elements.items():
             for item in root.findall(kind):
                 identifier = item.attrib["id"]
@@ -108,8 +125,8 @@ def normalize(xml_paths, extracted_on, source_url):
             ways.append([refs, direction])
             used_nodes.update(refs)
 
-    features = []
-    stations_by_name = {}
+    features: list[MapFeature] = []
+    stations_by_name: dict[str, list[MapFeature]] = {}
     for element in node_elements + way_elements:
         properties = tags(element)
         kind = feature_type(properties)
@@ -124,13 +141,14 @@ def normalize(xml_paths, extracted_on, source_url):
                 continue
             points = [nodes[ref] for ref in refs]
             point = [(min(axis) + max(axis)) / 2 for axis in zip(*points)]
-        feature = {
+        label = properties.get("name:ru") or properties.get("name")
+        feature: MapFeature = {
             "type": kind,
             "osm_type": element.tag,
             "osm_id": osm_id,
             "point": point,
             "point_kind": "osm_node" if element.tag == "node" else "bbox_centre",
-            "label": properties.get("name:ru") or properties.get("name"),
+            "label": label,
         }
         if kind == "MetroEntrance":
             feature["usable"] = (
@@ -140,13 +158,14 @@ def normalize(xml_paths, extracted_on, source_url):
                 and properties.get("entrance") != "exit"
                 and public_access(properties)
             )
-        if kind == "MetroStation" and feature["label"]:
-            stations_by_name.setdefault(feature["label"], []).append(feature)
+        if kind == "MetroStation" and label:
+            stations_by_name.setdefault(label, []).append(feature)
         features.append(feature)
 
     for feature in features:
         if feature["type"] == "MetroEntrance":
-            matches = stations_by_name.get(feature["label"], [])
+            label = feature["label"]
+            matches = stations_by_name.get(label, []) if label else []
             if len(matches) == 1:
                 station = matches[0]
                 feature["station"] = [station["osm_type"], station["osm_id"]]

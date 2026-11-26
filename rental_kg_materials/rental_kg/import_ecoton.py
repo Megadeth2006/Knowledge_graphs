@@ -1,4 +1,4 @@
-"""Import factual fields from one public page of the Ecoton long-term catalogue."""
+"""Import factual fields from one public page of the long-term rental catalogue."""
 
 import argparse
 import csv
@@ -8,7 +8,7 @@ from pathlib import Path
 from tempfile import NamedTemporaryFile
 from urllib.request import Request, urlopen
 
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, Tag
 
 from pilot_area import on_petrograd_island
 
@@ -33,42 +33,61 @@ FIELDS = [
 ]
 
 
-def parse_catalog(html, observed_on):
+def required_tag(section: Tag, selector: str) -> Tag:
+    tag = section.select_one(selector)
+    if tag is None:
+        raise ValueError(f"Missing catalogue element: {selector}")
+    return tag
+
+
+def text_attribute(tag: Tag, name: str) -> str:
+    value = tag.get(name)
+    if not isinstance(value, str) or not value:
+        raise ValueError(f"Missing catalogue attribute: {name}")
+    return value
+
+
+def parse_catalog(html: bytes, observed_on: date) -> list[dict[str, str | int | float]]:
     page = BeautifulSoup(html, "html.parser", from_encoding="utf-8")
     selected = page.select_one("#frenttype option[selected]")
     if selected is None or selected.get("value") != "long":
         raise ValueError("Expected the long-term rental catalogue")
-    rows = {}
+    rows: dict[str, dict[str, str | int | float]] = {}
     for section in page.select("section.search-result_items_object"):
-        title = section.select_one(".search-result_items_object_name_link")
+        title = required_tag(section, ".search-result_items_object_name_link")
         name = " ".join(title.stripped_strings)
         flat = re.fullmatch(r"(\d+)\s+ккв\s+(.+)", name)
-        if not flat or not title.get("data-lng") or not title.get("data-lat"):
+        lon_text, lat_text = title.get("data-lng"), title.get("data-lat")
+        if not flat or not lon_text or not lat_text:
             continue
-        lon, lat = float(title["data-lng"]), float(title["data-lat"])
+        if not isinstance(lon_text, str) or not isinstance(lat_text, str):
+            raise TypeError(f"Expected coordinate strings for {name}")
+        lon, lat = float(lon_text), float(lat_text)
         if not on_petrograd_island((lon, lat)):
             continue
-        field = section.select_one
-        identifier = field(".search-result_items_object_name_add-favourites")[
-            "data-objectnumber"
-        ]
-        link = field(".search-result_items_object_name_newtab")["href"]
+        favourite = required_tag(
+            section, ".search-result_items_object_name_add-favourites"
+        )
+        identifier = text_attribute(favourite, "data-objectnumber")
+        link_tag = required_tag(section, ".search-result_items_object_name_newtab")
+        link = text_attribute(link_tag, "href")
         if (
             not identifier.isdecimal()
             or link != "/detal-object.html?itemid=" + identifier
         ):
             raise ValueError(f"Unexpected source link for {identifier}")
-        area = re.search(
-            r"общая:\s*([\d.,]+)",
-            field(".search-result_items_object_squares").get_text(" ", strip=True),
-        )
-        floor, total = (
-            field(".search-result_items_object_storey").get_text(strip=True).split("/")
-        )
-        rent = "".join(section.select_one(".ps-price-wrap span").stripped_strings)
-        description = " ".join(
-            field(".search-result_items_object_comments").stripped_strings
-        ).casefold()
+
+        squares = required_tag(section, ".search-result_items_object_squares")
+        area = re.search(r"общая:\s*([\d.,]+)", squares.get_text(" ", strip=True))
+        if area is None:
+            raise ValueError(f"Missing total area for {identifier}")
+
+        storey = required_tag(section, ".search-result_items_object_storey")
+        floor, total = storey.get_text(strip=True).split("/")
+        price = required_tag(section, ".ps-price-wrap span")
+        rent = "".join(price.stripped_strings)
+        comments = required_tag(section, ".search-result_items_object_comments")
+        description = " ".join(comments.stripped_strings).casefold()
         # Conservative, complete statements. Conditional permission stays unknown.
         sentences = {part.strip() for part in re.split(r"[.!?\n]+", description)}
         positive = bool(sentences & {"можно с животными", "животные разрешены"})
@@ -101,10 +120,22 @@ def parse_catalog(html, observed_on):
         raise ValueError(
             "No island apartments found. Check the page before replacing the sample."
         )
-    return sorted(rows.values(), key=lambda row: row["source_id"])
+    return [rows[identifier] for identifier in sorted(rows)]
 
 
-def main():
+def read_catalog(saved_page: Path | None) -> bytes:
+    if saved_page is not None:
+        return saved_page.read_bytes()
+
+    request = Request(
+        CATALOG,
+        headers={"User-Agent": "RentalKG/1.0 (academic catalogue sample)"},
+    )
+    with urlopen(request, timeout=30) as response:
+        return response.read()
+
+
+def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
         "--html", type=Path, help="saved rental.html, paired with --date"
@@ -118,18 +149,7 @@ def main():
     args = parser.parse_args()
     if bool(args.html) != bool(args.date):
         parser.error("--html and --date must be supplied together")
-    if args.html:
-        html = args.html.read_bytes()
-    else:
-        with urlopen(
-            Request(
-                CATALOG,
-                headers={"User-Agent": "RentalKG/1.0 (academic catalogue sample)"},
-            ),
-            timeout=30,
-        ) as response:
-            html = response.read()
-    rows = parse_catalog(html, args.date or date.today())
+    rows = parse_catalog(read_catalog(args.html), args.date or date.today())
     with NamedTemporaryFile(
         "w", dir=args.output.parent, encoding="utf-8", newline="", delete=False
     ) as output:

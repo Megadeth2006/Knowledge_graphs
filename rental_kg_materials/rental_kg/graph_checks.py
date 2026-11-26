@@ -5,8 +5,9 @@ from decimal import Decimal
 from math import isclose
 
 from pyshacl import validate
-from rdflib import Literal
+from rdflib import Graph, Literal
 from rdflib.namespace import OWL, RDF, RDFS, SH, XSD
+from rdflib.query import ResultRow
 
 from ontology_schema import CLASSES, EX, new_graph
 from rental_data import add_point, build_observed, building_iri
@@ -206,6 +207,7 @@ def negative_checks(demo, schema, shapes):
             ont_graph=schema,
             inference="rdfs",
         )
+        assert isinstance(report, Graph), name
         assert not conforms, name
         if component is not None:
             assert (None, SH.sourceConstraintComponent, component) in report, name
@@ -268,8 +270,11 @@ def check_walking_boundaries():
     network.edges["1"]["2"] = 840 * WALK_SPEED_M_S
     network.edges["2"]["3"] = 60 * WALK_SPEED_M_S
     origin = (30.0, 60.0)
-    assert network.length(origin, (30.0, 60.001)) / WALK_SPEED_M_S <= 900
-    assert isclose(network.length(origin, (30.0, 60.002)) / WALK_SPEED_M_S, 900)
+    short_route = network.length(origin, (30.0, 60.001))
+    exactly_at_limit = network.length(origin, (30.0, 60.002))
+    assert short_route is not None and short_route / WALK_SPEED_M_S <= 900
+    assert exactly_at_limit is not None
+    assert isclose(exactly_at_limit / WALK_SPEED_M_S, 900)
     assert network.length(origin, (30.0, 60.003)) is None
     assert network.length((40.0, 60.0), (30.0, 60.001)) is None
     isolated = deepcopy(snapshot)
@@ -290,7 +295,8 @@ def check_walking_boundaries():
     longer = deepcopy(snapshot)
     longer_network = PedestrianNetwork(longer)
     longer_network.edges["1"]["2"] = 1080 * WALK_SPEED_M_S
-    assert longer_network.length(origin, (30.0, 60.001)) / WALK_SPEED_M_S > 900
+    long_route = longer_network.length(origin, (30.0, 60.001))
+    assert long_route is not None and long_route / WALK_SPEED_M_S > 900
 
 
 def listing_ids(rows):
@@ -365,18 +371,23 @@ def check_queries(answers, rows, demo, real, queries, network):
     higher_limit = real + new_graph()
     higher_limit.set((EX.WalkingProfile, EX.maxMetroWalkSeconds, Literal(960)))
     for entry in higher_limit.query(walk_query):
-        assert bool(entry.withinLimit) == (float(entry.seconds) <= 960)
+        assert isinstance(entry, ResultRow)
+        assert bool(entry["withinLimit"]) == (float(str(entry["seconds"])) <= 960)
     mixed = real + demo
     for path in queries.glob("real_*.rq"):
-        result = [
-            {str(name): str(value) for name, value in row.asdict().items()}
-            for row in mixed.query(path.read_text(encoding="utf-8"))
-        ]
+        result = []
+        for row in mixed.query(path.read_text(encoding="utf-8")):
+            assert isinstance(row, ResultRow)
+            result.append({name: str(value) for name, value in row.asdict().items()})
         assert result == answers[path.stem], path.stem
 
     near_query = (queries / "demo_pet_budget.rq").read_text(encoding="utf-8")
     unfiltered = near_query.replace(" && ?distance <= ?limit", "")
-    assert {str(row.listing) for row in demo.query(unfiltered)} == {
+    unfiltered_listings = set()
+    for row in demo.query(unfiltered):
+        assert isinstance(row, ResultRow)
+        unfiltered_listings.add(str(row["listing"]))
+    assert unfiltered_listings == {
         str(EX.D06),
         str(EX.D09),
         str(EX.D12),

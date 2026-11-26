@@ -2,11 +2,13 @@
 
 import math
 import re
+from collections.abc import Callable
+from typing import cast
 
 from geographiclib.geodesic import Geodesic
 from rdflib import Literal, Namespace
 from rdflib.namespace import XSD
-from rdflib.plugins.sparql.operators import custom_function
+from rdflib.plugins.sparql.operators import register_custom_function
 from rdflib.plugins.sparql.sparql import SPARQLError
 
 GEO = Namespace("http://www.opengis.net/ont/geosparql#")
@@ -45,7 +47,6 @@ def distance_metres(first, second):
     return Geodesic.WGS84.Inverse(lat1, lon1, lat2, lon2)["s12"]
 
 
-@custom_function(GEOF.distance)
 def geosparql_distance(first, second, unit):
     """Execute the metre-valued, point-to-point subset of geof:distance."""
     if str(unit) != METRE:
@@ -57,3 +58,9 @@ def geosparql_distance(first, second, unit):
     if not math.isfinite(distance):
         raise SPARQLError("Distance is not finite")
     return Literal(distance, datatype=XSD.double)
+
+
+# RDFLib types the raw callback only, but calls non-raw callbacks with RDF terms.
+register_custom_function(
+    GEOF.distance, cast(Callable[..., Literal], geosparql_distance)
+)
