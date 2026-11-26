@@ -104,6 +104,8 @@ class Catalog:
                 if row.seconds is None
                 else f"{safe(row.station)} · {duration(row.seconds)} пешком"
             )
+            if str(row.geometryKind) == "publisher_pin_approximate":
+                route += "<br>Приблизительно по метке объявления; подъезд уточняется"
             price = f"{int(row.rent):,}".replace(",", " ")
             why = (
                 f'<p class="reason">{". ".join(reasons)}.</p>'

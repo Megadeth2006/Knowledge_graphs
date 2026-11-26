@@ -1,6 +1,7 @@
 PREFIX ex: <https://example.org/rental-kg#>
 PREFIX dct: <http://purl.org/dc/terms/>
-SELECT ?listing ?address ?rent ?date ?url ?identifier ?pets ?station ?seconds
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+SELECT ?listing ?address ?rent ?date ?url ?identifier ?pets ?station ?seconds ?geometryKind
        (?rent <= ?budget AS ?priceOK)
        ((! ?needPets || COALESCE(?pets, false)) AS ?petsOK)
        ((?noLimit || COALESCE(?seconds <= ?timeLimit, false)) AS ?walkOK)
@@ -12,6 +13,9 @@ WHERE {
     FILTER (STR(?term) = "long_term")
     ?source ex:sourceUrl ?url ; dct:identifier ?identifier .
     OPTIONAL { ?listing ex:petsAllowed ?pets }
+    OPTIONAL {
+        ?listing ex:offers/ex:inBuilding/geo:hasGeometry/ex:geometryKind ?geometryKind
+    }
     OPTIONAL { ?listing ex:nearestWalkSeconds ?seconds ; ex:nearestStationLabel ?station }
 }
 ORDER BY ?rent ?listing

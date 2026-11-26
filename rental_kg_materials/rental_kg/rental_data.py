@@ -241,6 +241,17 @@ def build_osm_pilot(data_dir, observed_rows):
     for item in observed_rows:
         match = by_address.get(item["address"])
         if match is None:
+            if item.get("pin_lon") and item.get("pin_lat"):
+                point = float(item["pin_lon"]), float(item["pin_lat"])
+                if not on_petrograd_island(point):
+                    raise ValueError(f"Offer pin outside island: {item['id']}")
+                add_point(
+                    graph,
+                    building_iri(item, False),
+                    point,
+                    "publisher_pin_approximate",
+                    EX[f"{item['id']}_source"],
+                )
             continue
         point = float(match["lon"]), float(match["lat"])
         if not on_petrograd_island(point):

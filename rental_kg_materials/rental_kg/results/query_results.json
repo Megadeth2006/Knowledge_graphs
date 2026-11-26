@@ -72,6 +72,48 @@
   ],
   "real_metro_walk": [
     {
+      "listing": "https://example.org/rental-kg#E128027065",
+      "station": "https://www.openstreetmap.org/node/88803981",
+      "seconds": "627.4233116979749",
+      "withinLimit": "true"
+    },
+    {
+      "listing": "https://example.org/rental-kg#E128027065",
+      "station": "https://www.openstreetmap.org/node/88802787",
+      "seconds": "1310.8251957480747",
+      "withinLimit": "false"
+    },
+    {
+      "listing": "https://example.org/rental-kg#E128027065",
+      "station": "https://www.openstreetmap.org/node/88833360",
+      "seconds": "1810.0870158738142",
+      "withinLimit": "false"
+    },
+    {
+      "listing": "https://example.org/rental-kg#E128027065",
+      "station": "https://www.openstreetmap.org/node/2036840002",
+      "seconds": "1924.9112906615717",
+      "withinLimit": "false"
+    },
+    {
+      "listing": "https://example.org/rental-kg#E128027065",
+      "station": "https://www.openstreetmap.org/node/88833366",
+      "seconds": "2004.0544359191038",
+      "withinLimit": "false"
+    },
+    {
+      "listing": "https://example.org/rental-kg#E128027065",
+      "station": "https://www.openstreetmap.org/node/91264383",
+      "seconds": "3499.792498695953",
+      "withinLimit": "false"
+    },
+    {
+      "listing": "https://example.org/rental-kg#E128027065",
+      "station": "https://www.openstreetmap.org/node/2468455392",
+      "seconds": "4805.889093165168",
+      "withinLimit": "false"
+    },
+    {
       "listing": "https://example.org/rental-kg#E129891108",
       "station": "https://www.openstreetmap.org/node/88833366",
       "seconds": "430.32348351237374",
@@ -195,6 +237,48 @@
       "listing": "https://example.org/rental-kg#E146482554",
       "station": "https://www.openstreetmap.org/node/2468455392",
       "seconds": "4712.648597934049",
+      "withinLimit": "false"
+    },
+    {
+      "listing": "https://example.org/rental-kg#E64293061",
+      "station": "https://www.openstreetmap.org/node/88803981",
+      "seconds": "491.2094693687236",
+      "withinLimit": "true"
+    },
+    {
+      "listing": "https://example.org/rental-kg#E64293061",
+      "station": "https://www.openstreetmap.org/node/88802787",
+      "seconds": "1050.0971520179849",
+      "withinLimit": "false"
+    },
+    {
+      "listing": "https://example.org/rental-kg#E64293061",
+      "station": "https://www.openstreetmap.org/node/2036840002",
+      "seconds": "1612.7842751380877",
+      "withinLimit": "false"
+    },
+    {
+      "listing": "https://example.org/rental-kg#E64293061",
+      "station": "https://www.openstreetmap.org/node/88833366",
+      "seconds": "1752.4742240548865",
+      "withinLimit": "false"
+    },
+    {
+      "listing": "https://example.org/rental-kg#E64293061",
+      "station": "https://www.openstreetmap.org/node/88833360",
+      "seconds": "1815.7001039562492",
+      "withinLimit": "false"
+    },
+    {
+      "listing": "https://example.org/rental-kg#E64293061",
+      "station": "https://www.openstreetmap.org/node/91264383",
+      "seconds": "3248.2122868317356",
+      "withinLimit": "false"
+    },
+    {
+      "listing": "https://example.org/rental-kg#E64293061",
+      "station": "https://www.openstreetmap.org/node/2468455392",
+      "seconds": "4654.299809245187",
       "withinLimit": "false"
     },
     {

@@ -7,7 +7,11 @@ ex:Building_010f87aa72a5e05423cc geo:hasGeometry ex:Building_010f87aa72a5e05423c
 
 ex:Building_5b243800fa1f2040b58a geo:hasGeometry ex:Building_5b243800fa1f2040b58a_point .
 
+ex:Building_6bb1245b10beb129e554 geo:hasGeometry ex:Building_6bb1245b10beb129e554_point .
+
 ex:Building_9c65a12b320ad8bd0634 geo:hasGeometry ex:Building_9c65a12b320ad8bd0634_point .
+
+ex:Building_b786b1771fd30e1843d3 geo:hasGeometry ex:Building_b786b1771fd30e1843d3_point .
 
 ex:Building_c1598bd9705984973384 geo:hasGeometry ex:Building_c1598bd9705984973384_point .
 
@@ -1820,11 +1824,23 @@ ex:Building_5b243800fa1f2040b58a_point a geo:Geometry ;
     ex:geometryKind "osm_outline_vertex_mean"^^xsd:string ;
     ex:hasSource <https://www.openstreetmap.org/way/51133597> .
 
+ex:Building_6bb1245b10beb129e554_point a geo:Geometry ;
+    rdfs:label "Опорная точка"@ru ;
+    geo:asWKT "POINT (30.32930700 59.95466900)"^^geo:wktLiteral ;
+    ex:geometryKind "publisher_pin_approximate"^^xsd:string ;
+    ex:hasSource ex:E128027065_source .
+
 ex:Building_9c65a12b320ad8bd0634_point a geo:Geometry ;
     rdfs:label "Опорная точка"@ru ;
     geo:asWKT "POINT (30.29711909 59.95766898)"^^geo:wktLiteral ;
     ex:geometryKind "osm_outline_vertex_mean"^^xsd:string ;
     ex:hasSource <https://www.openstreetmap.org/way/37437371> .
+
+ex:Building_b786b1771fd30e1843d3_point a geo:Geometry ;
+    rdfs:label "Опорная точка"@ru ;
+    geo:asWKT "POINT (30.32504900 59.95920100)"^^geo:wktLiteral ;
+    ex:geometryKind "publisher_pin_approximate"^^xsd:string ;
+    ex:hasSource ex:E64293061_source .
 
 ex:Building_c1598bd9705984973384_point a geo:Geometry ;
     rdfs:label "Опорная точка"@ru ;

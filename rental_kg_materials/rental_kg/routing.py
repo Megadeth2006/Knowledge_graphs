@@ -41,6 +41,19 @@ class PedestrianNetwork:
             for feature in snapshot["features"]
             if feature["type"] == "MetroEntrance" and feature["usable"]
         }
+        # Snap to a nearby node from which an entrance can actually be reached.
+        # Small disconnected paths can be closer than the surrounding street.
+        reverse_edges = defaultdict(list)
+        for start, neighbours in self.edges.items():
+            for end in neighbours:
+                reverse_edges[end].append(start)
+        self.metro_connected = set(self.destinations.values())
+        pending = list(self.metro_connected)
+        while pending:
+            for node in reverse_edges.get(pending.pop(), ()):
+                if node not in self.metro_connected:
+                    self.metro_connected.add(node)
+                    pending.append(node)
         self.origins = {}
 
     def search(self, point):
@@ -48,6 +61,8 @@ class PedestrianNetwork:
         connector = MAX_SNAP_METRES
         lon, lat = point
         for node in self.edges:
+            if node not in self.metro_connected:
+                continue
             node_lon, node_lat = self.points[node]
             # Cheap bounding box before computing the short geodesic.
             if abs(lon - node_lon) > 0.002 or abs(lat - node_lat) > 0.001:

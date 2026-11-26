@@ -272,6 +272,16 @@ def check_walking_boundaries():
     assert isclose(network.length(origin, (30.0, 60.002)) / WALK_SPEED_M_S, 900)
     assert network.length(origin, (30.0, 60.003)) is None
     assert network.length((40.0, 60.0), (30.0, 60.001)) is None
+    isolated = deepcopy(snapshot)
+    isolated["nodes"].update(
+        {
+            "9": [30.00001, 60.0],
+            "10": [30.00002, 60.0],
+        }
+    )
+    isolated["ways"].append([["9", "10"], "no"])
+    reachable_network = PedestrianNetwork(isolated)
+    assert reachable_network.length((30.00001, 60.0), (30.0, 60.001)) is not None
     reversed_path = deepcopy(snapshot)
     reversed_path["ways"][0][1] = "-1"
     one_way = PedestrianNetwork(reversed_path)
