@@ -1,0 +1,7 @@
+id,platform,source_id,address,rent_rub_month,utilities_rub_month,deposit_rub,commission_rub,area_m2,rooms,floor,floors_total,pets_allowed,term,min_months,quality_note,source_url,observed_on,is_synthetic,pin_lon,pin_lat,verified_home_id,identity_evidence,identity_source,listing_status
+R01,yandex,5227535735060667195,"Пулковское шоссе, 42к6",45000,,,22500,44.5,2,7,20,false,long_term,,furniture_conflict,https://realty.yandex.ru/offer/5227535735060667195/,2026-10-22,false,,,,,,
+R02,yandex,5467258361881462548,"Русановская улица, 20к3",33500,,0,0,24,0,9,24,false,long_term,11,,https://realty.yandex.ru/offer/5467258361881462548/,2026-10-22,false,,,,,,
+R03,yandex,4744575448774797879,"улица Тельмана, 48к4",25000,,,12500,40.6,1,8,10,false,fixed_short_term,,4 months; excluded from long-term selection,https://realty.yandex.ru/offer/4744575448774797879/,2026-10-22,false,,,,,,
+R04,yandex,1544554545513061376,"улица Красного Курсанта, 51",70000,,70000,35000,54.7,2,1,5,,long_term,,,https://realty.yandex.ru/offer/1544554545513061376/,2026-10-22,false,,,,,,
+R05,yandex,8162702168070170624,"Невский проспект, 88",50000,,45000,25000,40,1,2,5,,long_term,,possible_duplicate_R06; elevator_and_window_conflicts,https://realty.yandex.ru/offer/8162702168070170624/,2026-10-22,false,,,,,,
+R06,yandex,8560687234450187520,"Невский проспект, 88",45000,,45000,22500,40,1,2,5,,long_term,,possible_duplicate_R05; elevator_conflict,https://realty.yandex.ru/offer/8560687234450187520/,2026-10-22,false,,,,,,

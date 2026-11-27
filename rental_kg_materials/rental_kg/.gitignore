@@ -1,0 +1,8 @@
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+# Runtime status, lock and staging of the update button.
+state/
+# Raw prepared files; the verified result goes to data/sources/.
+data/import/*/
+.ruff_cache/

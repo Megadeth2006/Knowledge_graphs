@@ -1,7 +1,13 @@
 <p class="lead">
-  Долгосрочная аренда на Петроградском острове. В срезе $total предложений.
-  Время до метро рассчитано до ближайшего доступного входа при скорости 1,4 м/с.
+  Долгосрочная аренда на Петроградском острове. В срезе $total предложений, $groups квартир.
+  Время до метро — пешком по сети OSM до ближайшего доступного входа при 1,4 м/с.
+  Магазин и парк — геодезическое расстояние по прямой.
 </p>
+<div class="update">
+  <p>$slice_info</p>
+  <form method="post" action="/update"><button $update_disabled>Обновить</button></form>
+  <p><a href="/update">$update_state</a></p>
+</div>
 <form method="get">
   <label>Бюджет, ₽/мес.
     <input name="budget" type="number" min="0" max="100000000" required value="$budget">
@@ -12,11 +18,30 @@
       <option value="yes" $pets_selected>Нужно разрешение</option>
     </select>
   </label>
-  <label>До метро, мин
+  <label>До метро пешком, мин
     <input name="minutes" type="number" min="0" max="1440" placeholder="Без лимита" value="$minutes">
+  </label>
+  <label>Площадь от, м²
+    <input name="area_min" type="number" min="0" max="10000" placeholder="Любая" value="$area_min">
+  </label>
+  <label>Комнат от
+    <input name="rooms_min" type="number" min="0" max="20" placeholder="Любое" value="$rooms_min">
+  </label>
+  <label>Этаж от
+    <input name="floor_min" type="number" min="0" max="200" placeholder="Любой" value="$floor_min">
+  </label>
+  <label>Этаж до
+    <input name="floor_max" type="number" min="0" max="200" placeholder="Любой" value="$floor_max">
+  </label>
+  <label>Супермаркет до, м по прямой
+    <input name="shop_m" type="number" min="0" max="100000" placeholder="Без лимита" value="$shop_m">
+  </label>
+  <label>Парк до, м по прямой
+    <input name="park_m" type="number" min="0" max="100000" placeholder="Без лимита" value="$park_m">
   </label>
   <button>Найти</button>
 </form>
+<p class="source">Если фильтр задан, а значение в карточке неизвестно, вариант попадает в исключённые с причиной.</p>
 <h2>Подходят · $match_count</h2>
 <div class="cards">$matches</div>
 <details>
