@@ -1,0 +1,8 @@
+# Versions used for the recorded run of notebooks/embedding_kg.ipynb (CPU only).
+numpy==2.5.3
+pandas==3.0.5
+scikit-learn==1.9.1
+scipy==1.18.1
+matplotlib==3.11.2
+# Optional, for Run All in Jupyter instead of notebooks/run_notebook.py:
+# notebook

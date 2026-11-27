@@ -1,0 +1,157 @@
+{
+ "seed": 20261127,
+ "versions": {
+  "python": "3.13.18",
+  "platform": "Linux-6.18.44-fc-v880-x86_64-with-glibc2.39",
+  "numpy": "2.5.3",
+  "pandas": "3.0.5",
+  "scikit-learn": "1.9.1",
+  "matplotlib": "3.11.2"
+ },
+ "listing_check": {
+  "observations": 11,
+  "cards": 11,
+  "apartments": 11,
+  "cards_observed_more_than_once": 0,
+  "apartments_with_several_cards": 0,
+  "observation_dates": {
+   "2026-10-22": 6,
+   "2026-11-26": 5
+  },
+  "pets_known": 4,
+  "rooms": {
+   "0": 1,
+   "1": 4,
+   "2": 3,
+   "3": 2,
+   "5": 1
+  }
+ },
+ "split": {
+  "seed_offset": 1,
+  "test_cells": 28,
+  "train_cells": 67,
+  "counts": {
+   "MetroEntrance": {
+    "test": 23,
+    "train": 16
+   },
+   "MetroStation": {
+    "test": 4,
+    "train": 4
+   },
+   "Park": {
+    "test": 47,
+    "train": 107
+   },
+   "Supermarket": {
+    "test": 27,
+    "train": 66
+   }
+  }
+ },
+ "embedding_split": {
+  "train_part_triples": 822,
+  "fit_triples": 567,
+  "eval_triples": 255,
+  "entities_total": 465,
+  "entities_in_train_part": 465,
+  "core_entities": 350,
+  "core_entities_in_both_parts": 350,
+  "entities_outside_core": 115,
+  "outside_core_by_kind": {
+   "test": 51,
+   "train": 2,
+   "название": 57,
+   "ячейка": 5
+  },
+  "leaf_triples_fit_only": 114,
+  "relations_in_both_parts": [
+   "cell_east_of",
+   "cell_north_of",
+   "entrance_of",
+   "has_name",
+   "in_cell",
+   "nearest_station"
+  ],
+  "eval_entities_seen_in_fit": 1.0
+ },
+ "ranking_eval": {
+  "TransE": {
+   "MR": 56.62352941176471,
+   "MRR": 0.23173722848192474,
+   "Hits@1": 0.15098039215686274,
+   "Hits@3": 0.2235294117647059,
+   "Hits@10": 0.4137254901960784
+  },
+  "случайные векторы": {
+   "MR": 236.12941176470588,
+   "MRR": 0.012691205255752264,
+   "Hits@1": 0.0,
+   "Hits@3": 0.00784313725490196,
+   "Hits@10": 0.01568627450980392
+  }
+ },
+ "clustering": {
+  "ARI_transe": 0.0023800097133391345,
+  "ARI_random_vectors": -0.0016920852205543752
+ },
+ "classification": {
+  "majority_from_train": {
+   "class": "Park",
+   "test_accuracy": 0.46534653465346537
+  },
+  "majority_from_test": {
+   "class": "Park",
+   "test_accuracy": 0.46534653465346537
+  },
+  "one_hot": {
+   "C": 10.0,
+   "cv_accuracy_train": 0.8607287449392713,
+   "test_accuracy": 0.7821782178217822,
+   "test_macro_f1": 0.5669125826081267
+  },
+  "transe": {
+   "C": 100.0,
+   "cv_accuracy_train": 0.839136302294197,
+   "test_accuracy": 0.7821782178217822,
+   "test_macro_f1": 0.7866066137252579
+  },
+  "one_hot_columns": 410,
+  "setting": "transductive: test objects and their relations were in the embedding graph, labels were not",
+  "transe_without_has_name": {
+   "C": 1.0,
+   "cv_accuracy_train": 0.5649122807017544,
+   "test_accuracy": 0.49504950495049505,
+   "test_macro_f1": 0.34771825396825395
+  }
+ },
+ "link_prediction": {
+  "test_triples": 97,
+  "candidates": 8,
+  "transe": {
+   "MRR": 0.9587628865979382,
+   "Hits@1": 0.9278350515463918,
+   "Hits@3": 1.0,
+   "MR": 1.1030927835051547
+  },
+  "most_frequent_station": {
+   "MRR": 0.28457290132547863,
+   "Hits@1": 0.08247422680412371,
+   "Hits@3": 0.25773195876288657,
+   "MR": 4.896907216494846
+  },
+  "neighbour_cells_vote": {
+   "MRR": 0.8275036818851251,
+   "Hits@1": 0.7216494845360825,
+   "Hits@3": 0.8762886597938144,
+   "MR": 1.597938144329897
+  },
+  "random_expected_MRR": 0.33973214285714287,
+  "transe_MRR_by_type": {
+   "MetroEntrance": 1.0,
+   "Park": 0.9680851063829787,
+   "Supermarket": 0.9074074074074074
+  }
+ }
+}
